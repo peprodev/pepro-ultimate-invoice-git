@@ -1,0 +1,202 @@
+@font-face {
+    font-family: bodyfontpepro;
+    font-style: normal;
+    font-weight: 400;
+    src: url('96594ad4.woff2') format('woff2');
+}
+
+
+/* 	td: pepropai
+	shortcode: pepro-pai */
+
+[data-vc-shortcode='pepro-pai'] .pepro-footerlink-vc {
+    display: flex !important;
+}
+
+div[data-vc-shortcode='pepro-pai'] input[name="idss"] {
+    display: none;
+}
+
+.pepropai__class .wpb_vc_param_value {
+    display: none;
+}
+
+.pepropai__class .wpb_element_title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.vc_ui-panel-footer .vc_ui-button-group,
+.vc_ui-panel-header-container,
+.vc_edit-form-tab,
+.vc_el-container,
+.wpb_visual_composer>h2>span,
+#poststuff h2,
+.vc_ui-panel-header-heading,
+.wpb_element_title,
+.pepropai__class .wpb_element_title,
+.vc_btn-content,
+.peprowidesliderclass .vc_btn-content,
+.pepropai__class_nav,
+.pepropai__class .vc_btn-content {
+    font-family: bodyfontpepro, Tahoma !important;
+}
+
+.pepropai__class .wpb_element_wrapper {
+    background: linear-gradient(120deg, #032031, #0d498a, #032031);
+    border: none;
+    border-radius: 3px !important;
+    margin: .2rem 0 .7rem 0;
+    color: white;
+    box-shadow: 0 4px 5px 0px rgba(0, 0, 0, .5) !important;
+}
+
+.holder {
+    position: relative;
+    left: 0.2rem;
+    top: 0;
+    width: 1.5rem;
+    height: 1rem;
+    background: linear-gradient(to bottom, black, black 20%, white 20%, white 40%, black 40%, black 60%, white 60%, white 80%, black 80%, black 100%);
+    cursor: grab;
+}
+
+.pepropai__workstation a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pepropai__workstationitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.pepropai__workstationitem div.title,
+.pepropai__workstationitem div.link {
+    width: 50%;
+    margin-left: 5px;
+}
+
+[dir="rtl"] .pepropai__workstation #add,
+[dir="rtl"] .pepropai__workstation #delall {
+    flex-direction: row-reverse;
+}
+
+.pepropai__workstation .workplace:empty {
+    height: 200px;
+}
+
+.pepropai__workstation .workplace:empty::before {
+    content: "🙄";
+    font-size: 50px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: .5;
+}
+
+[dir="rtl"] .pepropai__workstation #add i.fa,
+[dir="rtl"] .pepropai__workstation #delall i.fa {
+    margin: 0 0 0 10px !important;
+}
+
+.pepropai__workstation #add,
+.pepropai__workstation #delall {
+    justify-content: space-between;
+    direction: ltr;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pepro-ui-hide {
+    display: none;
+}
+
+.vc_col-sm-6.pp-bottom {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 1rem;
+}
+
+.pepro-footerlink-vc img {
+    margin: 0 10px 0 0;
+}
+
+.pepro-footerlink-vc {
+    direction: ltr;
+    float: right;
+    background: linear-gradient(120deg, #032031, #0d498a) !important;
+    border: none !important;
+    align-items: center;
+    padding: 10px 22px 10px 10px !important;
+}
+
+[dir="rtl"] .pepro-footerlink-vc {
+    float: left;
+}
+
+.pepro-footerlink-vc {
+    display: none !important;
+}
+
+
+/* common vc css fix for rtl-ready */
+
+.select2-container {
+    z-index: 9999999999999;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+    margin: 0 !important;
+    height: 0 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    margin-bottom: -3px !important;
+}
+
+.vc_ui-panel-content-container select {
+    width: 100% !important;
+    max-width: 100% !important;
+    line-height: 1;
+}
+
+[dir="rtl"] .vc_ui-panel-content-container select {
+    text-align: right !important;
+    padding: 8px 6px 8px 24px;
+}
+
+[dir="rtl"] .vc_general.vc_ui-tabs-line>li {
+    float: right;
+}
+
+[dir="rtl"] .vc_ui-panel-header .vc_ui-panel-header-controls {
+    float: left;
+    margin: 2px 12px 0 0;
+}
+
+[dir="rtl"] .vc_ui-panel-header .vc_ui-panel-header-heading {
+    margin: 0 0 1rem 1rem;
+}
+
+[dir="rtl"] .vc_add-element-container .wpb-content-layouts li {
+    float: right;
+}
+
+[dir="rtl"] .vc_add-element-container .vc_element-icon {
+    position: absolute;
+    top: 20px;
+    right: 8px;
+}
+
+[dir="rtl"] .vc_add-element-container .wpb-content-layouts a {
+    padding: 2px 47px 4px 2px;
+}

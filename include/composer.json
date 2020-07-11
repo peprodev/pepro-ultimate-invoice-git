@@ -1,0 +1,7 @@
+{
+    "require": {
+        "voku/css-to-inline-styles": "^2.0",
+		"appsero/client": "^1.1",
+        "mpdf/mpdf": "^8.0"
+    }
+}
