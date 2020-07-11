@@ -9,7 +9,7 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.0.0.2
+Version: 1.0.1
 Requires at least: 5
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -80,7 +80,7 @@ if (!class_exists("PeproUltimateInvoice")) {
             $this->plugin_url = plugins_url("", __FILE__);
             $this->assets_url = plugins_url("/assets/", __FILE__);
             $this->plugin_basename = plugin_basename(__FILE__);
-            $this->version = "1.0.0.2";
+            $this->version = "1.0.1";
             $this->title = __("Ultimate Invoice", $this->td);
             $this->title_t = __("Pepro Ultimate Invoice for Woocommerce", $this->td);
             $this->title_tw = sprintf(__("%2\$s ver. %1\$s", $this->td), $this->version, $this->title_t);
@@ -162,8 +162,8 @@ if (!class_exists("PeproUltimateInvoice")) {
           if ( ! class_exists( 'Appsero\Client' ) ) {
             require_once $this->plugin_dir . 'include/vendor/appsero/client/src/Client.php';
           }
-          $client = new \Appsero\Client( '083716f4-7249-40c7-bf8d-241143e22a87', 'Pepro Ultimate Invoice', __FILE__ );
-          $client->insights()->hide_notice()->init();
+          $client = new \Appsero\Client( 'f0dccd82-1adf-4de2-9683-68873c386b55', 'Pepro Ultimate Invoice for Woocommerce', __FILE__ );
+          $client->insights()->init();
           $client->updater();
 
         }
