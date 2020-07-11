@@ -19,7 +19,7 @@ html {
 	margin: 0 auto;
 	max-width: 29.7cm;
 	-webkit-print-color-adjust: exact;
-	direction: ltr;
+	direction: rtl;
 }
 @font-face {
 	font-family: iranyekan;
@@ -87,12 +87,12 @@ div.watermark {
 	margin-inline-end: 2px;
 	color: aliceblue;
 	display: inline-block;
-	border-radius: 0 5px 5px 0;
+	border-radius: 5px 0 0 5px;
 	line-height: 0;
 }
 
 .print-button:nth-last-of-type(2) {
-	border-radius: 5px 0 0 5px;
+	border-radius: 0 5px 5px 0;
 }
 
 .date_digit {
@@ -260,7 +260,7 @@ h1.puiw_title img {
 body {
 	font-family: iranyekan ,Tahoma ,Arial !important;
 	font-size: var(--theme_fontsize);
-	direction: ltr;
+	direction: rtl;
 	padding: 0.5cm;
 	-webkit-print-color-adjust:exact;
 }
@@ -282,7 +282,7 @@ table {
 
 table * {
 	font-size: var(--theme_fontsize);
-	direction: ltr;
+	direction: rtl;
 }
 
 .header-table {

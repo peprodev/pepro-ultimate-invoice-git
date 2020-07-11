@@ -3,7 +3,7 @@
 Plugin Name: Pepro Ultimate Invoice
 Description: The most complete invoice plugin you will ever need.
 Contributors: amirhosseinhpv
-Tags: wocommerce, functionality, pepro, invoice, shopping, checkout, pdfinvoice
+Tags: woocommerce invoice, pdf invoice, ultimate invoicing
 Author: Pepro Dev. Group
 Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
@@ -128,7 +128,7 @@ if (!class_exists("PeproUltimateInvoice")) {
               add_action( "woocommerce_new_order", array($this,"woocommerce_new_order_action"),  10, 1  );
             }
 
-            add_filter( "puiw_return_pdf_total_prices_as_single_price","__return_true");
+            // add_filter( "puiw_return_pdf_total_prices_as_single_price","__return_true");
 
             if ( is_admin() ) { (new PeproUltimateInvoice_wcPanel())->init(); }
 

@@ -27,7 +27,7 @@
 
 table * {
 	font-size: 9px !important;
-	direction: ltr;
+	direction: rtl;
 }
 
 body, table *, td, th {

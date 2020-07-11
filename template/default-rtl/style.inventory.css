@@ -2,9 +2,6 @@
 	--theme_color: {{{theme_color}}};
 	--theme_color2: {{{theme_color2}}};
 	--theme_color3: {{{theme_color3}}};
-	--theme_fontsize: {{{font_size}}};
-	--theme_fontsizel: {{{font_sizes}}};
-	--theme_fontsizem: {{{font_sizem}}};
 	--watermark_opacity: {{{watermark_opacity}}};
 }
 
@@ -19,7 +16,7 @@ html {
 	margin: 0 auto;
 	max-width: 29.7cm;
 	-webkit-print-color-adjust: exact;
-	direction: ltr;
+	direction: rtl;
 }
 @font-face {
 	font-family: iranyekan;
@@ -73,10 +70,6 @@ div.watermark {
 	background-size: 400px !important;
 }
 
-.print-button:only-child{
-	border-radius: 5px;
-}
-
 .print-button {
 	cursor: pointer;
 	text-decoration: none;
@@ -87,12 +80,12 @@ div.watermark {
 	margin-inline-end: 2px;
 	color: aliceblue;
 	display: inline-block;
-	border-radius: 0 5px 5px 0;
+	border-radius: 15px;
 	line-height: 0;
 }
 
 .print-button:nth-last-of-type(2) {
-	border-radius: 5px 0 0 5px;
+	border-radius: 0 15px 15px 0;
 }
 
 .date_digit {
@@ -259,8 +252,8 @@ h1.puiw_title img {
 .page,
 body {
 	font-family: iranyekan ,Tahoma ,Arial !important;
-	font-size: var(--theme_fontsize);
-	direction: ltr;
+	font-size: 12px;
+	direction: rtl;
 	padding: 0.5cm;
 	-webkit-print-color-adjust:exact;
 }
@@ -276,13 +269,13 @@ body {
 
 table {
 	width: 100%;
-	table-layout: fixed;
+	table-layout: auto;
 	border-spacing: 0;
 }
 
 table * {
-	font-size: var(--theme_fontsize);
-	direction: ltr;
+	font-size: 12px;
+	direction: rtl;
 }
 
 .header-table {
@@ -358,11 +351,11 @@ table.centered td {
 }
 
 .font-small {
-	font-size: var(--theme_fontsizes);
+	font-size: 8pt;
 }
 
 .font-medium {
-	font-size: var(--theme_fontsizem);
+	font-size: 10pt;
 }
 
 .label {
@@ -395,7 +388,6 @@ td[class="show_product_image"] img {
 	height: auto;
 }
 
-
 .offprecwent::after {
     content: " off";
 }
@@ -403,4 +395,13 @@ td[class="show_product_image"] img {
     display: inline-block;
     direction: ltr;
     font-weight: 800;
+}
+
+.transp td {
+	border: 1px solid var(--theme_color);
+	background: var(--theme_color) !important;
+}
+tr[if="show_inventory_note"] td {
+	margin: 0 !important;
+	padding: 0 !important;
 }

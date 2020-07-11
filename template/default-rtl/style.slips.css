@@ -15,7 +15,7 @@ html {
 	margin: 0 auto;
 	max-width: 29.7cm;
 	-webkit-print-color-adjust: exact;
-	direction: ltr;
+	direction: rtl;
 }
 @font-face {
 	font-family: iranyekan;
@@ -82,7 +82,7 @@ html {
 body {
 	font-family: iranyekan ,Tahoma ,Arial !important;
 	font-size: 12px;
-	direction: ltr;
+	direction: rtl;
 	padding: 0.5cm;
 	-webkit-print-color-adjust:exact;
 }

@@ -16,7 +16,7 @@ html {
 	margin: 0 auto;
 	max-width: 29.7cm;
 	-webkit-print-color-adjust: exact;
-	direction: rtl;
+	direction: ltr;
 }
 @font-face {
 	font-family: iranyekan;
@@ -253,7 +253,7 @@ h1.puiw_title img {
 body {
 	font-family: iranyekan ,Tahoma ,Arial !important;
 	font-size: 12px;
-	direction: rtl;
+	direction: ltr;
 	padding: 0.5cm;
 	-webkit-print-color-adjust:exact;
 }
@@ -275,7 +275,7 @@ table {
 
 table * {
 	font-size: 12px;
-	direction: rtl;
+	direction: ltr;
 }
 
 .header-table {

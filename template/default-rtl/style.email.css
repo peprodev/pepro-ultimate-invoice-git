@@ -1,26 +1,3 @@
-:root {
-	--theme_color: {{{theme_color}}};
-	--theme_color2: {{{theme_color2}}};
-	--theme_color3: {{{theme_color3}}};
-	--theme_fontsize: {{{font_size}}};
-	--theme_fontsizel: {{{font_sizes}}};
-	--theme_fontsizem: {{{font_sizem}}};
-	--watermark_opacity: {{{watermark_opacity}}};
-}
-
-
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-
-body,
-html {
-	margin: 0 auto;
-	max-width: 29.7cm;
-	-webkit-print-color-adjust: exact;
-	direction: ltr;
-}
 @font-face {
 	font-family: iranyekan;
 	font-style: normal;
@@ -34,11 +11,21 @@ html {
 	font-weight: normal;
 	src: url("{{{CURENT_DIR_URL}}}/fonts/woff2/iranyekanwebregular.woff2") format('woff2'), url("{{{CURENT_DIR_URL}}}/fonts/woff/iranyekanwebregular.woff") format('woff'));
 }
-
-svg.barcode {
-	width: 100%;
-	height: auto;
-	max-height: 1.5cm;
+body,
+html {
+	margin: 0 auto;
+	max-width: 1000px;
+	-webkit-print-color-adjust: exact;
+	direction: rtl;
+	font-family: iranyekan ,Tahoma ,Arial !important;
+	font-size: {{{font_size}}};
+	padding: 0.5cm;
+	-webkit-print-color-adjust:exact;
+}
+*{
+	font-family: iranyekan ,Tahoma ,Arial !important;
+	font-size: {{{font_size}}};
+	direction: rtl;
 }
 
 #invoice_qrcode {
@@ -87,18 +74,18 @@ div.watermark {
 	margin-inline-end: 2px;
 	color: aliceblue;
 	display: inline-block;
-	border-radius: 0 5px 5px 0;
+	border-radius: 5px 0 0 5px;
 	line-height: 0;
 }
 
 .print-button:nth-last-of-type(2) {
-	border-radius: 5px 0 0 5px;
+	border-radius: 0 5px 5px 0;
 }
 
 .date_digit {
 	display: inline-flex;
 	direction: ltr;
-	background: var(--theme_color3);
+	background: {{{theme_color3}}};
 	padding-inline: 5px;
 }
 
@@ -109,8 +96,19 @@ h1.puiw_title {
 	align-items: center;
 	justify-content: center;
 	margin: 5px 0;
+	align-items: center !important;
+	line-height: 5.2;
+	border: 1px solid {{{theme_color}}};
+	background: {{{theme_color}}} !important;
+
 }
-h1.puiw_title,
+
+.header-item-wrapper, .header-item-wrapper *{
+	width: 100%;
+	height: 100%;
+	line-height: 7;
+}
+
 .content-table thead tr th,
 .content-table tbody tr td:first-child,
 tr[if="show_custom_footer"],
@@ -119,8 +117,8 @@ tr[if="show_custom_footer"] td,
 tr[if="show_order_note"],
 thead tr[if="show_order_items"],
 .header-item-wrapper{
-	border: 1px solid var(--theme_color);
-	background: var(--theme_color) !important;
+	border: 1px solid {{{theme_color}}};
+	background: {{{theme_color}}} !important;
 }
 
 tfoot,
@@ -129,8 +127,8 @@ tr[if="show_order_total"] tr:last-child,
 .content-table tr:nth-child(even),
 .bordered.header-item-data,
 .bordered.grow{
-	border: 1px solid var(--theme_color);
-	background: var(--theme_color2);
+	border: 1px solid {{{theme_color}}};
+	background: {{{theme_color2}}};
 }
 
 
@@ -161,110 +159,13 @@ h1.puiw_title img {
 	-webkit-margin-end: 1rem;
 	margin-inline-end: 1rem;
 }
-* {
-	-webkit-print-color-adjust: exact;
-	print-color-adjust: exact;
-	-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
-}
+
 
 .page {
 	background: white;
 	page-break-after: always;
 	position: relative;
 }
-
-@media print {
-	.print-button {
-		display: none;
-	}
-
-	div.watermark_print {
-		display: block;
-		position: fixed;
-		inset: 0;
-	}
-	div.watermark {
-		display: none;
-	}
-
-	* {
-		-webkit-print-color-adjust: exact;
-		print-color-adjust: exact;
-		-webkit-box-decoration-break: clone;
-		box-decoration-break: clone;
-	}
-
-	h1.puiw_title,
-	.content-table thead tr th,
-	.content-table tbody tr[if!="show_order_note"] td:first-child,
-	tr[if="show_custom_footer"],
-	tr[if="show_custom_footer"] td,
-	tr[if="show_order_note"],
-	tr[if="show_order_note"] td,
-	thead tr[if="show_order_items"],
-	.header-item-wrapper{
-		border: 2px solid #606060 !important;
-		box-shadow: inset 0 0 0 1000px var(--theme_color);
-	}
-
-
-	tr[if="show_order_note"] td{
-		border: none !important;
-		border-color: transparent !important;
-	}
-
-	tr[if="show_order_total"] tr:not(:last-child){
-		box-shadow: inset 0 0 0 1000px white;
-	}
-
-	tfoot,
-	thead,
-	tr[if="show_order_total"] tr:last-child,
-	.content-table tr:nth-child(even),
-	.bordered.header-item-data,
-	.bordered.grow{
-		border: 2px solid #606060 !important;
-		box-shadow: inset 0 0 0 1000px var(--theme_color2);
-	}
-
-	tr[if="show_order_total"] *,
-	tr[if="show_order_total"] td{
-		border: none !important;
-		border-color: transparent !important;
-	}
-
-
-
-	.date_digit {
-		box-shadow: inset 0 0 0 1000px var(--theme_color3);
-	}
-
-	.bordered,
-	.content-table td,
-	.content-table td,
-	th {
-		border: 2px solid #606060 !important;
-	}
-
-
-	@page {
-		size: A4 landscape;
-		margin: 0.5cm 0;
-	}
-
-
-}
-
-.page,
-body {
-	font-family: iranyekan ,Tahoma ,Arial !important;
-	font-size: var(--theme_fontsize);
-	direction: ltr;
-	padding: 0.5cm;
-	-webkit-print-color-adjust:exact;
-}
-
 
 .autodir {
 	display: inline-flex;
@@ -281,8 +182,8 @@ table {
 }
 
 table * {
-	font-size: var(--theme_fontsize);
-	direction: ltr;
+	font-size: {{{font_size}}};
+	direction: rtl;
 }
 
 .header-table {
@@ -297,6 +198,7 @@ table * {
 
 .flex {
 	display: flex;
+	justify-content: space-evenly;
 }
 
 .flex > * {
@@ -307,14 +209,16 @@ table * {
 	flex-grow: 10000000;
 }
 
-.portait {
-	transform: rotate(-90deg);
-	text-align: center;
-}
+
 
 .header-item-data {
 	height: 100%;
-	width: 100%;
+	/* width: 100%; */
+}
+.portait {
+	height: 100%;
+	margin: 0 !important;
+	text-align: center;
 }
 
 .header-table table {
@@ -327,13 +231,13 @@ table * {
 }
 
 .bordered {
-	border: 1px solid var(--theme_color);
+	border: 1px solid {{{theme_color}}};
 	padding: 0.12cm;
 }
 
 .content-table td,
 th {
-	border: 1px solid var(--theme_color);
+	border: 1px solid {{{theme_color}}};
 	text-align: center;
 	padding: 0.1cm;
 	font-weight: normal;
@@ -353,7 +257,7 @@ table.centered td {
 }
 
 .grow {
-	width: 100%;
+	width: auto;
 	height: 100%;
 }
 
@@ -362,7 +266,7 @@ table.centered td {
 }
 
 .font-medium {
-	font-size: var(--theme_fontsizem);
+	font-size: {{{font_sizem}}};
 }
 
 .label {
@@ -375,10 +279,13 @@ table.centered td {
 	display: block;
 }
 
-tr.show_shipping_ref_id_colspan td[colspan="2"] {
-	padding: 0 4px 4px 0 !important;
+tr td[colspan="2"].shipping_ref_id {
+	padding: 4px 4px 4px 0 !important;
 }
 
+tr[if="show_signature"] div.flex-grow{
+	width: 48%;
+}
 table.transp * {
 	border: none !important;
 }
@@ -403,4 +310,9 @@ td[class="show_product_image"] img {
     display: inline-block;
     direction: ltr;
     font-weight: 800;
+}
+
+[if="show_shipping_ref_id"],
+[if="show_invoices_id_barcode"]{
+	display: none;
 }
