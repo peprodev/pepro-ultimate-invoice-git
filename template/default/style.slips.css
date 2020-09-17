@@ -1,0 +1,89 @@
+:root {
+	--theme_color: {{{theme_color}}};
+	--theme_color2: {{{theme_color2}}};
+	--theme_color3: {{{theme_color3}}};
+	--watermark_opacity: {{{watermark_opacity}}};
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0 auto;
+	max-width: 29.7cm;
+	-webkit-print-color-adjust: exact;
+	direction: ltr;
+}
+
+.page.body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+}
+
+.page.body > div {
+	background-image: repeating-linear-gradient(135deg,#cf2004 0,#cf2004 15px,transparent 15px,transparent 25px,#3ea8f2 25px,#3ea8f2 40px,transparent 40px,transparent 50px);
+	padding: 10px;
+	margin: 0.5rem;
+	flex: 0 1 100%;
+}
+
+.page.body > div > div {
+	background: #ffffff;
+	height: 100%;
+}
+
+.ship_from,
+.ship_to {
+	padding: 0.5rem;
+}
+
+.print-button {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #555;
+	padding: 1rem;
+	margin: auto;
+	-webkit-margin-end: 2px;
+	margin-inline-end: 2px;
+	color: aliceblue;
+	display: inline-block;
+	border-radius: 15px;
+	line-height: 0;
+}
+
+@media print {
+	.print-button {
+		display: none;
+	}
+	@page {
+		size: A4 landscape;
+		margin: 0.5cm 0;
+	}
+}
+
+.page,
+body {
+	font-family: Tahoma ,Arial !important;
+	font-size: 12px;
+	direction: ltr;
+	padding: 0.5cm;
+	-webkit-print-color-adjust:exact;
+}
+
+
+.autodir {
+	display: inline-flex;
+}
+
+[dir=rtl] .autodir {
+	direction: ltr;
+}
+
+img.barcode {
+	min-height: 40px;
+}
