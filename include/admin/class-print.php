@@ -607,10 +607,17 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $get_allow_pdf_customer = $this->fn->get_allow_pdf_customer();
           $get_pdf_size = $this->fn->get_pdf_size();
           $get_pdf_orientation = $this->fn->get_pdf_orientation();
+
+          $_fontData = $fontData + ['dana' => ['R' => 'DejaVuSans.ttf','B' => 'DejaVuSans-Bold.ttf','useOTL' => 0xFF,'useKashida' => 75,]];
+
+          if ($this->fn->get_force_persian_numbers() == "yes"){
+            $_fontData = $fontData + ['dana' => ['R' => 'IRANYekanRegular(FaNum).ttf','B' => 'IRANYekanBold(FaNum).ttf','useOTL' => 0xFF,'useKashida' => 75,]];
+          }
+
           if ("L" == $get_pdf_orientation){$get_pdf_size = "$get_pdf_size-L";}
           $mpdf = new \Mpdf\Mpdf(array(
             'fontDir' => array_merge($fontDirs, [plugin_dir_path(__FILE__)]),
-            'fontdata' => $fontData + ['dana' => ['R' => 'IRANYekanRegular(FaNum).ttf','B' => 'IRANYekanBold(FaNum).ttf','useOTL' => 0xFF,'useKashida' => 75,]],
+            'fontdata' => $_fontData,
             'default_font' => 'dana',
             'format' => "$get_pdf_size", // A4-L
             'mode' => 'utf-8',
