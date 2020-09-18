@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.0
-Stable tag: 1.1.0
+Version: 1.1.1
+Stable tag: 1.1.1
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -24,6 +24,15 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
+
+// define( 'WP_DEBUG', true );
+// define( 'WP_DEBUG_LOG', true );
+// define( 'WP_DEBUG_DISPLAY', true );
+// define( 'SCRIPT_DEBUG', true );
+// define( 'SAVEQUERIES', true );
+// @ini_set( 'display_errors', 1 );
+// error_reporting(E_ERROR|E_WARNING);
+// define( 'WC_TEMPLATE_DEBUG_MODE', true );
 
 /**
  * prevent data leak
@@ -50,6 +59,7 @@ if (!class_exists("PeproUltimateInvoice")) {
         public $title;
         public $title_w;
         public $title_t;
+        public $barcode;
         public $tpl;
         public $Unauthorized_Access;
         protected $print;
@@ -68,7 +78,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.1.0";
+            $this->version = "1.1.1";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -95,13 +105,16 @@ if (!class_exists("PeproUltimateInvoice")) {
             // hook into wp init and load plugin other hooks
             add_action( "init", array($this, 'init_plugin'));
 
+            include_once $this->plugin_dir . 'include/vendor/autoload.php';
+            $this->barcode = new \Picqer\Barcode\BarcodeGeneratorJPG();
+            $this->barcode->useGd();
             include_once $this->plugin_dir . "include/admin/class-setting.php";
             include_once $this->plugin_dir . "include/admin/class-print.php";
             include_once $this->plugin_dir . "include/admin/class-template.php";
             include_once $this->plugin_dir . "include/admin/class-column.php";
             include_once $this->plugin_dir . 'include/admin/class-jdate.php';
             include_once $this->plugin_dir . 'include/admin/class-wcproduct-panel.php';
-            include_once $this->plugin_dir . 'include/vendor/autoload.php';
+
 
             // handle template based funtions
             $this->tpl    = new \peproulitmateinvoice\PeproUltimateInvoice_Template;
@@ -2368,5 +2381,5 @@ if (!class_exists("PeproUltimateInvoice")) {
     });
 }
 /*################################################################################
-END OF PLUGIN || Programming is art // Artist : Amirhosseinhpv [https://hpv.im/]
-// */
+Lead Developer: [amirhosseinhpv](https://hpv.im/)
+################################################################################*/

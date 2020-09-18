@@ -1,0 +1,9 @@
+parameters:
+    level: max
+    reportUnmatchedIgnoredErrors: false
+    checkGenericClassInNonGenericObjectType: true
+    checkMissingIterableValueType: false
+    paths:
+        - %currentWorkingDirectory%/src/
+    ignoreErrors:
+        - '#Unsafe usage of new static#'

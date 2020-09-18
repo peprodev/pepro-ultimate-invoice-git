@@ -148,8 +148,8 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "invoice_final_row_colspan"                 => 14,
           );
           $use_billing = $opts["show_shipping_address"];
-          $generator = new \Picqer\Barcode\BarcodeGeneratorJPG();
-          $generator->useGd();
+
+
           $opts["invoice_id"]                 = apply_filters("puiw_printinvoice_getinvoice_id",                $opts["invoice_prefix"] . ($opts["invoice_start"]+$order->get_id()) . $opts["invoice_suffix"], $opts, $order);
           $opts["invoice_id_en"]              = apply_filters("puiw_printinvoice_getinvoice_id_en",             $opts["invoice_prefix"] . ($opts["invoice_start"]+$order->get_id()) . $opts["invoice_suffix"] ?: "0000000000000000", $opts, $order);
           $opts["invoice_id_nm"]              = apply_filters("puiw_printinvoice_getinvoice_id_raw",            $order->get_id(), $opts, $order);
@@ -220,6 +220,11 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $opts["invoice_total_weight"]       = "";
           $opts["invoice_products_list"]      = "";
           $opts["home_url"]                   = home_url();
+
+
+          global $PeproUltimateInvoice;
+          $generator = $PeproUltimateInvoice->barcode;
+          
           $opts["invoice_barcode"]            = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["invoice_id_en"], $generator::TYPE_CODE_128));
           $opts["invoice_track_barcode"]      = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["invoice_track_id_en"], $generator::TYPE_CODE_128));
           $opts["customer_postcode_barcode"]  = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["customer_postcode"], $generator::TYPE_CODE_128));
