@@ -610,7 +610,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
 
           $_fontData = $fontData + ['dana' => ['R' => 'DejaVuSans.ttf','B' => 'DejaVuSans-Bold.ttf','useOTL' => 0xFF,'useKashida' => 75,]];
 
-          if ($this->fn->get_force_persian_numbers() == "yes"){
+          if ($this->fn->get_force_persian_numbers() !== "no"){
             $_fontData = $fontData + ['dana' => ['R' => 'IRANYekanRegular(FaNum).ttf','B' => 'IRANYekanBold(FaNum).ttf','useOTL' => 0xFF,'useKashida' => 75,]];
           }
 
