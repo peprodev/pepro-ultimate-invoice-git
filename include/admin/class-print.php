@@ -224,11 +224,26 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
 
           global $PeproUltimateInvoice;
           $generator = $PeproUltimateInvoice->barcode;
-          
+
           $opts["invoice_barcode"]            = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["invoice_id_en"], $generator::TYPE_CODE_128));
-          $opts["invoice_track_barcode"]      = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["invoice_track_id_en"], $generator::TYPE_CODE_128));
-          $opts["customer_postcode_barcode"]  = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["customer_postcode"], $generator::TYPE_CODE_128));
-          $opts["store_postcode_barcode"]     = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["store_postcode"], $generator::TYPE_CODE_128));
+
+          if (!empty($opts["invoice_track_id_en"])){
+            $opts["invoice_track_barcode"]      = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["invoice_track_id_en"], $generator::TYPE_CODE_128));
+          }else{
+            $opts["invoice_track_barcode"]      = 'data:image/jpeg;';
+          }
+
+          if (!empty($opts["customer_postcode"])){
+            $opts["customer_postcode_barcode"]      = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["customer_postcode"], $generator::TYPE_CODE_128));
+          }else{
+            $opts["customer_postcode_barcode"]      = 'data:image/jpeg;';
+          }
+
+          if (!empty($opts["store_postcode"])){
+            $opts["store_postcode_barcode"]      = 'data:image/jpeg;base64,' . base64_encode($generator->getBarcode($opts["store_postcode"], $generator::TYPE_CODE_128));
+          }else{
+            $opts["store_postcode_barcode"]      = 'data:image/jpeg;';
+          }
 
           return apply_filters( "puiw_get_default_dynamic_params", $opts, $order);
         }

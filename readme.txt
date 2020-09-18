@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.5
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -142,7 +142,7 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
-= 1.1.1 =
+= 1.1.2 =
 
 - Fixed Darkmode
 - Fixed Barcode Generator
@@ -188,7 +188,7 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
-= 1.1.1 =
+= 1.1.2 =
 
 - Fixed Darkmode
 - Fixed Barcode Generator

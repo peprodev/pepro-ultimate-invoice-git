@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.1
-Stable tag: 1.1.1
+Version: 1.1.2
+Stable tag: 1.1.2
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -78,7 +78,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.1.1";
+            $this->version = "1.1.2";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -1336,7 +1336,8 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_order_note_inventory" => "note_provided_by_customer",
                     "puiw_show_create_sender_postal_label_button" => "yes",
                     "puiw_show_create_recipient_postal_label_button" => "yes",
-                    "puiw_template" => "default-rtl",
+                    "puiw_template" => PEPROULTIMATEINVOICE_DIR ."/template/default",
+                    "puiw_preinvoice_template" => PEPROULTIMATEINVOICE_DIR ."/template/default-pre-invoice",
                     "puiw_invoice_title" => _x("Invoice %s", "wc-setting",$this->td),
                     "puiw_theme_color" => "teal",
                     "puiw_theme_color2" => "#2271b9",

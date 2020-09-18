@@ -938,6 +938,9 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
     {
       $template = get_option("puiw_template",$default);
       $template = empty($template) ? $default : $template;
+      if (!file_exists("{$template}/default.cfg")){
+        $template = PEPROULTIMATEINVOICE_DIR ."/template/default";
+      }
       return apply_filters("puiw_get_template", $template, $default);
     }
     /**
@@ -1002,6 +1005,9 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
     {
       $template = get_option("puiw_preinvoice_template",$default);
       $template = empty($template) ? $default : $template;
+      if (!file_exists("{$template}/default.cfg")){
+        $template = PEPROULTIMATEINVOICE_DIR ."/template/default";
+      }
       return apply_filters("puiw_get_preinvoice_template", $template, $default);
     }
     /**
