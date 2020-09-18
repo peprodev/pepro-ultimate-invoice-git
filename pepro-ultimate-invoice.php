@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.4
-Stable tag: 1.1.4
+Version: 1.1.6
+Stable tag: 1.1.6
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -78,7 +78,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.1.4";
+            $this->version = "1.1.6";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -1765,7 +1765,8 @@ if (!class_exists("PeproUltimateInvoice")) {
         {
           $bg        = get_option( 'woocommerce_email_background_color' );
           $body      = get_option( 'woocommerce_email_body_background_color' );
-          $base      = $this->tpl->get_theme_color(get_option( 'woocommerce_email_base_color',"teal"));
+          // $base      = $this->tpl->get_theme_color(get_option( 'woocommerce_email_base_color',"teal"));
+          $base      = get_option( 'woocommerce_email_base_color' );
           $base_text = wc_light_or_dark( $base, '#202020', '#ffffff' );
           $text      = get_option( 'woocommerce_email_text_color' );
           $link_color = wc_hex_is_light( $base ) ? $base : $base_text;
