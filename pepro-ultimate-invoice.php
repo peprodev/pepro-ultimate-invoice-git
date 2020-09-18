@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.3
-Stable tag: 1.1.3
+Version: 1.1.4
+Stable tag: 1.1.4
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -78,7 +78,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.1.3";
+            $this->version = "1.1.4";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;

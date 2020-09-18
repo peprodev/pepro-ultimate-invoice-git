@@ -36,7 +36,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           }
           return $opts;
         }
-
         public function get_default_dynamic_params($order_id,$order)
         {
           $opts = array(
@@ -637,7 +636,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $pdf_title = sprintf(_x("Invoice #%s on %s", "invoice-template", $PeproUltimateInvoice->td), $order_id_formatted, get_bloginfo('title'));
             $pdf_title = apply_filters( "puiw_generate_pdf_title_of_pdf",$pdf_title);
             $datenow = current_time('timestamp');
-            $mpdf->SetDirectionality("rtl");
+            $mpdf->SetDirectionality($dire);
             $mpdf->SetTitle($pdf_title);
             $mpdf->SetSubject($pdf_title);
             $mpdf->SetAuthor($PeproUltimateInvoice->title_d);
