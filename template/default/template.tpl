@@ -97,7 +97,7 @@
             <div class="portait">{{{trnslt__dates}}}</div>
           </div>
         </td>
-        <td style="height: 2.5cm;vertical-align: middle; padding: 0 4px 4px 0" colspan="2">
+        <td style="height: 2.5cm;vertical-align: middle; padding: 0 0px 4px 0" colspan="2">
           <div class="bordered header-item-data">
             <table class="centered" style="height:100%">
               <tr>
@@ -107,7 +107,7 @@
                 <td if="show_transaction_ref_id" style="line-height: 2;"><span class="label">Transaction Ref: </span> <span class="date_digit">{{{order_transaction_ref_id}}}</span></td>
               </tr>
               <tr>
-                <td if="show_shipping_date" style="line-height: 2;"><span class="label">Order Status: </span> <span class="date_digit">{{{order_status}}}</span></td>
+                <td if="show_order_status" style="line-height: 2;"><span class="label">Order Status: </span> <span class="date_digit">{{{order_status}}}</span></td>
                 <td if="show_purchase_complete_date" style="line-height: 2;"><span class="label">Date Completed: </span> <span class="date_digit">{{{order_date_completed}}}</span></td>
                 <td if="show_shipping_date" style="line-height: 2;"><span class="label">Date Shipped: </span> <span class="date_digit">{{{order_date_shipped}}}</span></td>
                 <td if="show_shipping_method" style="line-height: 2;"><span class="label">Shipping Method: </span> <span class="date_digit">{{{order_shipping_method}}}</span></td>
@@ -139,14 +139,14 @@
             </th>
             <th if="show_product_image" style="width: 3cm;">Image</th>
             <th if="show_product_sku">SKU</th>
-            <th colspan="4">Product / Description</th>
+            <th colspan="{{{product_description_colspan}}}">Product / Description</th>
             <th>QTY</th>
             <th if="show_product_weight">Weight</th>
             <th if="show_product_dimensions">Dimensions</th>
             <th style="width: 2.3cm">Price</th>
-            <th style="width: 2.3cm">Discount</th>
-            <th style="width: 2.3cm">Tax</th>
-            <th style="width: 2.5cm">Total</th>
+            <th if="show_discount_precent" style="width: 2.3cm">Discount (%)</th>
+            <th if="show_product_tax" style="width: 2.3cm">Tax</th>
+            <th colspan="{{{product_nettotal_colspan}}}">Total</th>
         </tr>
       </thead>
       <tbody>

@@ -142,6 +142,27 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
+
+= 1.1.7 =
+
+- Added Compatibility to Pepro WooCommerce Receipt Upload (available upon request to support@pepro.dev)
+- Added Custom CSS Style for PDF Invoices
+- Added Option to show/hide Paid Date
+- Added Option to show/hide Purchase Complete Date
+- Added Option to show/hide Shipping Date
+- Added Option to show/hide Order Status
+- Fixed Showing Wrong Discount Amount
+- Added Showing Discount Percentage
+- Added Option to get Current/Applied price in Invoices
+- Fixed Translating WooCommerce Weight/Dimensions Units
+- Fixed Force Positioning Currency and Price (now follows WooCommerce Setting)
+- Added Compatibility to Templates to work with new updates options
+- Fixed Templates Structure
+- Fixed Order Status Naming
+- Enhanced PDF Generation
+- Fixed Images not loading in PDF
+- Changed Templates default preview images
+
 = 1.1.6 =
 
 - Fixed Darkmode
@@ -190,6 +211,26 @@ PEPRO DEV is a premium supplier of quality WordPress plugins, services and suppo
 Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to check our [free offerings](http://profiles.wordpress.org/peprodev/), we hope you enjoy them!
 
 == Upgrade Notice ==
+
+= 1.1.7 =
+
+- Added Compatibility to Pepro WooCommerce Receipt Upload (available upon request to support@pepro.dev)
+- Added Custom CSS Style for PDF Invoices
+- Added Option to show/hide Paid Date
+- Added Option to show/hide Purchase Complete Date
+- Added Option to show/hide Shipping Date
+- Added Option to show/hide Order Status
+- Fixed Showing Wrong Discount Amount
+- Added Showing Discount Percentage
+- Added Option to get Current/Applied price in Invoices
+- Fixed Translating WooCommerce Weight/Dimensions Units
+- Fixed Force Positioning Currency and Price (now follows WooCommerce Setting)
+- Added Compatibility to Templates to work with new updates options
+- Fixed Templates Structure
+- Fixed Order Status Naming
+- Enhanced PDF Generation
+- Fixed Images not loading in PDF
+- Changed Templates default preview images
 
 = 1.1.6 =
 

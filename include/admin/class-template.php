@@ -20,7 +20,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
     {
       $product = wc_get_product($product_id);
       $weight = $product->get_weight();
-      return apply_filters( "puiw_get_product_weight",wc_format_weight($weight), $weight,$product);
+      return apply_filters( "puiw_get_product_weight",$this->get_format_weight($weight), $weight, $product);
     }
     /**
      * return wc product weight in a human readable way
@@ -34,7 +34,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      */
     public function get_format_weight($weight)
     {
-      return apply_filters( "puiw_get_format_weight",wc_format_weight($weight), $weight);
+      return apply_filters( "puiw_get_format_weight", wc_format_weight($weight), $weight);
     }
     /**
      * return wc product dimensions in a huuman readable way
@@ -877,6 +877,22 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       return apply_filters("puiw_get_custom_css_style", $custom_css_style, $default);
     }
     /**
+     * get custom pdf css style
+     *
+     * @method PeproUltimateInvoice_Template->get_pdf_css_style()
+     * @param string $default default custom css style
+     * @return string custom css style
+     * @version 1.0.0
+     * @since 1.0.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_pdf_css_style($default="")
+    {
+      $custom_css_style = get_option("puiw_pdf_css_style",$default);
+      $custom_css_style = empty($custom_css_style) ? $default : $custom_css_style;
+      return apply_filters("puiw_get_pdf_css_style", $custom_css_style, $default);
+    }
+    /**
      * get extra notes on pre order by shop manager
      *
      * @method PeproUltimateInvoice_Template->get_preorder_shopmngr_extra_note()
@@ -1300,6 +1316,38 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       return apply_filters("puiw_get_show_product_dimensions_in_inventory", $show_product_image_inventory, $default);
     }
     /**
+     * show Product Discount Precent?
+     *
+     * @method PeproUltimateInvoice_Template->get_show_discount_precent()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.1.6
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_show_discount_precent($default="no")
+    {
+      $show_discount_precent = get_option("puiw_show_discount_precent",$default);
+      $show_discount_precent = empty($show_discount_precent) ? $default : $show_discount_precent;
+      return apply_filters("puiw_get_show_discount_precent", $show_discount_precent, $default);
+    }
+    /**
+     * show Product tax?
+     *
+     * @method PeproUltimateInvoice_Template->get_show_product_tax()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.1.6
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_show_product_tax($default="no")
+    {
+      $show_product_tax = get_option("puiw_show_product_tax",$default);
+      $show_product_tax = empty($show_product_tax) ? $default : $show_product_tax;
+      return apply_filters("puiw_get_show_product_tax", $show_product_tax, $default);
+    }
+    /**
      * show Product Quantity In Inventory?
      *
      * @method PeproUltimateInvoice_Template->get_show_product_quantity_in_inventory()
@@ -1522,6 +1570,70 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       $transaction_ref_id = get_option("puiw_transaction_ref_id",$default);
       $transaction_ref_id = empty($transaction_ref_id) ? $default : $transaction_ref_id;
       return apply_filters("puiw_get_show_transaction_ref_id", $transaction_ref_id, $default);
+    }
+    /**
+     * Show Paid Date
+     *
+     * @method PeproUltimateInvoice_Template->get_show_paid_date()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.0.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_show_paid_date($default="no")
+    {
+      $transaction_ref_id = get_option("puiw_paid_date",$default);
+      $transaction_ref_id = empty($transaction_ref_id) ? $default : $transaction_ref_id;
+      return apply_filters("puiw_get_show_paid_date", $transaction_ref_id, $default);
+    }
+    /**
+     * Show Order Status
+     *
+     * @method PeproUltimateInvoice_Template->get_show_order_status()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.0.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_show_order_status($default="no")
+    {
+      $transaction_ref_id = get_option("puiw_order_status",$default);
+      $transaction_ref_id = empty($transaction_ref_id) ? $default : $transaction_ref_id;
+      return apply_filters("puiw_get_show_order_status", $transaction_ref_id, $default);
+    }
+    /**
+     * show Purchase Complete Date
+     *
+     * @method PeproUltimateInvoice_Template->get_show_purchase_complete_date()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.0.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_show_purchase_complete_date($default="no")
+    {
+      $transaction_ref_id = get_option("puiw_purchase_complete_date",$default);
+      $transaction_ref_id = empty($transaction_ref_id) ? $default : $transaction_ref_id;
+      return apply_filters("puiw_get_show_purchase_complete_date", $transaction_ref_id, $default);
+    }
+    /**
+     * Show Shipping Date
+     *
+     * @method PeproUltimateInvoice_Template->get_show_shipping_date()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.0.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_show_shipping_date($default="no")
+    {
+      $transaction_ref_id = get_option("puiw_shipping_date",$default);
+      $transaction_ref_id = empty($transaction_ref_id) ? $default : $transaction_ref_id;
+      return apply_filters("puiw_get_show_shipping_date", $transaction_ref_id, $default);
     }
     /**
      * show product image?

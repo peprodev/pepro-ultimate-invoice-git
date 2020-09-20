@@ -1,7 +1,7 @@
 <div class="page body">
   <table id="headertitles">
     <tr class="headtr">
-      <td class="header-item-wrapper" style="padding: 0.3cm;"><img height="64px" src="{{{store_logo}}}" /></td>
+      <td class="header-item-wrapper" style="padding: 0.3cm; width: 4cm;"><img height="64px" src="{{{store_logo}}}" /></td>
       <td class="header-item-wrapper" style="width: 70%; font-weight: bold; font-size: 1.7rem; text-align: right; padding: 0.1cm .5cm; display: block !important;">{{{invoice_title}}}</td>
       <td class="header-item-wrapper" style="width: 4cm;padding: 1rem;">
         <div>شماره فاکتور</div>

@@ -68,7 +68,7 @@
                 <td if="show_transaction_ref_id" style="line-height: 2;"><span class="label">رسید پرداخت: </span><span class="date_digit">{{{order_transaction_ref_id}}}</span></td>
               </tr>
               <tr>
-                <td if="show_shipping_date" style="line-height: 2;"><span class="label">وضعیت سفارش: </span><span class="date_digit">{{{order_status}}}</span></td>
+                <td if="show_order_status" style="line-height: 2;"><span class="label">وضعیت سفارش: </span><span class="date_digit">{{{order_status}}}</span></td>
                 <td if="show_purchase_complete_date" style="line-height: 2;"><span class="label">تاریخ تکمیل سفارش: </span><span class="date_digit">{{{order_date_completed}}}</span></td>
                 <td if="show_shipping_date" style="line-height: 2;"><span class="label">تاریخ ارسال مرسوله: </span><span class="date_digit">{{{order_date_shipped}}}</span></td>
                 <td if="show_shipping_method" style="line-height: 2;"><span class="label">روش ارسال مرسوله: </span><span class="date_digit">{{{order_shipping_method}}}</span></td>
@@ -100,14 +100,14 @@
             </th>
             <th if="show_product_image" style="width: 3cm;">تصویر</th>
             <th if="show_product_sku">کد کالا</th>
-            <th colspan="4">شرح کالا</th>
+            <th colspan="{{{product_description_colspan}}}">شرح کالا</th>
             <th>تعداد</th>
             <th if="show_product_weight">وزن</th>
             <th if="show_product_dimensions">ابعاد</th>
             <th style="width: 2.3cm">مبلغ واحد</th>
-            <th style="width: 2.3cm">تخفیف</th>
-            <th style="width: 2.3cm">مالیات</th>
-            <th style="width: 2.5cm">جمع کل</th>
+            <th if="show_discount_precent" style="width: 2.3cm">درصد تخفیف</th>
+            <th if="show_product_tax" style="width: 2.3cm">مالیات</th>
+            <th colspan="{{{product_nettotal_colspan}}}">جمع کل</th>
         </tr>
       </thead>
       <tbody>

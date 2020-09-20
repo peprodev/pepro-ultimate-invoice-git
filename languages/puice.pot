@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Pepro Ultimate Invoice\n"
-"POT-Creation-Date: 2020-09-16 22:17+0430\n"
+"POT-Creation-Date: 2020-09-21 01:22+0330\n"
 "PO-Revision-Date: 2020-06-14 15:14+0430\n"
 "Last-Translator: Amirhosseinhpv <amirhossein@hpv.im>\n"
 "Language-Team: Amirhosseinhpv <amirhossein@hpv.im>\n"
@@ -21,27 +21,27 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: include/admin/class-column.php:24 include/admin/class-setting.php:1389
+#: include/admin/class-column.php:24 include/admin/class-setting.php:1401
 msgctxt "wc-setting-js"
 msgid "Select image file"
 msgstr ""
 
-#: include/admin/class-column.php:25 include/admin/class-setting.php:1390
+#: include/admin/class-column.php:25 include/admin/class-setting.php:1402
 msgctxt "wc-setting-js"
 msgid "Use this image"
 msgstr ""
 
-#: include/admin/class-column.php:26 include/admin/class-setting.php:1391
+#: include/admin/class-column.php:26 include/admin/class-setting.php:1403
 msgctxt "wc-setting-js"
 msgid "Clear"
 msgstr ""
 
-#: include/admin/class-column.php:27 include/admin/class-setting.php:1392
+#: include/admin/class-column.php:27 include/admin/class-setting.php:1404
 msgctxt "wc-setting-js"
 msgid "Current preview"
 msgstr ""
 
-#: include/admin/class-column.php:28 include/admin/class-setting.php:1393
+#: include/admin/class-column.php:28 include/admin/class-setting.php:1405
 msgctxt "wc-setting-js"
 msgid "Select image"
 msgstr ""
@@ -56,57 +56,57 @@ msgctxt "js-string"
 msgid "Today"
 msgstr ""
 
-#: include/admin/class-column.php:33 include/admin/class-setting.php:1288
+#: include/admin/class-column.php:33 include/admin/class-setting.php:1300
 msgctxt "wc-setting-js"
 msgid "Error"
 msgstr ""
 
-#: include/admin/class-column.php:34 include/admin/class-setting.php:1289
+#: include/admin/class-column.php:34 include/admin/class-setting.php:1301
 msgctxt "wc-setting-js"
 msgid "Canceled"
 msgstr ""
 
-#: include/admin/class-column.php:35 include/admin/class-setting.php:1290
+#: include/admin/class-column.php:35 include/admin/class-setting.php:1302
 msgctxt "wc-setting-js"
 msgid "Confirm"
 msgstr ""
 
-#: include/admin/class-column.php:36 include/admin/class-setting.php:1291
+#: include/admin/class-column.php:36 include/admin/class-setting.php:1303
 msgctxt "wc-setting-js"
 msgid "Success"
 msgstr ""
 
-#: include/admin/class-column.php:37 include/admin/class-setting.php:1292
+#: include/admin/class-column.php:37 include/admin/class-setting.php:1304
 msgctxt "wc-setting-js"
 msgid "Submit"
 msgstr ""
 
-#: include/admin/class-column.php:38 include/admin/class-setting.php:1293
+#: include/admin/class-column.php:38 include/admin/class-setting.php:1305
 msgctxt "wc-setting-js"
 msgid "Okay"
 msgstr ""
 
-#: include/admin/class-column.php:39 include/admin/class-setting.php:1295
+#: include/admin/class-column.php:39 include/admin/class-setting.php:1307
 msgctxt "wc-setting-js"
 msgid "Yes"
 msgstr ""
 
-#: include/admin/class-column.php:40 include/admin/class-setting.php:1297
+#: include/admin/class-column.php:40 include/admin/class-setting.php:1309
 msgctxt "wc-setting-js"
 msgid "No"
 msgstr ""
 
-#: include/admin/class-column.php:41 include/admin/class-setting.php:1298
+#: include/admin/class-column.php:41 include/admin/class-setting.php:1310
 msgctxt "wc-setting-js"
 msgid "Cancel"
 msgstr ""
 
-#: include/admin/class-column.php:42 include/admin/class-setting.php:1299
+#: include/admin/class-column.php:42 include/admin/class-setting.php:1311
 msgctxt "wc-setting-js"
 msgid "Send to all"
 msgstr ""
 
-#: include/admin/class-column.php:43 include/admin/class-setting.php:1300
+#: include/admin/class-column.php:43 include/admin/class-setting.php:1312
 msgctxt "wc-setting-js"
 msgid "Close"
 msgstr ""
@@ -164,21 +164,21 @@ msgctxt "wc-setting-js"
 msgid "Enter at least an email address"
 msgstr ""
 
-#: include/admin/class-column.php:84 pepro-ultimate-invoice.php:81
+#: include/admin/class-column.php:84 pepro-ultimate-invoice.php:91
 msgid "Ultimate Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:127 pepro-ultimate-invoice.php:767
+#: include/admin/class-column.php:127 pepro-ultimate-invoice.php:800
 msgctxt "wc-orders-popup"
 msgid "View Invoice Options"
 msgstr ""
 
-#: include/admin/class-column.php:130 pepro-ultimate-invoice.php:807
+#: include/admin/class-column.php:130 pepro-ultimate-invoice.php:840
 msgctxt "wc-orders-popup"
 msgid "View Order HTML Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:133 pepro-ultimate-invoice.php:811
+#: include/admin/class-column.php:133 pepro-ultimate-invoice.php:844
 msgctxt "wc-orders-popup"
 msgid "View Order PDF Invoice"
 msgstr ""
@@ -214,135 +214,135 @@ msgctxt "wc-orders-popup"
 msgid "Invoice #%s Options"
 msgstr ""
 
-#: include/admin/class-column.php:158 pepro-ultimate-invoice.php:808
+#: include/admin/class-column.php:158 pepro-ultimate-invoice.php:841
 msgctxt "wc-orders-popup"
 msgid "HTML Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:159 pepro-ultimate-invoice.php:812
+#: include/admin/class-column.php:159 pepro-ultimate-invoice.php:845
 msgctxt "wc-orders-popup"
 msgid "PDF Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:160 pepro-ultimate-invoice.php:816
+#: include/admin/class-column.php:160 pepro-ultimate-invoice.php:849
 msgctxt "wc-orders-popup"
 msgid "Inventory report"
 msgstr ""
 
-#: include/admin/class-column.php:161 pepro-ultimate-invoice.php:820
+#: include/admin/class-column.php:161 pepro-ultimate-invoice.php:853
 msgctxt "wc-orders-popup"
 msgid "Sender/Receiver Packing Slip"
 msgstr ""
 
-#: include/admin/class-column.php:162 pepro-ultimate-invoice.php:824
+#: include/admin/class-column.php:162 pepro-ultimate-invoice.php:857
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Customer"
 msgstr ""
 
-#: include/admin/class-column.php:163 pepro-ultimate-invoice.php:828
+#: include/admin/class-column.php:163 pepro-ultimate-invoice.php:861
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Shop Managers"
 msgstr ""
 
-#: include/admin/class-column.php:164 pepro-ultimate-invoice.php:832
+#: include/admin/class-column.php:164 pepro-ultimate-invoice.php:865
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Custom List"
 msgstr ""
 
-#: include/admin/class-print.php:141
+#: include/admin/class-print.php:142
 msgid "Print"
 msgstr ""
 
-#: include/admin/class-print.php:142
+#: include/admin/class-print.php:143
 msgid "Seller"
 msgstr ""
 
-#: include/admin/class-print.php:143
+#: include/admin/class-print.php:144
 msgid "Buyer"
 msgstr ""
 
-#: include/admin/class-print.php:144
+#: include/admin/class-print.php:145
 msgid "Extras"
 msgstr ""
 
-#: include/admin/class-print.php:156
+#: include/admin/class-print.php:158
 #, php-format
 msgid "Invoice %s"
 msgstr ""
 
-#: include/admin/class-print.php:328 include/admin/class-print.php:556
-#: include/admin/class-print.php:688 include/admin/class-print.php:866
-#: pepro-ultimate-invoice.php:1518
+#: include/admin/class-print.php:352 include/admin/class-print.php:608
+#: include/admin/class-print.php:747 include/admin/class-print.php:941
+#: pepro-ultimate-invoice.php:1553
 msgid "Incorrect data!"
 msgstr ""
 
-#: include/admin/class-print.php:331 include/admin/class-print.php:691
-#: include/admin/class-print.php:869
+#: include/admin/class-print.php:355 include/admin/class-print.php:750
+#: include/admin/class-print.php:944
 msgid "Incorrect Order!"
 msgstr ""
 
-#: include/admin/class-print.php:333 include/admin/class-print.php:334
-#: include/admin/class-print.php:563 pepro-ultimate-invoice.php:324
-#: pepro-ultimate-invoice.php:335 pepro-ultimate-invoice.php:343
-#: pepro-ultimate-invoice.php:351
+#: include/admin/class-print.php:357 include/admin/class-print.php:358
+#: include/admin/class-print.php:615 pepro-ultimate-invoice.php:355
+#: pepro-ultimate-invoice.php:366 pepro-ultimate-invoice.php:374
+#: pepro-ultimate-invoice.php:382
 msgid "Err 403 - Access Denied"
 msgstr ""
 
-#: include/admin/class-print.php:345 include/admin/class-print.php:708
-#: include/admin/class-print.php:886
+#: include/admin/class-print.php:369 include/admin/class-print.php:767
+#: include/admin/class-print.php:961
 msgid "Note provided by Customer"
 msgstr ""
 
-#: include/admin/class-print.php:346 include/admin/class-print.php:709
-#: include/admin/class-print.php:887
+#: include/admin/class-print.php:370 include/admin/class-print.php:768
+#: include/admin/class-print.php:962
 msgid "Note provided by Shop manager"
 msgstr ""
 
-#: include/admin/class-print.php:438 include/admin/class-print.php:441
-#: include/admin/class-print.php:704 include/admin/class-print.php:882
+#: include/admin/class-print.php:485 include/admin/class-print.php:488
+#: include/admin/class-print.php:763 include/admin/class-print.php:957
 msgid "PRINT"
 msgstr ""
 
-#: include/admin/class-print.php:439 include/admin/class-print.php:442
+#: include/admin/class-print.php:486 include/admin/class-print.php:489
 msgid "GET PDF"
 msgstr ""
 
-#: include/admin/class-print.php:617
+#: include/admin/class-print.php:676
 #, php-format
 msgctxt "invoice-template"
 msgid "Invoice #%s on %s"
 msgstr ""
 
-#: include/admin/class-print.php:626
+#: include/admin/class-print.php:685
 msgctxt "invoice-template"
 msgid "Error! Invoice does not exist."
 msgstr ""
 
-#: include/admin/class-print.php:628
+#: include/admin/class-print.php:687
 #, php-format
 msgctxt "invoice-template"
 msgid "Created by %s<br>( %s )"
 msgstr ""
 
-#: include/admin/class-print.php:630
+#: include/admin/class-print.php:689
 #, php-format
 msgctxt "invoice-template"
 msgid "%sBack to Dashboard%s"
 msgstr ""
 
-#: include/admin/class-print.php:631
+#: include/admin/class-print.php:690
 #, php-format
 msgctxt "invoice-template"
 msgid "%sBack to Orders%s"
 msgstr ""
 
-#: include/admin/class-print.php:653
+#: include/admin/class-print.php:712
 #, php-format
 msgctxt "invoice-template"
 msgid "%s -- Page {PAGENO} / {nbpg}"
 msgstr ""
 
-#: include/admin/class-print.php:654
+#: include/admin/class-print.php:713
 #, php-format
 msgctxt "invoice-template"
 msgid "Created by %s at %s"
@@ -383,7 +383,7 @@ msgctxt "wc-setting"
 msgid "Email"
 msgstr ""
 
-#: include/admin/class-setting.php:68 include/admin/class-setting.php:1323
+#: include/admin/class-setting.php:68 include/admin/class-setting.php:1335
 msgctxt "wc-setting"
 msgid "Color Schemes"
 msgstr ""
@@ -426,12 +426,13 @@ msgstr ""
 #: include/admin/class-setting.php:153 include/admin/class-setting.php:159
 #: include/admin/class-setting.php:165 include/admin/class-setting.php:171
 #: include/admin/class-setting.php:176 include/admin/class-setting.php:182
-#: include/admin/class-setting.php:188 include/admin/class-setting.php:267
-#: include/admin/class-setting.php:273 include/admin/class-setting.php:286
-#: include/admin/class-setting.php:292 include/admin/class-setting.php:298
+#: include/admin/class-setting.php:188 include/admin/class-setting.php:194
+#: include/admin/class-setting.php:200 include/admin/class-setting.php:279
+#: include/admin/class-setting.php:285 include/admin/class-setting.php:298
 #: include/admin/class-setting.php:304 include/admin/class-setting.php:310
-#: include/admin/class-setting.php:316 include/admin/class-setting.php:504
-#: include/admin/class-setting.php:789 include/admin/class-setting.php:795
+#: include/admin/class-setting.php:316 include/admin/class-setting.php:322
+#: include/admin/class-setting.php:328 include/admin/class-setting.php:516
+#: include/admin/class-setting.php:801 include/admin/class-setting.php:807
 msgctxt "wc-setting"
 msgid "Check to show or leave unchecked to hide"
 msgstr ""
@@ -493,12 +494,12 @@ msgstr ""
 
 #: include/admin/class-setting.php:163
 msgctxt "wc-setting"
-msgid "Show Order Items?"
+msgid "Show Order Items"
 msgstr ""
 
 #: include/admin/class-setting.php:169
 msgctxt "wc-setting"
-msgid "Show Order Total?"
+msgid "Show Order Total"
 msgstr ""
 
 #: include/admin/class-setting.php:175
@@ -513,258 +514,288 @@ msgstr ""
 
 #: include/admin/class-setting.php:187
 msgctxt "wc-setting"
-msgid "Show Product SKU"
+msgid "Show Product Discount percentage"
 msgstr ""
 
-#: include/admin/class-setting.php:193 include/admin/class-setting.php:278
+#: include/admin/class-setting.php:193
 msgctxt "wc-setting"
-msgid "Use ID when SKU's unavailable"
-msgstr ""
-
-#: include/admin/class-setting.php:194 include/admin/class-setting.php:279
-msgctxt "wc-setting"
-msgid "Check to use or leave unchecked to not"
+msgid "Show Product Calculated Tax"
 msgstr ""
 
 #: include/admin/class-setting.php:199
 msgctxt "wc-setting"
+msgid "Show Product SKU"
+msgstr ""
+
+#: include/admin/class-setting.php:205 include/admin/class-setting.php:290
+msgctxt "wc-setting"
+msgid "Use ID when SKU's unavailable"
+msgstr ""
+
+#: include/admin/class-setting.php:206 include/admin/class-setting.php:291
+msgctxt "wc-setting"
+msgid "Check to use or leave unchecked to not"
+msgstr ""
+
+#: include/admin/class-setting.php:211
+msgctxt "wc-setting"
 msgid "Activate User UIN feature & Show it"
 msgstr ""
 
-#: include/admin/class-setting.php:200 include/admin/class-setting.php:826
-#: include/admin/class-setting.php:832 include/admin/class-setting.php:839
-#: include/admin/class-setting.php:845 include/admin/class-setting.php:851
+#: include/admin/class-setting.php:212 include/admin/class-setting.php:838
+#: include/admin/class-setting.php:844 include/admin/class-setting.php:857
+#: include/admin/class-setting.php:863
 msgctxt "wc-setting"
 msgid "Check to add or leave unchecked to hide"
 msgstr ""
 
-#: include/admin/class-setting.php:201
+#: include/admin/class-setting.php:213
 msgctxt "wc-setting"
 msgid ""
 "Show User UIN (Unique Identification Number) in invoice which will be "
 "received at checkout page"
 msgstr ""
 
-#: include/admin/class-setting.php:206
+#: include/admin/class-setting.php:218
 msgctxt "wc-setting"
 msgid "Address on Invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:210
+#: include/admin/class-setting.php:222
 msgctxt "wc-setting"
 msgid "Use Billing Address"
 msgstr ""
 
-#: include/admin/class-setting.php:211
+#: include/admin/class-setting.php:223
 msgctxt "wc-setting"
 msgid "Use Shipping Address"
 msgstr ""
 
-#: include/admin/class-setting.php:216 include/admin/class-setting.php:218
+#: include/admin/class-setting.php:228 include/admin/class-setting.php:230
 msgctxt "wc-setting"
 msgid "Customer Address template"
 msgstr ""
 
-#: include/admin/class-setting.php:218 include/admin/class-setting.php:350
-#: include/admin/class-setting.php:396 include/admin/class-setting.php:405
-#: include/admin/class-setting.php:414 include/admin/class-setting.php:432
-#: include/admin/class-setting.php:441 include/admin/class-setting.php:450
-#: include/admin/class-setting.php:464 include/admin/class-setting.php:474
-#: include/admin/class-setting.php:481 include/admin/class-setting.php:488
-#: include/admin/class-setting.php:495 include/admin/class-setting.php:527
-#: include/admin/class-setting.php:538 include/admin/class-setting.php:546
-#: include/admin/class-setting.php:583 include/admin/class-setting.php:873
-#: include/admin/class-setting.php:884 include/admin/class-setting.php:893
-#: include/admin/class-setting.php:1064 include/admin/class-setting.php:1072
-#: include/admin/class-setting.php:1171 include/admin/class-setting.php:1186
-#: include/admin/class-setting.php:1193 include/admin/class-setting.php:1200
-#: include/admin/class-setting.php:1207 include/admin/class-setting.php:1214
-#: include/admin/class-setting.php:1221 include/admin/class-setting.php:1228
-#: include/admin/class-setting.php:1235
+#: include/admin/class-setting.php:230 include/admin/class-setting.php:362
+#: include/admin/class-setting.php:408 include/admin/class-setting.php:417
+#: include/admin/class-setting.php:426 include/admin/class-setting.php:444
+#: include/admin/class-setting.php:453 include/admin/class-setting.php:462
+#: include/admin/class-setting.php:476 include/admin/class-setting.php:486
+#: include/admin/class-setting.php:493 include/admin/class-setting.php:500
+#: include/admin/class-setting.php:507 include/admin/class-setting.php:539
+#: include/admin/class-setting.php:550 include/admin/class-setting.php:558
+#: include/admin/class-setting.php:595 include/admin/class-setting.php:885
+#: include/admin/class-setting.php:896 include/admin/class-setting.php:905
+#: include/admin/class-setting.php:1076 include/admin/class-setting.php:1084
+#: include/admin/class-setting.php:1183 include/admin/class-setting.php:1198
+#: include/admin/class-setting.php:1205 include/admin/class-setting.php:1212
+#: include/admin/class-setting.php:1219 include/admin/class-setting.php:1226
+#: include/admin/class-setting.php:1233 include/admin/class-setting.php:1240
+#: include/admin/class-setting.php:1247
 #, php-format
 msgid "Enter %s here"
 msgstr ""
 
-#: include/admin/class-setting.php:220
+#: include/admin/class-setting.php:232
 msgctxt "wc-setting"
 msgid "Use following tags and build your own addressing template."
 msgstr ""
 
-#: include/admin/class-setting.php:224
+#: include/admin/class-setting.php:236
 msgctxt "wc-setting"
 msgid "Show Order Note?"
 msgstr ""
 
-#: include/admin/class-setting.php:230
+#: include/admin/class-setting.php:242
 msgctxt "wc-setting"
 msgid "Hide Note from invoice"
 msgstr ""
 
-#: include/admin/class-setting.php:231 include/admin/class-setting.php:327
+#: include/admin/class-setting.php:243 include/admin/class-setting.php:339
 msgctxt "wc-setting"
 msgid "Show Note provided by customer"
 msgstr ""
 
-#: include/admin/class-setting.php:232 include/admin/class-setting.php:328
+#: include/admin/class-setting.php:244 include/admin/class-setting.php:340
 msgctxt "wc-setting"
 msgid "Show Note provided by shop manager"
 msgstr ""
 
-#: include/admin/class-setting.php:233 include/admin/class-setting.php:329
+#: include/admin/class-setting.php:245 include/admin/class-setting.php:341
 msgctxt "wc-setting"
 msgid "Show Note provided by customer & shop manager"
 msgstr ""
 
-#: include/admin/class-setting.php:237
+#: include/admin/class-setting.php:249
 msgctxt "wc-setting"
 msgid "Show Price Template"
 msgstr ""
 
-#: include/admin/class-setting.php:243 include/admin/class-setting.php:340
+#: include/admin/class-setting.php:255
 msgctxt "wc-setting"
-msgid "Show only regular price"
+msgid "Show current regular price"
 msgstr ""
 
-#: include/admin/class-setting.php:244 include/admin/class-setting.php:341
+#: include/admin/class-setting.php:256
 msgctxt "wc-setting"
-msgid "Show only sale price"
+msgid "Show current sale price"
 msgstr ""
 
-#: include/admin/class-setting.php:245 include/admin/class-setting.php:342
+#: include/admin/class-setting.php:257
 msgctxt "wc-setting"
-msgid "Show both regular and sale price"
+msgid "Show current regular & sale price"
 msgstr ""
 
-#: include/admin/class-setting.php:246 include/admin/class-setting.php:343
+#: include/admin/class-setting.php:258
 msgctxt "wc-setting"
-msgid "Show regular/sale price"
+msgid "Show actual price"
 msgstr ""
 
-#: include/admin/class-setting.php:261
+#: include/admin/class-setting.php:273
 msgctxt "wc-setting"
 msgid "Inventory Report Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:266
+#: include/admin/class-setting.php:278
 msgctxt "wc-setting"
 msgid "Shelf Storage Number ID in Inventory Report "
 msgstr ""
 
-#: include/admin/class-setting.php:272
+#: include/admin/class-setting.php:284
 msgctxt "wc-setting"
 msgid "Show Product SKU in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:284
+#: include/admin/class-setting.php:296
 msgctxt "wc-setting"
 msgid "Show Product Image in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:290
+#: include/admin/class-setting.php:302
 msgctxt "wc-setting"
 msgid "Show Product Weight in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:296
+#: include/admin/class-setting.php:308
 msgctxt "wc-setting"
 msgid "Show Product Total Weight in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:302
+#: include/admin/class-setting.php:314
 msgctxt "wc-setting"
 msgid "Show Product Dimensions in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:308
+#: include/admin/class-setting.php:320
 msgctxt "wc-setting"
 msgid "Show Product Quantity in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:314
+#: include/admin/class-setting.php:326
 msgctxt "wc-setting"
 msgid "Show Product Note in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:320
+#: include/admin/class-setting.php:332
 msgctxt "wc-setting"
 msgid "Show Order Notes in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:326
+#: include/admin/class-setting.php:338
 msgctxt "wc-setting"
 msgid "Hide Notes from report"
 msgstr ""
 
-#: include/admin/class-setting.php:333
+#: include/admin/class-setting.php:345
 msgctxt "wc-setting"
 msgid "Price in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:339
+#: include/admin/class-setting.php:351
 msgctxt "wc-setting"
 msgid "Hide Price in reports"
 msgstr ""
 
-#: include/admin/class-setting.php:347 include/admin/class-setting.php:350
+#: include/admin/class-setting.php:352
+msgctxt "wc-setting"
+msgid "Show only regular price"
+msgstr ""
+
+#: include/admin/class-setting.php:353
+msgctxt "wc-setting"
+msgid "Show only sale price"
+msgstr ""
+
+#: include/admin/class-setting.php:354
+msgctxt "wc-setting"
+msgid "Show both regular and sale price"
+msgstr ""
+
+#: include/admin/class-setting.php:355
+msgctxt "wc-setting"
+msgid "Show regular/sale price"
+msgstr ""
+
+#: include/admin/class-setting.php:359 include/admin/class-setting.php:362
 msgctxt "wc-setting"
 msgid "Inventory Report Custom CSS"
 msgstr ""
 
-#: include/admin/class-setting.php:351
+#: include/admin/class-setting.php:363
 msgctxt "wc-setting"
 msgid "You can add custom css here to be used in Inventory Report"
 msgstr ""
 
-#: include/admin/class-setting.php:366
+#: include/admin/class-setting.php:378
 msgctxt "wc-setting"
 msgid "Invoices Theming Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:371
+#: include/admin/class-setting.php:383
 msgctxt "wc-setting"
 msgid "Default Theme"
 msgstr ""
 
-#: include/admin/class-setting.php:375
+#: include/admin/class-setting.php:387
 msgctxt "wc-setting"
 msgid ""
 "This theme will be used as default in Emails, HTML invoices, PDF invoices, "
 "Inventory Reports and Packing Slips."
 msgstr ""
 
-#: include/admin/class-setting.php:381
+#: include/admin/class-setting.php:393
 msgctxt "wc-setting"
 msgid "Pre-Invoice Theme"
 msgstr ""
 
-#: include/admin/class-setting.php:385
+#: include/admin/class-setting.php:397
 msgctxt "wc-setting"
 msgid ""
 "This theme will be used for Pre-Invoice orders in Emails, HTML invoices, PDF "
 "invoices, Inventory Reports and Packing Slips."
 msgstr ""
 
-#: include/admin/class-setting.php:391
+#: include/admin/class-setting.php:403
 msgctxt "wc-setting"
 msgid "Theme Colors set"
 msgstr ""
 
-#: include/admin/class-setting.php:396 include/admin/class-setting.php:432
+#: include/admin/class-setting.php:408 include/admin/class-setting.php:444
 msgctxt "wc-setting"
 msgid "Theme primary color"
 msgstr ""
 
-#: include/admin/class-setting.php:405 include/admin/class-setting.php:441
+#: include/admin/class-setting.php:417 include/admin/class-setting.php:453
 msgctxt "wc-setting"
 msgid "Theme secondary color"
 msgstr ""
 
-#: include/admin/class-setting.php:414 include/admin/class-setting.php:450
+#: include/admin/class-setting.php:426 include/admin/class-setting.php:462
 msgctxt "wc-setting"
 msgid "Theme tertiary color"
 msgstr ""
 
-#: include/admin/class-setting.php:421 include/admin/class-setting.php:458
+#: include/admin/class-setting.php:433 include/admin/class-setting.php:470
 #, php-format
 msgctxt "wc-setting"
 msgid ""
@@ -772,443 +803,438 @@ msgid ""
 "favourie colors set."
 msgstr ""
 
-#: include/admin/class-setting.php:421 include/admin/class-setting.php:458
+#: include/admin/class-setting.php:433 include/admin/class-setting.php:470
 msgid "here"
 msgstr ""
 
-#: include/admin/class-setting.php:427
+#: include/admin/class-setting.php:439
 msgctxt "wc-setting"
 msgid "Pre-Invoice Theme Colors set"
 msgstr ""
 
-#: include/admin/class-setting.php:463 include/admin/class-setting.php:464
+#: include/admin/class-setting.php:475 include/admin/class-setting.php:476
 msgctxt "wc-setting"
 msgid "Invoice Title"
 msgstr ""
 
-#: include/admin/class-setting.php:467 pepro-ultimate-invoice.php:1326
+#: include/admin/class-setting.php:479 pepro-ultimate-invoice.php:1361
 #, php-format
 msgctxt "wc-setting"
 msgid "Invoice %s"
 msgstr ""
 
-#: include/admin/class-setting.php:468 include/admin/class-setting.php:877
+#: include/admin/class-setting.php:480 include/admin/class-setting.php:889
 #, php-format
 msgctxt "wc-setting"
 msgid "You can use %s instead of Invoice Number"
 msgstr ""
 
-#: include/admin/class-setting.php:471 include/admin/class-setting.php:474
+#: include/admin/class-setting.php:483 include/admin/class-setting.php:486
 msgctxt "wc-setting"
 msgid "Font size (px)"
 msgstr ""
 
-#: include/admin/class-setting.php:479 include/admin/class-setting.php:481
+#: include/admin/class-setting.php:491 include/admin/class-setting.php:493
 msgctxt "wc-setting"
 msgid "Invoice Prefix"
 msgstr ""
 
-#: include/admin/class-setting.php:486 include/admin/class-setting.php:488
+#: include/admin/class-setting.php:498 include/admin/class-setting.php:500
 msgctxt "wc-setting"
 msgid "Invoice Suffix"
 msgstr ""
 
-#: include/admin/class-setting.php:493 include/admin/class-setting.php:495
+#: include/admin/class-setting.php:505 include/admin/class-setting.php:507
 msgctxt "wc-setting"
 msgid "Invoice Start Number"
 msgstr ""
 
-#: include/admin/class-setting.php:496
+#: include/admin/class-setting.php:508
 msgctxt "wc-setting"
 msgid "Invoices number will start from this number"
 msgstr ""
 
-#: include/admin/class-setting.php:501
+#: include/admin/class-setting.php:513
 msgctxt "wc-setting"
 msgid "Show Signatures"
 msgstr ""
 
-#: include/admin/class-setting.php:507
+#: include/admin/class-setting.php:519
 msgctxt "wc-setting"
 msgid "Add Store Signature and Stamp"
 msgstr ""
 
-#: include/admin/class-setting.php:511
+#: include/admin/class-setting.php:523
 msgctxt "wc-setting"
 msgid ""
 "Add your scanned signature or stamp to be added to invoices footer. "
 "(preferred size: 150x300 px)"
 msgstr ""
 
-#: include/admin/class-setting.php:516
+#: include/admin/class-setting.php:528
 msgctxt "wc-setting"
 msgid "Add Watermark to Invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:520
+#: include/admin/class-setting.php:532
 msgctxt "wc-setting"
 msgid "Add your watermark image to invoices (can use png too)"
 msgstr ""
 
-#: include/admin/class-setting.php:525 include/admin/class-setting.php:527
+#: include/admin/class-setting.php:537 include/admin/class-setting.php:539
 msgctxt "wc-setting"
 msgid "Watermark opacity"
 msgstr ""
 
-#: include/admin/class-setting.php:528
+#: include/admin/class-setting.php:540
 msgctxt "wc-setting"
 msgid "Watermark opacity scale <br>(0: opaque | 100: transparent)"
 msgstr ""
 
-#: include/admin/class-setting.php:535 include/admin/class-setting.php:538
+#: include/admin/class-setting.php:547 include/admin/class-setting.php:550
 msgctxt "wc-setting"
 msgid "Invoices footer"
 msgstr ""
 
-#: include/admin/class-setting.php:539
+#: include/admin/class-setting.php:551
 msgctxt "wc-setting"
 msgid "HTML tags are allowed. DO NOT ADD CSS here!"
 msgstr ""
 
-#: include/admin/class-setting.php:543 include/admin/class-setting.php:546
+#: include/admin/class-setting.php:555 include/admin/class-setting.php:558
 msgctxt "wc-setting"
 msgid "Invoices Custom CSS"
 msgstr ""
 
-#: include/admin/class-setting.php:547
+#: include/admin/class-setting.php:559
 msgctxt "wc-setting"
 msgid "You can add custom css here to be used in Invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:562
+#: include/admin/class-setting.php:574
 msgctxt "wc-setting"
 msgid "Miscellaneous Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:567
+#: include/admin/class-setting.php:579
 msgctxt "wc-setting"
 msgid "Use Dark-mode as Default"
 msgstr ""
 
-#: include/admin/class-setting.php:571
+#: include/admin/class-setting.php:583
 msgctxt "wc-setting"
 msgid ""
 "Check to use dark-mode as default color scheme for setting screen or leave "
 "unchecked to use default color scheme"
 msgstr ""
 
-#: include/admin/class-setting.php:574
+#: include/admin/class-setting.php:586
 msgctxt "wc-setting"
 msgid "Disable WC Dashboard"
 msgstr ""
 
-#: include/admin/class-setting.php:577
+#: include/admin/class-setting.php:589
 msgctxt "wc-setting"
 msgid ""
 "Check to disable new Dashboard introduced in Woocommerce 4.0 or leave "
 "unchecked to use it"
 msgstr ""
 
-#: include/admin/class-setting.php:578
+#: include/admin/class-setting.php:590
 msgctxt "wc-setting"
 msgid "Refresh page after setting saved."
 msgstr ""
 
-#: include/admin/class-setting.php:581 include/admin/class-setting.php:583
+#: include/admin/class-setting.php:593 include/admin/class-setting.php:595
 msgctxt "wc-setting"
 msgid "Date parsing template"
 msgstr ""
 
-#: include/admin/class-setting.php:775
+#: include/admin/class-setting.php:787
 msgctxt "wc-setting"
 msgid ""
 "Some of the most commonly used date/time format characters and their values"
 msgstr ""
 
-#: include/admin/class-setting.php:775
+#: include/admin/class-setting.php:787
 msgctxt "wc-setting"
 msgid "View date format string examples"
 msgstr ""
 
-#: include/admin/class-setting.php:780
+#: include/admin/class-setting.php:792
 msgctxt "wc-setting"
 msgid "Convert Date to Jalali/Shamsi"
 msgstr ""
 
-#: include/admin/class-setting.php:783
+#: include/admin/class-setting.php:795
 msgctxt "wc-setting"
 msgid ""
 "Check to convert dates into Jalali/Shamsi format or leave unchecked to use "
 "default setting"
 msgstr ""
 
-#: include/admin/class-setting.php:786
+#: include/admin/class-setting.php:798
 msgctxt "wc-setting"
 msgid "Show Shipped Date on Order details"
 msgstr ""
 
-#: include/admin/class-setting.php:792
+#: include/admin/class-setting.php:804
 msgctxt "wc-setting"
 msgid "Show Shipping Track Serial on Order details"
 msgstr ""
 
-#: include/admin/class-setting.php:798
+#: include/admin/class-setting.php:810
 msgctxt "wc-setting"
 msgid "Force Persian/Faris Numbers?"
 msgstr ""
 
-#: include/admin/class-setting.php:802
+#: include/admin/class-setting.php:814
 msgctxt "wc-setting"
 msgid "No, Use Default English style"
 msgstr ""
 
-#: include/admin/class-setting.php:803
+#: include/admin/class-setting.php:815
 msgctxt "wc-setting"
 msgid "Yes, Use Eastern Arabic Numbers style"
 msgstr ""
 
-#: include/admin/class-setting.php:804
+#: include/admin/class-setting.php:816
 msgctxt "wc-setting"
 msgid "Yes, Use Persian Numbers style"
 msgstr ""
 
-#: include/admin/class-setting.php:820
+#: include/admin/class-setting.php:832
 msgctxt "wc-setting"
 msgid "Invoices Barcode Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:825
+#: include/admin/class-setting.php:837
 msgctxt "wc-setting"
 msgid "Show Invoices Number Barcode"
 msgstr ""
 
-#: include/admin/class-setting.php:831
+#: include/admin/class-setting.php:843
 msgctxt "wc-setting"
 msgid "Show Shipping Track Serial Barcode"
 msgstr ""
 
-#: include/admin/class-setting.php:838
-msgctxt "wc-setting"
-msgid "Show Invoices QR Code"
-msgstr ""
-
-#: include/admin/class-setting.php:844
+#: include/admin/class-setting.php:856
 msgctxt "wc-setting"
 msgid "Show Barcode in Sender Shipping slip"
 msgstr ""
 
-#: include/admin/class-setting.php:850
+#: include/admin/class-setting.php:862
 msgctxt "wc-setting"
 msgid "Show Barcode in Recipient Shipping slip"
 msgstr ""
 
-#: include/admin/class-setting.php:867
+#: include/admin/class-setting.php:879
 msgctxt "wc-setting"
 msgid "Invoices Email Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:872 include/admin/class-setting.php:873
+#: include/admin/class-setting.php:884 include/admin/class-setting.php:885
 msgctxt "wc-setting"
 msgid "Email Subject"
 msgstr ""
 
-#: include/admin/class-setting.php:875 pepro-ultimate-invoice.php:266
+#: include/admin/class-setting.php:887 pepro-ultimate-invoice.php:297
 #, php-format
 msgctxt "wc-setting"
 msgid "Order #%s invoice on "
 msgstr ""
 
-#: include/admin/class-setting.php:883 include/admin/class-setting.php:884
+#: include/admin/class-setting.php:895 include/admin/class-setting.php:896
 msgctxt "wc-setting"
 msgid "\"From\" name"
 msgstr ""
 
-#: include/admin/class-setting.php:885
+#: include/admin/class-setting.php:897
 msgid "How the sender name appears in outgoing emails"
 msgstr ""
 
-#: include/admin/class-setting.php:892 include/admin/class-setting.php:893
+#: include/admin/class-setting.php:904 include/admin/class-setting.php:905
 msgctxt "wc-setting"
 msgid "\"From\" address"
 msgstr ""
 
-#: include/admin/class-setting.php:894
+#: include/admin/class-setting.php:906
 msgid "How the sender email appears in outgoing emails"
 msgstr ""
 
-#: include/admin/class-setting.php:899
+#: include/admin/class-setting.php:911
 msgctxt "wc-setting"
 msgid "Send Invoices via Email to Customer"
 msgstr ""
 
-#: include/admin/class-setting.php:904 include/admin/class-setting.php:925
+#: include/admin/class-setting.php:916 include/admin/class-setting.php:937
 msgctxt "wc-setting"
 msgid "Send Manually"
 msgstr ""
 
-#: include/admin/class-setting.php:905 include/admin/class-setting.php:926
+#: include/admin/class-setting.php:917 include/admin/class-setting.php:938
 msgctxt "wc-setting"
 msgid "Send Automatically"
 msgstr ""
 
-#: include/admin/class-setting.php:907 include/admin/class-setting.php:928
+#: include/admin/class-setting.php:919 include/admin/class-setting.php:940
 msgctxt "wc-setting"
 msgid ""
 "Choose whether send HTML invoices via Email to customers automatically or "
 "manually"
 msgstr ""
 
-#: include/admin/class-setting.php:911
+#: include/admin/class-setting.php:923
 msgctxt "wc-setting"
 msgid "Order Statuses for Automatic Sending to Customers"
 msgstr ""
 
-#: include/admin/class-setting.php:917
+#: include/admin/class-setting.php:929
 msgctxt "wc-setting"
 msgid ""
 "Send HTML Invoices via Email to customer when order status is among these "
 "selection. <br>Multiple selection allowed"
 msgstr ""
 
-#: include/admin/class-setting.php:920
+#: include/admin/class-setting.php:932
 msgctxt "wc-setting"
 msgid "Send Invoices via Email to Shop Managers"
 msgstr ""
 
-#: include/admin/class-setting.php:932
+#: include/admin/class-setting.php:944
 msgctxt "wc-setting"
 msgid "Order Statuses for Automatic Sending to Managers"
 msgstr ""
 
-#: include/admin/class-setting.php:938
+#: include/admin/class-setting.php:950
 msgctxt "wc-setting"
 msgid ""
 "Send HTML Invoices via Email to Shop managers when order status is among "
 "these selection. <br>Multiple selection allowed"
 msgstr ""
 
-#: include/admin/class-setting.php:941
+#: include/admin/class-setting.php:953
 msgctxt "wc-setting"
 msgid "Shop Managers who will receive invoice mail"
 msgstr ""
 
-#: include/admin/class-setting.php:946
+#: include/admin/class-setting.php:958
 msgctxt "wc-setting"
 msgid ""
 "Send HTML Invoices via Email to Shop managers either manually through WC "
 "Orders screen or automatically. <br>Multiple selection allowed"
 msgstr ""
 
-#: include/admin/class-setting.php:949
+#: include/admin/class-setting.php:961
 msgctxt "wc-setting"
 msgid "Attach PDF Invoices to mail"
 msgstr ""
 
-#: include/admin/class-setting.php:952
+#: include/admin/class-setting.php:964
 msgctxt "wc-setting"
 msgid ""
 "Check to attach a PDF Invoice to WooCommerce Mails or leave unchecked to not"
 msgstr ""
 
-#: include/admin/class-setting.php:966
+#: include/admin/class-setting.php:978
 msgctxt "wc-setting"
 msgid "Privacy Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:971
+#: include/admin/class-setting.php:983
 msgctxt "wc-setting"
 msgid "Allow Guest Users view invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:974 include/admin/class-setting.php:993
-#: include/admin/class-setting.php:1012
+#: include/admin/class-setting.php:986 include/admin/class-setting.php:1005
+#: include/admin/class-setting.php:1024
 msgctxt "wc-setting"
 msgid "Check to allow or leave unchecked to disallow"
 msgstr ""
 
-#: include/admin/class-setting.php:975
+#: include/admin/class-setting.php:987
 msgctxt "wc-setting"
 msgid "Allow logged out visitors be able to see invoices by having its URL"
 msgstr ""
 
-#: include/admin/class-setting.php:978
+#: include/admin/class-setting.php:990
 msgctxt "wc-setting"
 msgid "Invoice Output for Guests"
 msgstr ""
 
-#: include/admin/class-setting.php:984 include/admin/class-setting.php:1003
+#: include/admin/class-setting.php:996 include/admin/class-setting.php:1015
 msgctxt "wc-setting"
 msgid "Use HTML Only"
 msgstr ""
 
-#: include/admin/class-setting.php:985 include/admin/class-setting.php:1004
+#: include/admin/class-setting.php:997 include/admin/class-setting.php:1016
 msgctxt "wc-setting"
 msgid "Use PDF Only"
 msgstr ""
 
-#: include/admin/class-setting.php:986 include/admin/class-setting.php:1005
+#: include/admin/class-setting.php:998 include/admin/class-setting.php:1017
 msgctxt "wc-setting"
 msgid "User HTML/PDF"
 msgstr ""
 
-#: include/admin/class-setting.php:990
+#: include/admin/class-setting.php:1002
 msgctxt "wc-setting"
 msgid "Allow Customer/Users view invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:994
+#: include/admin/class-setting.php:1006
 msgctxt "wc-setting"
 msgid ""
 "Allow logged in visitors be able to see their invoices by having its URL"
 msgstr ""
 
-#: include/admin/class-setting.php:997
+#: include/admin/class-setting.php:1009
 msgctxt "wc-setting"
 msgid "Invoice Output for Customers"
 msgstr ""
 
-#: include/admin/class-setting.php:1009
+#: include/admin/class-setting.php:1021
 msgctxt "wc-setting"
 msgid "Show Invoices option in orders list"
 msgstr ""
 
-#: include/admin/class-setting.php:1013
+#: include/admin/class-setting.php:1025
 msgctxt "wc-setting"
 msgid ""
 "Add 'Get Invoice' button to customer order list so they could have invoice "
 "too"
 msgstr ""
 
-#: include/admin/class-setting.php:1016
+#: include/admin/class-setting.php:1028
 msgctxt "wc-setting"
 msgid "Allowed Orders statuses"
 msgstr ""
 
-#: include/admin/class-setting.php:1022
+#: include/admin/class-setting.php:1034
 msgctxt "wc-setting"
 msgid ""
 "In which Order Status Customers can use 'Get Invoice' feature?<br>Multiple "
 "selection allowed"
 msgstr ""
 
-#: include/admin/class-setting.php:1036
+#: include/admin/class-setting.php:1048
 msgctxt "wc-setting"
 msgid "Extras Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:1041
+#: include/admin/class-setting.php:1053
 msgctxt "wc-setting"
 msgid "Enable Quick Shop Feature"
 msgstr ""
 
-#: include/admin/class-setting.php:1044
+#: include/admin/class-setting.php:1056
 msgctxt "wc-setting"
 msgid ""
 "Check to Enable 'Quick Shop' Feature and integrate it with WPBakery Page "
 "Builder (if installed)"
 msgstr ""
 
-#: include/admin/class-setting.php:1045
+#: include/admin/class-setting.php:1057
 msgctxt "wc-setting"
 msgid ""
 "This will let users filter and shop all your products in one page. Use "
@@ -1216,18 +1242,18 @@ msgid ""
 "display it"
 msgstr ""
 
-#: include/admin/class-setting.php:1048
+#: include/admin/class-setting.php:1060
 msgctxt "wc-setting"
 msgid "Pre-order Invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:1051
+#: include/admin/class-setting.php:1063
 msgctxt "wc-setting"
 msgid ""
 "Check to allow users get pre-order invoices or leave unchecked to disallow"
 msgstr ""
 
-#: include/admin/class-setting.php:1052
+#: include/admin/class-setting.php:1064
 msgctxt "wc-setting"
 msgid ""
 "PRE-ORDER INVOICE means user does not place an order, but rather select "
@@ -1235,447 +1261,447 @@ msgid ""
 "directly from your physical store."
 msgstr ""
 
-#: include/admin/class-setting.php:1055
+#: include/admin/class-setting.php:1067
 msgctxt "wc-setting"
 msgid "Clear Cart on Quick Buy"
 msgstr ""
 
-#: include/admin/class-setting.php:1058
+#: include/admin/class-setting.php:1070
 msgctxt "wc-setting"
 msgid ""
 "Check to clear cart on pre-order invoice creation or leave unchecked to keep "
 "previous cart"
 msgstr ""
 
-#: include/admin/class-setting.php:1061 include/admin/class-setting.php:1064
+#: include/admin/class-setting.php:1073 include/admin/class-setting.php:1076
 msgctxt "wc-setting"
 msgid "Extra Notes on Pre-order by Shop Manager"
 msgstr ""
 
-#: include/admin/class-setting.php:1065
+#: include/admin/class-setting.php:1077
 msgctxt "wc-setting"
 msgid "You can add custom note here to be added into pre-orders"
 msgstr ""
 
-#: include/admin/class-setting.php:1069 include/admin/class-setting.php:1072
+#: include/admin/class-setting.php:1081 include/admin/class-setting.php:1084
 msgctxt "wc-setting"
 msgid "Extra Notes on Pre-order on behalf of Customer"
 msgstr ""
 
-#: include/admin/class-setting.php:1073
+#: include/admin/class-setting.php:1085
 msgctxt "wc-setting"
 msgid ""
 "You can add custom note here to be added into pre-orders on behalf of "
 "customer"
 msgstr ""
 
-#: include/admin/class-setting.php:1088
+#: include/admin/class-setting.php:1100
 msgctxt "wc-setting"
 msgid "PDF Invoices Setting"
 msgstr ""
 
-#: include/admin/class-setting.php:1093
+#: include/admin/class-setting.php:1105
 msgctxt "wc-setting"
 msgid "PDF Page size"
 msgstr ""
 
-#: include/admin/class-setting.php:1100
+#: include/admin/class-setting.php:1112
 msgctxt "wc-setting"
 msgid "A Series: A0"
 msgstr ""
 
-#: include/admin/class-setting.php:1101
+#: include/admin/class-setting.php:1113
 msgctxt "wc-setting"
 msgid "A Series: A1"
 msgstr ""
 
-#: include/admin/class-setting.php:1102
+#: include/admin/class-setting.php:1114
 msgctxt "wc-setting"
 msgid "A Series: A2"
 msgstr ""
 
-#: include/admin/class-setting.php:1103
+#: include/admin/class-setting.php:1115
 msgctxt "wc-setting"
 msgid "A Series: A3"
 msgstr ""
 
-#: include/admin/class-setting.php:1104
+#: include/admin/class-setting.php:1116
 msgctxt "wc-setting"
 msgid "A Series: A4"
 msgstr ""
 
-#: include/admin/class-setting.php:1105
+#: include/admin/class-setting.php:1117
 msgctxt "wc-setting"
 msgid "A Series: A5"
 msgstr ""
 
-#: include/admin/class-setting.php:1106
+#: include/admin/class-setting.php:1118
 msgctxt "wc-setting"
 msgid "A Series: A6"
 msgstr ""
 
-#: include/admin/class-setting.php:1107
+#: include/admin/class-setting.php:1119
 msgctxt "wc-setting"
 msgid "A Series: A7"
 msgstr ""
 
-#: include/admin/class-setting.php:1108
+#: include/admin/class-setting.php:1120
 msgctxt "wc-setting"
 msgid "A Series: A8"
 msgstr ""
 
-#: include/admin/class-setting.php:1109
+#: include/admin/class-setting.php:1121
 msgctxt "wc-setting"
 msgid "A Series: A9"
 msgstr ""
 
-#: include/admin/class-setting.php:1110
+#: include/admin/class-setting.php:1122
 msgctxt "wc-setting"
 msgid "A Series: A10"
 msgstr ""
 
-#: include/admin/class-setting.php:1111
+#: include/admin/class-setting.php:1123
 msgctxt "wc-setting"
 msgid "B Series: B0"
 msgstr ""
 
-#: include/admin/class-setting.php:1112
+#: include/admin/class-setting.php:1124
 msgctxt "wc-setting"
 msgid "B Series: B1"
 msgstr ""
 
-#: include/admin/class-setting.php:1113
+#: include/admin/class-setting.php:1125
 msgctxt "wc-setting"
 msgid "B Series: B2"
 msgstr ""
 
-#: include/admin/class-setting.php:1114
+#: include/admin/class-setting.php:1126
 msgctxt "wc-setting"
 msgid "B Series: B3"
 msgstr ""
 
-#: include/admin/class-setting.php:1115
+#: include/admin/class-setting.php:1127
 msgctxt "wc-setting"
 msgid "B Series: B4"
 msgstr ""
 
-#: include/admin/class-setting.php:1116
+#: include/admin/class-setting.php:1128
 msgctxt "wc-setting"
 msgid "B Series: B5"
 msgstr ""
 
-#: include/admin/class-setting.php:1117
+#: include/admin/class-setting.php:1129
 msgctxt "wc-setting"
 msgid "B Series: B6"
 msgstr ""
 
-#: include/admin/class-setting.php:1118
+#: include/admin/class-setting.php:1130
 msgctxt "wc-setting"
 msgid "B Series: B7"
 msgstr ""
 
-#: include/admin/class-setting.php:1119
+#: include/admin/class-setting.php:1131
 msgctxt "wc-setting"
 msgid "B Series: B8"
 msgstr ""
 
-#: include/admin/class-setting.php:1120
+#: include/admin/class-setting.php:1132
 msgctxt "wc-setting"
 msgid "B Series: B9"
 msgstr ""
 
-#: include/admin/class-setting.php:1121
+#: include/admin/class-setting.php:1133
 msgctxt "wc-setting"
 msgid "B Series: B10"
 msgstr ""
 
-#: include/admin/class-setting.php:1122
+#: include/admin/class-setting.php:1134
 msgctxt "wc-setting"
 msgid "C Series: C0"
 msgstr ""
 
-#: include/admin/class-setting.php:1123
+#: include/admin/class-setting.php:1135
 msgctxt "wc-setting"
 msgid "C Series: C1"
 msgstr ""
 
-#: include/admin/class-setting.php:1124
+#: include/admin/class-setting.php:1136
 msgctxt "wc-setting"
 msgid "C Series: C2"
 msgstr ""
 
-#: include/admin/class-setting.php:1125
+#: include/admin/class-setting.php:1137
 msgctxt "wc-setting"
 msgid "C Series: C3"
 msgstr ""
 
-#: include/admin/class-setting.php:1126
+#: include/admin/class-setting.php:1138
 msgctxt "wc-setting"
 msgid "C Series: C4"
 msgstr ""
 
-#: include/admin/class-setting.php:1127
+#: include/admin/class-setting.php:1139
 msgctxt "wc-setting"
 msgid "C Series: C5"
 msgstr ""
 
-#: include/admin/class-setting.php:1128
+#: include/admin/class-setting.php:1140
 msgctxt "wc-setting"
 msgid "C Series: C6"
 msgstr ""
 
-#: include/admin/class-setting.php:1129
+#: include/admin/class-setting.php:1141
 msgctxt "wc-setting"
 msgid "C Series: C7"
 msgstr ""
 
-#: include/admin/class-setting.php:1130
+#: include/admin/class-setting.php:1142
 msgctxt "wc-setting"
 msgid "C Series: C8"
 msgstr ""
 
-#: include/admin/class-setting.php:1131
+#: include/admin/class-setting.php:1143
 msgctxt "wc-setting"
 msgid "C Series: C9"
 msgstr ""
 
-#: include/admin/class-setting.php:1132
+#: include/admin/class-setting.php:1144
 msgctxt "wc-setting"
 msgid "C Series: C10"
 msgstr ""
 
-#: include/admin/class-setting.php:1133
+#: include/admin/class-setting.php:1145
 msgctxt "wc-setting"
 msgid "Letter"
 msgstr ""
 
-#: include/admin/class-setting.php:1134
+#: include/admin/class-setting.php:1146
 msgctxt "wc-setting"
 msgid "Legal"
 msgstr ""
 
-#: include/admin/class-setting.php:1135
+#: include/admin/class-setting.php:1147
 msgctxt "wc-setting"
 msgid "Executive"
 msgstr ""
 
-#: include/admin/class-setting.php:1136
+#: include/admin/class-setting.php:1148
 msgctxt "wc-setting"
 msgid "Folio"
 msgstr ""
 
-#: include/admin/class-setting.php:1137
+#: include/admin/class-setting.php:1149
 msgctxt "wc-setting"
 msgid "Demy"
 msgstr ""
 
-#: include/admin/class-setting.php:1138
+#: include/admin/class-setting.php:1150
 msgctxt "wc-setting"
 msgid "Royal"
 msgstr ""
 
-#: include/admin/class-setting.php:1142
+#: include/admin/class-setting.php:1154
 msgctxt "wc-setting"
 msgid "PDF Page Orientation "
 msgstr ""
 
-#: include/admin/class-setting.php:1149
+#: include/admin/class-setting.php:1161
 msgctxt "wc-setting"
 msgid "Portrait"
 msgstr ""
 
-#: include/admin/class-setting.php:1150
+#: include/admin/class-setting.php:1162
 msgctxt "wc-setting"
 msgid "Landscape"
 msgstr ""
 
-#: include/admin/class-setting.php:1165
+#: include/admin/class-setting.php:1177
 msgctxt "wc-setting"
 msgid "Store Details in Invoices"
 msgstr ""
 
-#: include/admin/class-setting.php:1170 include/admin/class-setting.php:1171
+#: include/admin/class-setting.php:1182 include/admin/class-setting.php:1183
 msgctxt "wc-setting"
 msgid "Store Name"
 msgstr ""
 
-#: include/admin/class-setting.php:1176
+#: include/admin/class-setting.php:1188
 msgctxt "wc-setting"
 msgid "Store Logo"
 msgstr ""
 
-#: include/admin/class-setting.php:1179
+#: include/admin/class-setting.php:1191
 msgctxt "wc-setting"
 msgid "Select your store logo file"
 msgstr ""
 
-#: include/admin/class-setting.php:1185 include/admin/class-setting.php:1186
+#: include/admin/class-setting.php:1197 include/admin/class-setting.php:1198
 msgctxt "wc-setting"
 msgid "Store Website"
 msgstr ""
 
-#: include/admin/class-setting.php:1192 include/admin/class-setting.php:1193
+#: include/admin/class-setting.php:1204 include/admin/class-setting.php:1205
 msgctxt "wc-setting"
 msgid "Store E-mail"
 msgstr ""
 
-#: include/admin/class-setting.php:1199 include/admin/class-setting.php:1200
+#: include/admin/class-setting.php:1211 include/admin/class-setting.php:1212
 msgctxt "wc-setting"
 msgid "Store Phone number"
 msgstr ""
 
-#: include/admin/class-setting.php:1206 include/admin/class-setting.php:1207
+#: include/admin/class-setting.php:1218 include/admin/class-setting.php:1219
 msgctxt "wc-setting"
 msgid "Store National ID"
 msgstr ""
 
-#: include/admin/class-setting.php:1213 include/admin/class-setting.php:1214
+#: include/admin/class-setting.php:1225 include/admin/class-setting.php:1226
 msgctxt "wc-setting"
 msgid "Store Registration Number"
 msgstr ""
 
-#: include/admin/class-setting.php:1220 include/admin/class-setting.php:1221
+#: include/admin/class-setting.php:1232 include/admin/class-setting.php:1233
 msgctxt "wc-setting"
 msgid "Store Economical Number"
 msgstr ""
 
-#: include/admin/class-setting.php:1227 include/admin/class-setting.php:1228
+#: include/admin/class-setting.php:1239 include/admin/class-setting.php:1240
 msgctxt "wc-setting"
 msgid "Store Address"
 msgstr ""
 
-#: include/admin/class-setting.php:1231
+#: include/admin/class-setting.php:1243
 msgctxt "wc-setting"
 msgid ""
 "This Address will be used instead of Woocommerce store address in invoices, "
 "leave empty to use Woocommerce default address"
 msgstr ""
 
-#: include/admin/class-setting.php:1234 include/admin/class-setting.php:1235
+#: include/admin/class-setting.php:1246 include/admin/class-setting.php:1247
 msgctxt "wc-setting"
 msgid "Store Postcode / ZIP"
 msgstr ""
 
-#: include/admin/class-setting.php:1265
+#: include/admin/class-setting.php:1277
 msgid "Delete"
 msgstr ""
 
-#: include/admin/class-setting.php:1266
+#: include/admin/class-setting.php:1278
 msgid "Edit"
 msgstr ""
 
-#: include/admin/class-setting.php:1267
+#: include/admin/class-setting.php:1279
 msgid "Apply"
 msgstr ""
 
-#: include/admin/class-setting.php:1268
+#: include/admin/class-setting.php:1280
 msgid "Discard"
 msgstr ""
 
-#: include/admin/class-setting.php:1269
+#: include/admin/class-setting.php:1281
 msgid "Export"
 msgstr ""
 
-#: include/admin/class-setting.php:1270
+#: include/admin/class-setting.php:1282
 msgid "Import"
 msgstr ""
 
-#: include/admin/class-setting.php:1271
+#: include/admin/class-setting.php:1283
 msgid "Comming Soon ..."
 msgstr ""
 
-#: include/admin/class-setting.php:1272
+#: include/admin/class-setting.php:1284
 msgid "Primary"
 msgstr ""
 
-#: include/admin/class-setting.php:1273
+#: include/admin/class-setting.php:1285
 msgid "Secondary"
 msgstr ""
 
-#: include/admin/class-setting.php:1274
+#: include/admin/class-setting.php:1286
 msgid "Tertiary"
 msgstr ""
 
-#: include/admin/class-setting.php:1275
+#: include/admin/class-setting.php:1287
 msgid "Click to change"
 msgstr ""
 
-#: include/admin/class-setting.php:1276
+#: include/admin/class-setting.php:1288
 msgid "Error importing data!"
 msgstr ""
 
-#: include/admin/class-setting.php:1277
+#: include/admin/class-setting.php:1289
 msgid "Please check the data or contact support@pepro.dev"
 msgstr ""
 
-#: include/admin/class-setting.php:1278
+#: include/admin/class-setting.php:1290
 msgid "Enter data here to Import."
 msgstr ""
 
-#: include/admin/class-setting.php:1279
+#: include/admin/class-setting.php:1291
 msgid "Press ENTER to set name or ESC to discard"
 msgstr ""
 
-#: include/admin/class-setting.php:1294
+#: include/admin/class-setting.php:1306
 msgctxt "wc-setting-js"
 msgid "Copy to clipboard"
 msgstr ""
 
-#: include/admin/class-setting.php:1296
+#: include/admin/class-setting.php:1308
 msgctxt "wc-setting-js"
 msgid "Import"
 msgstr ""
 
-#: include/admin/class-setting.php:1302
+#: include/admin/class-setting.php:1314
 msgctxt "wc-setting-js"
 msgid ""
 "Are you sure you want to Delete This Color Schemes?<br>THIS CAN NOT BE "
 "UNDONE."
 msgstr ""
 
-#: include/admin/class-setting.php:1303
+#: include/admin/class-setting.php:1315
 msgctxt "wc-setting-js"
 msgid "Are you sure you want to Delete All Color Schemes?"
 msgstr ""
 
-#: include/admin/class-setting.php:1304
+#: include/admin/class-setting.php:1316
 msgctxt "wc-setting-js"
 msgid ""
 "Are you sure you want to Restore All Color Schemes to Default?<br>THIS WILL "
 "DELETE ALL CURRENT ITEMS AND IT CAN NOT BE UNDONE."
 msgstr ""
 
-#: include/admin/class-setting.php:1329 include/admin/class-setting.php:1340
+#: include/admin/class-setting.php:1341 include/admin/class-setting.php:1352
 msgctxt "swatches-panel"
 msgid "Save Color Schemes"
 msgstr ""
 
-#: include/admin/class-setting.php:1331 include/admin/class-setting.php:1342
+#: include/admin/class-setting.php:1343 include/admin/class-setting.php:1354
 msgctxt "swatches-panel"
 msgid "Add New"
 msgstr ""
 
-#: include/admin/class-setting.php:1332 include/admin/class-setting.php:1343
+#: include/admin/class-setting.php:1344 include/admin/class-setting.php:1355
 msgctxt "swatches-panel"
 msgid "Delete All"
 msgstr ""
 
-#: include/admin/class-setting.php:1333 include/admin/class-setting.php:1344
+#: include/admin/class-setting.php:1345 include/admin/class-setting.php:1356
 msgctxt "swatches-panel"
 msgid "Restore Default"
 msgstr ""
 
-#: include/admin/class-setting.php:1335 include/admin/class-setting.php:1346
+#: include/admin/class-setting.php:1347 include/admin/class-setting.php:1358
 msgctxt "swatches-panel"
 msgid "Export"
 msgstr ""
 
-#: include/admin/class-setting.php:1336 include/admin/class-setting.php:1347
+#: include/admin/class-setting.php:1348 include/admin/class-setting.php:1359
 msgctxt "swatches-panel"
 msgid "Import"
 msgstr ""
 
-#: include/admin/class-setting.php:1338
+#: include/admin/class-setting.php:1350
 msgid "No Color Scheme Found!"
 msgstr ""
 
@@ -1687,293 +1713,329 @@ msgstr ""
 msgid "Enter the Number/ID of rack in storage that product is in"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:82
+#: pepro-ultimate-invoice.php:92
 msgid "Pepro Ultimate Invoice for Woocommerce"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:83 pepro-ultimate-invoice.php:85
+#: pepro-ultimate-invoice.php:93 pepro-ultimate-invoice.php:95
 #, php-format
 msgid "%2$s ver. %1$s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:84
+#: pepro-ultimate-invoice.php:94
 msgid "Pepro Development Group"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:86
+#: pepro-ultimate-invoice.php:96
 msgid "Unauthorized Access!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:87
+#: pepro-ultimate-invoice.php:97
 msgid "Go Back"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:174 pepro-ultimate-invoice.php:220
+#: pepro-ultimate-invoice.php:148
+msgid "kg"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:148
+msgid "g"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:148
+msgid "lbs"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:148
+msgid "oz"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:158
+msgid "m"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:159
+msgid "cm"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:160
+msgid "mm"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:161
+msgid "in"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:162
+msgid "yd"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:205 pepro-ultimate-invoice.php:251
 #, php-format
 msgid "Automatic Email sent to customer mail address:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:176 pepro-ultimate-invoice.php:222
+#: pepro-ultimate-invoice.php:207 pepro-ultimate-invoice.php:253
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to customer mail address:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:184 pepro-ultimate-invoice.php:233
+#: pepro-ultimate-invoice.php:215 pepro-ultimate-invoice.php:264
 #, php-format
 msgid "Automatic Email sent to following shop managers:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:186 pepro-ultimate-invoice.php:235
+#: pepro-ultimate-invoice.php:217 pepro-ultimate-invoice.php:266
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to following shop managers:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:189 pepro-ultimate-invoice.php:238
+#: pepro-ultimate-invoice.php:220 pepro-ultimate-invoice.php:269
 msgid "No Shop Manager selected to send Automatic Email to."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:386
+#: pepro-ultimate-invoice.php:417
 msgid "User Unique Identification Number"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:396
+#: pepro-ultimate-invoice.php:427
 msgid "Shipped Date (Shamsi)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:398 pepro-ultimate-invoice.php:404
+#: pepro-ultimate-invoice.php:429 pepro-ultimate-invoice.php:435
 msgid "Select Shipped Date"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:402
+#: pepro-ultimate-invoice.php:433
 msgid "Shipped Date (Gregorian)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:408
+#: pepro-ultimate-invoice.php:439
 msgid "Shipping Track Serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:410
+#: pepro-ultimate-invoice.php:441
 msgid "Enter Shipping Track Serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:414
+#: pepro-ultimate-invoice.php:445
 msgid "Customer Signature"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:454 pepro-ultimate-invoice.php:1101
+#: pepro-ultimate-invoice.php:487 pepro-ultimate-invoice.php:1134
 msgctxt "order-page"
 msgid "View Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:457 pepro-ultimate-invoice.php:1105
+#: pepro-ultimate-invoice.php:490 pepro-ultimate-invoice.php:1138
 msgctxt "order-page"
 msgid "PDF Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:479
+#: pepro-ultimate-invoice.php:512
 msgid "Page {PAGENO} / {nbpg}"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:525
+#: pepro-ultimate-invoice.php:558
 msgctxt "wc-orders"
 msgid "Shipped Date:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:528
+#: pepro-ultimate-invoice.php:561
 msgctxt "wc-orders"
 msgid "Shipping tracking Serial:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:661
+#: pepro-ultimate-invoice.php:694
 #, php-format
 msgctxt "theme-name"
 msgid "%1$s — by %2$s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:711
+#: pepro-ultimate-invoice.php:744
 msgid "Select The Date Product Shipped"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:712
+#: pepro-ultimate-invoice.php:745
 msgid "Clear"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:768
+#: pepro-ultimate-invoice.php:801
 msgctxt "wc-orders-popup"
 msgid "Invoice Options"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:772
+#: pepro-ultimate-invoice.php:805
 msgid "Use Advanced Options?"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:776
+#: pepro-ultimate-invoice.php:809
 msgid "Force Use theme"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:782
+#: pepro-ultimate-invoice.php:815
 msgid "Primary, Secondary and Tertiary Colors"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:794
+#: pepro-ultimate-invoice.php:827
 msgid "Load colors from Schemes"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:800
+#: pepro-ultimate-invoice.php:833
 msgctxt "wc-orders-popup"
 msgid "Reset Advanced Options to default"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:800
+#: pepro-ultimate-invoice.php:833
 msgctxt "wc-orders-popup"
 msgid "Reset"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:815
+#: pepro-ultimate-invoice.php:848
 msgctxt "wc-orders-popup"
 msgid "View Order Inventory report"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:819
+#: pepro-ultimate-invoice.php:852
 msgctxt "wc-orders-popup"
 msgid "View Packing Slip for shipping"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:823
+#: pepro-ultimate-invoice.php:856
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Customer"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:827
+#: pepro-ultimate-invoice.php:860
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Shop Managers"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:831
+#: pepro-ultimate-invoice.php:864
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Custom List"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:835
+#: pepro-ultimate-invoice.php:868
 msgctxt "wc-orders-popup"
 msgid "Edit User Unique Identification Number"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:836
+#: pepro-ultimate-invoice.php:869
 msgctxt "wc-orders-popup"
 msgid "Edit User UIN"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:839
+#: pepro-ultimate-invoice.php:872
 msgctxt "wc-orders-popup"
 msgid "Edit transaction ID"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:840
+#: pepro-ultimate-invoice.php:873
 msgctxt "wc-orders-popup"
 msgid "Edit Transaction ID"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:843
+#: pepro-ultimate-invoice.php:876
 msgctxt "wc-orders-popup"
 msgid "Edit shipped date"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:844
+#: pepro-ultimate-invoice.php:877
 msgctxt "wc-orders-popup"
 msgid "Edit Shipped Date"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:847
+#: pepro-ultimate-invoice.php:880
 msgctxt "wc-orders-popup"
 msgid "Edit shipping track serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:848
+#: pepro-ultimate-invoice.php:881
 msgctxt "wc-orders-popup"
 msgid "Edit Shipping Track Serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:851
+#: pepro-ultimate-invoice.php:884
 msgctxt "wc-orders-popup"
 msgid "Edit customer signature image"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:852
+#: pepro-ultimate-invoice.php:885
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Signature"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:855
+#: pepro-ultimate-invoice.php:888
 msgctxt "wc-orders-popup"
 msgid "Edit customer provided note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:856
+#: pepro-ultimate-invoice.php:889
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:859
+#: pepro-ultimate-invoice.php:892
 msgctxt "wc-orders-popup"
 msgid "Edit shop manager provided note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:860
+#: pepro-ultimate-invoice.php:893
 msgctxt "wc-orders-popup"
 msgid "Edit Shop manager Note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:881 pepro-ultimate-invoice.php:885
+#: pepro-ultimate-invoice.php:914 pepro-ultimate-invoice.php:918
 msgid "Shop Manager provided note:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:886
+#: pepro-ultimate-invoice.php:919
 msgid "Enter Shop Manager provided note here"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:937 pepro-ultimate-invoice.php:938
+#: pepro-ultimate-invoice.php:970 pepro-ultimate-invoice.php:971
 msgctxt "wc-order-screen"
 msgid "Unique Identification Number"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:984
+#: pepro-ultimate-invoice.php:1017
 msgid "Back to Dashboard"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:991
+#: pepro-ultimate-invoice.php:1024
 msgid "Switch Color Scheme"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:998
+#: pepro-ultimate-invoice.php:1031
 msgid "WC Orders"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1039 pepro-ultimate-invoice.php:1129
+#: pepro-ultimate-invoice.php:1072 pepro-ultimate-invoice.php:1162
 msgid "Pre-buy Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1044
+#: pepro-ultimate-invoice.php:1077
 #, php-format
 msgid "Pre-buy Invoice (%s)"
 msgid_plural "Pre-buy Invoices (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: pepro-ultimate-invoice.php:1149
+#: pepro-ultimate-invoice.php:1182
 msgctxt "js-cart-page"
 msgid "Unauthorized Access!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1150 pepro-ultimate-invoice.php:1158
-#: pepro-ultimate-invoice.php:1982
+#: pepro-ultimate-invoice.php:1183 pepro-ultimate-invoice.php:1191
+#: pepro-ultimate-invoice.php:1996
 msgctxt "js-cart-page"
 msgid "Okay"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1151
+#: pepro-ultimate-invoice.php:1184
 #, php-format
 msgctxt "js-cart-page"
 msgid ""
@@ -1981,318 +2043,318 @@ msgid ""
 "users.<br>Please %sLogin / Register%s."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1164
+#: pepro-ultimate-invoice.php:1197
 msgid "Get Pre-buy Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1207 pepro-ultimate-invoice.php:1208
-#: pepro-ultimate-invoice.php:2030
+#: pepro-ultimate-invoice.php:1240 pepro-ultimate-invoice.php:1241
+#: pepro-ultimate-invoice.php:2044
 msgid "Setting"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1213 pepro-ultimate-invoice.php:1214
+#: pepro-ultimate-invoice.php:1246 pepro-ultimate-invoice.php:1247
 msgid "Support"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1235
+#: pepro-ultimate-invoice.php:1268
 msgid "Settings"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1411
+#: pepro-ultimate-invoice.php:1446
 msgid "Shortcode and Hooks for Developers"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1415
+#: pepro-ultimate-invoice.php:1450
 msgctxt "setting-general"
 msgid "WordPress Shortcode"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1421
+#: pepro-ultimate-invoice.php:1456
 msgctxt "setting-general"
 msgid "WordPress Action Hooks"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1432
+#: pepro-ultimate-invoice.php:1467
 msgctxt "setting-general"
 msgid "WordPress Filter Hooks"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1442
+#: pepro-ultimate-invoice.php:1477
 msgctxt "setting-general"
 msgid "jQuery Triggering Hooks"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1474
+#: pepro-ultimate-invoice.php:1509
 #, php-format
 msgctxt "footer-copyright"
 msgid "Thanks for using %s products"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1474
+#: pepro-ultimate-invoice.php:1509
 msgid "Pepro Co"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1479
+#: pepro-ultimate-invoice.php:1514
 #, php-format
 msgctxt "footer-copyright"
 msgid "%s — Version %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1496
+#: pepro-ultimate-invoice.php:1531
 msgid "Unauthorized Access Denied!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1514
+#: pepro-ultimate-invoice.php:1549
 msgid "Products successfully added to cart!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1572
+#: pepro-ultimate-invoice.php:1607
 #, php-format
 msgid "Invoice Created by %s%s"
 msgstr ""
 
 #. Author of the plugin/theme
-#: pepro-ultimate-invoice.php:1572
+#: pepro-ultimate-invoice.php:1607
 msgid "Pepro Dev. Group"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1582
+#: pepro-ultimate-invoice.php:1617
 msgid "Request success!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1590
+#: pepro-ultimate-invoice.php:1625
 msgid "No valid order"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1630
+#: pepro-ultimate-invoice.php:1665
 #, php-format
 msgid "Sending email to <br><strong>%s</strong><br>was successfully done"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1630
+#: pepro-ultimate-invoice.php:1665
 #, php-format
 msgid "%d emails"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1632
+#: pepro-ultimate-invoice.php:1667
 #, php-format
 msgid "Error sending email to <br><strong>%s</strong>"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1635
+#: pepro-ultimate-invoice.php:1670
 msgid "No valid email found for this order"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1644
+#: pepro-ultimate-invoice.php:1679
 msgid "Error fetching shop managers."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1651 pepro-ultimate-invoice.php:1671
+#: pepro-ultimate-invoice.php:1686
 msgid "Saved successfully!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1727
+#: pepro-ultimate-invoice.php:1741
 #, php-format
 msgctxt "required-plugin"
 msgid "%1$s needs %2$s in order to function"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1729
+#: pepro-ultimate-invoice.php:1743
 msgctxt "required-plugin"
 msgid "WooCommerce"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1854
+#: pepro-ultimate-invoice.php:1868
 msgid "All Categories"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1882 pepro-ultimate-invoice.php:1883
-#: pepro-ultimate-invoice.php:1992
+#: pepro-ultimate-invoice.php:1896 pepro-ultimate-invoice.php:1897
+#: pepro-ultimate-invoice.php:2006
 msgctxt "js-i18n"
 msgid "SKU:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1911
+#: pepro-ultimate-invoice.php:1925
 msgid "Add to cart"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1940
+#: pepro-ultimate-invoice.php:1954
 msgid "Filter Products by Category"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1946
+#: pepro-ultimate-invoice.php:1960
 msgid "Sort and Search shown products"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1948
+#: pepro-ultimate-invoice.php:1962
 msgid "Search among current shown products"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1951
+#: pepro-ultimate-invoice.php:1965
 msgid "Sort By: "
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1952
+#: pepro-ultimate-invoice.php:1966
 msgid "Alphabetically"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1953
+#: pepro-ultimate-invoice.php:1967
 msgid "Popularity"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1954
+#: pepro-ultimate-invoice.php:1968
 msgid "Total Sales"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1955
+#: pepro-ultimate-invoice.php:1969
 msgid "Latest"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1956
+#: pepro-ultimate-invoice.php:1970
 msgid "Price (ASC)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1957
+#: pepro-ultimate-invoice.php:1971
 msgid "Price (DESC)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1964
+#: pepro-ultimate-invoice.php:1978
 msgid "Your cart is empty!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1966
+#: pepro-ultimate-invoice.php:1980
 msgid "Nothing found!"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1984
-msgctxt "js-i18n"
-msgid "Added to cart"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1985
-msgctxt "js-i18n"
-msgid "THIS IS AN ERROR!"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1986
-msgctxt "js-i18n"
-msgid "Your basket is empty!"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1987
-msgctxt "js-i18n"
-msgid "Total Items:"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1988
-msgctxt "js-i18n"
-msgid "Total Products:"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1989
-msgctxt "js-i18n"
-msgid "There is an unknown error and we are unable to proccess your request"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1990
-msgctxt "js-i18n"
-msgid "Remove from cart"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1991
-msgctxt "js-i18n"
-msgid "Clear cart"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1993
-msgctxt "js-i18n"
-msgid "Are you sure you want to remove this item from basket?"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1994
-msgctxt "js-i18n"
-msgid "Are you sure you want to remove all items from basket?"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1995
-msgctxt "js-i18n"
-msgid "Removing"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1996
-msgctxt "js-i18n"
-msgid "Clear basket"
-msgstr ""
-
-#: pepro-ultimate-invoice.php:1997
-msgctxt "js-i18n"
-msgid "Instant Shopping Basket Upated!"
 msgstr ""
 
 #: pepro-ultimate-invoice.php:1998
 msgctxt "js-i18n"
-msgid "Yes"
+msgid "Added to cart"
 msgstr ""
 
 #: pepro-ultimate-invoice.php:1999
 msgctxt "js-i18n"
-msgid "No"
+msgid "THIS IS AN ERROR!"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2000
+msgctxt "js-i18n"
+msgid "Your basket is empty!"
 msgstr ""
 
 #: pepro-ultimate-invoice.php:2001
 msgctxt "js-i18n"
+msgid "Total Items:"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2002
+msgctxt "js-i18n"
+msgid "Total Products:"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2003
+msgctxt "js-i18n"
+msgid "There is an unknown error and we are unable to proccess your request"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2004
+msgctxt "js-i18n"
+msgid "Remove from cart"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2005
+msgctxt "js-i18n"
+msgid "Clear cart"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2007
+msgctxt "js-i18n"
+msgid "Are you sure you want to remove this item from basket?"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2008
+msgctxt "js-i18n"
+msgid "Are you sure you want to remove all items from basket?"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2009
+msgctxt "js-i18n"
+msgid "Removing"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2010
+msgctxt "js-i18n"
+msgid "Clear basket"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2011
+msgctxt "js-i18n"
+msgid "Instant Shopping Basket Upated!"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2012
+msgctxt "js-i18n"
+msgid "Yes"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2013
+msgctxt "js-i18n"
+msgid "No"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:2015
+msgctxt "js-i18n"
 msgid "Proceed to Checkout / Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2020
+#: pepro-ultimate-invoice.php:2034
 msgid "Quick Shop"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2021
+#: pepro-ultimate-invoice.php:2035
 msgid "One-page Purchase"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2027
+#: pepro-ultimate-invoice.php:2041
 msgid "Pepro Elements"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2039
+#: pepro-ultimate-invoice.php:2053
 msgid "Element ID"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2042
+#: pepro-ultimate-invoice.php:2056
 #, php-format
 msgid ""
 "Enter element ID (Note: make sure it is unique and valid according to %sW3C "
 "Specification%s)."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2043 pepro-ultimate-invoice.php:2051
-#: pepro-ultimate-invoice.php:2057
+#: pepro-ultimate-invoice.php:2057 pepro-ultimate-invoice.php:2065
+#: pepro-ultimate-invoice.php:2071
 msgid "Design Options"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2047
+#: pepro-ultimate-invoice.php:2061
 msgid "Extra class name"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2050
+#: pepro-ultimate-invoice.php:2064
 msgid ""
 "If you wish to style particular content element differently, then use this "
 "field to add a class name and then refer to it in your css file."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2055
+#: pepro-ultimate-invoice.php:2069
 msgid "CSS box"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2257
+#: pepro-ultimate-invoice.php:2271
 #, php-format
 msgctxt "setting-page"
 msgid "Enter %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2281
+#: pepro-ultimate-invoice.php:2295
 #, php-format
 msgctxt "setting-page"
 msgid "Choose %s"

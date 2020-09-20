@@ -101,7 +101,7 @@
             </tr>
             <tr>
               <td class="" style="line-height: 2;">
-                <span class="show_shipping_date label">Order Status:</span> <span class="show_shipping_date date_digit">{{{order_status}}}</span>
+                <span class="show_order_status label">Order Status:</span> <span class="show_order_status date_digit">{{{order_status}}}</span>
               </td>
               <td class="" style="line-height: 2;">
                 <span class="show_purchase_complete_date label">Date Completed:</span> <span class="show_purchase_complete_date date_digit">{{{order_date_completed}}}</span>
@@ -125,14 +125,15 @@
           <th class="" style="width: 1cm !important;">No.</th>
           <th class="show_product_image" style="{{{show_product_image_hc}}}" width="1.5cm"><div style="{{{show_product_image_dn}}}">Image</div></th>
           <th class="show_product_sku" style="{{{show_product_sku_hc}}}" width="1.5cm"><div style="{{{show_product_sku_dn}}}">SKU</div></th>
-          <th colspan="4">Description</th>
+          <th colspan="{{{product_description_colspan}}}">Description</th>
           <th width="1.5cm">QTY</th>
           <th class="show_product_weight" style="{{{show_product_weight_hc}}}"><div style="{{{show_product_weight_dn}}}">Weight</div></th>
           <th class="show_product_dimensions" style="{{{show_product_dimensions_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Dimensions</div></th>
           <th width="1.5cm">Price</th>
-          <th width="1.5cm">Discount</th>
-          <th width="1.5cm">Tax</th>
-          <th width="1.5cm">Total</th>
+          <th width="1.5cm" class="show_discount_precent" style="{{{show_discount_precent_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Discount (%)</div></th>
+          <th width="1.5cm" class="show_product_tax" style="{{{show_product_tax_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Tax</div></th>
+          <th width="1.5cm" colspan="{{{product_nettotal_colspan}}}">Total</th>
+
         </tr>
       </div>
     </thead>
@@ -142,7 +143,8 @@
     <tfoot>
       <div class="show_order_items show_order_total">
         <tr class="">
-          <td colspan="{{{invoice_final_prices_pre_colspan}}}">Total</td> <td>{{{invoice_total_qty}}}</td>
+          <td colspan="{{{invoice_final_prices_pre_colspan}}}">Total</td>
+          <td>{{{invoice_total_qty}}}</td>
           <td class="show_product_weight" style="{{{show_product_weight_hc}}}"><div style="{{{show_product_weight_dn}}}">{{{invoice_total_weight}}}</div></td>
           <td colspan="{{{invoice_final_prices_colspan}}}"> <span class="ltr" style="vertical-align: middle;">{{{invoice_final_prices_pdf}}}</span></td>
         </tr>
@@ -157,5 +159,4 @@
           {{{invoice_notes}}}
         </tr>
       </table>
-
 </div>

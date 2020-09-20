@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.6
-Stable tag: 1.1.6
+Version: 1.1.7
+Stable tag: 1.1.7
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -24,15 +24,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
-
-// define( 'WP_DEBUG', true );
-// define( 'WP_DEBUG_LOG', true );
-// define( 'WP_DEBUG_DISPLAY', true );
-// define( 'SCRIPT_DEBUG', true );
-// define( 'SAVEQUERIES', true );
-// @ini_set( 'display_errors', 1 );
-// error_reporting(E_ERROR|E_WARNING);
-// define( 'WC_TEMPLATE_DEBUG_MODE', true );
 
 /**
  * prevent data leak
@@ -78,7 +69,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.1.6";
+            $this->version = "1.1.7";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -143,6 +134,23 @@ if (!class_exists("PeproUltimateInvoice")) {
               add_filter( 'woocommerce_marketing_menu_items', '__return_empty_array' );
               add_filter( 'woocommerce_helper_suppress_admin_notices', '__return_true' );
             }
+
+            add_filter('woocommerce_format_weight', function($weight) {
+              return str_replace(array( 'kg', 'g', 'lbs', 'oz', ), array( __( 'kg', $this->td ), __( 'g', $this->td ), __( 'lbs', $this->td ), __( 'oz', $this->td ), ), $weight);
+            });
+            add_filter('woocommerce_format_dimensions', function($weight) {
+              return str_replace(array(
+                'mm',
+                'cm',
+                'in',
+                'yd',
+              ), array(
+                __( 'mm', $this->td ),
+                __( 'cm', $this->td ),
+                __( 'in', $this->td ),
+                __( 'yd', $this->td ),
+               ), $weight);
+            });
 
             if (isset($_GET["tab"]) && $_GET["tab"] == "pepro_ultimate_invoice"){
                 add_filter( 'woocommerce_admin_disabled', '__return_true');
@@ -1318,7 +1326,8 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_order_items" => "yes",
                     "puiw_show_order_total" => "yes",
                     "puiw_show_total_items" => "yes",
-                    "puiw_show_total_discount" => "yes",
+                    "puiw_show_discount_precent" => "yes",
+                    "puiw_show_product_tax" => "yes",
                     "puiw_show_total_tax" => "yes",
                     "puiw_show_order_note" => "note_provided_by_customer",
                     "puiw_show_user_uin" => "no",

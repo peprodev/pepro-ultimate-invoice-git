@@ -30,9 +30,8 @@
         <td><div class="grow bordered" style="padding: 2mm 5mm;">
           <div class="flex" style="flex-direction: column;text-align: center">
             <div class="font-small">بارکد رهگیری مرسوله</div>
-            <div class="flex-grow font-medium">
-              <img alt='{{{invoice_track_id_en}}}' style="width: 100%;height: auto;" src='{{{invoice_track_barcode}}}'/>
-            </div>
+            <img alt='{{{invoice_track_id_en}}}' style="width: 100%;height: auto;" src='{{{invoice_track_barcode}}}'/>
+            {{{invoice_track_id_en}}}
           </div>
         </div></td>
       </tr>

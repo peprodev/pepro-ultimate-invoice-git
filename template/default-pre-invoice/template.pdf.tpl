@@ -61,7 +61,7 @@
             </tr>
             <tr>
               <td class="" style="line-height: 2;">
-                <span class="show_shipping_date label">وضعیت سفارش:</span> <span class="show_shipping_date date_digit">{{{order_status}}}</span>
+                <span class="show_order_status label">وضعیت سفارش:</span> <span class="show_order_status date_digit">{{{order_status}}}</span>
               </td>
               <td class="" style="line-height: 2;">
                 <span class="show_purchase_complete_date label">تاریخ تکمیل سفارش:</span> <span class="show_purchase_complete_date date_digit">{{{order_date_completed}}}</span>
@@ -85,14 +85,14 @@
           <th class="" style="width: 1cm !important;">ردیف</th>
           <th class="show_product_image" style="{{{show_product_image_hc}}}" width="1.5cm"><div style="{{{show_product_image_dn}}}">تصویر</div></th>
           <th class="show_product_sku" style="{{{show_product_sku_hc}}}" width="1.5cm"><div style="{{{show_product_sku_dn}}}">کد کالا</div></th>
-          <th colspan="4">شرح کالا</th>
+          <th colspan="{{{product_description_colspan}}}">شرح کالا</th>
           <th width="1.5cm">تعداد</th>
           <th class="show_product_weight" style="{{{show_product_weight_hc}}}"><div style="{{{show_product_weight_dn}}}">وزن</div></th>
           <th class="show_product_dimensions" style="{{{show_product_dimensions_hc}}}"><div style="{{{show_product_dimensions_dn}}}">ابعاد</div></th>
           <th width="1.5cm">مبلغ واحد</th>
-          <th width="1.5cm">تخفیف</th>
-          <th width="1.5cm">مالیات</th>
-          <th width="1.5cm">جمع کل</th>
+          <th width="1.5cm" class="show_discount_precent" style="{{{show_discount_precent_hc}}}"><div style="{{{show_product_dimensions_dn}}}">درصد تخفیف</div></th>
+          <th width="1.5cm" class="show_product_tax" style="{{{show_product_tax_hc}}}"><div style="{{{show_product_dimensions_dn}}}">مالیات</div></th>
+          <th width="1.5cm" colspan="{{{product_nettotal_colspan}}}">جمع کل</th>
         </tr>
       </div>
     </thead>
@@ -102,7 +102,8 @@
     <tfoot>
       <div class="show_order_items show_order_total">
         <tr class="">
-          <td colspan="{{{invoice_final_prices_pre_colspan}}}">جمع کل</td> <td>{{{invoice_total_qty}}} عدد</td>
+          <td colspan="{{{invoice_final_prices_pre_colspan}}}">جمع کل</td>
+          <td>{{{invoice_total_qty}}} عدد</td>
           <td class="show_product_weight" style="{{{show_product_weight_hc}}}"><div style="{{{show_product_weight_dn}}}">{{{invoice_total_weight}}}</div></td>
           <td colspan="{{{invoice_final_prices_colspan}}}"> <span class="ltr" style="vertical-align: middle;">{{{invoice_final_prices_pdf}}}</span></td>
         </tr>
