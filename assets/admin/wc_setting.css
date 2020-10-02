@@ -148,16 +148,16 @@ html.dark #TB_ajaxWindowTitle,
 html.dark #TB_title,
 html.dark #TB_window,
 html.dark #wpbody,
-html.dark #wpbody *:not(.puiw_color_schemes_workspace *):not([class|='iris']):not(.button-primary):not(button):not(li):not(input):not(textarea):not(.select2-selection__arrow):not(b):not(.media-modal-content):not(.media-modal-icon),
-html.dark *:not([class|='iris']):not(.button-primary):not(button):not(li):not(input):not(textarea):not(.select2-selection__arrow):not(b):not(.media-modal-content):not(.media-modal-icon),
+html.dark #wpbody *:not([class|='iris']):not(.button-primary):not(button):not(li):not(input):not(textarea):not(.select2-selection__arrow):not(b):not(.media-modal-content):not(.media-modal-icon):not([class|='minicolors']),
+html.dark *:not([class|='iris']):not(.button-primary):not(button):not(li):not(input):not(textarea):not(.select2-selection__arrow):not(b):not(.media-modal-content):not(.media-modal-icon):not([class|='minicolors']),
 html.dark .select2-container--default .select2-selection--multiple .select2-selection__choice,
 html.dark .select2-selection,
 html.dark body {
 	transition: all 0.3s ease-in-out;
-	background: var(--puiw--bg) !important;
-	background-color: var(--puiw--bg) !important;
-	border-color: #383a41 !important;
-	color: #d7d7db !important;
+	background: var(--puiw--bg);
+	background-color: var(--puiw--bg);
+	border-color: #383a41;
+	color: #d7d7db;
 }
 
 html.dark .select2-container--default .select2-results__option[data-selected=true] {

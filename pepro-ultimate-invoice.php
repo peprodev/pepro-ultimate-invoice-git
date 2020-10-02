@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.7
-Stable tag: 1.1.7
+Version: 1.1.7.1
+Stable tag: 1.1.7.1
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
