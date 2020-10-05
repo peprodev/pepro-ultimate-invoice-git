@@ -315,6 +315,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "invoice_final_prices",
               "invoice_final_prices_pdf",
               "invoice_products_list",
+              "invoices_footer",
               "base_price",
               "invoice_notes",
               "invoice_note_customer",
