@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.5
-Stable tag: 1.1.7.1
+Stable tag: 1.1.8
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -33,13 +33,13 @@ This plugin lets you to Generate Awesome Invoices for Woocommerce orders and:
 -   and .....
 
 
-### New Features in version 1.1.0
+### New Features in version 1.1.6
 
 - Integration with Dokan
 - Multiple-template per order
 - Color Schemes for invoices
 - Separated template for pre-invoice
-- Added hooks so you can bundle your invoice template with wordpress theme
+- Added hooks so you can bundle your invoice template with WordPress theme
 
 -----------------------
 
@@ -143,6 +143,11 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 == Changelog ==
 
 
+= 1.1.8 =
+
+- Fixed get customer full name
+- Changed Plugin Icon and WordPress Banners
+
 = 1.1.7 =
 
 - Added Compatibility to Pepro WooCommerce Receipt Upload (available upon request to support@pepro.dev)
@@ -211,6 +216,12 @@ PEPRO DEV is a premium supplier of quality WordPress plugins, services and suppo
 Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to check our [free offerings](http://profiles.wordpress.org/peprodev/), we hope you enjoy them!
 
 == Upgrade Notice ==
+
+
+= 1.1.8 =
+
+- Fixed get customer full name
+- Changed Plugin Icon and WordPress Banners
 
 = 1.1.7 =
 
