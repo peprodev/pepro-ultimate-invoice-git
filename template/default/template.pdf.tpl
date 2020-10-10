@@ -130,8 +130,8 @@
           <th class="show_product_weight" style="{{{show_product_weight_hc}}}"><div style="{{{show_product_weight_dn}}}">Weight</div></th>
           <th class="show_product_dimensions" style="{{{show_product_dimensions_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Dimensions</div></th>
           <th width="1.5cm">Price</th>
-          <th width="1.5cm" class="show_discount_precent" style="{{{show_discount_precent_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Discount (%)</div></th>
-          <th width="1.5cm" class="show_product_tax" style="{{{show_product_tax_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Tax</div></th>
+          <th width="1.5cm" class="show_discount_precent" style="{{{show_discount_precent_hc}}}"><div style="{{{show_discount_precent_dn}}}">Discount (%)</div></th>
+          <th width="1.5cm" class="show_product_tax" style="{{{show_product_tax_hc}}}"><div style="{{{show_product_tax_dn}}}">Tax</div></th>
           <th width="1.5cm" colspan="{{{product_nettotal_colspan}}}">Total</th>
 
         </tr>

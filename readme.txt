@@ -3,9 +3,11 @@ Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
-Tested up to: 5.5
-Stable tag: 1.1.8.2
+Tested up to: 5.5.1
+Stable tag: 1.1.8.3
 Requires PHP: 5.4
+WC requires at least: 4.0
+WC tested up to: 4.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -218,6 +220,12 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
+
+= 1.1.8.3 =
+
+- Fix Showing product discount in PDF
+- Fix Showing product weight in PDF
+- Fix Showing product tax in PDF
 
 = 1.1.8 =
 
