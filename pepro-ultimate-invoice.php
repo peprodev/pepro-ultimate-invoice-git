@@ -1,4 +1,5 @@
 <?php
+# @Last modified time: 2020/10/20 15:58:47
 /*
 Plugin Name: Pepro Ultimate Invoice
 Description: The most complete invoice plugin you will ever need.
@@ -9,12 +10,12 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.1.8.3
-Stable tag: 1.1.8.3
+Version: 1.1.9
+Stable tag: 1.1.9
 Requires at least: 5.0
 Tested up to: 5.5.1
 Requires PHP: 5.6
-WC requires at least: 4.0
+WC requires at least: 4.4
 WC tested up to: 4.5.2
 Text Domain: puice
 Domain Path: /languages
@@ -22,8 +23,19 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
+
+
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
+
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'SCRIPT_DEBUG', true );
+define( 'SAVEQUERIES', true );
+@ini_set( 'display_errors', 1 );
+error_reporting(E_ERROR|E_WARNING);
+define( 'WC_TEMPLATE_DEBUG_MODE', true );
 
 /**
  * prevent data leak
@@ -1010,7 +1022,7 @@ if (!class_exists("PeproUltimateInvoice")) {
             $wp_admin_bar->add_menu(
                 array(
                 'id' => 'puiw_toolbar_dark_btn',
-                'title' => '<span class="ab-icon"></span>' . __("Switch Color Scheme", $this->td),
+                'title' => '<span class="ab-icon"></span>' . __("Switch Dark-mode", $this->td),
                 'href' => admin_url()
                 )
             );
@@ -1219,12 +1231,6 @@ if (!class_exists("PeproUltimateInvoice")) {
             if (!empty($this->meta_links)) {return $this->meta_links;
             }
             $this->meta_links = array(
-                // 'docs'            => array(
-                //     'title'       => __('Documentation', $this->td),
-                //     'description' => __('Documentation', $this->td),
-                //     'target'      => '_self',
-                //     'url'         => admin_url("options-general.php?page={$this->db_slug}"),
-                // ),
                 'sett'            => array(
                     'title'       => __('Setting', $this->td),
                     'description' => __('Setting', $this->td),
@@ -1235,7 +1241,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                   'title'         => __('Support', $this->td),
                   'description'   => __('Support', $this->td),
                   'target'        => '_blank',
-                  'url'           => "mailto:support+UltimateInvoice@pepro.dev?subject=Pepro+Ultimate+Invoice+Support",
+                  'url'           => "mailto:support@pepro.dev?subject=Pepro+Ultimate+Invoice+Support",
                 ),
             );
             return $this->meta_links;
@@ -1251,11 +1257,8 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function get_manage_links()
         {
-            if (!empty($this->manage_links)) {return $this->manage_links;
-            }
-            $this->manage_links = array(
-            __("Settings", $this->td) => admin_url("admin.php?page=wc-settings&tab=pepro_ultimate_invoice"),
-            );
+            if (!empty($this->manage_links)) {return $this->manage_links; }
+            // $this->manage_links = array( __("Settings", $this->td) => admin_url("admin.php?page=wc-settings&tab=pepro_ultimate_invoice"), );
             return $this->manage_links;
         }
         /**
@@ -1491,19 +1494,16 @@ if (!class_exists("PeproUltimateInvoice")) {
          * @since   1.0.0
          * @license https://pepro.dev/license Pepro.dev License
          */
-        public function update_footer_info()
-        {
-            add_filter(
-                'admin_footer_text', function () {
-                    return sprintf(_x("Thanks for using %s products", "footer-copyright", $this->td), "<b><a href='https://pepro.co' target='_blank' >".__("Pepro Co", $this->td)."</a></b>");
-                }, 11
-            );
-            add_filter(
-                'update_footer', function () {
-                    return sprintf(_x("%s — Version %s", "footer-copyright", $this->td), $this->title, $this->version);
-                }, 11
-            );
-        }
+         public function update_footer_info()
+         {
+            $f = "pepro_temp_stylesheet.".current_time("timestamp");
+            wp_register_style($f, null);
+            wp_add_inline_style($f," #footer-left b a::before { content: ''; background: url('{$this->assets_url}/img/peprodev.svg') no-repeat; background-position-x: center; background-position-y: center; background-size: contain; width: 60px; height: 40px; display: inline-block; pointer-events: none; position: absolute; -webkit-margin-before: calc(-60px + 1rem); margin-block-start: calc(-60px + 1rem); -webkit-filter: opacity(0.0);
+            filter: opacity(0.0); transition: all 0.3s ease-in-out; }#footer-left b a:hover::before { -webkit-filter: opacity(1.0); filter: opacity(1.0); transition: all 0.3s ease-in-out; }[dir=rtl] #footer-left b a::before {margin-inline-start: calc(30px);}");
+            wp_enqueue_style($f);
+            add_filter( 'admin_footer_text', function () { return sprintf(_x("Thanks for using %s products", "footer-copyright", $this->td), "<b><a href='https://pepro.dev/' target='_blank' >".__("Pepro Dev", $this->td)."</a></b>");}, 11000 );
+            add_filter( 'update_footer', function () { return sprintf(_x("%s — Version %s", "footer-copyright", $this->td), $this->title, $this->version); }, 1100 );
+          }
         /**
          * receive and return ajax json/data
          *
@@ -2391,6 +2391,6 @@ if (!class_exists("PeproUltimateInvoice")) {
       register_uninstall_hook(__FILE__, array("PeproUltimateInvoice", "uninstall_hook"));
     });
 }
-/*################################################################################
+/*##################################################
 Lead Developer: [amirhosseinhpv](https://hpv.im/)
-################################################################################*/
+##################################################*/

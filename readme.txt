@@ -1,12 +1,14 @@
+@Last modified time: 2020/10/20 15:57:32
+
 === Pepro Ultimate Invoice ===
 Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.5.1
-Stable tag: 1.1.8.3
-Requires PHP: 5.4
-WC requires at least: 4.0
+Stable tag: 1.1.9
+Requires PHP: 5.6
+WC requires at least: 4.4
 WC tested up to: 4.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -35,13 +37,11 @@ This plugin lets you to Generate Awesome Invoices for Woocommerce orders and:
 -   and .....
 
 
-### New Features in version 1.1.6
+### New Features in version 1.1.9
 
-- Integration with Dokan
-- Multiple-template per order
-- Color Schemes for invoices
-- Separated template for pre-invoice
-- Added hooks so you can bundle your invoice template with WordPress theme
+- Added PDF Font Selector!
+- Print PDF Invoice with Multiple-template per order
+- Pre-defined Color Schemes for Invoices
 
 -----------------------
 
@@ -146,10 +146,24 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 == Changelog ==
 
 
+= 1.1.9 =
+
+- Added PDF Font Selector!
+- Changed "Switch Color Scheme" button label to "Switch Dark-mode"
+- Changed Support Email
+- Added Minified CSS, JS Version
+- Added Option to use Minified/Un-minified CSS, JS based on WP_DEBUG
+- Changed minimum WooCommerce Required to version 4.4
+- Fixed Signature showing despite it's option
+- Fixed Showing Wrong Signature if no signature set
+
 = 1.1.8 =
 
 - Fixed get customer full name
 - Changed Plugin Icon and WordPress Banners
+- Fix Showing product discount in PDF
+- Fix Showing product weight in PDF
+- Fix Showing product tax in PDF
 
 = 1.1.7 =
 
@@ -220,17 +234,25 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
+= 1.1.9 =
 
-= 1.1.8.3 =
-
-- Fix Showing product discount in PDF
-- Fix Showing product weight in PDF
-- Fix Showing product tax in PDF
+- Added PDF Font Selector!
+- Changed "Switch Color Scheme" button label to "Switch Dark-mode"
+- Changed Support Email
+- Added Minified CSS, JS Version
+- Added Option to use Minified/Un-minified CSS, JS based on WP_DEBUG
+- Changed minimum WooCommerce Required to version 4.4
+- Fixed Signature showing despite it's option
+- Fixed Showing Wrong Signature if no signature set
 
 = 1.1.8 =
 
 - Fixed get customer full name
 - Changed Plugin Icon and WordPress Banners
+- Fix Showing product discount in PDF
+- Fix Showing product weight in PDF
+- Fix Showing product tax in PDF
+
 
 = 1.1.7 =
 

@@ -1,3 +1,8 @@
+<!--
+@Last modified time: 2020/10/20 15:23:32
+-->
+
+
 <body dir="rtl">
   <div class="page body">
     <h1 class="puiw_title"><img height="64px" src="{{{store_logo}}}" />  {{{invoice_title}}} <div if="show_qr_code_id" id="invoice_qrcode"></div></h1>
@@ -167,13 +172,13 @@
           </td>
         </tr>
         <tr if="show_signature" style="background: #fff">
-          <td colspan="{{{invoice_final_row_colspan}}}" style="height: 2.5cm;vertical-align: top">
+          <td colspan="{{{invoice_final_row_colspan}}}" style="vertical-align: top">
             <div class="flex">
               <div class="flex-grow">مهر و امضای فروشنده:<br>
-                <img class="footer-img uk-align-center" alt="" style="width:150px" src="{{{signature}}}">
+                <img class="footer-img uk-align-center" alt="" style="width:150px; {{{signature_css}}}" src="{{{signature}}}">
               </div>
               <div class="flex-grow">مهر و امضای خریدار:<br>
-                <img class="footer-img uk-align-center" alt="" style="width:150px" src="{{{customer_signature}}}">
+                <img class="footer-img uk-align-center" alt="" style="width:150px; {{{customer_signature_css}}}" src="{{{customer_signature}}}">
               </div>
             </div>
           </td>

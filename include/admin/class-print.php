@@ -1,4 +1,5 @@
 <?php
+# @Last modified time: 2020/10/20 15:57:55
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -95,13 +96,12 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "invoice_suffix"                            => $this->fn->get_invoice_suffix(),
               "invoice_start"                             => $this->fn->get_invoice_start(),
               "signature"                                 => $this->fn->get_signature(),
-              "show_signature"                            => $this->fn->get_show_signatures(),
               "watermark"                                 => $this->fn->get_watermark(),
               "watermark_opacity"                         => $this->fn->get_watermark_opacity(),
               "watermark_opacity_10"                      => $this->fn->get_watermark_opacity()/100,
               "invoices_footer"                           => $this->fn->get_invoices_footer(),
               "show_custom_footer"                        => empty($this->fn->get_invoices_footer())?"no":"yes",
-              "show_signatures"                           => empty($this->fn->get_invoices_footer())?"no":"yes",
+              "show_signature"                            => $this->fn->get_show_signatures(),
               "show_shelf_number_id"                      => $this->fn->get_show_shelf_number_id(),
               "show_product_sku_inventory"                => $this->fn->get_show_product_sku_inventory(),
               "show_product_sku2_inventory"               => $this->fn->get_show_product_sku2_inventory(),
@@ -227,6 +227,14 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $opts["invoice_products_list"]      = "";
           $opts["home_url"]                   = home_url();
 
+          if (empty(trim($opts["customer_signature"]))){
+            $opts["customer_signature_css"] = "display: none !important; width:0; height:0;";
+            $opts["customer_signature"] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+          }
+          if (empty(trim($opts["signature"]))){
+            $opts["signature_css"] = "display: none !important; width:0; height:0;";
+            $opts["signature"] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+          }
 
           global $PeproUltimateInvoice;
           $generator = $PeproUltimateInvoice->barcode;
@@ -293,10 +301,10 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "font_sizem",
               "font_size",
               "signature",
+              "customer_signature",
               "watermark",
               "watermark_opacity",
               "watermark_opacity_10",
-              "customer_signature",
               "theme_color",
               "theme_color2",
               "theme_color3",
@@ -648,17 +656,58 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $get_pdf_size = $this->fn->get_pdf_size();
           $get_pdf_orientation = $this->fn->get_pdf_orientation();
 
-          $_fontData = $fontData + ['dana' => ['R' => 'DejaVuSans.ttf','B' => 'DejaVuSans-Bold.ttf','useOTL' => 0xFF,'useKashida' => 75,]];
+          $_fontData = $fontData + [
+            'dejavu' => [
+              'R' => 'DejaVuSans.ttf',
+              'B' => 'DejaVuSans-Bold.ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+            'iranyekanen' => [
+              'R' => 'IRANYekanRegular.ttf',
+              'B' => 'IRANYekanBold.ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+            'iranyekanfa' => [
+              'R' => 'IRANYekanRegular(FaNum).ttf',
+              'B' => 'IRANYekanBold(FaNum).ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+            'iransans' => [
+              'R' => 'IRANSans.ttf',
+              'B' => 'IRANSans_Bold.ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+            'iransansfa' => [
+              'R' => 'IRANSans(FaNum).ttf',
+              'B' => 'IRANSans(FaNum)_Bold.ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+            'danaen' => [
+              'R' => 'Dana-Regular.ttf',
+              'B' => 'Dana-Bold.ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+            'danafa' => [
+              'R' => 'Dana-FaNum-Regular.ttf',
+              'B' => 'Dana-FaNum-Bold.ttf',
+              'useOTL' => 0xFF,
+              'useKashida' => 75,
+            ],
+          ];
 
-          if ($this->fn->get_force_persian_numbers() !== "no"){
-            $_fontData = $fontData + ['dana' => ['R' => 'IRANYekanRegular(FaNum).ttf','B' => 'IRANYekanBold(FaNum).ttf','useOTL' => 0xFF,'useKashida' => 75,]];
-          }
 
           if ("L" == $get_pdf_orientation){$get_pdf_size = "$get_pdf_size-L";}
           $mpdf = new \Mpdf\Mpdf(array(
             'fontDir' => array_merge($fontDirs, [plugin_dir_path(__FILE__)]),
             'fontdata' => $_fontData,
-            'default_font' => 'dana',
+            'default_font' => $this->fn->get_pdf_font(),
+            // 'default_font' => "danafa",
             'format' => "$get_pdf_size", // A4-L
             'mode' => 'utf-8',
             'margin_right' => $template_pdf_setting["pdf_margin_right"],

@@ -1,4 +1,5 @@
 <?php
+# @Last modified time: 2020/10/20 15:58:15
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -844,7 +845,7 @@ function PeproUltimateInvoice__wc_get_settings_pages()
                       'default'  => 'no',
                       'options'  => array(
                         'no'     => _x("No, Use Default English style", "wc-setting", $this->td),
-                        'arabic'     => _x("Yes, Use Eastern Arabic Numbers style", "wc-setting", $this->td),
+                        'arabic' => _x("Yes, Use Eastern Arabic Numbers style", "wc-setting", $this->td),
                         'farsi'  => _x("Yes, Use Persian Numbers style", "wc-setting", $this->td),
                       ),
                       'id'       => 'puiw_force_persian_numbers',
@@ -1185,14 +1186,29 @@ function PeproUltimateInvoice__wc_get_settings_pages()
                   'puiw_pdf_orientation'                        => array(
                     'name'     => _x("PDF Page Orientation ", "wc-setting", $this->td),
                     'id'       => 'puiw_pdf_orientation',
-                    'type'     => 'select',
-                    'class'    => 'wc-enhanced-select',
+                    'type'     => 'radio',
+                    // 'class'    => 'wc-enhanced-select',
                     'default'  => 'P',
                     'options' =>
                       array(
                         'P'  => _x("Portrait", "wc-setting", $this->td),
                         'L'  => _x("Landscape", "wc-setting", $this->td),
                       ),
+                  ),
+                  'puiw_pdf_font'                => array(
+                    'name'     => _x("PDF Font", "wc-setting", $this->td),
+                    'type'     => 'radio',
+                    'default'  => 'iranyekanfa',
+                    'options'  => array(
+                      "dejavu"      => _x("DejaVuSans (Standard)","wc-setting",$this->td),
+                      "danaen"      => _x("Dana (Standard)","wc-setting",$this->td),
+                      "iransans"    => _x("IRANSans (Standard)","wc-setting",$this->td),
+                      "iranyekanen" => _x("IRANYekan (Standard)","wc-setting",$this->td),
+                      "danafa"      => _x("Dana (Farsi-Digits Support)","wc-setting",$this->td),
+                      "iransansfa"  => _x("IRANSans (Farsi-Digits Support)","wc-setting",$this->td),
+                      "iranyekanfa" => _x("IRANYekan (Farsi-Digits Support)","wc-setting",$this->td),
+                    ),
+                    'id'       => 'puiw_pdf_font',
                   ),
                   'puiw_pdf_end'                                => array(
                     'type' => 'sectionend',

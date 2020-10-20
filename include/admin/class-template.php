@@ -1,4 +1,6 @@
 <?php
+# @Last modified time: 2020/10/20 15:58:31
+
 namespace peproulitmateinvoice;
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
@@ -1105,6 +1107,22 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       $invoice_prefix = get_option("puiw_invoice_prefix",$default);
       $invoice_prefix = empty($invoice_prefix) ? $default : $invoice_prefix;
       return apply_filters("puiw_get_invoice_prefix", $invoice_prefix, $default);
+    }
+    /**
+     * Get PDF Font
+     *
+     * @method PeproUltimateInvoice_Template->get_pdf_font()
+     * @param string $default default font
+     * @return string font name
+     * @version 1.0.0
+     * @since 1.0.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_pdf_font($default="iranyekanfa")
+    {
+      $invoice_prefix = get_option("puiw_pdf_font",$default);
+      $invoice_prefix = empty($invoice_prefix) ? $default : $invoice_prefix;
+      return apply_filters("puiw_get_pdf_font", $invoice_prefix, $default);
     }
     /**
      * get invoice suffix
