@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 15:58:15
+# @Last modified time: 2020/10/20 16:15:56
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -48,6 +48,10 @@ function PeproUltimateInvoice__wc_get_settings_pages()
         }
 
       }
+      public function debug_enabled($true = true,$false = false)
+      {
+        return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
+      }
       public function get_sections()
       {
         echo get_option( "puiw_dark_mode", "no" ) == "no" ? "" : "<script>
@@ -56,7 +60,7 @@ function PeproUltimateInvoice__wc_get_settings_pages()
         $this->wp_enqueue_scripts();
         // prevent gap between page load css and page first byte transfer
         $ext = "@font-face { font-family: 'bodyfont'; font-style: normal; font-weight: 400; src: url('".PEPROULTIMATEINVOICE_URL."/assets/css/96594ad4.woff2') format('woff2'); }";
-        $css = file_get_contents(PEPROULTIMATEINVOICE_DIR . '/assets/admin/wc_setting.css');
+        $css = file_get_contents(PEPROULTIMATEINVOICE_DIR . '/assets/admin/wc_setting' . $this->debug_enabled(".css",".min.css"));
         $css = str_replace("{dir}", PEPROULTIMATEINVOICE_URL."/assets/" , $css);
         echo "<style>$ext $css</style>";
         $sections = array(
@@ -1317,10 +1321,10 @@ function PeproUltimateInvoice__wc_get_settings_pages()
             wp_enqueue_script("jquery-confirm","{$this->assets_url}js/jquery-confirm.min.js", array("jquery"));
             wp_enqueue_script("jquery-color","{$this->assets_url}js/jquery.color.min.js", array("jquery"));
             wp_enqueue_style("jquery-confirm","{$this->assets_url}css/jquery-confirm.min.css", array(), '1.0', 'all');
-            wp_enqueue_style("jquery-minicolors",PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery.minicolors.css", array(), '1.0', 'all');
+            wp_enqueue_style("jquery-minicolors",PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery.minicolors" . $this->debug_enabled(".css",".min.css"), array(), '1.0', 'all');
             wp_enqueue_script("jquery-minicolors",PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery.minicolors.min.js", array("jquery"));
-            wp_enqueue_style( "color-scheme.css", PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme.css');
-            wp_register_script( "color-scheme.js", PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme.js', array('jquery'), "1.1.0");
+            wp_enqueue_style( "color-scheme.css", PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".css",".min.css"));
+            wp_register_script( "color-scheme.js", PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".js",".min.js"), array('jquery'), "1.1.0");
             wp_localize_script( "color-scheme.js", "msg", array(
               "delete" => __("Delete",$this->td),
               "edit" => __("Edit",$this->td),

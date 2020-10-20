@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 15:58:47
+# @Last modified time: 2020/10/20 16:18:05
 /*
 Plugin Name: Pepro Ultimate Invoice
 Description: The most complete invoice plugin you will ever need.
@@ -27,15 +27,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
-
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_LOG', true );
-define( 'WP_DEBUG_DISPLAY', true );
-define( 'SCRIPT_DEBUG', true );
-define( 'SAVEQUERIES', true );
-@ini_set( 'display_errors', 1 );
-error_reporting(E_ERROR|E_WARNING);
-define( 'WC_TEMPLATE_DEBUG_MODE', true );
 
 /**
  * prevent data leak
@@ -71,6 +62,7 @@ if (!class_exists("PeproUltimateInvoice")) {
         protected $db_table = null;
         protected $manage_links = array();
         protected $meta_links = array();
+
         /**
          * construct plugin and set initiation hook and declare consts
          *
@@ -185,6 +177,10 @@ if (!class_exists("PeproUltimateInvoice")) {
               return $vars;
             } );
 
+        }
+        public function debug_enabled($true = true,$false = false)
+        {
+          return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
         }
         /**
          * woocommerce order placed hook to send emails
@@ -734,7 +730,7 @@ if (!class_exists("PeproUltimateInvoice")) {
 
           wp_enqueue_script("jquery-confirm","{$this->assets_url}js/jquery-confirm.min.js", array("jquery"));
           wp_enqueue_style("jquery-confirm","{$this->assets_url}css/jquery-confirm.min.css", array(), '1.0', 'all');
-          wp_enqueue_style("fontawesome","https://use.fontawesome.com/releases/v5.13.1/css/all.css", array(), '1.0', 'all');
+          wp_enqueue_style("fontawesome","//use.fontawesome.com/releases/v5.13.1/css/all.css", array(), '1.0', 'all');
 
           $localize_script = (new PeproUltimateInvoice_Columns)->localize_script();
           wp_register_script("pepro-ultimate-invoice-orders-options", "{$this->assets_url}/admin/wc_orders.js", array("jquery"), current_time('timestamp'));
@@ -756,10 +752,10 @@ if (!class_exists("PeproUltimateInvoice")) {
           wp_register_script( "pepro-ultimate-invoice-persian-date", PEPROULTIMATEINVOICE_ASSETS_URL . "/js/persian-date.min.js", array("jquery"),'1.0.2');
           wp_register_script( "pepro-ultimate-invoice-persian-datepicker", PEPROULTIMATEINVOICE_ASSETS_URL . "/js/persian-datepicker.min.js", array("jquery"),'1.0.2');
 
-          wp_register_style( "pepro-ultimate-invoice-multiple-emails", PEPROULTIMATEINVOICE_ASSETS_URL . "/css/multiple-emails.css");
-          wp_register_script( "pepro-ultimate-invoice-multiple-emails", PEPROULTIMATEINVOICE_ASSETS_URL . "/js/multiple-emails.js", array("jquery"));
+          wp_register_style( "pepro-ultimate-invoice-multiple-emails", PEPROULTIMATEINVOICE_ASSETS_URL . "/css/multiple-emails" . $this->debug_enabled(".css",".min.css"));
+          wp_register_script( "pepro-ultimate-invoice-multiple-emails", PEPROULTIMATEINVOICE_ASSETS_URL . "/js/multiple-emails" . $this->debug_enabled(".js",".min.js"), array("jquery"));
 
-          wp_register_style( "pepro-ultimate-invoice-orders-options", PEPROULTIMATEINVOICE_ASSETS_URL . "/admin/wc_orders.css");
+          wp_register_style( "pepro-ultimate-invoice-orders-options", PEPROULTIMATEINVOICE_ASSETS_URL . "/admin/wc_orders" . $this->debug_enabled(".css",".min.css"));
           wp_register_style( "pepro-ultimate-invoice-persian-datepicker", PEPROULTIMATEINVOICE_ASSETS_URL . "/css/persian-datepicker.min.css");
 
           wp_enqueue_style("pepro-ultimate-invoice-multiple-emails");
@@ -1175,8 +1171,8 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function woocommerce_after_cart_contents()
         {
-            wp_enqueue_style("$this->td-ml", "$this->assets_url/css/mobileLayer.css", array(), "1.0.0", "all");
-            wp_enqueue_script("$this->td-ml", "$this->assets_url/js/mobileLayer.js", array("jquery","jquery-ui-core"), "1.0.0", true);
+            wp_enqueue_style("$this->td-ml", "$this->assets_url/css/mobileLayer" . $this->debug_enabled(".css",".min.css"), array(), "1.0.0", "all");
+            wp_enqueue_script("$this->td-ml", "$this->assets_url/js/mobileLayer". $this->debug_enabled(".js",".min.js"), array("jquery","jquery-ui-core"), "1.0.0", true);
             if (!is_user_logged_in()) {
                 wp_enqueue_script("$this->td-cart", "$this->assets_url/js/wc.cart.public.js", array("jquery"), "1.0.0", true);
                 wp_localize_script("$this->td-cart", "_i18n", array(
@@ -1185,7 +1181,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "msg"       => sprintf( _x("We are sorry for inconvenience, this feature is only available to logged-in users.<br>Please %sLogin / Register%s.", "js-cart-page", $this->td), "<a href='".get_permalink(get_option('woocommerce_myaccount_page_id'))."' target='_blank'>", "</a>"), )
                 );
             }else{
-                wp_enqueue_script("$this->td-cart", "$this->assets_url/js/wc.cart.private.js", array("jquery"), "1.0.0", true);
+                wp_enqueue_script("$this->td-cart", "$this->assets_url/js/wc.cart.private". $this->debug_enabled(".js",".min.js"), array("jquery"), "1.0.0", true);
                 wp_localize_script("$this->td-cart", "_i18n",
                 array(
                       "td"        => "puiw_{$this->td}",
@@ -1422,8 +1418,8 @@ if (!class_exists("PeproUltimateInvoice")) {
         public function help_container($hook)
         {
             ob_start();
-            wp_enqueue_style("{$this->db_slug}_bkend", "{$this->assets_url}css/backend.css");
-            wp_enqueue_script("{$this->db_slug}_bkend", "{$this->assets_url}/js/settings.js", array('jquery','wp-color-picker'), null, true);
+            wp_enqueue_style("{$this->db_slug}_bkend", "{$this->assets_url}css/backend" . $this->debug_enabled(".css",".min.css"));
+            wp_enqueue_script("{$this->db_slug}_bkend", "{$this->assets_url}/js/settings". $this->debug_enabled(".js",".min.js"), array('jquery','wp-color-picker'), null, true);
             wp_add_inline_style("{$this->db_slug}_bkend", ".form-table th {} ");
             is_rtl() AND wp_add_inline_style("{$this->db_slug}_bkend", ".form-table th {}#wpfooter, #wpbody-content *:not(.dashicons ), #wpbody-content input:not([dir=ltr]), #wpbody-content textarea:not([dir=ltr]), h1.had{ font-family: bodyfont, roboto, Tahoma; }");
             $this->update_footer_info();
@@ -1972,10 +1968,10 @@ if (!class_exists("PeproUltimateInvoice")) {
             </div>
             <?php
             echo "</div>";
-            wp_enqueue_style("$this->td-ml", "$this->assets_url/css/mobileLayer.css", array(), "1.0.0", "all");
-            wp_enqueue_script("$this->td-ml", "$this->assets_url/js/mobileLayer.js", array("jquery","jquery-ui-core"), "1.0.0", true);
-            wp_enqueue_style("$this->td", "$this->assets_url/css/front-end.css", array(), "1.0.0", "all");
-            wp_enqueue_script("$this->td", "$this->assets_url/js/front-end.js", array("jquery"), "1.0.0", true);
+            wp_enqueue_style("$this->td-ml", "$this->assets_url/css/mobileLayer" . $this->debug_enabled(".css",".min.css"), array(), "1.0.0", "all");
+            wp_enqueue_script("$this->td-ml", "$this->assets_url/js/mobileLayer". $this->debug_enabled(".js",".min.js"), array("jquery","jquery-ui-core"), "1.0.0", true);
+            wp_enqueue_style("$this->td", "$this->assets_url/css/front-end" . $this->debug_enabled(".css",".min.css"), array(), "1.0.0", "all");
+            wp_enqueue_script("$this->td", "$this->assets_url/js/front-end". $this->debug_enabled(".js",".min.js"), array("jquery"), "1.0.0", true);
             wp_enqueue_style("select2", "{$this->assets_url}css/select2.min.css", false, "4.0.6", "all");
             wp_enqueue_script("select2", "{$this->assets_url}js/select2.min.js", array( "jquery" ), "4.0.6", true);
             wp_localize_script("$this->td", "_i18n",
@@ -2025,7 +2021,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                   'class' => "{$this->td}__class",
                   'icon' => plugin_dir_url(__file__)."assets/img/pepro.png",
                   'show_settings_on_create' => true,
-                  'admin_enqueue_css' => array("{$this->assets_url}/css/vc.init.css","{$this->assets_url}/css/select2.min.css"),
+                  'admin_enqueue_css' => array("{$this->assets_url}/css/vc.init" . $this->debug_enabled(".css",".min.css"),"{$this->assets_url}/css/select2.min.css"),
                   'admin_enqueue_js' => array("{$this->assets_url}/js/select2.min.js"),
                   'category' => __('Pepro Elements', "$this->td"),
                   'params' => array(
