@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 16:18:05
+# @Last modified time: 2020/10/20 22:18:28
 /*
 Plugin Name: Pepro Ultimate Invoice
 Description: The most complete invoice plugin you will ever need.
@@ -733,7 +733,7 @@ if (!class_exists("PeproUltimateInvoice")) {
           wp_enqueue_style("fontawesome","//use.fontawesome.com/releases/v5.13.1/css/all.css", array(), '1.0', 'all');
 
           $localize_script = (new PeproUltimateInvoice_Columns)->localize_script();
-          wp_register_script("pepro-ultimate-invoice-orders-options", "{$this->assets_url}/admin/wc_orders.js", array("jquery"), current_time('timestamp'));
+          wp_register_script("pepro-ultimate-invoice-orders-options", "{$this->assets_url}/admin/wc_orders" . $this->debug_enabled(".js",".min.js"), array("jquery"), current_time('timestamp'));
           wp_localize_script( "pepro-ultimate-invoice-orders-options", "_i18n",
             array_merge($localize_script,array(
               "calendarType"        => ($this->tpl->get_date_shamsi()=="yes") ? "persian" : "gregorian",
@@ -1174,7 +1174,7 @@ if (!class_exists("PeproUltimateInvoice")) {
             wp_enqueue_style("$this->td-ml", "$this->assets_url/css/mobileLayer" . $this->debug_enabled(".css",".min.css"), array(), "1.0.0", "all");
             wp_enqueue_script("$this->td-ml", "$this->assets_url/js/mobileLayer". $this->debug_enabled(".js",".min.js"), array("jquery","jquery-ui-core"), "1.0.0", true);
             if (!is_user_logged_in()) {
-                wp_enqueue_script("$this->td-cart", "$this->assets_url/js/wc.cart.public.js", array("jquery"), "1.0.0", true);
+                wp_enqueue_script("$this->td-cart", "$this->assets_url/js/wc.cart.public" . $this->debug_enabled(".js",".min.js"), array("jquery"), "1.0.0", true);
                 wp_localize_script("$this->td-cart", "_i18n", array(
                     "title"     => _x("Unauthorized Access!", "js-cart-page", $this->td),
                     "okaylabel" => _x("Okay", "js-cart-page", $this->td),
@@ -1738,7 +1738,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                   add_shortcode(  "puiw_quick_shop",  array($this,  "integrate_with_shortcode"));
                   add_action(     "vc_before_init",   array($this,  "integrate_with_vc"));
                   if (function_exists('vc_add_shortcode_param')) {
-                      vc_add_shortcode_param("{$this->td}_about", array($this,'vc_add_pepro_about'), plugins_url("/assets/js/vc.init.js", __FILE__));
+                      vc_add_shortcode_param("{$this->td}_about", array($this,'vc_add_pepro_about'), plugins_url("/assets/js/vc.init" . $this->debug_enabled(".js",".min.js"), __FILE__));
                   }
               }
             }

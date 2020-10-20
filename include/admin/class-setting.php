@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 16:15:56
+# @Last modified time: 2020/10/20 22:17:31
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -1447,7 +1447,7 @@ function PeproUltimateInvoice__wc_get_settings_pages()
         wp_enqueue_script('jquery');
         wp_enqueue_script('jquery-ui-core');
         wp_enqueue_script('jquery-ui-selectmenu');
-        wp_register_script("pepro-ultimate-invoice-wc-setting", PEPROULTIMATEINVOICE_ASSETS_URL . "/admin/wc_setting.js", array("jquery","wp-color-picker"));
+        wp_register_script("pepro-ultimate-invoice-wc-setting", PEPROULTIMATEINVOICE_ASSETS_URL . "/admin/wc_setting"  . $this->debug_enabled(".js",".min.js"), array("jquery","wp-color-picker"));
         wp_localize_script(
           "pepro-ultimate-invoice-wc-setting", "_l10n", array(
             "title"         => _x("Select image file", "wc-setting-js", $this->td),
