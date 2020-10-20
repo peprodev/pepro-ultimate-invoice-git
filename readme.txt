@@ -1,4 +1,4 @@
-@Last modified time: 2020/10/20 15:57:32
+@Last modified time: 2020/10/20 22:48:09
 
 === Pepro Ultimate Invoice ===
 Contributors: peprodev,amirhosseinhpv
@@ -156,6 +156,7 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 - Changed minimum WooCommerce Required to version 4.4
 - Fixed Signature showing despite it's option
 - Fixed Showing Wrong Signature if no signature set
+- Fixed Retrieving Email Addresses on Success/Error send
 
 = 1.1.8 =
 

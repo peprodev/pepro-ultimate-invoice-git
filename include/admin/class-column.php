@@ -3,7 +3,7 @@
 # @Date:   2020/09/20 23:08:04
 # @Email:  its@hpv.im
 # @Last modified by:   Amirhosseinhpv
-# @Last modified time: 2020/10/20 16:14:39
+# @Last modified time: 2020/10/20 22:34:03
 # @License: GPLv2
 # @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
 
@@ -64,7 +64,8 @@ if (!class_exists("PeproUltimateInvoice_Columns")) {
         }
         public function debug_enabled($true = true,$false = false)
         {
-          return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
+          return $true;
+          // return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
         }
         public function admin_enqueue_scripts()
         {
@@ -108,8 +109,13 @@ if (!class_exists("PeproUltimateInvoice_Columns")) {
         {
             global $post;
             if (!wp_script_is("pepro-ultimate-invoice-orders-options")){
-              wp_enqueue_media();
               add_thickbox();
+              wp_enqueue_media();
+              wp_enqueue_script("jquery");
+              wp_enqueue_style("wp-color-picker");
+              wp_enqueue_script("wp-color-picker");
+              wp_enqueue_script('jquery-ui-core');
+              wp_enqueue_script('jquery-ui-selectmenu');
               wp_enqueue_style("pepro-ultimate-invoice-persian-datepicker");
               wp_enqueue_style("pepro-ultimate-invoice-multiple-emails");
               wp_enqueue_style("pepro-ultimate-invoice-orders-options");

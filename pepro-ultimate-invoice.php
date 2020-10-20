@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 22:18:28
+# @Last modified time: 2020/10/20 22:47:29
 /*
 Plugin Name: Pepro Ultimate Invoice
 Description: The most complete invoice plugin you will ever need.
@@ -180,7 +180,8 @@ if (!class_exists("PeproUltimateInvoice")) {
         }
         public function debug_enabled($true = true,$false = false)
         {
-          return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
+          return $true;
+          // return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
         }
         /**
          * woocommerce order placed hook to send emails
@@ -1641,15 +1642,17 @@ if (!class_exists("PeproUltimateInvoice")) {
                     }
                     if (!empty($email)){
                       if (!empty($_POST['dparam']) && "PDF" == trim($_POST['dparam'])){
-                        $wp_mail = $this->send_formatted_email($order_id,$email,true);
+                        $wp_mail = $this->send_formatted_email($order_id, $email, true);
                       }else{
-                        $wp_mail = $this->send_formatted_email($order_id,$email,false);
+                        $wp_mail = $this->send_formatted_email($order_id, $email, false);
                       }
 
+                      $email_label = (is_array($email)&&count($email)>0) ? count($email) > 3 ? sprintf(__("%d emails",$this->td),count($email)) : implode("<br>", $email) : $email;
+
                       if ($wp_mail) {
-                        wp_send_json_success( array( "e" => $puiw_send_mail_params_advanced, "msg"=> sprintf(__("Sending email to <br><strong>%s</strong><br>was successfully done",$this->td), is_array($email) ? count($email) > 3 ? sprintf(__("%d emails",$this->td),count($email)) : implode("<br>", $email) : $email)));
+                        wp_send_json_success( array( "e" => $puiw_send_mail_params_advanced, "msg"=> sprintf(__("Sending email to <br><strong>%s</strong><br>was successfully done",$this->td), $email_label)));
                       }else{
-                        wp_send_json_error( array( "e" => $puiw_send_mail_params_advanced, "msg"=> sprintf(__("Error sending email to <br><strong>%s</strong>",$this->td), $email)));
+                        wp_send_json_error( array( "e" => $puiw_send_mail_params_advanced, "msg"=> sprintf(__("Error sending email to <br><strong>%s</strong>",$this->td), $email_label)));
                       }
                     }else{
                       wp_send_json_error( array("msg"=>__("No valid email found for this order",$this->td)));

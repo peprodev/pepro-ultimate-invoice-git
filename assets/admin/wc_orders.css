@@ -1,3 +1,14 @@
+/**
+ * @Author: Amirhosseinhpv
+ * @Date:   2020/10/20 22:23:23
+ * @Email:  its@hpv.im
+ * @Last modified by:   Amirhosseinhpv
+ * @Last modified time: 2020/10/20 22:35:54
+ * @License: GPLv2
+ * @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
+ */
+
+
 :root {
 	--puiw--spinner-color: #0073aa;
 	--puiw--bg: #03051a;
@@ -497,4 +508,8 @@ label[for] {
 [dir=rtl] .ui-selectmenu-button span.ui-icon {
 	right: auto;
 	left: 0.5em;
+}
+
+.wc-customer-search + .select2 {
+	z-index: 1 !important;
 }

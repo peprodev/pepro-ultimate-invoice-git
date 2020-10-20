@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 22:17:31
+# @Last modified time: 2020/10/20 22:31:52
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -50,7 +50,8 @@ function PeproUltimateInvoice__wc_get_settings_pages()
       }
       public function debug_enabled($true = true,$false = false)
       {
-        return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
+        return $true;
+        // return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
       }
       public function get_sections()
       {

@@ -1,5 +1,5 @@
 <!--
-@Last modified time: 2020/10/20 15:20:30
+@Last modified time: 2020/10/20 22:37:34
 -->
 
 
@@ -8,7 +8,6 @@
     <td colspan="6" style="vertical-align: top; text-align:center;">
       <p style="text-align:center;">مهر و امضای فروشنده:<br><br>
         <img class="footer-img uk-align-center" alt="" style="width:2cm; {{{signature_css}}}" src="{{{signature}}}">
-        SIG:[{{{signature}}}]
       </p>
     </td>
     <td colspan="6" style="vertical-align: top; text-align:center;">
