@@ -1,5 +1,3 @@
-@Last modified time: 2020/10/20 22:48:09
-
 === Pepro Ultimate Invoice ===
 Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate

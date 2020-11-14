@@ -1,5 +1,4 @@
 <?php
-# @Last modified time: 2020/10/20 22:47:29
 /*
 Plugin Name: Pepro Ultimate Invoice
 Description: The most complete invoice plugin you will ever need.
@@ -23,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-
+# @Last modified time: 2020/10/20 22:47:29
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
