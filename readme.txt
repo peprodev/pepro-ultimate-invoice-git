@@ -3,11 +3,11 @@ Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
-Tested up to: 5.5.1
-Stable tag: 1.1.9
-Requires PHP: 5.6
+Tested up to: 5.6.0
+Stable tag: 1.1.10
+Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 4.5.2
+WC tested up to: 5.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -143,6 +143,14 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
+= 1.1.11 =
+
+- Compatibility with New WooCommerce
+- Compatibility with New WordPress
+
+= 1.1.10 =
+
+- Default Template Translation fix
 
 = 1.1.9 =
 
@@ -232,6 +240,15 @@ PEPRO DEV is a premium supplier of quality WordPress plugins, services and suppo
 Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to check our [free offerings](http://profiles.wordpress.org/peprodev/), we hope you enjoy them!
 
 == Upgrade Notice ==
+
+= 1.1.11 =
+
+- Compatibility with New WooCommerce
+- Compatibility with New WordPress
+
+= 1.1.10 =
+
+- Default Template Translation fix
 
 = 1.1.9 =
 

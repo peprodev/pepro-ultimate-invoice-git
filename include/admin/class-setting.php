@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 22:31:52
+# @Last modified time: 2021/02/27 11:57:43
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -14,7 +14,7 @@ add_filter("woocommerce_get_settings_pages", "PeproUltimateInvoice__wc_get_setti
  * @since   1.0.0
  * @license https://pepro.dev/license      Pepro.dev License
  */
-function PeproUltimateInvoice__wc_get_settings_pages()
+function PeproUltimateInvoice__wc_get_settings_pages($settings)
 {
   if (!class_exists("PeproUltimateInvoice_WC_Setting")) {
     /**
@@ -1319,13 +1319,13 @@ function PeproUltimateInvoice__wc_get_settings_pages()
         switch ($current_section) {
           case 'color':
             $hide_save_button = true;
-            wp_enqueue_script("jquery-confirm","{$this->assets_url}js/jquery-confirm.min.js", array("jquery"));
-            wp_enqueue_script("jquery-color","{$this->assets_url}js/jquery.color.min.js", array("jquery"));
-            wp_enqueue_style("jquery-confirm","{$this->assets_url}css/jquery-confirm.min.css", array(), '1.0', 'all');
-            wp_enqueue_style("jquery-minicolors",PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery.minicolors" . $this->debug_enabled(".css",".min.css"), array(), '1.0', 'all');
-            wp_enqueue_script("jquery-minicolors",PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery.minicolors.min.js", array("jquery"));
-            wp_enqueue_style( "color-scheme.css", PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".css",".min.css"));
-            wp_register_script( "color-scheme.js", PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".js",".min.js"), array('jquery'), "1.1.0");
+            wp_enqueue_script("jquery-confirm",     PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery-confirm.min.js", array("jquery"));
+            wp_enqueue_script("jquery-color",       PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery.color.min.js", array("jquery"));
+            wp_enqueue_style("jquery-confirm",      PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery-confirm.min.css", array(), '1.0', 'all');
+            wp_enqueue_style("jquery-minicolors",   PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery.minicolors" . $this->debug_enabled(".css",".min.css"), array(), '1.0', 'all');
+            wp_enqueue_script("jquery-minicolors",  PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery.minicolors.min.js", array("jquery"));
+            wp_enqueue_style( "color-scheme.css",   PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".css",".min.css"));
+            wp_register_script( "color-scheme.js",  PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".js",".min.js"), array('jquery'), "1.1.0");
             wp_localize_script( "color-scheme.js", "msg", array(
               "delete" => __("Delete",$this->td),
               "edit" => __("Edit",$this->td),
@@ -1501,6 +1501,7 @@ function PeproUltimateInvoice__wc_get_settings_pages()
         return wc_get_order_statuses();
       }
     }
-    return new PeproUltimateInvoice_WC_Setting();
+    $settings[] = new PeproUltimateInvoice_WC_Setting();
+    return $settings;
   }
 }
