@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/02/27 11:57:43
+# @Last modified time: 2021/03/15 23:44:34
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -1385,31 +1385,31 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
 
         ?>
 
-        <h2><?=_x("Color Schemes", "wc-setting", $this->td);?></h2>
+        <h2><?php echo _x("Color Schemes", "wc-setting", $this->td);?></h2>
         <br>
         <div class="puiw_color_schemes_wrap">
-          <textarea readonly="readonly" onclick="this.focus();this.select()" onfocus="this.focus();this.select();" id="puiw_color_schemes" style="display: none;" name="puiw_color_schemes" rows="8" cols="200"><?=esc_js(get_option("puiw_color_swatches",""));?></textarea>
+          <textarea readonly="readonly" onclick="this.focus();this.select()" onfocus="this.focus();this.select();" id="puiw_color_schemes" style="display: none;" name="puiw_color_schemes" rows="8" cols="200"><?php echo esc_js(get_option("puiw_color_swatches",""));?></textarea>
           <br>
           <p class="puiw_color_schemes_tool">
-            <a class="button button-primary swatches-save" href="#"><?=_x("Save Color Schemes","swatches-panel",$this->td);?></a>
+            <a class="button button-primary swatches-save" href="#"><?php echo _x("Save Color Schemes","swatches-panel",$this->td);?></a>
             <span style="margin: 0.5rem;color: #ccc;"></span>
-            <a class="button button-secondary swatches-add-new" href="#"><?=_x("Add New","swatches-panel",$this->td);?></a>
-            <a class="button button-secondary swatches-delete-all" href="#"><?=_x("Delete All","swatches-panel",$this->td);?></a>
-            <a class="button button-secondary swatches-restore-default" href="#"><?=_x("Restore Default","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary swatches-add-new" href="#"><?php echo _x("Add New","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary swatches-delete-all" href="#"><?php echo _x("Delete All","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary swatches-restore-default" href="#"><?php echo _x("Restore Default","swatches-panel",$this->td);?></a>
             <span style="margin: 0.5rem;color: #ccc;"></span>
-            <a class="button button-secondary swatches-export" href="#"><?=_x("Export","swatches-panel",$this->td);?></a>
-            <a class="button button-secondary swatches-import show" href="#"><?=_x("Import","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary swatches-export" href="#"><?php echo _x("Export","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary swatches-import show" href="#"><?php echo _x("Import","swatches-panel",$this->td);?></a>
           </p>
-          <div class="puiw_color_schemes_workspace" empty="<?=__("No Color Scheme Found!",$this->td);?>"></div>
+          <div class="puiw_color_schemes_workspace" empty="<?php echo __("No Color Scheme Found!",$this->td);?>"></div>
           <p class="puiw_color_schemes_tool">
-             <a class="button button-primary swatches-save" href="#"><?=_x("Save Color Schemes","swatches-panel",$this->td);?></a>
+             <a class="button button-primary swatches-save" href="#"><?php echo _x("Save Color Schemes","swatches-panel",$this->td);?></a>
              <span style="margin: 0.5rem;color: #ccc;"></span>
-             <a class="button button-secondary swatches-add-new" href="#"><?=_x("Add New","swatches-panel",$this->td);?></a>
-             <a class="button button-secondary swatches-delete-all" href="#"><?=_x("Delete All","swatches-panel",$this->td);?></a>
-             <a class="button button-secondary swatches-restore-default" href="#"><?=_x("Restore Default","swatches-panel",$this->td);?></a>
+             <a class="button button-secondary swatches-add-new" href="#"><?php echo _x("Add New","swatches-panel",$this->td);?></a>
+             <a class="button button-secondary swatches-delete-all" href="#"><?php echo _x("Delete All","swatches-panel",$this->td);?></a>
+             <a class="button button-secondary swatches-restore-default" href="#"><?php echo _x("Restore Default","swatches-panel",$this->td);?></a>
              <span style="margin: 0.5rem;color: #ccc;"></span>
-             <a class="button button-secondary swatches-export" href="#"><?=_x("Export","swatches-panel",$this->td);?></a>
-             <a class="button button-secondary swatches-import show" href="#"><?=_x("Import","swatches-panel",$this->td);?></a>
+             <a class="button button-secondary swatches-export" href="#"><?php echo _x("Export","swatches-panel",$this->td);?></a>
+             <a class="button button-secondary swatches-import show" href="#"><?php echo _x("Import","swatches-panel",$this->td);?></a>
           </p>
         </div>
         <?php

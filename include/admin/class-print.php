@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 15:57:55
+# @Last modified time: 2021/03/15 23:44:21
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -18,21 +18,21 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function puiw_get_default_dynamic_params($opts, $order)
         {
-          if (isset($_GET["tp"]) && !empty(trim($_GET["tp"]))){
-            $opts["template"] = base64_decode(urldecode(trim($_GET["tp"])));
-            $opts["preinvoice_template"] = base64_decode(urldecode(trim($_GET["tp"])));
+          if (isset($_GET["tp"]) && !empty(trim(sanitize_text_field($_GET["tp"])))){
+            $opts["template"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tp"]))));
+            $opts["preinvoice_template"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tp"]))));
           }
-          if (isset($_GET["pclr"]) && !empty(trim($_GET["pclr"]))){
-            $opts["theme_color"] = base64_decode(urldecode(trim($_GET["pclr"])));
-            $opts["preinvoice_theme_color"] = base64_decode(urldecode(trim($_GET["pclr"])));
+          if (isset($_GET["pclr"]) && !empty(trim(sanitize_text_field($_GET["pclr"])))){
+            $opts["theme_color"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["pclr"]))));
+            $opts["preinvoice_theme_color"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["pclr"]))));
           }
-          if (isset($_GET["sclr"]) && !empty(trim($_GET["sclr"]))){
-            $opts["theme_color2"] = base64_decode(urldecode(trim($_GET["sclr"])));
-            $opts["preinvoice_theme_color2"] = base64_decode(urldecode(trim($_GET["sclr"])));
+          if (isset($_GET["sclr"]) && !empty(trim(sanitize_text_field($_GET["sclr"])))){
+            $opts["theme_color2"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["sclr"]))));
+            $opts["preinvoice_theme_color2"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["sclr"]))));
           }
-          if (isset($_GET["tclr"]) && !empty(trim($_GET["tclr"]))){
-            $opts["theme_color3"] = base64_decode(urldecode(trim($_GET["tclr"])));
-            $opts["preinvoice_theme_color3"] = base64_decode(urldecode(trim($_GET["tclr"])));
+          if (isset($_GET["tclr"]) && !empty(trim(sanitize_text_field($_GET["tclr"])))){
+            $opts["theme_color3"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tclr"]))));
+            $opts["preinvoice_theme_color3"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tclr"]))));
           }
           return $opts;
         }
@@ -1382,7 +1382,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           echo '<table style="width: 100%;float: left;">';
           foreach ( $order->get_order_item_totals() as $key => $total ) {
             ?>
-            <tr class="puiw_totalrow <?=$key;?>">
+            <tr class="puiw_totalrow <?php echo $key;?>">
               <th style="border: none;"scope="row"><?php echo esc_html( $total['label'] ); ?></th>
               <td style="border: none;"><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
             </tr>
