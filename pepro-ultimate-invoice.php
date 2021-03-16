@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.2.0
-Stable tag: 1.2.0
+Version: 1.2.1
+Stable tag: 1.2.1
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/03/15 23:45:14
+# @Last modified time: 2021/03/16 11:52:04
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -72,7 +72,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.2.0";
+            $this->version = "1.2.1";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -347,12 +347,20 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function init_plugin()
         {
-            if (isset($_GET["invoice"]) && !empty(trim(sanitize_text_field($_GET["invoice"]))){
-              if (!$this->auth_check()){
+            if (
+              isset($_GET["invoice"]) && !empty(
+                trim(
+                  sanitize_text_field($_GET["invoice"])
+                )
+              )
+            ){
+              if (
+                !$this->auth_check()
+              ){
                 $this->die("invoice auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
               }else
               {
-                die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"])));
+                die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"]))));
               }
             }
             if (isset($_GET["invoice-pdf"]) && !empty(trim(sanitize_text_field($_GET["invoice-pdf"])))){
@@ -1614,27 +1622,33 @@ if (!class_exists("PeproUltimateInvoice")) {
                     $advanced = false;
                     if (!empty($_POST['eparam'])){
                       global $puiw_send_mail_params_advanced;
-                      $puiw_send_mail_params_advanced = $_POST['eparam'];
+                      $puiw_send_mail_params_advanced = sanitize_post($_POST['eparam']);
 
                       add_filter( "puiw_get_default_dynamic_params", function($opts, $order)
                       {
                         global $puiw_send_mail_params_advanced;
-                        if (isset($puiw_send_mail_params_advanced["tp"]) && !empty(trim($puiw_send_mail_params_advanced["tp"]))){
-                          $opts["template"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["tp"])));
-                          $opts["preinvoice_template"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["tp"])));
+                        $g_GET = $puiw_send_mail_params_advanced;
+
+                        if ( isset($g_GET["tp"]) && !empty($g_GET["tp"]) ){
+                          $opts["template"] = sanitize_text_field(base64_decode(urldecode($g_GET["tp"])));
+                          $opts["preinvoice_template"] = sanitize_text_field(base64_decode(urldecode($g_GET["tp"])));
                         }
-                        if (isset($puiw_send_mail_params_advanced["pclr"]) && !empty(trim($puiw_send_mail_params_advanced["pclr"]))){
-                          $opts["theme_color"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["pclr"])));
-                          $opts["preinvoice_theme_color"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["pclr"])));
+
+                        if ( isset($g_GET["pclr"]) && !empty($g_GET["pclr"]) ){
+                          $opts["theme_color"] = sanitize_hex_color(base64_decode(urldecode(trim($g_GET["pclr"]))));
+                          $opts["preinvoice_theme_color"] = sanitize_hex_color(base64_decode(urldecode($g_GET["pclr"])));
                         }
-                        if (isset($puiw_send_mail_params_advanced["sclr"]) && !empty(trim($puiw_send_mail_params_advanced["sclr"]))){
-                          $opts["theme_color2"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["sclr"])));
-                          $opts["preinvoice_theme_color2"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["sclr"])));
+
+                        if ( isset($g_GET["sclr"]) && !empty($g_GET["sclr"]) ){
+                          $opts["theme_color2"] = sanitize_hex_color(base64_decode(urldecode($g_GET["sclr"])));
+                          $opts["preinvoice_theme_color2"] = sanitize_hex_color(base64_decode(urldecode($g_GET["sclr"])));
                         }
-                        if (isset($puiw_send_mail_params_advanced["tclr"]) && !empty(trim($puiw_send_mail_params_advanced["tclr"]))){
-                          $opts["theme_color3"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["tclr"])));
-                          $opts["preinvoice_theme_color3"] = base64_decode(urldecode(trim($puiw_send_mail_params_advanced["tclr"])));
+
+                        if ( isset($g_GET["tclr"]) && !empty($g_GET["tclr"]) ){
+                          $opts["theme_color3"] = sanitize_hex_color(base64_decode(urldecode($g_GET["tclr"])));
+                          $opts["preinvoice_theme_color3"] = sanitize_hex_color(base64_decode(urldecode($g_GET["tclr"])));
                         }
+
                         return $opts;
                       } , 10, 2);
 

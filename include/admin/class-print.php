@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/03/15 23:44:21
+# @Last modified time: 2021/03/16 11:48:27
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -18,22 +18,27 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function puiw_get_default_dynamic_params($opts, $order)
         {
-          if (isset($_GET["tp"]) && !empty(trim(sanitize_text_field($_GET["tp"])))){
-            $opts["template"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tp"]))));
-            $opts["preinvoice_template"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tp"]))));
+          
+          if ( isset($_GET["tp"]) && !empty($_GET["tp"]) ){
+            $opts["template"] = sanitize_text_field(base64_decode(urldecode($_GET["tp"])));
+            $opts["preinvoice_template"] = sanitize_text_field(base64_decode(urldecode($_GET["tp"])));
           }
-          if (isset($_GET["pclr"]) && !empty(trim(sanitize_text_field($_GET["pclr"])))){
-            $opts["theme_color"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["pclr"]))));
-            $opts["preinvoice_theme_color"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["pclr"]))));
+
+          if ( isset($_GET["pclr"]) && !empty($_GET["pclr"]) ){
+            $opts["theme_color"] = sanitize_hex_color(base64_decode(urldecode(trim($_GET["pclr"]))));
+            $opts["preinvoice_theme_color"] = sanitize_hex_color(base64_decode(urldecode($_GET["pclr"])));
           }
-          if (isset($_GET["sclr"]) && !empty(trim(sanitize_text_field($_GET["sclr"])))){
-            $opts["theme_color2"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["sclr"]))));
-            $opts["preinvoice_theme_color2"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["sclr"]))));
+
+          if ( isset($_GET["sclr"]) && !empty($_GET["sclr"]) ){
+            $opts["theme_color2"] = sanitize_hex_color(base64_decode(urldecode($_GET["sclr"])));
+            $opts["preinvoice_theme_color2"] = sanitize_hex_color(base64_decode(urldecode($_GET["sclr"])));
           }
-          if (isset($_GET["tclr"]) && !empty(trim(sanitize_text_field($_GET["tclr"])))){
-            $opts["theme_color3"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tclr"]))));
-            $opts["preinvoice_theme_color3"] = base64_decode(urldecode(trim(sanitize_text_field($_GET["tclr"]))));
+
+          if ( isset($_GET["tclr"]) && !empty($_GET["tclr"]) ){
+            $opts["theme_color3"] = sanitize_hex_color(base64_decode(urldecode($_GET["tclr"])));
+            $opts["preinvoice_theme_color3"] = sanitize_hex_color(base64_decode(urldecode($_GET["tclr"])));
           }
+
           return $opts;
         }
         public function get_default_dynamic_params($order_id,$order)
