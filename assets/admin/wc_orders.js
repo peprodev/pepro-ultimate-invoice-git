@@ -1,3 +1,14 @@
+/**
+ * @Author: Amirhosseinhpv
+ * @Date:   2020/10/20 22:23:23
+ * @Email:  its@hpv.im
+ * @Last modified by:   Amirhosseinhpv
+ * @Last modified time: 2021/03/30 14:43:34
+ * @License: GPLv2
+ * @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
+ */
+
+
 (function($) {
   var ULTIMATE_INVOICE_CURRENT_AJAX = null;
   var _pepro_ajax_request = null;
@@ -440,99 +451,102 @@
       window.open(_i18n.home + "/?invoice-pdf=" + lparam + "&download=1");
     });
 
-    $.widget( "ui.selectmenu", $.ui.selectmenu, {
-        _renderItem: function( ul, item ) {
-          var el = $(item.element.context);
-          $elid = el.data("uniq");
-          var li = $("<li>");
-          if (el.is(".eu_puiw_selector")){
-             $("body").append(`<style>
-             .ui-widget-content .${$elid}{background:rgb(255,255,255);
-               background:linear-gradient(90deg, rgba(255,255,255,1) 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%) !important;
-               background:-moz-linear-gradient(90deg, rgba(255,255,255,1) 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               background:-webkit-linear-gradient(90deg, rgba(255,255,255,1) 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
-             }
-             li.ui-state-focus.${$elid}{background:#0073aa; color: white;
-               background:linear-gradient(90deg, #0073aa, white 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%) !important;
-               background:-moz-linear-gradient(90deg, #0073aa, white 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               background:-webkit-linear-gradient(90deg, #0073aa, white 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
-             }
-             [dir=rtl] .ui-widget-content .${$elid}{background:rgb(255,255,255);
-               background:linear-gradient(-90deg, rgba(255,255,255,1) 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%) !important;
-               background:-moz-linear-gradient(-90deg, rgba(255,255,255,1) 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               background:-webkit-linear-gradient(-90deg, rgba(255,255,255,1) 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
-             }
-             [dir=rtl] li.ui-state-focus.${$elid}{background:#0073aa; color: white;
-               background:linear-gradient(-90deg, #0073aa, white 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%) !important;
-               background:-moz-linear-gradient(-90deg, #0073aa, white 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               background:-webkit-linear-gradient(-90deg, #0073aa, white 70%, ${el.data("p")} 70%, ${el.data("p")} 80%, ${el.data("s")} 80%, ${el.data("s")} 90%, ${el.data("t")} 90%, ${el.data("t")} 100%);
-               filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
-             }
-             </style>`);
-             var li = $("<li>").addClass($elid).data("p",el.data("p")).data("s",el.data("s")).data("t",el.data("t"));
-             this._setText( li, item.label );
-          }
-          if (el.is(".th_puiw_selector")){
-             $("body").append(`<style>
-             .ui-widget-content .${$elid}{
-               background: white url('${el.data("icon")}')  no-repeat center left;
-               background-position-x: 4px; background-size: 64px; height: 64px; padding-inline-start: 74px; line-height: 1.2;
-             }
-             [dir=rtl] .ui-widget-content .${$elid}{background-position-x: calc(100% - 4px);}
-             li.ui-state-focus.${$elid}{background-color:#0073aa; color: white; }
-             </style>`);
-             var li = $("<li>").addClass($elid).data("p",el.data("p")).data("s",el.data("s")).data("t",el.data("t"));
-             li.append(`<span>
-             <span style="display: block; font-style: italic;font-weight: bold;">${el.data("name")}</span>
-             <span style="display: block; font-style: italic;font-size: 0.6rem;">${el.data("author")}</span></span>`);
-          }
-          if (item.disabled) {li.addClass( "ui-state-disabled" );}
-          return li.appendTo( ul );
-        }
-    });
     var DEFAULT_SWATACHES = `[{"n":"Smoke","p":"#9E9E9E","s":"#A6A6A6","t":"#B3B3B3"},{"n":"Mango","p":"#FFCC80","s":"#FCD59A","t":"#FFDFB0"},{"n":"Gold","p":"#FAEE84","s":"#FFF59D","t":"#FFF8B5"},{"n":"Grass","p":"#A5D6A7","s":"#AFE0B1","t":"#C3EBC5"},{"n":"Sea","p":"#90CAF9","s":"#A6D5FC","t":"#B5DEFF"},{"n":"Peach","p":"#EF9A9A","s":"#F5ABAB","t":"#F0BBBB"}]`;
-    $("select.swatch-select").each(function(index, select) {
+
+    if (_i18n.load_themes){
+      themes = _i18n.load_themes;
+      get_template = _i18n.get_template; ind=0;
+      styles = '';
+      $.each(themes, function(index, val) {
+        var $elid = 'th_puiw_' + Math.floor(Math.random() * 26) + Date.now() + ind++;
+        var sel = "";
+        if (get_template == val.path){ sel = "selected='selected'"; }
+        $(".jqui-select").append(`<option class="th_puiw_selector" ${sel} data-name="${val.name}" data-version="${val.version}" data-author="${val.author}" data-uniq="${$elid}" data-icon="${val.icon}" value="${val.path}">${val.name}</option>`);
+        styles += `
+          \n/* style for theme selector -- title: ${val.name}*/
+          ul.select2-results__options li[id$='${val.path}']{
+            background: white url('${val.icon}') no-repeat center left;
+            background-position-x: 4px;
+            background-size: 64px;
+            height: 64px;
+            line-height: 64px;
+            padding-inline-start: 74px;
+            font-style: italic;
+            font-weight: bold;
+          }
+          [dir=rtl] ul.select2-results__options li[id$='${val.path}']{
+            background-position-x: calc(100% - 4px);
+          }
+          ul.select2-results__options li[id$='${val.path}'].select2-results__option--highlighted{
+            background-color:#0073aa;
+            color: white;
+          }\n`;
+      });
+      $("body").append(`<style>${styles}</style>`);
+    }
+    $("select#puiw_metabox_theme_select").addClass("wc-enhanced-select");
+
+    $("select#puiw_metabox_swatch_select").each(function(index, select) {
       var swatches = $(select).attr("swatches");
       if (!swatches){swatches = DEFAULT_SWATACHES;}
       $(select).empty();
       try {var dJSON = $.parseJSON(swatches);}
       catch (err) {var dJSON = DEFAULT_SWATACHES;}
+      styles = '';
       $.each(dJSON, function(index, val) {
-        var $elid = 'eu_puiw_' + Math.floor(Math.random() * 26) + Date.now() + index++;
-        $(select).append(`<option class="eu_puiw_selector" data-uniq="${$elid}" data-p="${val.p}" data-s="${val.s}" data-t="${val.t}" value="${val.p},${val.s},${val.t}">${val.n}</option>`);
+        var $elidraw = Math.floor(Math.random() * 26) + Date.now() + index++;
+        var $elid = 'eu_puiw_' + $elidraw;
+        el = $(select).append(`<option data-uniq="${$elid}" data-p="${val.p}" data-s="${val.s}" data-t="${val.t}" value="${$elid}">${val.n}</option>`);
+        styles += `
+          \n/* style for swatch -- item with colors: ${val.p}, ${val.s}, ${val.t} | title: ${val.n}*/
+          ul.select2-results__options li[id$='${$elid}']{
+            background:rgb(255,255,255);
+            background:linear-gradient(90deg, rgba(255,255,255,1) 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%) !important;
+            background:-moz-linear-gradient(90deg, rgba(255,255,255,1) 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            background:-webkit-linear-gradient(90deg, rgba(255,255,255,1) 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
+          }
+          [dir=rtl] ul.select2-results__options li[id$='${$elid}']{
+            background:rgb(255,255,255);
+            background:linear-gradient(-90deg, rgba(255,255,255,1) 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%) !important;
+            background:-moz-linear-gradient(-90deg, rgba(255,255,255,1) 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            background:-webkit-linear-gradient(-90deg, rgba(255,255,255,1) 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
+          }
+          ul.select2-results__options li[id$='${$elid}'].select2-results__option--highlighted{
+            background:#0073aa;
+            background:linear-gradient(90deg, #0073aa, white 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%) !important;
+            background:-moz-linear-gradient(90deg, #0073aa, white 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            background:-webkit-linear-gradient(90deg, #0073aa, white 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
+          }
+          [dir=rtl] ul.select2-results__options li[id$='${$elid}'].select2-results__option--highlighted{
+            background:#0073aa;
+            background:linear-gradient(-90deg, #0073aa, white 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%) !important;
+            background:-moz-linear-gradient(-90deg, #0073aa, white 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            background:-webkit-linear-gradient(-90deg, #0073aa, white 70%, ${val.p} 70%, ${val.p} 80%, ${val.s} 80%, ${val.s} 90%, ${val.t} 90%, ${val.t} 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d8bfc",GradientType=1) !important;
+          }\n`;
       });
-      $(select).selectmenu({width: "100%"});
+      $("body").append(`<style>${styles}</style>`);
     });
+    $("select#puiw_metabox_swatch_select").addClass("wc-enhanced-select");
+    $(document.body).trigger('wc-enhanced-select-init');
+
     $("[selecteditem]").each(function(index, val) {
       $(val).find("option").removeAttr("selected");
       $(val).find("option[value='"+$(val).attr("selecteditem")+"']").attr("selected");
       $(val).val($(val).attr("selecteditem"));
       $(val).trigger("change");
     });
-    if (_i18n.load_themes){
-      themes = _i18n.load_themes;
-      get_template = _i18n.get_template; ind=0;
-      $.each(themes, function(index, val) {
-        var $elid = 'th_puiw_' + Math.floor(Math.random() * 26) + Date.now() + ind++;
-        var sel = "";
-        if (get_template == val.path){
-          sel = "selected='selected'";
-        }
-        $(".jqui-select").append(`<option class="th_puiw_selector" ${sel} data-name="${val.name}" data-version="${val.version}" data-author="${val.author}" data-uniq="${$elid}" data-icon="${val.icon}" value="${val.path}">${val.title}}</option>`);
-      });
 
-      $(".jqui-select").selectmenu({width: "100%"});
-    }
     $(".wc-color-picker").wpColorPicker();
 
     $("#puiwc_advanced_opts").prop("checked",false).trigger("change");
 
-    $(document).on("click tap","ul#puiw_metabox_swatch_select-menu li.ui-menu-item",function(e){
+    $(document).on("change","#puiw_metabox_swatch_select",function(e){
       e.preventDefault();
-      var me = $(this);
+      var me = $(this).find("option:selected").first();
       $("input#puiw_metabox_theme_color").val(me.data("p")).trigger("change");
       $("input#puiw_metabox_theme_color2").val(me.data("s")).trigger("change");
       $("input#puiw_metabox_theme_color3").val(me.data("t")).trigger("change");
@@ -540,7 +554,8 @@
 
     $(document).on("click tap change",".pwui_reset_advanced",function(e){
       e.preventDefault();
-      $("select#puiw_metabox_theme_select").val(_i18n.get_template).trigger("change").selectmenu("refresh").trigger("selectmenuselect");
+      $("select#puiw_metabox_swatch_select").val("").trigger("change");
+      $("select#puiw_metabox_theme_select").val(_i18n.get_template).trigger("change");
       $("input#puiw_metabox_theme_color").val(_i18n.theme_color).trigger("change");
       $("input#puiw_metabox_theme_color2").val(_i18n.theme_color2).trigger("change");
       $("input#puiw_metabox_theme_color3").val(_i18n.theme_color3).trigger("change");

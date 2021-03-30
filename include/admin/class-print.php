@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/03/16 11:48:27
+# @Last modified time: 2021/03/30 14:36:35
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -18,7 +18,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function puiw_get_default_dynamic_params($opts, $order)
         {
-          
+
           if ( isset($_GET["tp"]) && !empty($_GET["tp"]) ){
             $opts["template"] = sanitize_text_field(base64_decode(urldecode($_GET["tp"])));
             $opts["preinvoice_template"] = sanitize_text_field(base64_decode(urldecode($_GET["tp"])));
@@ -502,11 +502,11 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               if (!$email_printout)   {
                 $body_content           = '<p style="text-align:center;">';
                 if ($skipAuth){
-                  $body_content .= '<a class="print-button" href="javascript:;" onclick="window.print();return false;">'.__("PRINT",$this->td).'</a>';
-                  $body_content .= '<a class="print-button" target="_blank" href="{{{home_url}}}?invoice-pdf={{{invoice_id_nm}}}">'.__("GET PDF",$this->td).'</a>';
+                  $body_content .= '<a class="print-button" href="javascript:;" onclick="window.print();return false;" >'.__("PRINT",$this->td).'</a>';
+                  $body_content .= '<a class="print-button" href="javascript:;" onclick="window.open(window.location.href.replace(\'?invoice=\',\'?invoice-pdf=\'))" >'.__("GET PDF",$this->td).'</a>';
                 }else{
                   if ($this->has_access("HTML",$order)) { $body_content .= '<a class="print-button" href="javascript:;" onclick="window.print();return false;">'.__("PRINT",$this->td).'</a>'; }
-                  if ($this->has_access("PDF",$order))  { $body_content .= '<a class="print-button" target="_blank" href="{{{home_url}}}?invoice-pdf={{{invoice_id_nm}}}">'.__("GET PDF",$this->td).'</a>'; }
+                  if ($this->has_access("PDF",$order))  { $body_content .= '<a class="print-button" href="javascript:;" onclick="window.open(window.location.href.replace(\'?invoice=\',\'?invoice-pdf=\'))" >'.__("GET PDF",$this->td).'</a>'; }
                 }
                 $body_content           .= '</p>';
               }
@@ -558,16 +558,16 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $opt["invoice_total_qty"] = (int) $opt["invoice_total_qty"] + $quantity;
               switch ($opt["show_price_template"]) {
                 case 'show_only_regular_price':
-                  $base_price = wc_price($product->get_regular_price());
+                  $base_price = wc_price($product->get_regular_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 case 'show_only_sale_price':
-                  $base_price = wc_price($product->get_sale_price());
+                  $base_price = wc_price($product->get_sale_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 case 'show_wc_price':
-                  $base_price = wc_price($product->get_price());
+                  $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 default:
-                  $base_price = wc_price(number_format( $item->get_total() / $item->get_quantity() ));
+				  $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
               $optm = array(
@@ -935,16 +935,16 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               switch ($opt["show_price_template"]) {
                 //show_only_regular_price, show_only_sale_price, show_both_regular_and_sale_price
                 case 'show_only_regular_price':
-                  $base_price = wc_price($product->get_regular_price());
+                  $base_price = wc_price($product->get_regular_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 case 'show_only_sale_price':
-                  $base_price = wc_price($product->get_sale_price());
+                  $base_price = wc_price($product->get_sale_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 case 'show_wc_price':
-                  $base_price = wc_price($product->get_price());
+                  $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 default:
-                  $base_price = wc_price(number_format( $item->get_total() / $item->get_quantity() ));
+				  $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
               $optm = array(
@@ -1097,20 +1097,21 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               switch ($opt["price_inventory_report"]) {
                 //show_only_regular_price, show_only_sale_price, show_both_regular_and_sale_price
                 case 'show_only_regular_price':
-                  $base_price = wc_price($product->get_regular_price());
+                  $base_price = wc_price($product->get_regular_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 case 'show_only_sale_price':
-                  $base_price = wc_price($product->get_sale_price());
+                  $base_price = wc_price($product->get_sale_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 case 'show_wc_price':
-                  $base_price = wc_price($product->get_price());
+                  $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
                   $opt["show_product_image"] = "yes";
                   break;
                 case 'hide_all_price':
                   $base_price = "";
                   break;
                 default:
-                  $base_price = wc_price(number_format( $item->get_total() / $item->get_quantity() ));
+                  // $base_price = wc_price($item->get_total() / $item->get_quantity());
+				  $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
               $optm = array(

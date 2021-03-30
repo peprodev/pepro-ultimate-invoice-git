@@ -9,20 +9,20 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.2.1
-Stable tag: 1.2.1
+Version: 1.2.4
+Stable tag: 1.2.4
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 5.0.0
+WC tested up to: 5.1.0
 Text Domain: puice
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/03/16 11:52:04
+# @Last modified time: 2021/03/30 14:47:09
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -72,7 +72,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.2.1";
+            $this->version = "1.2.4";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
