@@ -3,7 +3,7 @@
 # @Date:   2020/09/20 23:08:04
 # @Email:  its@hpv.im
 # @Last modified by:   Amirhosseinhpv
-# @Last modified time: 2020/10/20 22:34:03
+# @Last modified time: 2021/04/15 12:29:11
 # @License: GPLv2
 # @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
 
@@ -37,6 +37,7 @@ if (!class_exists("PeproUltimateInvoice_Columns")) {
             "selectbtn"           => _x("Select image", "wc-setting-js", $this->td),
             "plugin_url"          => PEPROULTIMATEINVOICE_URL,
 
+            "rtl"                 => is_rtl() ? 1 : 0,
             "tr_submit"           => _x("Submit","js-string",$this->td),
             "tr_today"            => _x("Today","js-string",$this->td),
             "errorTxt"            => _x("Error", "wc-setting-js", $this->td),

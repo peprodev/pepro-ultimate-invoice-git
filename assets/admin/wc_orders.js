@@ -3,7 +3,7 @@
  * @Date:   2020/10/20 22:23:23
  * @Email:  its@hpv.im
  * @Last modified by:   Amirhosseinhpv
- * @Last modified time: 2021/04/15 12:07:29
+ * @Last modified time: 2021/04/15 12:32:30
  * @License: GPLv2
  * @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
  */
@@ -12,7 +12,7 @@
 (function($) {
   var ULTIMATE_INVOICE_CURRENT_AJAX = null;
   var _pepro_ajax_request = null;
-
+  isRTL = _i18n.rtl === 1 ? true : false;
   $checkboxforpdf = `<p>
   <input class='pdfattachment' id='pdfattachment' type='checkbox' />
   <label style="user-select: none;-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;" for='pdfattachment'>${_i18n.attach}</label>
@@ -117,14 +117,19 @@
       prevdata = today;
     }
     defaultdate_format = "YYYY-MM-DD";
-    var day = new persianDate(Date.parse(prevdata));
+    var day = new pu_persianDate(Date.parse(prevdata));
 
     $("#puiw_DateContainer").data("date", prevdata);
 
     $("#puiw_DateContainer").pu_pDatepicker({
+      onSelect: function(unix) {
+        var day = new pu_persianDate(unix);
+        $("#_shipping_puiw_invoice_shipdatefa").val(day.toCalendar('persian').toLocale('en').format(defaultdate_format));
+        $("#_shipping_puiw_invoice_shipdate").val(day.toCalendar('gregorian').toLocale('en').format(defaultdate_format));
+      },
       inline: 1,
-      format: defaultdate_format,
       viewMode: "day",
+      format: defaultdate_format,
       initialValue: true,
       initialValueType: "gregorian",
       minDate: null,
@@ -135,69 +140,80 @@
       onlySelectOnDate: true,
       calendarType: _i18n.calendarType,
       inputDelay: 800,
-      observer: false,
+      observer: 1,
       calendar: {
-        "persian": {
-          "locale": "fa",
-          "showHint": true,
-          "leapYearMode": "algorithmic"
+        persian: {
+          locale: "fa",
+          leapYearMode: "algorithmic",
+          showHint: 1,
         },
-        "gregorian": {
-          "locale": "en",
-          "showHint": true
+        gregorian: {
+          locale: "en",
+          showHint: true
         }
       },
       navigator: {
-        "enabled": true,
-        "scroll": {
-          "enabled": false
+        enabled: true,
+        scroll: { enabled: false },
+        text: {
+          btnNextText: isRTL ? ">" : "<",
+          btnPrevText: isRTL ? "<" : ">"
         },
       },
       toolbox: {
-        "enabled": true,
-        "calendarSwitch": {
-          "enabled": true,
-          "format": "MMMM"
+        enabled: true,
+        calendarSwitch: {
+          enabled: true,
+          format: "MMMM",
+          onSwitch: function(e) {
+            unix = e.api.model.state.selected.unixDate;
+            var day = new pu_persianDate(unix);
+            $("#_shipping_puiw_invoice_shipdatefa").val(day.toCalendar('persian').toLocale('en').format(defaultdate_format));
+            $("#_shipping_puiw_invoice_shipdate").val(day.toCalendar('gregorian').toLocale('en').format(defaultdate_format));
+          },
         },
-        "todayButton": {
-          "enabled": true,
-          "text": {
-            "fa": _i18n.tr_today,
-            "en": "Today"
+        todayButton: {
+          enabled: true,
+          text: {
+            fa: _i18n.tr_today,
+            en: "Today"
           }
         },
-        "submitButton": {
-          "enabled": true,
-          "text": {
-            "fa": _i18n.tr_submit,
-            "en": "Submit"
-          }
+        submitButton: {
+          enabled: true,
+          text: {
+            fa: _i18n.tr_submit,
+            en: "Submit"
+          },
+          onSubmit: function(e) {},
         },
-        "text": {
-          "btnToday": _i18n.tr_today
+        onToday: function(datepickerObject) {
+          var day = new pu_persianDate();
+          $("#_shipping_puiw_invoice_shipdatefa").val(day.toCalendar('persian').toLocale('en').format(defaultdate_format));
+          $("#_shipping_puiw_invoice_shipdate").val(day.toCalendar('gregorian').toLocale('en').format(defaultdate_format));
+          return false;
+        },
+        text: {
+          btnToday: _i18n.tr_today
         }
       },
       timePicker: {
-        "enabled": false,
+        enabled: false,
       },
       dayPicker: {
-        "enabled": true,
-        "titleFormat": "YYYY MMMM"
+        enabled: true,
+        titleFormat: "YYYY MMMM"
       },
       monthPicker: {
-        "enabled": true,
-        "titleFormat": "YYYY"
+        enabled: true,
+        titleFormat: "YYYY"
       },
       yearPicker: {
-        "enabled": true,
-        "titleFormat": "YYYY"
+        enabled: true,
+        titleFormat: "YYYY"
       },
+      persianDigit: false,
       responsive: true,
-      onSelect: function(unix) {
-        var day = new persianDate(unix);
-        $("#_shipping_puiw_invoice_shipdatefa").val(day.toCalendar('persian').toLocale('en').format(defaultdate_format));
-        $("#_shipping_puiw_invoice_shipdate").val(day.toCalendar('gregorian').toLocale('en').format(defaultdate_format));
-      }
     });
 
     if ($("#puiw_DateContainer").length){
