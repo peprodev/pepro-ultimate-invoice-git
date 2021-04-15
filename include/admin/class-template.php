@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2020/10/20 15:58:31
+# @Last modified time: 2021/04/15 11:53:57
 
 namespace peproulitmateinvoice;
 
@@ -77,7 +77,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       (int) $timestamp = strtotime($date_str);
       $converted_date = date_i18n( $date_format, $timestamp);
       if ($this->get_date_shamsi() == "yes") {
-        $converted_date = jdate($date_format, $timestamp, "", "local", "en");
+        $converted_date = pu_jdate($date_format, $timestamp, "", "local", "en");
       }
       return apply_filters("puiw_get_date", $converted_date, $date_str, $timestamp, $date_format, $default_format, $force_format);
     }

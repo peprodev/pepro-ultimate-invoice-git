@@ -1,6 +1,15 @@
 <?php
-if (!function_exists("jdate")) {
-    function jdate($format,$timestamp='',$none='',$time_zone='Asia/Tehran',$tr_num='fa')
+# @Author: Amirhosseinhpv
+# @Date:   2020/10/20 22:23:23
+# @Email:  its@hpv.im
+# @Last modified by:   Amirhosseinhpv
+# @Last modified time: 2021/04/15 11:54:55
+# @License: GPLv2
+# @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
+
+
+if (!function_exists("pu_jdate")) {
+    function pu_jdate($format,$timestamp='',$none='',$time_zone='Asia/Tehran',$tr_num='fa')
     {
         (int) $T_sec=0; // server date bug fix , use + and - following a second number. e.g. +5 -> add five second
         if($time_zone!='local') { date_default_timezone_set(($time_zone==='')?'Asia/Tehran':$time_zone); }
@@ -449,7 +458,7 @@ if (!function_exists("jmktime")) {
                     if($jm==='') {
                         return mktime($h, $m, $s);
                     }else{
-                        $jdate=explode('_', jdate('Y_j', '', '', $timezone, 'en'));
+                        $jdate=explode('_', pu_jdate('Y_j', '', '', $timezone, 'en'));
                         if($jd==='') {
                             list($gy,$gm,$gd)=jalali_to_gregorian($jdate[0], $jm, $jdate[1]);
                             return mktime($h, $m, $s, $gm);
@@ -472,7 +481,7 @@ if (!function_exists("jgetdate")) {
     function jgetdate($timestamp='',$none='',$timezone='Asia/Tehran',$tn='en')
     {
         $ts=($timestamp==='')?time():tr_num($timestamp);
-        $jdate=explode('_', jdate('F_G_i_j_l_n_s_w_Y_z', $ts, '', $timezone, $tn));
+        $jdate=explode('_', pu_jdate('F_G_i_j_l_n_s_w_Y_z', $ts, '', $timezone, $tn));
         return array(
         'seconds'=>tr_num((int)tr_num($jdate[6]), $tn),
         'minutes'=>tr_num((int)tr_num($jdate[2]), $tn),

@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.7
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 Requires PHP: 7.0
 WC requires at least: 4.4
 WC tested up to: 5.1.0
@@ -143,6 +143,10 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
+= 1.2.5 =
+- Fixed Jalali Date Converter incompatibility with some themes
+- Fixed Jalali Datepicker and Persian WooCommerce incompatibility
+
 = 1.2.4 =
 - Fixed Item Wrong Price display in some cases
 - Fixed Using Current Currency instead of Order Currency
@@ -253,6 +257,10 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
+= 1.2.5 =
+- Fixed Jalali Date Converter incompatibility with some themes
+- Fixed Jalali Datepicker and Persian WooCommerce incompatibility
+
 = 1.2.4 =
 - Fixed Item Wrong Price display in some cases
 - Fixed Using Current Currency instead of Order Currency
@@ -261,93 +269,3 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 - Fixed Color-Scheme Select in Setting > Theming section
 - Fixed Using Default PDF Invoice template while Advanced Invoice printing
 - Fixed PDF Generation link in HTML invoices
-
-= 1.2.0 =
-- Compatibility with WordPress 5.7
-
-= 1.1.11 =
-
-- Compatibility with New WooCommerce
-- Compatibility with New WordPress
-
-= 1.1.10 =
-
-- Default Template Translation fix
-
-= 1.1.9 =
-
-- Added PDF Font Selector!
-- Changed "Switch Color Scheme" button label to "Switch Dark-mode"
-- Changed Support Email
-- Added Minified CSS, JS Version
-- Added Option to use Minified/Un-minified CSS, JS based on WP_DEBUG
-- Changed minimum WooCommerce Required to version 4.4
-- Fixed Signature showing despite it's option
-- Fixed Showing Wrong Signature if no signature set
-
-= 1.1.8 =
-
-- Fixed get customer full name
-- Changed Plugin Icon and WordPress Banners
-- Fix Showing product discount in PDF
-- Fix Showing product weight in PDF
-- Fix Showing product tax in PDF
-
-
-= 1.1.7 =
-
-- Added Compatibility to Pepro WooCommerce Receipt Upload (available upon request to support@pepro.dev)
-- Added Custom CSS Style for PDF Invoices
-- Added Option to show/hide Paid Date
-- Added Option to show/hide Purchase Complete Date
-- Added Option to show/hide Shipping Date
-- Added Option to show/hide Order Status
-- Fixed Showing Wrong Discount Amount
-- Added Showing Discount Percentage
-- Added Option to get Current/Applied price in Invoices
-- Fixed Translating WooCommerce Weight/Dimensions Units
-- Fixed Force Positioning Currency and Price (now follows WooCommerce Setting)
-- Added Compatibility to Templates to work with new updates options
-- Fixed Templates Structure
-- Fixed Order Status Naming
-- Enhanced PDF Generation
-- Fixed Images not loading in PDF
-- Changed Templates default preview images
-
-= 1.1.6 =
-
-- Fixed Darkmode
-- Fixed Barcode Generator
-- Fixed LTR PDF Template Barcode Size
-- Fixed PDF Font for EN sites
-- Fixed Force WC Email Colors from Ultimate Invoice
-
-= 1.1.0 =
-
-- Added Integration with Dokan (available upon request to support@pepro.dev)
-- Added Multiple-template
-- Added Templates Color scheme editor
-- Added Separated template for pre-invoice
-- Added Show/Hide Shipping Date on orders
-- Added Show/Hide Shipping Track Code on orders
-- Added Sub-menu under WooCommerce menu
-- Added hooks so you can bundle your invoice template with your wordpress theme
-- Added Readme details, typo fixed
-- Fixed Unique Identification Number not saving for new users
-- Fixed Color-picker on setting page
-
-= 1.0.3 =
-
-- Added hook: pepro-ultimate-invoice-orders-column-data
-- Added hook: pepro-ultimate-invoice-orders-action
-- Removed Appsero integration
-
-= 1.0.2 =
-
--   Directory Index Blocked for resources
-
-= 1.0.1 =
-
--   readme update
--   usage tracking integration
--   cursor fix in setting page

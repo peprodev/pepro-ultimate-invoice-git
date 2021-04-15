@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/03/30 14:36:35
+# @Last modified time: 2021/04/15 11:54:05
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -767,7 +767,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               // echo "<style type='text/css'>$stylesheet</style>$html_header $html_invoice $html_footer";exit;
               $datec = date_i18n("Y-m-d H:i", $datenow);
               if ($this->fn->get_date_shamsi() == "yes") {
-                $datec = jdate("Y-m-d H:i", (int) $datenow, "", "local", "en");
+                $datec = pu_jdate("Y-m-d H:i", (int) $datenow, "", "local", "en");
               }
               $footerhtml0 = "<div class='footerauto' style='text-align:center;' dir='ltr'>";
               $footerhtml1 = "<strong>" . sprintf(_x('%s -- Page {PAGENO} / {nbpg}', 'invoice-template', $PeproUltimateInvoice->td), $pdf_title)."</strong><br>";
@@ -783,7 +783,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
 
             $datetime = date_i18n("Y_m_d_H_i", $datenow);
             if ($this->fn->get_date_shamsi() == "yes") {
-              $datetime = jdate("Y-m-d_H-i-s", (int) $datenow, "", "local", "en");
+              $datetime = pu_jdate("Y-m-d_H-i-s", (int) $datenow, "", "local", "en");
             }
             // $name = printf("Invoice-%s-%s-%s", $order_id_formatted,get_bloginfo('title'), $datetime);
             $name = "Invoice-$order_id_formatted-$datetime";

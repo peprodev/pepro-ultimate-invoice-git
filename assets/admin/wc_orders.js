@@ -3,7 +3,7 @@
  * @Date:   2020/10/20 22:23:23
  * @Email:  its@hpv.im
  * @Last modified by:   Amirhosseinhpv
- * @Last modified time: 2021/03/30 14:43:34
+ * @Last modified time: 2021/04/15 12:07:29
  * @License: GPLv2
  * @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
  */
@@ -121,7 +121,7 @@
 
     $("#puiw_DateContainer").data("date", prevdata);
 
-    $("#puiw_DateContainer").pDatepicker({
+    $("#puiw_DateContainer").pu_pDatepicker({
       inline: 1,
       format: defaultdate_format,
       viewMode: "day",

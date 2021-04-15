@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.2.4
-Stable tag: 1.2.4
+Version: 1.2.5
+Stable tag: 1.2.5
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/03/30 14:47:09
+# @Last modified time: 2021/04/15 11:59:57
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -72,7 +72,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.2.4";
+            $this->version = "1.2.5";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -1336,10 +1336,10 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_discount_precent" => "yes",
                     "puiw_show_product_tax" => "yes",
                     "puiw_show_total_tax" => "yes",
-                    "puiw_show_order_note" => "note_provided_by_customer",
+                    "puiw_show_order_note" => "note_provided_by_both",
                     "puiw_show_user_uin" => "no",
                     "puiw_show_shipping_ref_id" => "yes",
-                    "puiw_show_price_template" => "show_both_regular_and_sale_price",
+                    "puiw_show_price_template" => "show_wc_price",
                     "puiw_show_product_weight" => "yes",
                     "puiw_show_product_dimensions" => "yes",
                     "puiw_show_product_sku" => "yes",
@@ -1348,11 +1348,11 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_product_sku_inventory" => "yes",
                     "puiw_show_product_sku2_inventory" => "yes",
                     "puiw_show_product_image_inventory" => "yes",
-                    "puiw_price_inventory_report" => "show_both_regular_and_sale_price",
-                    "puiw_show_order_note_inventory" => "note_provided_by_customer",
+                    "puiw_price_inventory_report" => "show_wc_price",
+                    "puiw_show_order_note_inventory" => "note_provided_by_both",
                     "puiw_show_create_sender_postal_label_button" => "yes",
                     "puiw_show_create_recipient_postal_label_button" => "yes",
-                    "puiw_template" => PEPROULTIMATEINVOICE_DIR ."/template/default",
+                    "puiw_template" => PEPROULTIMATEINVOICE_DIR ."/template/default" . (is_rtl() ? "-rtl" : ""),
                     "puiw_preinvoice_template" => PEPROULTIMATEINVOICE_DIR ."/template/default-pre-invoice",
                     "puiw_invoice_title" => _x("Invoice %s", "wc-setting",$this->td),
                     "puiw_theme_color" => "teal",
@@ -1388,7 +1388,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_store_national_id" => "yes",
                     "puiw_show_store_registration_number" => "yes",
                     "puiw_show_store_economical_number" => "yes",
-                    "puiw_force_persian_numbers" => "no",
+                    "puiw_force_persian_numbers" => (is_rtl() ? "yes" : "no"),
                   );
             foreach ($wc_opt as $key => $value) {
                 if (!get_option($key, "")) {
