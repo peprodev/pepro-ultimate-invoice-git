@@ -994,8 +994,12 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                   break;
               }
 
-              if ($this->is_bundled_child($item_id)){ $base_price = ""; $subtotal = ""; }
-
+              if ($this->is_bundled_child($item_id)){
+                $base_price = "";
+                $subtotal = "";
+                if ($this->_woosb_show_bundled_hierarchy == "yes"){$n--;}
+              }
+              
               $optm = array(
                 "n" => $n,
                 "img" => ("PDF" == $MODE) ? $product->get_image(array( 50, 50 )) : $product->get_image('shop_thumbnail'),
@@ -1169,7 +1173,11 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                   break;
               }
 
-              if ($this->is_bundled_child($item_id)){ $base_price = ""; $subtotal = ""; }
+              if ($this->is_bundled_child($item_id)){
+                $base_price = "";
+                $subtotal = "";
+                if ($this->_woosb_show_bundled_hierarchy == "yes"){$n--;}
+              }
 
               $optm = array(
                 "n" => $n,
