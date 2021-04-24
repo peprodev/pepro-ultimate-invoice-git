@@ -396,5 +396,5 @@ img.barcode {
 	min-height: 40px;
 }
 
-.show_product_title_description, .show_product_title_description * { text-align: left !important; }
+.show_product_title, .show_product_description, .show_product_title_description, .show_product_title_description * { text-align: left !important; }
 tfoot td:last-of-type * { text-align: left; vertical-align: top; }
