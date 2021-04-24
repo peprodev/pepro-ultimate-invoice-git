@@ -393,3 +393,6 @@ td[class="show_product_image"] img {
 img.barcode {
 	min-height: 40px;
 }
+
+.show_product_title_description, .show_product_title_description * { text-align: left !important; }
+tfoot td:last-of-type * { text-align: left; vertical-align: top; }

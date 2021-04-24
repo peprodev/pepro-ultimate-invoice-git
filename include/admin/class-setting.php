@@ -584,7 +584,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'custom_attributes' => array( 'rows' => '5', )
                   ),
                   'puiw_custom_css_style'                       => array(
-                    'name'              => _x("HTML Invoices Custom CSS", "wc-setting", $this->td),
+                    'name'              => _x("HTML Custom CSS", "wc-setting", $this->td),
                     'type'              => 'textarea',
                     'id'                => 'puiw_custom_css_style',
                     'placeholder'       => sprintf(__("Enter %s here", $this->td), _x("HTML Invoices Custom CSS", "wc-setting", $this->td)),
@@ -592,7 +592,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'custom_attributes' => array( 'dir'  => 'ltr', 'rows' => '5', )
                   ),
                   'puiw_pdf_css_style'                       => array(
-                    'name'              => _x("PDF Invoices Custom CSS", "wc-setting", $this->td),
+                    'name'              => _x("PDF Custom CSS", "wc-setting", $this->td),
                     'type'              => 'textarea',
                     'id'                => 'puiw_pdf_css_style',
                     'placeholder'       => sprintf(__("Enter %s here", $this->td), _x("PDF Invoices Custom CSS", "wc-setting", $this->td)),

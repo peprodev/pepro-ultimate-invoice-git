@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/24 11:15:29
+# @Last modified time: 2021/04/24 18:22:49
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -36,6 +36,20 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
 
             add_action( "woocommerce_before_order_itemmeta", array( $this, "woosb_before_order_item_meta" ), 10, 1 );
             add_filter( "puiw_invoice_item_extra_classes", array($this, "puiw__item_extra_classes"), 10, 6);
+            add_filter( "puiw_get_custom_css_style", array($this, "custom_css_per_invoice"), 10, 2);
+            add_filter( "puiw_get_pdf_css_style", array($this, "custom_css_per_invoice"), 10, 2);
+            add_filter( "puiw_get_inventory_css_style", array($this, "custom_css_per_invoice"), 10, 2);
+
+
+        }
+        public function custom_css_per_invoice($custom_css_style, $default)
+        {
+          if ($this->_woosb_show_bundled_hierarchy == "yes"){
+            $custom_css_style .= "tr.even {background: var(--theme_color) !important;}";
+            $custom_css_style .= "tr.odd {background: white !important;}";
+            $custom_css_style .= ".woosb-order-item.woosb-item-child .show_product_image *,.woosb-order-item.woosb-item-child .show_product_n * {display: none;}";
+          }
+          return $custom_css_style;
         }
         public function puiw_get_default_dynamic_params($opts, $order)
         {
@@ -356,8 +370,9 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "invoice_note_customer",
               "invoice_note_shopmngr",
               "order_total",
-              "custom_pdf_css_style",
               "custom_css_style",
+              "custom_pdf_css_style",
+              "inventory_css_style",
             ),
             $opt,
             $order
@@ -407,7 +422,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $keepOriginalHTMLtags = $this->get_preserve_html_tags($opt, $order);
           $keepOriginalENnumbers = $this->get_preserve_english_numbers($opt, $order);
           do_action("puiw_printinvoice_before_create_html", $opt, $opts, $order);
-          $main_css_style_inline = $opts["custom_pdf_css_style"];
+          $main_css_style_inline = "";
           $order_note_a = apply_filters( "puiw_printinvoice_order_note_customer", "<strong>".__("Note provided by Customer",$this->td)."</strong><br><div>" . $this->fn->get_order_note($order,"a")."</div>", $this->fn->get_order_note($order,"a"), $order, $opt);
           $order_note_b = apply_filters( "puiw_printinvoice_order_note_shopmngr", "<strong>".__("Note provided by Shop manager",$this->td)."</strong><br><div>" . $this->fn->get_order_note($order,"b")."</div>", $this->fn->get_order_note($order,"b"), $order, $opt);
           switch ($opt["show_order_note"]) {
@@ -452,7 +467,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           if (trim($opt["watermark"]) == ""){
             // $main_css_style_inline .= '[if~="watermark"]{display:none !important; visibility: hidden !important;}';
           }
-
           if ($opt["show_invoices_id_barcode"] !== "yes" || $email_printout){
             $opt["show_invoices_id_barcode_colspan"] = 2 ;
           }
@@ -486,7 +500,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $opt["invoice_final_prices_pre_colspan"] = $opt["invoice_final_prices_pre_colspan"] -1 ;
             }
           }
-
           if ($opt["show_discount_precent"] !== "yes"){
             if ("PDF" !== $MODE){
               $opt["product_nettotal_colspan"] = $opt["product_nettotal_colspan"] + 1;
@@ -494,7 +507,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               // $opt["invoice_final_prices_pre_colspan"] = $opt["invoice_final_prices_pre_colspan"] +1 ;
             }
           }
-
           if ($opt["show_product_tax"] !== "yes"){
             if ("PDF" !== $MODE){
               $opt["product_nettotal_colspan"] = $opt["product_nettotal_colspan"] + 1;
@@ -502,14 +514,11 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               // $opt["invoice_final_prices_pre_colspan"] = $opt["invoice_final_prices_pre_colspan"] +1 ;
             }
           }
-
-
           $templateDirpath = apply_filters( "puiw_get_template_dir_path", $opt["template"], $order);
-
           $opt["invoice_note_customer"] = $order_note_a;
           $opt["invoice_note_shopmngr"] = $order_note_b;
           $opt["invoice_notes"] = $notes;
-          if ("PDF_EXTRA_STYLE" == $MODE) { return $main_css_style_inline;}
+          if ("PDF_EXTRA_STYLE" == $MODE) { return $main_css_style_inline.$opts["custom_pdf_css_style"];}
           if ("PDF" == $MODE) {
               $template                     = file_get_contents("$templateDirpath/template.pdf.tpl");
               if(!empty($part)){ $template  = file_get_contents("$templateDirpath/template.pdf.{$part}.tpl"); }
@@ -539,7 +548,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $invoicehtmltitle       = apply_filters( "puiw_printinvoice_HTML_title", $invoicehtmltitle, $order_id);
               $main_css_style         = apply_filters( "puiw_printinvoice_HTML_style", $main_css_style,$main_css_style_inline, $order_id);
               $product_row_RAW        = file_get_contents("$templateDirpath/template.row.tpl");
-              // if ($email_printout){$product_row_RAW .= $s;}
               $template               = "<!DOCTYPE html><html lang=\"fa\" dir=\"ltr\"><head><title>$invoicehtmltitle</title>$extrainvoiceheaddata<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style type='text/css'>{$main_css_style}{{{custom_css_style}}}</style></head>$body_content</html>";
           }
 
@@ -793,7 +801,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $html_invoice = $this->create_html($order_id, "PDF","","",$skipAuth);
               $html_header = $this->create_html($order_id, "PDF", "header","",$skipAuth);
               $html_footer = $this->create_html($order_id, "PDF", "footer","",$skipAuth);
-              // echo "<pre dir='ltr' style='border:1px solid gray'>". print_r([$stylesheet, $PDF_EXTRA_STYLE],1) ."</pre>";exit;
+              // echo "<pre dir='ltr' style='border:1px solid gray'>". print_r([$html_invoice, $PDF_EXTRA_STYLE],1) ."</pre>";exit;
               // $cssToInlineStyles = new CssToInlineStyles($html_invoice);
               // $cssToInlineStyles->setCleanup(true);
               // $cssToInlineStyles->setUseInlineStylesBlock(true);
@@ -819,10 +827,8 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             if ($this->fn->get_date_shamsi() == "yes") {
               $datetime = pu_jdate("Y-m-d_H-i-s", (int) $datenow, "", "local", "en");
             }
-            // $name = printf("Invoice-%s-%s-%s", $order_id_formatted,get_bloginfo('title'), $datetime);
             $name = "Invoice-$order_id_formatted-$datetime";
             $name = apply_filters("puiw_get_export_pdf_name", $name , $order_id_formatted, $order_id, $datenow);
-            // if (isset($_GET["download"]) && !empty($_GET["download"])){ $force_download = true; }
             if ("S" == $MODE){
               $rand = md5(time());
               $namedir = PEPROULTIMATEINVOICE_DIR . "/pdf_temp";
@@ -834,7 +840,10 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $er = $mpdf->Output($tmpname, "F");
               return $namedotext;
             }
-            // 'D': download the PDF file 'I': serves in-line to the browser 'S': returns the PDF document as a string 'F': save as file $file_out
+            // 'D': download the PDF file
+            // 'I': serves in-line to the browser
+            // 'S': returns the PDF document as a string
+            // 'F': save as file $file_out
             $mpdf->Output($name . ($force_download ? ".pdf" : ""),($force_download ? "D" : "I"));
         }
         public function create_slips($order_id=0, $MODE="HTML")
@@ -1473,6 +1482,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $echo .= "<div class='view order_item_meta'><table cellspacing='0' class='display_meta'>";
             foreach ( $meta_data as $meta_id => $meta ){
               if ( in_array( $meta->key, $hidden_order_itemmeta, true ) ) { continue; }
+              if ($this->_woosb_show_bundles_subtitle == "no" && "bundled-products" === sanitize_title($meta->key,"")){ continue; }
               $found_any = true;
               $echo .= "<tr style='background: unset;' class='". sanitize_title("$meta->key","") ."'>
                       <th style='border: none;'><strong>" . wp_kses_post( $meta->display_key ) . "</strong>:</th>
@@ -1564,19 +1574,9 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function woosb_before_order_item_meta($order_item_id)
         {
-          if ($this->_woosb_show_bundled_hierarchy == "yes"){
-            echo "<style>tr.even {background: var(--theme_color) !important;}
-            .woosb-order-item.woosb-item-child .show_product_image *,
-            .woosb-order-item.woosb-item-child .show_product_n * {display: none;}
-            tr.odd {background: white !important;}</style>";
-          }
-          if ($this->_woosb_show_bundles_subtitle == "no"){
-            echo "<style>div.view.order_item_meta tr.bundled-products{display: none !important;}</style>";
-          }
-
           if ( $parent_id = wc_get_order_item_meta( $order_item_id, '_woosb_parent_id', true ) ) {
             if ($this->_woosb_show_bundled_subtitle == "yes"){
-              echo $this->_woosb_show_bundled_prefix.get_the_title($parent_id);
+              echo $this->_woosb_show_bundled_prefix." ".get_the_title($parent_id);
             }
           }
         }

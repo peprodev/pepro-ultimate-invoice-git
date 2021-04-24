@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/04/19 23:48:28
+# @Last modified time: 2021/04/24 17:29:03
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -1346,16 +1346,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_discount_precent" => "yes",
                     "puiw_show_product_tax" => "yes",
                     "puiw_show_total_tax" => "yes",
-                    "puiw_custom_css_style" => ".show_product_title_description, .show_product_title_description * {
-                        text-align: right !important;
-                      }
-                      tfoot td:last-of-type * {
-                        text-align: right;
-                        vertical-align: top;
-                      }
-                      .show_product_image {
-                        width: 2cm !important;
-                      }",
+                    "puiw_custom_css_style" => "",
                     "puiw_show_order_note" => "note_provided_by_both",
                     "puiw_show_user_uin" => "no",
                     "puiw_show_shipping_ref_id" => "yes",

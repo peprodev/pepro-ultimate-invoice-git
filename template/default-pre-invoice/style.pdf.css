@@ -181,3 +181,6 @@ table.centered td {
 img.barcode {
 	min-height: 40px;
 }
+
+.show_product_title_description, .show_product_title_description * { text-align: right !important; }
+tfoot td:last-of-type * { text-align: right; vertical-align: top; }
