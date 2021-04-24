@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/03/15 23:44:34
+# @Last modified time: 2021/04/24 21:07:18
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -289,6 +289,26 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                       'show_wc_price'                     => _x("Show Invoice Calculated price", "wc-setting", $this->td),
                     ),
                   ),
+                  'puiw_items_sorting'                    => array(
+                    'id'=> 'puiw_items_sorting',
+                    'name'=> _x("Invoice Items Sorting", "wc-setting", $this->td),
+                    'type'=> 'select',
+                    'class'=> 'wc-enhanced-select',
+                    'default'=> 'NONE',
+                    'options' => array(
+                      'NONE' => _x("Default", "wc-setting", $this->td),
+                      'ID' => _x("By Item ID", "wc-setting", $this->td),
+                      'PID' => _x("By Product ID", "wc-setting", $this->td),
+                      'SKU' => _x("By SKU", "wc-setting", $this->td),
+                      'QTY' => _x("By Quantity", "wc-setting", $this->td),
+                      'NAME' => _x("By Name", "wc-setting", $this->td),
+                      'PRICE' => _x("By Price", "wc-setting", $this->td),
+                      'TOTAL' => _x("By Total", "wc-setting", $this->td),
+                      'WEIGHT' => _x("By Weight", "wc-setting", $this->td),
+                      'SUBTOTAL' => _x("By Subtotal", "wc-setting", $this->td),
+                      'SUBTOTAL_TAX' => _x("By Subtotal Tax", "wc-setting", $this->td),
+                    ),
+                  ),
                   'puiw_items_end'                              => array(
                     'type' => 'sectionend',
                     'id'   => 'puiw_items_end'
@@ -517,7 +537,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'id'                => 'puiw_font_size',
                     'placeholder'       => sprintf(__("Enter %s here", $this->td), _x("Font size (px)", "wc-setting", $this->td)),
                     'default'           => '12',
-                    'custom_attributes' => array( 'dir'  => 'ltr', 'step' => '1', 'min'  => '8', 'max'  => '30', )
+                    'custom_attributes' => array( 'dir'  => 'ltr', 'step' => '1', 'min'  => '8', 'max'  => '99', )
                   ),
                   'puiw_invoice_prefix'                         => array(
                     'name'              => _x("Invoice Prefix", "wc-setting", $this->td),
@@ -887,6 +907,12 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                       'type'     => 'checkbox',
                       'default'  => 'no',
                       'desc'     => _x("Check to show or leave unchecked to hide", "wc-setting", $this->td),
+                    ),
+                    'puiw_woosb_bundles_subtitle_prefix' => array(
+                      'id'       => 'puiw_woosb_bundles_subtitle_prefix',
+                      'name'     => _x("Bundles products subtitle prefix", "wc-setting", $this->td),
+                      'type'     => 'text',
+                      'default'  => _x("Bundled products:", "wc-setting", $this->td),
                     ),
                     'puiw_woosb_show_bundled_products'   => array(
                       'id'       => 'puiw_woosb_show_bundled_products',

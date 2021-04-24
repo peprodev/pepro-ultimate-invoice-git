@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/24 18:22:49
+# @Last modified time: 2021/04/24 21:26:10
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -25,14 +25,18 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $this->_woosb_show_bundled_subtitle = $this->fn->get_woosb_show_bundled_subtitle();
             $this->_woosb_show_bundled_hierarchy = $this->fn->get_woosb_show_bundled_hierarchy();
             $this->_woosb_show_bundled_prefix = $this->fn->get_woosb_bundled_subtitle_prefix(_x("Bundled in:", "wc-setting", $this->td));
+            $this->_woosb_show_bundles_prefix = $this->fn->get_woosb_bundles_subtitle_prefix(_x("Bundled products:", "wc-setting", $this->td));
+
+            add_filter( "puiw_order_items", array($this, "puiw_sort_order_items"), 2, 2);
 
             if ($this->_woosb_show_bundles == "no"){
-              add_filter( "puiw_order_items", array($this, "woosb_puiw_hide_bundles_parent"), 10, 1);
+              add_filter( "puiw_order_items", array($this, "woosb_puiw_hide_bundles_parent"), 10, 2);
             }
 
             if ($this->_woosb_show_bundled_products == "no"){
-              add_filter( "puiw_order_items", array($this, "woosb_puiw_hide_bundled_childs"), 10, 1);
+              add_filter( "puiw_order_items", array($this, "woosb_puiw_hide_bundled_childs"), 10, 2);
             }
+
 
             add_action( "woocommerce_before_order_itemmeta", array( $this, "woosb_before_order_item_meta" ), 10, 1 );
             add_filter( "puiw_invoice_item_extra_classes", array($this, "puiw__item_extra_classes"), 10, 6);
@@ -41,15 +45,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             add_filter( "puiw_get_inventory_css_style", array($this, "custom_css_per_invoice"), 10, 2);
 
 
-        }
-        public function custom_css_per_invoice($custom_css_style, $default)
-        {
-          if ($this->_woosb_show_bundled_hierarchy == "yes"){
-            $custom_css_style .= "tr.even {background: var(--theme_color) !important;}";
-            $custom_css_style .= "tr.odd {background: white !important;}";
-            $custom_css_style .= ".woosb-order-item.woosb-item-child .show_product_image *,.woosb-order-item.woosb-item-child .show_product_n * {display: none;}";
-          }
-          return $custom_css_style;
         }
         public function puiw_get_default_dynamic_params($opts, $order)
         {
@@ -337,6 +332,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "discount",
               "nettotal",
               "tax",
+              "sku",
               "font_sizes",
               "font_sizem",
               "font_size",
@@ -552,7 +548,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           }
 
           $n=0;$total_weight = 0;
-          foreach ( apply_filters( "puiw_order_items", $order->get_items()) as $item_id => $item ) {
+          foreach ( apply_filters( "puiw_order_items", $order->get_items(), $order) as $item_id => $item ) {
               $n+=1;
               $product_row  = ($product_row_RAW);
               $product_id   = $item->get_product_id();
@@ -601,7 +597,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                   $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 default:
-			            $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
+			            $base_price = wc_price($order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
 
@@ -999,7 +995,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 $subtotal = "";
                 if ($this->_woosb_show_bundled_hierarchy == "yes"){$n--;}
               }
-              
+
               $optm = array(
                 "n" => $n,
                 "img" => ("PDF" == $MODE) ? $product->get_image(array( 50, 50 )) : $product->get_image('shop_thumbnail'),
@@ -1448,6 +1444,39 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 $input
             );
         }
+
+
+        
+        /**
+         * hook to alter css styles
+         *
+         * @method  custom_css_per_invoice
+         * @param   string $custom_css_style
+         * @param   string $default
+         * @return  string
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
+        public function custom_css_per_invoice($custom_css_style, $default)
+        {
+          if ($this->_woosb_show_bundled_hierarchy == "yes"){
+            $custom_css_style .= "tr.even {background: var(--theme_color) !important;}";
+            $custom_css_style .= "tr.odd {background: white !important;}";
+            $custom_css_style .= ".woosb-order-item.woosb-item-child .show_product_image *,.woosb-order-item.woosb-item-child .show_product_n * {display: none;}";
+          }
+          return $custom_css_style;
+        }
+        /**
+         * Get Order Final Prices
+         *
+         * @method  get_order_final_prices
+         * @param   WC_Order $order
+         * @return  string
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         public function get_order_final_prices($order)
         {
           ob_start();
@@ -1466,6 +1495,16 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           ob_end_clean();
           return $tr;
         }
+        /**
+         * Get Order Final Prices Pdf
+         *
+         * @method  get_order_final_prices_pdf
+         * @param   WC_Order $order
+         * @return  string
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         public function get_order_final_prices_pdf($order)
         {
           ob_start();
@@ -1477,6 +1516,18 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           ob_end_clean();
           return apply_filters("puiw_return_pdf_total_prices_as_single_price", false , $order) ? $order->get_order_item_totals()["order_total"]["value"] : $tr;
         }
+        /**
+         * show item meta supporting WPC Product Bundles and wc hooks
+         *
+         * @method  get_item_meta
+         * @param   int $item_id
+         * @param   Object $item
+         * @param   WC_Product $product
+         * @return  string
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         private function get_item_meta($item_id, $item, $product)
         {
           ob_start();
@@ -1491,6 +1542,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             foreach ( $meta_data as $meta_id => $meta ){
               if ( in_array( $meta->key, $hidden_order_itemmeta, true ) ) { continue; }
               if ($this->_woosb_show_bundles_subtitle == "no" && "bundled-products" === sanitize_title($meta->key,"")){ continue; }
+              if ($this->_woosb_show_bundles_subtitle == "yes" && "bundled-products" === sanitize_title($meta->key,"")){ $meta->display_key = $this->_woosb_show_bundles_prefix; }
               $found_any = true;
               $echo .= "<tr style='background: unset;' class='". sanitize_title("$meta->key","") ."'>
                       <th style='border: none;'><strong>" . wp_kses_post( $meta->display_key ) . "</strong>:</th>
@@ -1508,7 +1560,18 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
 
           return $ob_get_contents;
         }
-        public function woosb_puiw_hide_bundles_parent( $data_list )
+        /**
+         * WPC Product Bundles Hide Bundles Parent
+         *
+         * @method  woosb_puiw_hide_bundles_parent
+         * @param   array $data_list
+         * @param   WC_Order $order
+         * @return  array
+         * @version 1.0.0
+         * @since   1.0.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
+        public function woosb_puiw_hide_bundles_parent( $data_list, $order )
         {
           foreach ( $data_list as $key => $data ) {
             $bundles = wc_get_order_item_meta( $key, '_woosb_ids', true );
@@ -1518,7 +1581,18 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           }
           return $data_list;
         }
-        public function woosb_puiw_hide_bundled_childs( $data_list )
+        /**
+         * WPC Product Bundles Hide Bundled Childs
+         *
+         * @method  woosb_puiw_hide_bundled_childs
+         * @param   array $data_list
+         * @param   WC_Order $order
+         * @return  array
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
+        public function woosb_puiw_hide_bundled_childs( $data_list, $order )
         {
           foreach ( $data_list as $key => $data ) {
             $bundled = wc_get_order_item_meta( $key, '_woosb_parent_id', true );
@@ -1528,14 +1602,49 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           }
           return $data_list;
         }
+        /**
+         * WPC Product Bundles isBundledParent
+         *
+         * @method  is_bundled_parent
+         * @param   string $key
+         * @return  boolean
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         public function is_bundled_parent($key)
         {
           return wc_get_order_item_meta( $key, '_woosb_ids', true );
         }
+        /**
+         * WPC Product Bundles isBundledChild
+         *
+         * @method  is_bundled_child
+         * @param   string $key
+         * @return  boolean
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         public function is_bundled_child($key)
         {
           return wc_get_order_item_meta( $key, '_woosb_parent_id', true );
         }
+        /**
+         * invoice items tr html classes
+         *
+         * @method  puiw__item_extra_classes
+         * @param   array $classes
+         * @param   WC_Product $product
+         * @param   int $item_id
+         * @param   Object $item
+         * @param   WC_Order $order
+         * @param   int $nthitem
+         * @return  array classes
+         * @version 1.0.0
+         * @since   1.0.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         public function puiw__item_extra_classes($classes, $product, $item_id, $item, $order, $nthitem)
         {
           if ($nthitem % 2) {
@@ -1580,6 +1689,16 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $classes[] = $odd_even;
           return $classes;
         }
+        /**
+         * add bundled in to bundled products child
+         *
+         * @method  woosb_before_order_item_meta
+         * @param   int $order_item_id
+         * @return  string
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
         public function woosb_before_order_item_meta($order_item_id)
         {
           if ( $parent_id = wc_get_order_item_meta( $order_item_id, '_woosb_parent_id', true ) ) {
@@ -1587,6 +1706,78 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               echo $this->_woosb_show_bundled_prefix." ".get_the_title($parent_id);
             }
           }
+        }
+        /**
+         * Sort Order Items
+         *
+         * @method  puiw_sort_order_items
+         * @param   array $items
+         * @param   WC_Order $order
+         * @return  array $items
+         * @version 1.0.0
+         * @since   1.3.0
+         * @license https://pepro.dev/license Pepro.dev License
+         */
+        public function puiw_sort_order_items($items, $order)
+        {
+          if( count($items) > 1 ) {
+            $item_qty = array();
+            $item_order = array();
+            $sort_by = apply_filters( "puiw_order_items_sort_by", $this->fn->get_items_sorting("NONE"));
+            if ( !$sort_by || empty($sort_by) || $sort_by == "NONE" ){
+              return $items;
+            }
+            foreach( $items as $items_id => $item ){
+              // Check items type: for versions before Woocommerce 3.3
+              if( $item->is_type('line_item') && method_exists( $item, 'get_product' ) ){
+                $product = $item->get_product(); // Get the product Object
+                if( is_a( $product, 'WC_Product' ) ) {
+                  switch ($sort_by) {
+                    case 'ID':
+                      $item_sku[$items_id] = $items_id;
+                      break;
+                    case 'PID':
+                      $item_sku[$items_id] = $items_id;
+                      break;
+                    case 'SKU':
+                      $item_sku[$product->get_sku()] = $items_id;
+                      break;
+                    case 'QTY':
+                      $item_order[$item->get_quantity()] = $items_id;
+                      break;
+                    case 'NAME':
+                      $item_order[$item->get_name()] = $items_id;
+                      break;
+                    case 'PRICE':
+                      $item_order[$order->get_item_subtotal( $item, false, true )] = $items_id;
+                      break;
+                    case 'TOTAL':
+                      $item_order[$item->get_total()] = $items_id;
+                      break;
+                    case 'WEIGHT':
+                      $item_order[$product->get_weight()] = $items_id;
+                      break;
+                    case 'SUBTOTAL':
+                      $item_order[$item->get_subtotal()] = $items_id;
+                      break;
+                    case 'SUBTOTAL_TAX':
+                      $item_order[$item->get_subtotal_tax()] = $items_id;
+                      break;
+                    default: // by Hook
+                      $sort_by_force = apply_filters( "puiw_order_items_sort_by_force", $items_id, $item, $product, $items, $sort_by);
+                      $item_order[$sort_by_force] = $items_id;
+                      break;
+                  }
+                }
+              }
+            }
+            if(!empty($item_order)) {
+              if (apply_filters( "puiw_order_items_sort_desc", false) === true){ krsort($item_order); }else{ ksort($item_order); }
+              foreach( $item_order as $sku => $item_id ){ $sorted_items[$item_id] = $items[$item_id]; }
+              $items = $sorted_items;
+            }
+          }
+          return $items;
         }
         /**
          * read css file header and info

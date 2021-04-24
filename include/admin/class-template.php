@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/15 11:53:57
+# @Last modified time: 2021/04/24 21:18:07
 
 namespace peproulitmateinvoice;
 
@@ -1885,7 +1885,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      * @param string $default default status
      * @return string yes / no
      * @version 1.0.0
-     * @since 1.2.5-RC
+     * @since 1.3.0
      * @license https://pepro.dev/license Pepro.dev License
      */
     public function get_woosb_show_bundles($default="no")
@@ -1901,7 +1901,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      * @param string $default default status
      * @return string yes / no
      * @version 1.0.0
-     * @since 1.2.5-RC
+     * @since 1.3.0
      * @license https://pepro.dev/license Pepro.dev License
      */
     public function get_woosb_show_bundles_subtitle($default="no")
@@ -1917,7 +1917,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      * @param string $default default status
      * @return string yes / no
      * @version 1.0.0
-     * @since 1.2.5-RC
+     * @since 1.3.0
      * @license https://pepro.dev/license Pepro.dev License
      */
     public function get_woosb_show_bundled_products($default="no")
@@ -1933,7 +1933,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      * @param string $default default status
      * @return string yes / no
      * @version 1.0.0
-     * @since 1.2.5-RC
+     * @since 1.3.0
      * @license https://pepro.dev/license Pepro.dev License
      */
     public function get_woosb_show_bundled_subtitle($default="no")
@@ -1949,7 +1949,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      * @param string $default default status
      * @return string yes / no
      * @version 1.0.0
-     * @since 1.2.5-RC
+     * @since 1.3.0
      * @license https://pepro.dev/license Pepro.dev License
      */
     public function get_woosb_show_bundled_hierarchy($default="no")
@@ -1959,13 +1959,13 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       return apply_filters("puiw_get_woosb_show_bundled_hierarchy", $show_product_sku2, $default);
     }
     /**
-     * WPC Product Bundles: Bundled products prefix
+     * WPC Product Bundles: Bundled products subtitle prefix
      *
      * @method PeproUltimateInvoice_Template->get_woosb_bundled_subtitle_prefix()
      * @param string $default default status
      * @return string yes / no
      * @version 1.0.0
-     * @since 1.2.5-RC
+     * @since 1.3.0
      * @license https://pepro.dev/license Pepro.dev License
      */
     public function get_woosb_bundled_subtitle_prefix($default="")
@@ -1973,6 +1973,38 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       $show_product_sku2 = get_option("puiw_woosb_bundled_subtitle_prefix",$default);
       $show_product_sku2 = empty($show_product_sku2) ? $default : $show_product_sku2;
       return apply_filters("puiw_get_woosb_bundled_subtitle_prefix", $show_product_sku2, $default);
+    }
+    /**
+     * WPC Product Bundles: Bundles products subtitle prefix
+     *
+     * @method PeproUltimateInvoice_Template->get_woosb_bundles_subtitle_prefix()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.3.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_woosb_bundles_subtitle_prefix($default="")
+    {
+      $show_product_sku2 = get_option("puiw_woosb_bundles_subtitle_prefix",$default);
+      $show_product_sku2 = empty($show_product_sku2) ? $default : $show_product_sku2;
+      return apply_filters("puiw_get_woosb_bundles_subtitle_prefix", $show_product_sku2, $default);
+    }
+    /**
+     * WPC Product Bundles: Bundled products prefix
+     *
+     * @method PeproUltimateInvoice_Template->get_woosb_bundled_subtitle_prefix()
+     * @param string $default default status
+     * @return string yes / no
+     * @version 1.0.0
+     * @since 1.3.0
+     * @license https://pepro.dev/license Pepro.dev License
+     */
+    public function get_items_sorting($default="")
+    {
+      $show_product_sku2 = get_option("puiw_items_sorting",$default);
+      $show_product_sku2 = empty($show_product_sku2) ? $default : $show_product_sku2;
+      return apply_filters("puiw_get_items_sorting", $show_product_sku2, $default);
     }
 
   }
