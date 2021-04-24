@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/15 11:54:05
+# @Last modified time: 2021/04/24 11:15:29
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -15,6 +15,27 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $this->td = "puice";
             $this->fn = new PeproUltimateInvoice_Template;
             add_filter( "puiw_get_default_dynamic_params", array( $this, "puiw_get_default_dynamic_params"), 10, 2);
+            // add compatibility with WPC Product Bundles for WooCommerce By WPClever
+            $this->hide_bundles_parent = 0;
+            $this->hide_bundles_child = 0;
+
+              $this->_woosb_show_bundles = $this->fn->get_woosb_show_bundles();
+            $this->_woosb_show_bundles_subtitle = $this->fn->get_woosb_show_bundles_subtitle();
+            $this->_woosb_show_bundled_products = $this->fn->get_woosb_show_bundled_products();
+            $this->_woosb_show_bundled_subtitle = $this->fn->get_woosb_show_bundled_subtitle();
+            $this->_woosb_show_bundled_hierarchy = $this->fn->get_woosb_show_bundled_hierarchy();
+            $this->_woosb_show_bundled_prefix = $this->fn->get_woosb_bundled_subtitle_prefix(_x("Bundled in:", "wc-setting", $this->td));
+
+            if ($this->_woosb_show_bundles == "no"){
+              add_filter( "puiw_order_items", array($this, "woosb_puiw_hide_bundles_parent"), 10, 1);
+            }
+
+            if ($this->_woosb_show_bundled_products == "no"){
+              add_filter( "puiw_order_items", array($this, "woosb_puiw_hide_bundled_childs"), 10, 1);
+            }
+
+            add_action( "woocommerce_before_order_itemmeta", array( $this, "woosb_before_order_item_meta" ), 10, 1 );
+            add_filter( "puiw_invoice_item_extra_classes", array($this, "puiw__item_extra_classes"), 10, 6);
         }
         public function puiw_get_default_dynamic_params($opts, $order)
         {
@@ -314,6 +335,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               "theme_color2",
               "theme_color3",
               "show_shipping_ref_id_colspan",
+              "extra_classes",
               "img",
             ),
             $opt,
@@ -374,8 +396,8 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $order = wc_get_order($order_id);
           if (!$order) {return __('Incorrect Order!', $this->td);}
           if (!$skipAuth){
-            if ("HTML" == $MODE && !$this->has_access("HTML",$order)){ global $PeproUltimateInvoice; $PeproUltimateInvoice->die("create_html 1", __("Err 403 - Access Denied", $this->td), $PeproUltimateInvoice->Unauthorized_Access); }
-            if ("PDF" == $MODE && !$this->has_access("PDF",$order)){ global $PeproUltimateInvoice; $PeproUltimateInvoice->die("create_html 2", __("Err 403 - Access Denied", $this->td), $PeproUltimateInvoice->Unauthorized_Access); }
+            if ("HTML" == $MODE && !$this->has_access("HTML",$order)){ global $PeproUltimateInvoice; $PeproUltimateInvoice->die("printClass_create_html auth_check", __("Err 403 - Access Denied", $this->td), $PeproUltimateInvoice->Unauthorized_Access); }
+            if ("PDF" == $MODE && !$this->has_access("PDF",$order)){ global $PeproUltimateInvoice; $PeproUltimateInvoice->die("printClass_create_html_pdf auth_check", __("Err 403 - Access Denied", $this->td), $PeproUltimateInvoice->Unauthorized_Access); }
           }
           ob_start();
           $opts = $this->get_default_dynamic_params($order_id,$order);
@@ -522,7 +544,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           }
 
           $n=0;$total_weight = 0;
-          foreach ( $order->get_items() as $item_id => $item ) {
+          foreach ( apply_filters( "puiw_order_items", $order->get_items()) as $item_id => $item ) {
               $n+=1;
               $product_row  = ($product_row_RAW);
               $product_id   = $item->get_product_id();
@@ -534,6 +556,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $sale_price   = $product->get_sale_price(); // The product raw sale price
               $regular_price= $product->get_regular_price(); // The product raw regular price
               $name         = apply_filters( "puiw_invoice_item_get_name",              $item->get_name(), $product, $item, $order);
+              $extra_classes= apply_filters( "puiw_invoice_item_extra_classes",         [], $product, $item_id, $item, $order, $n);
               $quantity     = apply_filters( "puiw_invoice_item_get_quantity",          $item->get_quantity(), $product, $item, $order);
               $subtotal     = apply_filters( "puiw_invoice_item_get_subtotal",          wc_price($item->get_subtotal()), $product, $item, $order);
               $total        = apply_filters( "puiw_invoice_item_get_total",             wc_price($item->get_total()), $product, $item, $order);
@@ -542,11 +565,14 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $taxstat      = apply_filters( "puiw_invoice_item_get_tax_status",        $item->get_tax_status(), $product, $item, $order);
               $allmeta      = apply_filters( "puiw_invoice_item_get_meta_data",         $item->get_meta_data(), $product, $item, $order);
               $description  = apply_filters( "puiw_invoice_item_get_purchase_note",     $product->get_purchase_note(), $product, $item, $order);
+              $description .= (empty($description)?"":"$description<br>").$this->get_item_meta($item_id, $item, $product);
               $weight_raw   = apply_filters( "puiw_invoice_item_get_product_weight_raw",$product->get_weight() , $product, $item, $order);
               $weight       = apply_filters( "puiw_invoice_item_get_product_weight",    $this->fn->get_format_weight($weight_raw), $product, $item, $order);
               $dimension    = apply_filters( "puiw_invoice_item_get_product_dimension", $this->fn->get_product_dimension($item->get_product_id()), $product, $item, $order);
               $percentage   = "0.00%";
-              if( $product->is_on_sale() && !$product->is_type('variable')){$percentage   = number_format(round(100-((float)$active_price / (float)$regular_price * 100 ), 1 )) . "%";}
+              if( $product->is_on_sale() && !$product->is_type('variable')){
+                $percentage = number_format(round(100-((float)$active_price / (float)$regular_price * 100 ), 1 )) . "%";
+              }
               $discount     = apply_filters( "puiw_invoice_item_get_product_discount", $percentage, $product, $item, $order);
               $sku          = $product->get_sku();
               if ($opt["show_product_sku2"] == "yes"){$sku = empty($sku) || !$sku ? "#$product_id" : $sku;}
@@ -563,13 +589,20 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 case 'show_only_sale_price':
                   $base_price = wc_price($product->get_sale_price(), array( 'currency' => $order->get_currency() ));
                   break;
-                case 'show_wc_price':
+                case 'show_both_regular_and_sale_price':
                   $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 default:
-				  $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
+			            $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
+
+              if ($this->is_bundled_child($item_id)){
+                $base_price = "";
+                $subtotal = "";
+                if ($this->_woosb_show_bundled_hierarchy == "yes"){$n--;}
+              }
+
               $optm = array(
                 "n" => $n,
                 "img" => ("PDF" == $MODE) ? $product->get_image(array( 50, 50 )) : $product->get_image('shop_thumbnail'),
@@ -578,6 +611,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 "qty" => $quantity,
                 "base_price" => $base_price,
                 "description" => $description,
+                "extra_classes" => implode(" ", (array) $extra_classes),
                 "discount" => $discount,
                 "weight" => $weight,
                 "product_description_colspan" => $opt["product_description_colspan"],
@@ -632,7 +666,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $skipAuth = true;
           if ("S" !== $MODE){
             $skipAuth = false;
-            if (!$this->has_access("PDF",$order)){ global $PeproUltimateInvoice; $PeproUltimateInvoice->die("create_pdf 2", __("Err 403 - Access Denied", $this->td), $PeproUltimateInvoice->Unauthorized_Access); }
+            if (!$this->has_access("PDF",$order)){ global $PeproUltimateInvoice; $PeproUltimateInvoice->die("printClass_create_pdf auth_check", __("Err 403 - Access Denied", $this->td), $PeproUltimateInvoice->Unauthorized_Access); }
           }
           if (!$this->CheckPDFRequirements()){
             $this->CheckPDFRequirements(true);
@@ -898,7 +932,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $template = "<!DOCTYPE html><html lang=\"fa\" dir=\"ltr\"><head><title>$invoicehtmltitle</title>$extrainvoiceheaddata<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style type='text/css'>{$main_css_style}{{{custom_css_style}}}</style></head>$body_content</html>";
           $product_row_RAW = file_get_contents("$templateDirpath/template.row.tpl");
           $n=0;$total_weight = 0;
-          foreach ( $order->get_items() as $item_id => $item ) {
+          foreach ( apply_filters( "puiw_order_items", $order->get_items()) as $item_id => $item ) {
             $n+=1;
             $product_row  = ($product_row_RAW);
             $product_id   = $item->get_product_id();
@@ -910,6 +944,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $sale_price   = $product->get_sale_price(); // The product raw sale price
             $regular_price= $product->get_regular_price(); // The product raw regular price
             $name         = apply_filters( "puiw_invoice_item_get_name",              $item->get_name(), $product, $item, $order);
+            $extra_classes= apply_filters( "puiw_invoice_item_extra_classes",         [], $product, $item_id, $item, $order, $n);
             $quantity     = apply_filters( "puiw_invoice_item_get_quantity",          $item->get_quantity(), $product, $item, $order);
             $subtotal     = apply_filters( "puiw_invoice_item_get_subtotal",          wc_price($item->get_subtotal()), $product, $item, $order);
             $total        = apply_filters( "puiw_invoice_item_get_total",             wc_price($item->get_total()), $product, $item, $order);
@@ -918,9 +953,11 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $taxstat      = apply_filters( "puiw_invoice_item_get_tax_status",        $item->get_tax_status(), $product, $item, $order);
             $allmeta      = apply_filters( "puiw_invoice_item_get_meta_data",         $item->get_meta_data(), $product, $item, $order);
             $description  = apply_filters( "puiw_invoice_item_get_purchase_note",     $product->get_purchase_note(), $product, $item, $order);
+            $description .= (empty($description)?"":"$description<br>").$this->get_item_meta($item_id, $item, $product);
             $weight_raw   = apply_filters( "puiw_invoice_item_get_product_weight_raw",$product->get_weight() , $product, $item, $order);
             $weight       = apply_filters( "puiw_invoice_item_get_product_weight",    $this->fn->get_format_weight($weight_raw), $product, $item, $order);
             $dimension    = apply_filters( "puiw_invoice_item_get_product_dimension", $this->fn->get_product_dimension($item->get_product_id()), $product, $item, $order);
+
             $percentage   = "0.00%";
             if( $product->is_on_sale() && !$product->is_type('variable')){$percentage   = number_format(round(100-((float)$active_price / (float)$regular_price * 100 ), 1 )) . "%";}
             $discount     = apply_filters( "puiw_invoice_item_get_product_discount", $percentage, $product, $item, $order);
@@ -940,13 +977,16 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 case 'show_only_sale_price':
                   $base_price = wc_price($product->get_sale_price(), array( 'currency' => $order->get_currency() ));
                   break;
-                case 'show_wc_price':
+                case 'show_both_regular_and_sale_price':
                   $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
                   break;
                 default:
-				  $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
+			            $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
+
+              if ($this->is_bundled_child($item_id)){ $base_price = ""; $subtotal = ""; }
+
               $optm = array(
                 "n" => $n,
                 "img" => ("PDF" == $MODE) ? $product->get_image(array( 50, 50 )) : $product->get_image('shop_thumbnail'),
@@ -955,6 +995,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 "qty" => $quantity,
                 "base_price" => $base_price,
                 "description" => $description,
+                "extra_classes" => implode(" ", (array) $extra_classes),
                 "discount" => $discount,
                 "weight" => $weight,
                 "total_weight" => apply_filters( "puiw_printslips_create_html_total_weight", $this->fn->get_format_weight(floatval($product_weight*$quantity)),
@@ -1058,7 +1099,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $template = "<!DOCTYPE html><html lang=\"fa\" dir=\"ltr\"><head><title>$invoicehtmltitle</title>$extrainvoiceheaddata<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style type='text/css'>{$main_css_style}{{{inventory_css_style}}}</style></head>$body_content</html>";
           $product_row_RAW = file_get_contents("$templateDirpath/template.row.inventory.tpl");
           $n=0;$total_weight = 0;
-          foreach ( $order->get_items() as $item_id => $item ) {
+          foreach ( apply_filters( "puiw_order_items", $order->get_items()) as $item_id => $item ) {
               $n+=1;
               $product_row  = ($product_row_RAW);
               $product_id   = $item->get_product_id();
@@ -1070,6 +1111,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $sale_price   = $product->get_sale_price(); // The product raw sale price
               $regular_price= $product->get_regular_price(); // The product raw regular price
               $name         = apply_filters( "puiw_invoice_item_get_name",              $item->get_name(), $product, $item, $order);
+              $extra_classes= apply_filters( "puiw_invoice_item_extra_classes",         [], $product, $item_id, $item, $order, $n);
               $quantity     = apply_filters( "puiw_invoice_item_get_quantity",          $item->get_quantity(), $product, $item, $order);
               $subtotal     = apply_filters( "puiw_invoice_item_get_subtotal",          wc_price($item->get_subtotal()), $product, $item, $order);
               $total        = apply_filters( "puiw_invoice_item_get_total",             wc_price($item->get_total()), $product, $item, $order);
@@ -1078,9 +1120,12 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $taxstat      = apply_filters( "puiw_invoice_item_get_tax_status",        $item->get_tax_status(), $product, $item, $order);
               $allmeta      = apply_filters( "puiw_invoice_item_get_meta_data",         $item->get_meta_data(), $product, $item, $order);
               $description  = apply_filters( "puiw_invoice_item_get_purchase_note",     $product->get_purchase_note(), $product, $item, $order);
+              $description .= (empty($description)?"":"$description<br>").$this->get_item_meta($item_id, $item, $product);
               $weight_raw   = apply_filters( "puiw_invoice_item_get_product_weight_raw",$product->get_weight() , $product, $item, $order);
               $weight       = apply_filters( "puiw_invoice_item_get_product_weight",    $this->fn->get_format_weight($weight_raw), $product, $item, $order);
               $dimension    = apply_filters( "puiw_invoice_item_get_product_dimension", $this->fn->get_product_dimension($item->get_product_id()), $product, $item, $order);
+
+
               $percentage   = "0.00%";
               if( $product->is_on_sale() && !$product->is_type('variable')){$percentage   = number_format(round(100-((float)$active_price / (float)$regular_price * 100 ), 1 )) . "%";}
               $discount     = apply_filters( "puiw_invoice_item_get_product_discount", $percentage, $product, $item, $order);
@@ -1102,18 +1147,21 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 case 'show_only_sale_price':
                   $base_price = wc_price($product->get_sale_price(), array( 'currency' => $order->get_currency() ));
                   break;
-                case 'show_wc_price':
+                case 'show_both_regular_and_sale_price':
+                  // $opt["show_product_image"] = "yes";
                   $base_price = wc_price($product->get_price(), array( 'currency' => $order->get_currency() ));
-                  $opt["show_product_image"] = "yes";
                   break;
                 case 'hide_all_price':
                   $base_price = "";
                   break;
                 default:
                   // $base_price = wc_price($item->get_total() / $item->get_quantity());
-				  $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
+		              $base_price = wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) );
                   break;
               }
+
+              if ($this->is_bundled_child($item_id)){ $base_price = ""; $subtotal = ""; }
+
               $optm = array(
                 "n" => $n,
                 "img" => ("PDF" == $MODE) ? $product->get_image(array( 50, 50 )) : $product->get_image('shop_thumbnail'),
@@ -1122,6 +1170,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                 "qty" => $quantity,
                 "base_price" => $base_price,
                 "description" => $description,
+                "extra_classes" => implode(" ", (array) $extra_classes),
                 "discount" => $discount,
                 "weight" => $weight,
                 "total_weight" => apply_filters( "puiw_printinventory_create_html_total_weight", $this->fn->get_format_weight(floatval($product_weight*$quantity)),
@@ -1411,6 +1460,126 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           ob_end_clean();
           return apply_filters("puiw_return_pdf_total_prices_as_single_price", false , $order) ? $order->get_order_item_totals()["order_total"]["value"] : $tr;
         }
+        private function get_item_meta($item_id, $item, $product)
+        {
+          ob_start();
+          $ob_get_contents = ""; $echo = ""; $found_any = false;
+          if (!$item || empty($item)) return '';
+          $hidden_order_itemmeta = apply_filters( 'woocommerce_hidden_order_itemmeta', array( '_qty', '_tax_class', '_product_id', '_variation_id', '_line_subtotal', '_line_subtotal_tax', '_line_total', '_line_tax', 'method_id', 'cost', '_reduced_stock', ) );
+
+          do_action( 'woocommerce_before_order_itemmeta', $item_id, $item, $product );
+
+          if ( $meta_data = $item->get_formatted_meta_data('') ) {
+            $echo .= "<div class='view order_item_meta'><table cellspacing='0' class='display_meta'>";
+            foreach ( $meta_data as $meta_id => $meta ){
+              if ( in_array( $meta->key, $hidden_order_itemmeta, true ) ) { continue; }
+              $found_any = true;
+              $echo .= "<tr style='background: unset;' class='". sanitize_title("$meta->key","") ."'>
+                      <th style='border: none;'><strong>" . wp_kses_post( $meta->display_key ) . "</strong>:</th>
+                      <td style='border: none;'>" . wp_kses_post( force_balance_tags( $meta->display_value ) ) . "</td>
+              </tr>";
+            }
+            if ($found_any){
+              echo "$echo</table></div>";
+            }
+            $ob_get_contents = ob_get_contents();
+            ob_end_clean();
+          }
+
+          do_action( 'woocommerce_after_order_itemmeta', $item_id, $item, $product );
+
+          return $ob_get_contents;
+        }
+        public function woosb_puiw_hide_bundles_parent( $data_list )
+        {
+          foreach ( $data_list as $key => $data ) {
+            $bundles = wc_get_order_item_meta( $key, '_woosb_ids', true );
+            if ( ! empty( $bundles ) ) {
+              unset( $data_list[ $key ] );
+            }
+          }
+          return $data_list;
+        }
+        public function woosb_puiw_hide_bundled_childs( $data_list )
+        {
+          foreach ( $data_list as $key => $data ) {
+            $bundled = wc_get_order_item_meta( $key, '_woosb_parent_id', true );
+            if ( ! empty( $bundled ) ) {
+              unset( $data_list[ $key ] );
+            }
+          }
+          return $data_list;
+        }
+        public function is_bundled_parent($key)
+        {
+          return wc_get_order_item_meta( $key, '_woosb_ids', true );
+        }
+        public function is_bundled_child($key)
+        {
+          return wc_get_order_item_meta( $key, '_woosb_parent_id', true );
+        }
+        public function puiw__item_extra_classes($classes, $product, $item_id, $item, $order, $nthitem)
+        {
+          if ($nthitem % 2) {
+            $odd_even = "odd";
+          } else {
+            $odd_even = "even";
+          }
+
+          global $puiw_last_woosb_bundle_parent_index, $puiw_last_woosb_bundle_child_index;
+
+
+          if ($this->is_bundled_parent($item_id)){
+            $classes[] = "woosb-order-item woosb-item-parent";
+            if ($this->_woosb_show_bundled_hierarchy == "yes"){
+              $puiw_last_woosb_bundle_child_index = false;
+              $puiw_last_woosb_bundle_parent_index = $nthitem;
+              $classes[] = $odd_even;
+              return $classes;
+            }
+          }
+          if ($this->is_bundled_child($item_id)){
+            $classes[] = "woosb-order-item woosb-item-child";
+            if ($this->_woosb_show_bundled_hierarchy == "yes"){
+              if ($puiw_last_woosb_bundle_parent_index % 2){$odd_even = "odd";}else{$odd_even = "even";}
+              $puiw_last_woosb_bundle_child_index = $nthitem;
+              $classes[] = $odd_even;
+              return $classes;
+            }
+          }
+          if ($this->_woosb_show_bundled_hierarchy == "yes"){
+            if ($puiw_last_woosb_bundle_child_index && $puiw_last_woosb_bundle_child_index>0){
+              if ( ( $nthitem - 1 -$puiw_last_woosb_bundle_child_index ) % 2) {
+                $odd_even = "odd";
+              } else {
+                $odd_even = "even";
+              }
+              $classes[] = $odd_even;
+              return $classes;
+            }
+          }
+
+          $classes[] = $odd_even;
+          return $classes;
+        }
+        public function woosb_before_order_item_meta($order_item_id)
+        {
+          if ($this->_woosb_show_bundled_hierarchy == "yes"){
+            echo "<style>tr.even {background: var(--theme_color) !important;}
+            .woosb-order-item.woosb-item-child .show_product_image *,
+            .woosb-order-item.woosb-item-child .show_product_n * {display: none;}
+            tr.odd {background: white !important;}</style>";
+          }
+          if ($this->_woosb_show_bundles_subtitle == "no"){
+            echo "<style>div.view.order_item_meta tr.bundled-products{display: none !important;}</style>";
+          }
+
+          if ( $parent_id = wc_get_order_item_meta( $order_item_id, '_woosb_parent_id', true ) ) {
+            if ($this->_woosb_show_bundled_subtitle == "yes"){
+              echo $this->_woosb_show_bundled_prefix.get_the_title($parent_id);
+            }
+          }
+        }
         /**
          * read css file header and info
          *
@@ -1436,3 +1605,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
     }
 }
+/*##################################################
+Lead Developer: [amirhosseinhpv](https://hpv.im/)
+##################################################*/

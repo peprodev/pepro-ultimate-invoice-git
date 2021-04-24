@@ -96,16 +96,16 @@ tfoot, thead, .content-table td, .content-table td, .bordered , tr.show_order_it
 	background: {{{theme_color}}} !important;
 }
 
-table.content-table tbody tr:nth-child(2n+1) {
+table.content-table tbody tr:nth-child(2n+1), table.content-table tbody tr.odd{
 	background: #eee !important;
 }
 
-table.content-table tfoot tr:nth-child(2n+1),
-table.content-table tfoot tr:nth-child(2n) {
+table.content-table tfoot tr:nth-child(2n+1), table.content-table tfoot tr.odd,
+table.content-table tfoot tr:nth-child(2n), table.content-table tfoot tr.even {
 	background: {{{theme_color}}} !important;
 }
 
-table.content-table tbody tr:nth-child(2n) {
+table.content-table tbody tr:nth-child(2n), table.content-table tbody tr.even {
 	background: {{{theme_color2}}} !important;
 }
 

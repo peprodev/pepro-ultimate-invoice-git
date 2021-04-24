@@ -1,4 +1,4 @@
-<div class="show_order_items">
+<div class="show_order_items" class="{{{extra_classes}}}">
   <tr class="show_order_items">
     <td><span class="nn">{{{n}}}</span></td>
     <td class="show_product_image" style="{{{show_product_image_hc}}}"><div style="{{{show_product_image_dn}}}">{{{img}}}</div></td>

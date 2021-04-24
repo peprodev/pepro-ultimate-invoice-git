@@ -76,6 +76,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
           'privacy'   =>  _x("Privacy",           "wc-setting", $this->td),
           'extras'    =>  _x("Extras",            "wc-setting", $this->td),
           'misc'      =>  _x("Misc.",             "wc-setting", $this->td),
+          'integ'     =>  _x("Integration",       "wc-setting", $this->td),
         );
         return apply_filters('woocommerce_get_sections_' . $this->id, $sections);
       }
@@ -282,10 +283,10 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'class'=> 'wc-enhanced-select',
                     'default'=> 'show_both_regular_and_sale_price',
                     'options' => array(
-                      'show_only_regular_price' => _x("Show current regular price", "wc-setting", $this->td),
-                      'show_only_sale_price' => _x("Show current sale price", "wc-setting", $this->td),
-                      'show_both_regular_and_sale_price' => _x("Show current regular & sale price", "wc-setting", $this->td),
-                      'show_wc_price' => _x("Show actual price", "wc-setting", $this->td),
+                      'show_only_regular_price'           => _x("Show Live Price (regular)", "wc-setting", $this->td),
+                      'show_only_sale_price'              => _x("Show Live Price (sale)", "wc-setting", $this->td),
+                      'show_both_regular_and_sale_price'  => _x("Show Live Price (sale & regular)", "wc-setting", $this->td),
+                      'show_wc_price'                     => _x("Show Invoice Calculated price", "wc-setting", $this->td),
                     ),
                   ),
                   'puiw_items_end'                              => array(
@@ -378,11 +379,12 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'class'=> 'wc-enhanced-select',
                     'default'=> 'show_both_regular_and_sale_price',
                     'options' => array(
-                      'hide_all_price' => _x("Hide Price in reports", "wc-setting", $this->td),
-                      'show_only_regular_price' => _x("Show only regular price", "wc-setting", $this->td),
-                      'show_only_sale_price' => _x("Show only sale price", "wc-setting", $this->td),
-                      'show_both_regular_and_sale_price' => _x("Show both regular and sale price", "wc-setting", $this->td),
-                      'show_wc_price' => _x("Show regular/sale price", "wc-setting", $this->td),
+                      'hide_all_price'                    => _x("DO NOT SHOW Prices (HIDE)", "wc-setting", $this->td),
+                      'show_only_regular_price'           => _x("Show Live Price (regular)", "wc-setting", $this->td),
+                      'show_only_sale_price'              => _x("Show Live Price (sale)", "wc-setting", $this->td),
+                      'show_both_regular_and_sale_price'  => _x("Show Live Price (sale & regular)", "wc-setting", $this->td),
+                      'show_wc_price'                     => _x("Show Invoice Calculated price", "wc-setting", $this->td),
+
                     ),
                   ),
                   'puiw_inventory_css_style'                    => array(
@@ -858,6 +860,64 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'puiw_misc_end'                             => array(
                       'type' => 'sectionend',
                       'id'   => 'puiw_misc_end'
+                    ),
+                  )
+              );
+              break;
+          case 'integ':
+              $section_data = apply_filters(
+                  "puiw_setting_section_{$current_section}",
+                  array(
+                    'puiw_integ_title'                   => array(
+                      'id'   => 'puiw_integ_title',
+                      'name' => _x("Integration Setting", "wc-setting", $this->td),
+                      'type' => 'title',
+                      'desc'  => sprintf(__('Integration with %s', $this->td ), "<a href='https://wordpress.org/plugins/woo-product-bundle/' target='_blank'>WPC Product Bundles</a>" ),
+                    ),
+                    'puiw_woosb_show_bundles'            => array(
+                      'id'       => 'puiw_woosb_show_bundles',
+                      'name'     => _x("Show bundles", "wc-setting", $this->td),
+                      'type'     => 'checkbox',
+                      'default'  => 'no',
+                      'desc'     => _x("Check to show or leave unchecked to hide", "wc-setting", $this->td),
+                    ),
+                    'puiw_woosb_show_bundles_subtitle'   => array(
+                      'id'       => 'puiw_woosb_show_bundles_subtitle',
+                      'name'     => _x("Show bundles subtitle", "wc-setting", $this->td),
+                      'type'     => 'checkbox',
+                      'default'  => 'no',
+                      'desc'     => _x("Check to show or leave unchecked to hide", "wc-setting", $this->td),
+                    ),
+                    'puiw_woosb_show_bundled_products'   => array(
+                      'id'       => 'puiw_woosb_show_bundled_products',
+                      'name'     => _x("Show bundled products", "wc-setting", $this->td),
+                      'type'     => 'checkbox',
+                      'default'  => 'no',
+                      'desc'     => _x("Check to show or leave unchecked to hide", "wc-setting", $this->td),
+                    ),
+                    'puiw_woosb_show_bundled_subtitle'   => array(
+                      'id'       => 'puiw_woosb_show_bundled_subtitle',
+                      'name'     => _x("Show bundled products subtitle", "wc-setting", $this->td),
+                      'type'     => 'checkbox',
+                      'default'  => 'no',
+                      'desc'     => _x("Check to show or leave unchecked to hide", "wc-setting", $this->td),
+                    ),
+                    'puiw_woosb_bundled_subtitle_prefix' => array(
+                      'id'       => 'puiw_woosb_bundled_subtitle_prefix',
+                      'name'     => _x("Bundled products subtitle prefix", "wc-setting", $this->td),
+                      'type'     => 'text',
+                      'default'  => _x("Bundled in:", "wc-setting", $this->td),
+                    ),
+                    'puiw_woosb_show_bundled_hierarchy'  => array(
+                      'id'       => 'puiw_woosb_show_bundled_hierarchy',
+                      'name'     => _x("Show bundled products hierarchy", "wc-setting", $this->td),
+                      'type'     => 'checkbox',
+                      'default'  => 'no',
+                      'desc'     => _x("Check to show hierarchy or leave unchecked to show normally", "wc-setting", $this->td),
+                    ),
+                    'puiw_integ_end'                     => array(
+                      'type' => 'sectionend',
+                      'id'   => 'puiw_integ_end'
                     ),
                   )
               );

@@ -139,19 +139,17 @@
           <th></th>
         </tr>
         <tr if="show_order_items">
-            <th style="width: 1.8cm;">ردیف
-              <div if="watermark" style="opacity: {{{watermark_opacity_10}}};filter: alpha(opacity={{{watermark_opacity}}});" data-opacity="{{{watermark_opacity}}}" class="watermark_print"></div>
-            </th>
-            <th if="show_product_image" style="width: 3cm;">تصویر</th>
-            <th if="show_product_sku">کد کالا</th>
-            <th colspan="{{{product_description_colspan}}}">شرح کالا</th>
-            <th>تعداد</th>
-            <th if="show_product_weight">وزن</th>
-            <th if="show_product_dimensions">ابعاد</th>
-            <th style="width: 2.3cm">مبلغ واحد</th>
-            <th if="show_discount_precent" style="width: 2.3cm">درصد تخفیف</th>
-            <th if="show_product_tax" style="width: 2.3cm">مالیات</th>
-            <th colspan="{{{product_nettotal_colspan}}}">جمع کل</th>
+            <th class="show_product_n" style="width: 1.8cm;">ردیف<div if="watermark" style="opacity: {{{watermark_opacity_10}}};filter: alpha(opacity={{{watermark_opacity}}});" data-opacity="{{{watermark_opacity}}}" class="watermark_print"></div></th>
+            <th class="show_product_image" if="show_product_image" style="width: 3cm;">تصویر</th>
+            <th class="show_product_sku" if="show_product_sku">کد کالا</th>
+            <th class="show_product_title_description" colspan="{{{product_description_colspan}}}">شرح کالا</th>
+            <th class="show_product_qty">تعداد</th>
+            <th class="show_product_weight" if="show_product_weight">وزن</th>
+            <th class="show_product_dimensions" if="show_product_dimensions">ابعاد</th>
+            <th class="show_product_base_price" style="width: 2.3cm">مبلغ واحد</th>
+            <th class="show_discount_precent" if="show_discount_precent" style="width: 2.3cm">درصد تخفیف</th>
+            <th class="show_product_tax" if="show_product_tax" style="width: 2.3cm">مالیات</th>
+            <th class="show_product_total_price" colspan="{{{product_nettotal_colspan}}}">جمع کل</th>
         </tr>
       </thead>
       <tbody>

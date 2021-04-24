@@ -120,6 +120,7 @@ tfoot,
 thead,
 tr[if="show_order_total"] tr:last-child,
 .content-table tr:nth-child(even),
+.content-table tr.even,
 .bordered.header-item-data,
 .bordered.grow{
 	border: 1px solid var(--theme_color);
@@ -133,7 +134,8 @@ tr[if="show_order_total"] tr:not(:last-child) {
 }
 
 
-.content-table tr:nth-child(odd) {
+.content-table tr:nth-child(odd),
+.content-table tr.odd {
 	background: #FFF;
 }
 
@@ -215,6 +217,7 @@ h1.puiw_title img {
 	thead,
 	tr[if="show_order_total"] tr:last-child,
 	.content-table tr:nth-child(even),
+	.content-table tr.even,
 	.bordered.header-item-data,
 	.bordered.grow{
 		border: 2px solid #606060 !important;

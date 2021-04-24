@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.2.5
-Stable tag: 1.2.5
+Version: 1.2.6
+Stable tag: 1.2.6
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/04/15 11:59:57
+# @Last modified time: 2021/04/19 23:48:28
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -72,7 +72,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.2.5";
+            $this->version = "1.2.6";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -130,6 +130,7 @@ if (!class_exists("PeproUltimateInvoice")) {
 
             // initiate plguin main instance
             if ( is_admin() ) { (new PeproUltimateInvoice_wcPanel())->init(); }
+
 
             // disable woocommerce modern admin dashboard, has to be called here!
             if ( "yes" == $this->tpl->get_disable_wc_dashboard()){
@@ -335,7 +336,7 @@ if (!class_exists("PeproUltimateInvoice")) {
         {
           $ext = " @font-face { font-family: 'bodyfont'; font-style: normal; font-weight: 400; src: url('".PEPROULTIMATEINVOICE_URL."/assets/css/96594ad4.woff2') format('woff2'); }";
           // $title = (!empty($preTitle)?"$preTitle -- ":"") . $title;
-          die('<title>'. $title .'</title><style type="text/css">'.$ext.'html { background: #f1f1f1; } body { background: #fff; color: #444; font-family: bodyfont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; margin: 2em auto; padding: 1em 2em; max-width: 700px; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); width: 80%; max-height: 130px;} h1 { border-bottom: 1px solid #dadada; clear: both; color: #666; font-size: 24px; margin: 30px 0 0 0; padding: 0; padding-bottom: 7px; } #error-page { margin-top: 50px; } #error-page p, #error-page .wp-die-message { font-size: 14px; line-height: 1.5; margin: 25px 0 20px; } #error-page code { font-family: Consolas, Monaco, monospace; } ul li { margin-bottom: 10px; font-size: 14px ; } a { color: #0073aa; } a:hover, a:active { color: #00a0d2; } a:focus { color: #124964; -webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); outline: none; } .button { background: #f7f7f7; border: 1px solid #ccc; color: #555; display: inline-block; text-decoration: none; font-size: 13px; line-height: 2; height: 28px; margin: 0; padding: 0 10px 1px; cursor: pointer; -webkit-border-radius: 3px; -webkit-appearance: none; border-radius: 3px; white-space: nowrap; -webkit-box-sizing: border-box; -moz-box-sizing:    border-box; box-sizing:         border-box; -webkit-box-shadow: 0 1px 0 #ccc; box-shadow: 0 1px 0 #ccc; vertical-align: top; } .button.button-large { height: 30px; line-height: 2.15384615; padding: 0 12px 2px; } .button:hover, .button:focus { background: #fafafa; border-color: #999; color: #23282d; } .button:focus { border-color: #5b9dd9; -webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); outline: none; } .button:active { background: #eee; border-color: #999; -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); }body { font-family: bodyfont, Tahoma, Arial; }	</style><body id="error-page"><div class="wp-die-message">'.$msg.'</div></body></html>');
+          die('<title>'. $title .'</title><!--ERR: '.$preTitle.' --><style type="text/css">'.$ext.'html { background: #f1f1f1; } body { background: #fff; color: #444; font-family: bodyfont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; margin: 2em auto; padding: 1em 2em; max-width: 700px; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); width: 80%; max-height: 130px;} h1 { border-bottom: 1px solid #dadada; clear: both; color: #666; font-size: 24px; margin: 30px 0 0 0; padding: 0; padding-bottom: 7px; } #error-page { margin-top: 50px; } #error-page p, #error-page .wp-die-message { font-size: 14px; line-height: 1.5; margin: 25px 0 20px; } #error-page code { font-family: Consolas, Monaco, monospace; } ul li { margin-bottom: 10px; font-size: 14px ; } a { color: #0073aa; } a:hover, a:active { color: #00a0d2; } a:focus { color: #124964; -webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); outline: none; } .button { background: #f7f7f7; border: 1px solid #ccc; color: #555; display: inline-block; text-decoration: none; font-size: 13px; line-height: 2; height: 28px; margin: 0; padding: 0 10px 1px; cursor: pointer; -webkit-border-radius: 3px; -webkit-appearance: none; border-radius: 3px; white-space: nowrap; -webkit-box-sizing: border-box; -moz-box-sizing:    border-box; box-sizing:         border-box; -webkit-box-shadow: 0 1px 0 #ccc; box-shadow: 0 1px 0 #ccc; vertical-align: top; } .button.button-large { height: 30px; line-height: 2.15384615; padding: 0 12px 2px; } .button:hover, .button:focus { background: #fafafa; border-color: #999; color: #23282d; } .button:focus { border-color: #5b9dd9; -webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); outline: none; } .button:active { background: #eee; border-color: #999; -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); }body { font-family: bodyfont, Tahoma, Arial; }	</style><body id="error-page"><div class="wp-die-message">'.$msg.'</div></body></html>');
         }
         /**
          * Initiate plugin with init hook
@@ -347,130 +348,139 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function init_plugin()
         {
-            if (
-              isset($_GET["invoice"]) && !empty(
-                trim(
-                  sanitize_text_field($_GET["invoice"])
-                )
-              )
-            ){
-              if (
-                !$this->auth_check()
-              ){
-                $this->die("invoice auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-              }else
-              {
-                die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"]))));
-              }
-            }
-            if (isset($_GET["invoice-pdf"]) && !empty(trim(sanitize_text_field($_GET["invoice-pdf"])))){
-              $force_download = false;
-              if (isset($_GET["download"]) && !empty(sanitize_text_field($_GET["download"]))){ $force_download = true; }
-              if (!$this->auth_check()){
-                $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
-                $this->die("invoice-pdf auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-              }else{
-                die($this->print->create_pdf((int) trim(sanitize_text_field($_GET["invoice-pdf"])),$force_download));
-              }
-            }
-            if (isset($_GET["invoice-slips"]) && !empty(trim(sanitize_text_field($_GET["invoice-slips"])))){
-              if (!$this->auth_check()){
-                $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
-                $this->die("invoice slips auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-              }else{
-                die($this->print->create_slips((int) trim(sanitize_text_field($_GET["invoice-slips"]))));
-              }
-            }
-            if (isset($_GET["invoice-inventory"]) && !empty(trim(sanitize_text_field($_GET["invoice-inventory"])))){
-              if (!$this->auth_check()){
-                $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
-                $this->die("invoice inventory auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-              }else{
-                die($this->print->create_inventory((int) trim(sanitize_text_field($_GET["invoice-inventory"]))));
-              }
-            }
+          // add compatibility with WPC Product Bundles for WooCommerce By WPClever
+          if (class_exists('WPCleverWoosb') && function_exists('WPCleverWoosb')){
+            $WPCleverWoosb = WPCleverWoosb();
+            remove_action("woocommerce_before_order_itemmeta", array( $WPCleverWoosb, 'woosb_before_order_item_meta'), 10);
+            remove_action( 'woocommerce_order_formatted_line_subtotal', array( $WPCleverWoosb, 'woosb_order_formatted_line_subtotal' ), 10, 2 );
+            // remove_all_actions("woocommerce_before_order_itemmeta", 10);
+          }
 
-            add_filter( "plugin_action_links_{$this->plugin_basename}", array($this, 'plugins_row_links'));
-            add_action( "plugin_row_meta", array( $this, 'plugin_row_meta' ), 10, 2);
-            add_action( "admin_menu", array($this, 'admin_menu'), 1000);
-            add_action( "admin_init", array($this, 'admin_init'));
-            add_action( "wp_ajax_nopriv_puiw_{$this->td}", array($this, 'handel_ajax_req'));
-            add_action( "wp_ajax_puiw_{$this->td}", array($this, 'handel_ajax_req'));
-            if ("yes" == $this->tpl->get_allow_preorder_invoice()){
-              add_action( "woocommerce_proceed_to_checkout", array( $this,"woocommerce_after_cart_contents"), 1000);
+          if (
+            isset($_GET["invoice"]) && !empty(
+              trim(
+                sanitize_text_field($_GET["invoice"])
+              )
+            )
+          ){
+            if (
+              !$this->auth_check()
+            ){
+              $this->die("invoice auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
+            }else
+            {
+              die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"]))));
             }
-            if ("yes" == $this->tpl->get_allow_users_use_invoices()){
-              add_filter( "woocommerce_my_account_my_orders_actions", array( $this,'add_view_invoice_button_orderpage'), 10, 2);
+          }
+          if (isset($_GET["invoice-pdf"]) && !empty(trim(sanitize_text_field($_GET["invoice-pdf"])))){
+            $force_download = false;
+            if (isset($_GET["download"]) && !empty(sanitize_text_field($_GET["download"]))){ $force_download = true; }
+            if (!$this->auth_check()){
+              $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
+              $this->die("pdfinvoice auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
+            }else{
+              die($this->print->create_pdf((int) trim(sanitize_text_field($_GET["invoice-pdf"])),$force_download));
             }
-            add_action( "wp_before_admin_bar_render", array( $this,'wp_before_admin_bar_render'));
-            if ("yes" == $this->tpl->get_allow_quick_shop()){
-              add_shortcode( "puiw_quick_shop", array($this, 'integrate_with_shortcode'));
+          }
+          if (isset($_GET["invoice-slips"]) && !empty(trim(sanitize_text_field($_GET["invoice-slips"])))){
+            if (!$this->auth_check()){
+              $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
+              $this->die("invoice slips auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
+            }else{
+              die($this->print->create_slips((int) trim(sanitize_text_field($_GET["invoice-slips"]))));
             }
-            add_action( 'woocommerce_admin_order_data_after_shipping_address', array($this,'after_shipping_shopmngr_provided_note'), 10, 1 );
-            add_action( "woocommerce_order_details_after_order_table_items", array($this, "woocommerce_order_details_after_order_table_items") );
-            add_action( 'woocommerce_checkout_update_order_meta', array($this,'woocommerce_checkout_update_order_meta'));
-            add_action( 'woocommerce_checkout_update_user_meta', array($this,'woocommerce_checkout_update_user_meta'), 10, 2);
-            add_filter( 'woocommerce_checkout_fields', array($this,'checkout_fields_add_uin') );
-            // add_action( 'woocommerce_admin_order_data_after_shipping_address', array($this,'checkout_field_admin_display_uin'), 10, 1 );
-            // add_action( 'woocommerce_admin_order_data_after_billing_address', array($this,'checkout_field_admin_display_uin'), 10, 1 );
-            // add_action( 'woocommerce_admin_order_data_after_order_details', array($this,'checkout_field_admin_display_odt'), 10, 1 );
-            add_filter( "woocommerce_admin_billing_fields", function($ar){
-              if ("yes" == $this->tpl->get_show_user_uin()){
-                $default_UIN = "";
-                if (get_current_user_id()){ $default_UIN = get_user_meta( get_current_user_id(), "billing_uin", true); }
-                $ar['puiw_billing_uin']  = array(
-                'label' => __( 'User Unique Identification Number', $this->td ),
-                'default'     => $default_UIN,
-                'class'   => 'long',
+          }
+          if (isset($_GET["invoice-inventory"]) && !empty(trim(sanitize_text_field($_GET["invoice-inventory"])))){
+            if (!$this->auth_check()){
+              $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
+              $this->die("invoice inventory auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
+            }else{
+              die($this->print->create_inventory((int) trim(sanitize_text_field($_GET["invoice-inventory"]))));
+            }
+          }
+
+          add_filter( "plugin_action_links_{$this->plugin_basename}", array($this, 'plugins_row_links'));
+          add_action( "plugin_row_meta", array( $this, 'plugin_row_meta' ), 10, 2);
+          add_action( "admin_menu", array($this, 'admin_menu'), 1000);
+          add_action( "admin_init", array($this, 'admin_init'));
+          add_action( "wp_ajax_nopriv_puiw_{$this->td}", array($this, 'handel_ajax_req'));
+          add_action( "wp_ajax_puiw_{$this->td}", array($this, 'handel_ajax_req'));
+          if ("yes" == $this->tpl->get_allow_preorder_invoice()){
+            add_action( "woocommerce_proceed_to_checkout", array( $this,"woocommerce_after_cart_contents"), 1000);
+          }
+          if ("yes" == $this->tpl->get_allow_users_use_invoices()){
+            add_filter( "woocommerce_my_account_my_orders_actions", array( $this,'add_view_invoice_button_orderpage'), 10, 2);
+          }
+          add_action( "wp_before_admin_bar_render", array( $this,'wp_before_admin_bar_render'));
+          if ("yes" == $this->tpl->get_allow_quick_shop()){
+            add_shortcode( "puiw_quick_shop", array($this, 'integrate_with_shortcode'));
+          }
+          add_action( 'woocommerce_admin_order_data_after_shipping_address', array($this,'after_shipping_shopmngr_provided_note'), 10, 1 );
+          add_action( "woocommerce_order_details_after_order_table_items", array($this, "woocommerce_order_details_after_order_table_items") );
+          add_action( 'woocommerce_checkout_update_order_meta', array($this,'woocommerce_checkout_update_order_meta'));
+          add_action( 'woocommerce_checkout_update_user_meta', array($this,'woocommerce_checkout_update_user_meta'), 10, 2);
+          add_filter( 'woocommerce_checkout_fields', array($this,'checkout_fields_add_uin') );
+          // add_action( 'woocommerce_admin_order_data_after_shipping_address', array($this,'checkout_field_admin_display_uin'), 10, 1 );
+          // add_action( 'woocommerce_admin_order_data_after_billing_address', array($this,'checkout_field_admin_display_uin'), 10, 1 );
+          // add_action( 'woocommerce_admin_order_data_after_order_details', array($this,'checkout_field_admin_display_odt'), 10, 1 );
+
+          add_filter( "woocommerce_admin_billing_fields", function($ar){
+            if ("yes" == $this->tpl->get_show_user_uin()){
+              $default_UIN = "";
+              if (get_current_user_id()){ $default_UIN = get_user_meta( get_current_user_id(), "billing_uin", true); }
+              $ar['puiw_billing_uin']  = array(
+              'label' => __( 'User Unique Identification Number', $this->td ),
+              'default'     => $default_UIN,
+              'class'   => 'long',
+            );
+            }
+            return $ar;
+          });
+          add_filter( "woocommerce_admin_shipping_fields", function($ar){
+              $ar['puiw_invoice_shipdaterow']  = array("label" => "", "name"=>"", "style"=>"display:none","class"=> 'long persianDatepickerRow',);
+              $ar['puiw_invoice_shipdatefa']  = array(
+                'label' => __( 'Shipped Date (Shamsi)', $this->td ),
+                'class'   => 'long persianDatepicker disabled',
+                'placeholder' => __( 'Select Shipped Date', $this->td ),
+                'custom_attributes' => array("readonly"=>"true"),
               );
-              }
+              $ar['puiw_invoice_shipdate']  = array(
+                'label' => __( 'Shipped Date (Gregorian)', $this->td ),
+                'class'   => 'long persianDatepicker disabled',
+                'placeholder' => __( 'Select Shipped Date', $this->td ),
+                'custom_attributes' => array("readonly"=>"true"),
+              );
+              $ar['puiw_invoice_track_id']  = array(
+                  'label' => __( 'Shipping Track Serial', $this->td ),
+                  'class'   => 'long',
+                  'placeholder' => __( 'Enter Shipping Track Serial', $this->td ),
+
+                );
+              $ar['puiw_customer_signature']  = array(
+                'label' => __( 'Customer Signature', $this->td ),
+                'class'   => 'wc-select-uploader',
+                'style'   => 'display:none',
+              );
               return $ar;
             });
-            add_filter( "woocommerce_admin_shipping_fields", function($ar){
-                $ar['puiw_invoice_shipdaterow']  = array("label" => "", "name"=>"", "style"=>"display:none","class"=> 'long persianDatepickerRow',);
-                $ar['puiw_invoice_shipdatefa']  = array(
-                  'label' => __( 'Shipped Date (Shamsi)', $this->td ),
-                  'class'   => 'long persianDatepicker disabled',
-                  'placeholder' => __( 'Select Shipped Date', $this->td ),
-                  'custom_attributes' => array("readonly"=>"true"),
-                );
-                $ar['puiw_invoice_shipdate']  = array(
-                  'label' => __( 'Shipped Date (Gregorian)', $this->td ),
-                  'class'   => 'long persianDatepicker disabled',
-                  'placeholder' => __( 'Select Shipped Date', $this->td ),
-                  'custom_attributes' => array("readonly"=>"true"),
-                );
-                $ar['puiw_invoice_track_id']  = array(
-                    'label' => __( 'Shipping Track Serial', $this->td ),
-                    'class'   => 'long',
-                    'placeholder' => __( 'Enter Shipping Track Serial', $this->td ),
+          $this->add_wc_prebuy_status();
 
-                  );
-                $ar['puiw_customer_signature']  = array(
-                  'label' => __( 'Customer Signature', $this->td ),
-                  'class'   => 'wc-select-uploader',
-                  'style'   => 'display:none',
-                );
-                return $ar;
-              });
-            $this->add_wc_prebuy_status();
+          add_action("woocommerce_order_details_before_order_table", array( $this ,'woocommerce_order_details_before_order_table'), -1000);
 
-            add_action("woocommerce_order_details_before_order_table", array( $this ,'woocommerce_order_details_before_order_table'), -1000);
+          add_filter("wc_order_statuses", array( $this,"add_wc_order_statuses"));
 
-            add_filter("wc_order_statuses", array( $this,"add_wc_order_statuses"));
+          // apply_filters( "puiw_get_template_dir_url", PEPROULTIMATEINVOICE_URL . "/template/{$opt["template"]}", $opt["template"]);
+          // $templateDirpath = apply_filters( "puiw_get_template_dir_path", PEPROULTIMATEINVOICE_DIR . "/template/{$opt["template"]}", $opt["template"]);
+          // puiw_get_templates_list
+          // puiw_load_themes_simple_path
+          // puiw_load_themes_simple_title
+          // puiw_load_themes_advanced_info
+          // puiw_load_themes_return_simple
+          // puiw_load_themes_return_advanced
+          // puiw_get_default_dynamic_params
+          // puiw_printinvoice_pdf_footer
 
-            // apply_filters( "puiw_get_template_dir_url", PEPROULTIMATEINVOICE_URL . "/template/{$opt["template"]}", $opt["template"]);
-            // $templateDirpath = apply_filters( "puiw_get_template_dir_path", PEPROULTIMATEINVOICE_DIR . "/template/{$opt["template"]}", $opt["template"]);
-            // puiw_get_templates_list
-            // puiw_load_themes_simple_path
-            // puiw_load_themes_simple_title
-            // puiw_load_themes_advanced_info
-            // puiw_load_themes_return_simple
-            // puiw_load_themes_return_advanced
-            // puiw_get_default_dynamic_params
-            // puiw_printinvoice_pdf_footer
-
-            // add_filter( "puiw_get_templates_list", function ($temp){$temp[] = 'C:\xampp\htdocs\amirhosseinhpv\wp-content\plugins\_sample.plugin\custom-puiw\default.cfg'; return $temp;} );
+          // add_filter( "puiw_get_templates_list", function ($temp){$temp[] = 'C:\xampp\htdocs\amirhosseinhpv\wp-content\plugins\_sample.plugin\custom-puiw\default.cfg'; return $temp;} );
 
         }
         /**
@@ -1303,8 +1313,8 @@ if (!class_exists("PeproUltimateInvoice")) {
             foreach ($peproultimateinvoice_options as $options) {
                 $opparent = $options["name"];
                 foreach ($options["data"] as $optname => $optvalue) {
-                    unregister_setting($opparent, $optname);
-                    delete_option($optname);
+                    // unregister_setting($opparent, $optname);
+                    // delete_option($optname);
                 }
             }
         }
@@ -1336,6 +1346,16 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_show_discount_precent" => "yes",
                     "puiw_show_product_tax" => "yes",
                     "puiw_show_total_tax" => "yes",
+                    "puiw_custom_css_style" => ".show_product_title_description, .show_product_title_description * {
+                        text-align: right !important;
+                      }
+                      tfoot td:last-of-type * {
+                        text-align: right;
+                        vertical-align: top;
+                      }
+                      .show_product_image {
+                        width: 2cm !important;
+                      }",
                     "puiw_show_order_note" => "note_provided_by_both",
                     "puiw_show_user_uin" => "no",
                     "puiw_show_shipping_ref_id" => "yes",
@@ -1355,10 +1375,13 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_template" => PEPROULTIMATEINVOICE_DIR ."/template/default" . (is_rtl() ? "-rtl" : ""),
                     "puiw_preinvoice_template" => PEPROULTIMATEINVOICE_DIR ."/template/default-pre-invoice",
                     "puiw_invoice_title" => _x("Invoice %s", "wc-setting",$this->td),
-                    "puiw_theme_color" => "teal",
-                    "puiw_theme_color2" => "#2271b9",
-                    "puiw_theme_color3" => "#555",
-                    "puiw_font_size" => "16",
+                    "puiw_theme_color" => "#90caf9",
+                    "puiw_theme_color2" => "#a6d5fc",
+                    "puiw_theme_color3" => "#b5deff",
+                    "puiw_preinvoice_theme_color" => "#faee84",
+                    "puiw_preinvoice_theme_color2" => "#fff59d",
+                    "puiw_preinvoice_theme_color3" => "#fff8b5",
+                    "puiw_font_size" => "12",
                     "puiw_watermark_opacity" => "80",
                     "puiw_dark_mode" => "no",
                     "puiw_date_format" => "Y/m/d H:i",
@@ -1505,7 +1528,7 @@ if (!class_exists("PeproUltimateInvoice")) {
             wp_add_inline_style($f," #footer-left b a::before { content: ''; background: url('{$this->assets_url}/img/peprodev.svg') no-repeat; background-position-x: center; background-position-y: center; background-size: contain; width: 60px; height: 40px; display: inline-block; pointer-events: none; position: absolute; -webkit-margin-before: calc(-60px + 1rem); margin-block-start: calc(-60px + 1rem); -webkit-filter: opacity(0.0);
             filter: opacity(0.0); transition: all 0.3s ease-in-out; }#footer-left b a:hover::before { -webkit-filter: opacity(1.0); filter: opacity(1.0); transition: all 0.3s ease-in-out; }[dir=rtl] #footer-left b a::before {margin-inline-start: calc(30px);}");
             wp_enqueue_style($f);
-            add_filter( 'admin_footer_text', function () { return sprintf(_x("Thanks for using %s products", "footer-copyright", $this->td), "<b><a href='https://pepro.dev/' target='_blank' >".__("Pepro Dev", $this->td)."</a></b>");}, 11000 );
+            add_filter( 'admin_footer_text', function () { return sprintf(_x("Thanks for using %s products.", "footer-copyright", $this->td), "<b><a href='https://pepro.dev/' target='_blank' >".__("Pepro Dev", $this->td)."</a></b>");}, 11000 );
             add_filter( 'update_footer', function () { return sprintf(_x("%s — Version %s", "footer-copyright", $this->td), $this->title, $this->version); }, 1100 );
           }
         /**

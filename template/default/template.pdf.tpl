@@ -122,17 +122,17 @@
       <!-- <div class="show_order_items"> <tr style="height: .1cm;"><td style="display: none !important; height: .1cm;" colspan="{{{invoice_final_row_colspan}}}"></td></tr> </div> -->
       <div class="show_order_items">
         <tr class="show_order_items bgONE">
-          <th class="" style="width: 1cm !important;">No.</th>
+          <th class="show_product_n" style="width: 1cm !important;">No.</th>
           <th class="show_product_image" style="{{{show_product_image_hc}}}" width="1.5cm"><div style="{{{show_product_image_dn}}}">Image</div></th>
           <th class="show_product_sku" style="{{{show_product_sku_hc}}}" width="1.5cm"><div style="{{{show_product_sku_dn}}}">SKU</div></th>
-          <th colspan="{{{product_description_colspan}}}">Description</th>
-          <th width="1.5cm">QTY</th>
+          <th class="show_product_title_description" colspan="{{{product_description_colspan}}}">Description</th>
+          <th class="show_product_qty" width="1.5cm">QTY</th>
           <th class="show_product_weight" style="{{{show_product_weight_hc}}}"><div style="{{{show_product_weight_dn}}}">Weight</div></th>
           <th class="show_product_dimensions" style="{{{show_product_dimensions_hc}}}"><div style="{{{show_product_dimensions_dn}}}">Dimensions</div></th>
-          <th width="1.5cm">Price</th>
-          <th width="1.5cm" class="show_discount_precent" style="{{{show_discount_precent_hc}}}"><div style="{{{show_discount_precent_dn}}}">Discount (%)</div></th>
-          <th width="1.5cm" class="show_product_tax" style="{{{show_product_tax_hc}}}"><div style="{{{show_product_tax_dn}}}">Tax</div></th>
-          <th width="1.5cm" colspan="{{{product_nettotal_colspan}}}">Total</th>
+          <th class="show_product_base_price" width="1.5cm">Price</th>
+          <th class="show_discount_precent" width="1.5cm" style="{{{show_discount_precent_hc}}}"><div style="{{{show_discount_precent_dn}}}">Discount (%)</div></th>
+          <th class="show_product_tax" width="1.5cm" style="{{{show_product_tax_hc}}}"><div style="{{{show_product_tax_dn}}}">Tax</div></th>
+          <th class="show_product_total_price" width="1.5cm" colspan="{{{product_nettotal_colspan}}}">Total</th>
 
         </tr>
       </div>

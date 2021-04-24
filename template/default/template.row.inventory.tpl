@@ -1,4 +1,4 @@
-<tr if="show_order_items">
+<tr if="show_order_items" class="{{{extra_classes}}}">
   <td>{{{n}}}</td>
   <td if="show_product_image_inventory">{{{img}}}</td>
   <td if="show_product_sku_inventory">{{{sku}}}</td>

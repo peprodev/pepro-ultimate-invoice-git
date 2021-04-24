@@ -139,19 +139,17 @@
           <th></th>
         </tr>
         <tr if="show_order_items">
-            <th style="width: 1.8cm;">No.
-              <div if="watermark" style="opacity: {{{watermark_opacity_10}}};filter: alpha(opacity={{{watermark_opacity}}});" data-opacity="{{{watermark_opacity}}}" class="watermark_print"></div>
-            </th>
-            <th if="show_product_image" style="width: 3cm;">Image</th>
-            <th if="show_product_sku">SKU</th>
-            <th colspan="{{{product_description_colspan}}}">Product / Description</th>
-            <th>QTY</th>
-            <th if="show_product_weight">Weight</th>
-            <th if="show_product_dimensions">Dimensions</th>
-            <th style="width: 2.3cm">Price</th>
-            <th if="show_discount_precent" style="width: 2.3cm">Discount (%)</th>
-            <th if="show_product_tax" style="width: 2.3cm">Tax</th>
-            <th colspan="{{{product_nettotal_colspan}}}">Total</th>
+            <th class="show_product_n" style="width: 1.8cm;">No.<div if="watermark" style="opacity: {{{watermark_opacity_10}}};filter: alpha(opacity={{{watermark_opacity}}});" data-opacity="{{{watermark_opacity}}}" class="watermark_print"></div></th>
+            <th class="show_product_image" if="show_product_image" style="width: 3cm;">Image</th>
+            <th class="show_product_sku" if="show_product_sku">SKU</th>
+            <th class="show_product_title_description" colspan="{{{product_description_colspan}}}">Product / Description</th>
+            <th class="show_product_qty">QTY</th>
+            <th class="show_product_weight" if="show_product_weight">Weight</th>
+            <th class="show_product_dimensions" if="show_product_dimensions">Dimensions</th>
+            <th class="show_product_base_price" style="width: 2.3cm">Price</th>
+            <th class="show_discount_precent" if="show_discount_precent" style="width: 2.3cm">Discount (%)</th>
+            <th class="show_product_tax" if="show_product_tax" style="width: 2.3cm">Tax</th>
+            <th class="show_product_total_price" colspan="{{{product_nettotal_colspan}}}">Total</th>
         </tr>
       </thead>
       <tbody>
