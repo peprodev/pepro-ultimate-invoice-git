@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.7
-Stable tag: 1.2.5
+Stable tag: 1.3.1
 Requires PHP: 7.0
 WC requires at least: 4.4
 WC tested up to: 5.1.0
@@ -151,6 +151,9 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 
 == Changelog ==
+
+= 1.3.1 =
+- Fix: Error Create Inventory and Packing Slip Reports
 
 = 1.3.0 =
 - Added: Fully Compatibility with [WPC Product Bundles by WPClever](https://wpclever.net/downloads/product-bundles)
@@ -304,8 +307,10 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
+= 1.3.1 =
+- Fix: Error Create Inventory and Packing Slip Reports
 
-= 1.3.0 =
+= 🔥 Version 1.3.0 🔥 (2021-04-24 | 1400-02-04) =
 - Added: Fully Compatibility with WPC Product Bundles by WPClever (https://wpclever.net/downloads/product-bundles)
 - Added: Fully Compatibility with WooCommerce Extra Product Options by ThemeComplete (https://codecanyon.net/item/woocommerce-extra-product-options/7908619)
 - Added: Fully Compatibility with *Any Standard* plugins that adds and shows Order item metas

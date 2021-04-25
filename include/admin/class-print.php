@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/24 21:26:10
+# @Last modified time: 2021/04/25 08:39:44
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -937,7 +937,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $template = "<!DOCTYPE html><html lang=\"fa\" dir=\"ltr\"><head><title>$invoicehtmltitle</title>$extrainvoiceheaddata<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style type='text/css'>{$main_css_style}{{{custom_css_style}}}</style></head>$body_content</html>";
           $product_row_RAW = file_get_contents("$templateDirpath/template.row.tpl");
           $n=0;$total_weight = 0;
-          foreach ( apply_filters( "puiw_order_items", $order->get_items()) as $item_id => $item ) {
+          foreach ( apply_filters( "puiw_order_items", $order->get_items(), $order) as $item_id => $item ) {
             $n+=1;
             $product_row  = ($product_row_RAW);
             $product_id   = $item->get_product_id();
@@ -1108,7 +1108,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $template = "<!DOCTYPE html><html lang=\"fa\" dir=\"ltr\"><head><title>$invoicehtmltitle</title>$extrainvoiceheaddata<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style type='text/css'>{$main_css_style}{{{inventory_css_style}}}</style></head>$body_content</html>";
           $product_row_RAW = file_get_contents("$templateDirpath/template.row.inventory.tpl");
           $n=0;$total_weight = 0;
-          foreach ( apply_filters( "puiw_order_items", $order->get_items()) as $item_id => $item ) {
+          foreach ( apply_filters( "puiw_order_items", $order->get_items(), $order) as $item_id => $item ) {
               $n+=1;
               $product_row  = ($product_row_RAW);
               $product_id   = $item->get_product_id();
@@ -1446,7 +1446,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
 
 
-        
+
         /**
          * hook to alter css styles
          *
