@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.3.3
-Stable tag: 1.3.3
+Version: 1.3.4
+Stable tag: 1.3.4
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/05/16 11:58:22
+# @Last modified time: 2021/05/16 12:12:10
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -72,7 +72,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.3.3";
+            $this->version = "1.3.4";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -334,6 +334,11 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function die($preTitle="",$title="ERR",$msg="")
         {
+          if (get_current_user_id() > 0){
+            $preTitle2 = "user-" . get_current_user_id();
+          }else{
+            $preTitle2 = "user-guest";
+          }
           $ext = " @font-face { font-family: 'bodyfont'; font-style: normal; font-weight: 400; src: url('".PEPROULTIMATEINVOICE_URL."/assets/css/96594ad4.woff2') format('woff2'); }";
           die('<title>'. $title .'</title><!--ERR: '.$preTitle.' --><style type="text/css">'.$ext.
           'html { background: #f1f1f1; } body { background: #fff; color: #444; font-family: bodyfont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -348,7 +353,7 @@ if (!class_exists("PeproUltimateInvoice")) {
           box-shadow: 0 1px 0 #ccc; vertical-align: top; } .button.button-large { height: 30px; line-height: 2.15384615; padding: 0 12px 2px; } .button:hover, .button:focus { background: #fafafa; border-color: #999; color: #23282d; }
           .button:focus { border-color: #5b9dd9; -webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); outline: none; } .button:active { background: #eee; border-color: #999;
           -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); }body { font-family: bodyfont, Tahoma, Arial; }	</style>
-          <body id="error-page'.$preTitle.'"><div class="wp-die-message">'.$msg.'</div></body></html>');
+          <body id="error-page '."$preTitle $preTitle2".'"><div class="wp-die-message">'.$msg.'</div></body></html>');
         }
         /**
          * Initiate plugin with init hook

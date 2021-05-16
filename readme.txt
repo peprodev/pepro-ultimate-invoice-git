@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.7
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 Requires PHP: 7.0
 WC requires at least: 4.4
 WC tested up to: 5.1.0
@@ -152,7 +152,7 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
-= 1.3.3 =
+= 1.3.4 =
 - Fix: Changed Default Invoice Access setting to prevent Pre-invoice 403 error
 - Dev: added `puiw_printinvoice_check_user_has_access` filter Hook to alter Invoice Access
 - Dev: Invoice Access function is more relible now
@@ -313,7 +313,7 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
-= 1.3.3 =
+= 1.3.4 =
 - Fix: Changed Default Invoice Access setting to prevent Pre-invoice 403 error
 - Dev: added `puiw_printinvoice_check_user_has_access` filter Hook to alter Invoice Access
 - Dev: Invoice Access function is more relible now

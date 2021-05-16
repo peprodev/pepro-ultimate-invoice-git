@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/05/16 11:45:41
+# @Last modified time: 2021/05/16 12:09:56
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -381,21 +381,21 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             return apply_filter("puiw_printinvoice_check_user_has_access", false, $type, $order);
           }
 
+          // Allow Customer/Users view invoices
+          $allow_users_view_invoices = $this->fn->get_allow_users_have_invoices();
+          // Invoice Output for Customers
+          $access_customer = $this->fn->get_allow_pdf_customer();
+
+          // Allow Guest Users view invoices
+          $allow_guest_view_invoices = $this->fn->get_allow_guest_users_view_invoices();
+          // Invoice Output for Guest Users
+          $access_guest = $this->fn->get_allow_pdf_guest();
+
           // USER IS LOGGED IN
           if (is_user_logged_in()){
 
             $user = wp_get_current_user();
             $user_id = get_current_user_id();
-
-            // Allow Customer/Users view invoices
-            $allow_users_view_invoices = $this->fn->get_allow_users_have_invoices();
-            // Invoice Output for Customers
-            $access_customer = $this->fn->get_allow_pdf_customer();
-
-            // Allow Guest Users view invoices
-            $allow_guest_view_invoices = $this->fn->get_allow_guest_users_view_invoices();
-            // Invoice Output for Guest Users
-            $access_guest = $this->fn->get_allow_pdf_guest();
 
             // force allow admins
             if ( in_array( "administrator", (array) $user->roles )  || in_array( "shop_manager", (array) $user->roles ) ){ return true; }
