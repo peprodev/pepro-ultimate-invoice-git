@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/24 21:07:18
+# @Last modified time: 2021/05/16 11:50:44
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -638,7 +638,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'puiw_dark_mode'                            => array(
                       'name'     => _x("Use Dark-mode as Default", "wc-setting", $this->td),
                       'type'     => 'checkbox',
-                      'default'     => 'no',
+                      'default'  => 'no',
                       'id'       => 'puiw_dark_mode',
                       'desc' => _x("Check to use dark-mode as default color scheme for setting screen or leave unchecked to use default color scheme", "wc-setting", $this->td),
                     ),
@@ -1125,6 +1125,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                   'puiw_allow_users_have_invoices'              => array(
                     'name'     => _x("Allow Customer/Users view invoices", "wc-setting", $this->td),
                     'type'     => 'checkbox',
+                    'default'  => 'yes',
                     'id'       => 'puiw_allow_users_have_invoices',
                     'desc'     => _x("Check to allow or leave unchecked to disallow", "wc-setting", $this->td),
                     'desc_tip' => _x("Allow logged in visitors be able to see their invoices by having its URL", "wc-setting", $this->td),
@@ -1134,7 +1135,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                     'type'     => 'select',
                     'class'    => 'wc-enhanced-select',
                     'id'       => 'puiw_allow_pdf_customer',
-                    'default'  => 'html',
+                    'default'  => 'both',
                     'options' => array(
                       'html' => _x("Use HTML Only", "wc-setting", $this->td),
                       'pdf' => _x("Use PDF Only", "wc-setting", $this->td),
@@ -1144,6 +1145,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
                   'puiw_allow_users_use_invoices'               => array(
                     'name'     => _x("Show Invoices option in orders list", "wc-setting", $this->td),
                     'type'     => 'checkbox',
+                    'default'  => 'yes',
                     'id'       => 'puiw_allow_users_use_invoices',
                     'desc'     => _x("Check to allow or leave unchecked to disallow", "wc-setting", $this->td),
                     'desc_tip' => _x("Add 'Get Invoice' button to customer order list so they could have invoice too", "wc-setting", $this->td),

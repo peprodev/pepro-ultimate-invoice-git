@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/25 08:39:44
+# @Last modified time: 2021/05/16 11:45:41
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -376,28 +376,85 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function has_access($type="HTML", $order)
         {
-          if ("yes" == $this->fn->get_allow_guest_users_view_invoices()){
-            $access_guest = $this->fn->get_allow_pdf_guest();
-            if ("PDF" == $type){ if ( "pdf" == $access_guest  || "both" == $access_guest ){ return true; } }
-            else{ if ( "html" == $access_guest  || "both" == $access_guest ){ return true; } }
+
+          if ( has_filter("puiw_printinvoice_check_user_has_access")){
+            return apply_filter("puiw_printinvoice_check_user_has_access", false, $type, $order);
           }
+
+          // USER IS LOGGED IN
           if (is_user_logged_in()){
+
             $user = wp_get_current_user();
             $user_id = get_current_user_id();
-            $access_customer = $this->fn->get_allow_pdf_customer();
-            if ( in_array( "administrator", (array) $user->roles )  || in_array( "shop_manager", (array) $user->roles ) ){
-              return true;
-            }
-            if ( $user_id !== $order->get_user_id() ){ return false; /* prevent other users to see others' invoices */ }else{
-              if ("yes" !== $this->fn->get_allow_users_have_invoices()){return false;}
-              if ("PDF" == $type){
-                if ( "pdf" == $access_customer  || "both" == $access_customer ){ return true; }
-              }else{
-                if ( "html" == $access_customer  || "both" == $access_customer ){ return true; }
-              }
-            }
 
+            // Allow Customer/Users view invoices
+            $allow_users_view_invoices = $this->fn->get_allow_users_have_invoices();
+            // Invoice Output for Customers
+            $access_customer = $this->fn->get_allow_pdf_customer();
+
+            // Allow Guest Users view invoices
+            $allow_guest_view_invoices = $this->fn->get_allow_guest_users_view_invoices();
+            // Invoice Output for Guest Users
+            $access_guest = $this->fn->get_allow_pdf_guest();
+
+            // force allow admins
+            if ( in_array( "administrator", (array) $user->roles )  || in_array( "shop_manager", (array) $user->roles ) ){ return true; }
+            // prevent users to see others' invoices
+            if ( $user_id !== $order->get_user_id() ){
+              return false;
+            }
+            // now if user is viewing his order, let's show him
+            else{
+              // Allow Customer/Users view invoices is NOT CHECKED
+              if ("yes" !== $allow_users_view_invoices ){
+                return false;
+              }
+              // Allow Customer/Users view invoices IS CHECKED
+              // Request is PDF invoice
+              if ("PDF" == $type){
+                // Invoice Output for Customers includes pdf or both
+                if ( "pdf" == $access_customer  || "both" == $access_customer ){
+                  return true;
+                }
+              }
+              // Request is HTML invoice
+              else{
+                // Invoice Output for Customers includes html or both
+                if ( "html" == $access_customer  || "both" == $access_customer ){
+                  return true;
+                }
+              }
+              // Invoice Output for Customers is not sufficient
+              return false;
+            }
           }
+          // USER IS GUEST AND NOT LOGGED IN
+          else{
+            // Allow Guests view invoices IS CHECKED
+            if ("yes" == $allow_guest_view_invoices ){
+              // Request is PDF invoice
+              if ("PDF" == $type){
+                // Invoice Output for Guests includes pdf or both
+                if ( "pdf" == $access_guest  || "both" == $access_guest ){
+                  return true;
+                }
+              }
+              // Request is HTML invoice
+              else{
+                // Invoice Output for Guests includes html or both
+                if ( "html" == $access_guest  || "both" == $access_guest ){
+                  return true;
+                }
+              }
+              // Invoice Output for Guests is not sufficient
+              return false;
+            }
+            // Allow Guests view invoices is NOT CHECKED
+            else{
+              return false;
+            }
+          }
+          // in case of fatal error, return 403
           return false;
         }
         public function create_html($order_id=0, $MODE="HTML",$part="",$email_printout="",$skipAuth=false)
@@ -1723,58 +1780,43 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           if( count($items) > 1 ) {
             $item_qty = array();
             $item_order = array();
+            $sorted_items = array();
             $sort_by = apply_filters( "puiw_order_items_sort_by", $this->fn->get_items_sorting("NONE"));
-            if ( !$sort_by || empty($sort_by) || $sort_by == "NONE" ){
-              return $items;
-            }
+            if ( !$sort_by || empty($sort_by) || $sort_by == "NONE" ){return $items;}
             foreach( $items as $items_id => $item ){
-              // Check items type: for versions before Woocommerce 3.3
               if( $item->is_type('line_item') && method_exists( $item, 'get_product' ) ){
-                $product = $item->get_product(); // Get the product Object
+                $product = $item->get_product();
                 if( is_a( $product, 'WC_Product' ) ) {
-                  switch ($sort_by) {
-                    case 'ID':
-                      $item_sku[$items_id] = $items_id;
-                      break;
-                    case 'PID':
-                      $item_sku[$items_id] = $items_id;
-                      break;
-                    case 'SKU':
-                      $item_sku[$product->get_sku()] = $items_id;
-                      break;
-                    case 'QTY':
-                      $item_order[$item->get_quantity()] = $items_id;
-                      break;
-                    case 'NAME':
-                      $item_order[$item->get_name()] = $items_id;
-                      break;
-                    case 'PRICE':
-                      $item_order[$order->get_item_subtotal( $item, false, true )] = $items_id;
-                      break;
-                    case 'TOTAL':
-                      $item_order[$item->get_total()] = $items_id;
-                      break;
-                    case 'WEIGHT':
-                      $item_order[$product->get_weight()] = $items_id;
-                      break;
-                    case 'SUBTOTAL':
-                      $item_order[$item->get_subtotal()] = $items_id;
-                      break;
-                    case 'SUBTOTAL_TAX':
-                      $item_order[$item->get_subtotal_tax()] = $items_id;
-                      break;
-                    default: // by Hook
-                      $sort_by_force = apply_filters( "puiw_order_items_sort_by_force", $items_id, $item, $product, $items, $sort_by);
-                      $item_order[$sort_by_force] = $items_id;
-                      break;
-                  }
+                  $item_order_data = array(
+                    "ID" => $items_id,
+                    'PID' => $item->get_product_id(),
+                    'SKU' => $product->get_sku(),
+                    'QTY' => $item->get_quantity(),
+                    'NAME' => $item->get_name(),
+                    'PRICE' => $order->get_item_subtotal( $item, false, true ),
+                    'TOTAL' => $item->get_total(),
+                    'WEIGHT' => $product->get_weight(),
+                    'SUBTOTAL' => $item->get_subtotal(),
+                    'SUBTOTAL_TAX' => $item->get_subtotal_tax(),
+                  );
+                  $item_order[$items_id] = apply_filters( "puiw_order_items_sort_by_force", $item_order_data, $item_order, $items_id, $item, $product, $items, $sort_by);
+                  $item_order[$items_id]["_id"] = $items_id;
                 }
               }
             }
-            if(!empty($item_order)) {
-              if (apply_filters( "puiw_order_items_sort_desc", false) === true){ krsort($item_order); }else{ ksort($item_order); }
-              foreach( $item_order as $sku => $item_id ){ $sorted_items[$item_id] = $items[$item_id]; }
-              $items = $sorted_items;
+            if(!empty($item_order)){
+              if (apply_filters( "puiw_order_items_sort_desc", false) === false){
+                $col = array_column( $item_order, $sort_by );
+                array_multisort( $col, SORT_ASC, $item_order );
+              }
+              else{
+                $col = array_column( $item_order, $sort_by );
+                array_multisort( $col, SORT_DESC, $item_order );
+              }
+              foreach( $item_order as $i => $x ){
+                $sorted_items[$x["_id"]] = $items[$x["_id"]];
+              }
+              return $sorted_items;
             }
           }
           return $items;

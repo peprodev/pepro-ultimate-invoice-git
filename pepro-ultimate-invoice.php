@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.3.1
-Stable tag: 1.3.1
+Version: 1.3.3
+Stable tag: 1.3.3
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/04/25 08:40:03
+# @Last modified time: 2021/05/16 11:46:38
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -72,7 +72,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.3.1";
+            $this->version = "1.3.3";
             self::$_instance = $this;
             $this->td = "puice";
             $this->db_slug = $this->td;
@@ -1394,8 +1394,10 @@ if (!class_exists("PeproUltimateInvoice")) {
                     "puiw_send_invoices_via_email_opt" => "wc-completed",
                     "puiw_send_invoices_via_email_admin" => "manual",
                     "puiw_send_invoices_via_email_opt_admin" => "wc-completed",
-                    "puiw_allow_users_use_invoices" => "no",
+                    "puiw_allow_pdf_customer" => "both",
+                    "puiw_allow_users_use_invoices" => "yes",
                     "puiw_allow_users_use_invoices_criteria" => "wc-completed",
+                    "puiw_allow_users_have_invoices" => "yes",
                     "puiw_store_name" => get_bloginfo('name'),
                     "puiw_store_website" => get_bloginfo('url'),
                     "puiw_store_email" => get_option("admin_email"),
