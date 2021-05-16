@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/05/16 11:46:38
+# @Last modified time: 2021/05/16 11:58:22
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -335,8 +335,20 @@ if (!class_exists("PeproUltimateInvoice")) {
         public function die($preTitle="",$title="ERR",$msg="")
         {
           $ext = " @font-face { font-family: 'bodyfont'; font-style: normal; font-weight: 400; src: url('".PEPROULTIMATEINVOICE_URL."/assets/css/96594ad4.woff2') format('woff2'); }";
-          // $title = (!empty($preTitle)?"$preTitle -- ":"") . $title;
-          die('<title>'. $title .'</title><!--ERR: '.$preTitle.' --><style type="text/css">'.$ext.'html { background: #f1f1f1; } body { background: #fff; color: #444; font-family: bodyfont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; margin: 2em auto; padding: 1em 2em; max-width: 700px; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); width: 80%; max-height: 130px;} h1 { border-bottom: 1px solid #dadada; clear: both; color: #666; font-size: 24px; margin: 30px 0 0 0; padding: 0; padding-bottom: 7px; } #error-page { margin-top: 50px; } #error-page p, #error-page .wp-die-message { font-size: 14px; line-height: 1.5; margin: 25px 0 20px; } #error-page code { font-family: Consolas, Monaco, monospace; } ul li { margin-bottom: 10px; font-size: 14px ; } a { color: #0073aa; } a:hover, a:active { color: #00a0d2; } a:focus { color: #124964; -webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); outline: none; } .button { background: #f7f7f7; border: 1px solid #ccc; color: #555; display: inline-block; text-decoration: none; font-size: 13px; line-height: 2; height: 28px; margin: 0; padding: 0 10px 1px; cursor: pointer; -webkit-border-radius: 3px; -webkit-appearance: none; border-radius: 3px; white-space: nowrap; -webkit-box-sizing: border-box; -moz-box-sizing:    border-box; box-sizing:         border-box; -webkit-box-shadow: 0 1px 0 #ccc; box-shadow: 0 1px 0 #ccc; vertical-align: top; } .button.button-large { height: 30px; line-height: 2.15384615; padding: 0 12px 2px; } .button:hover, .button:focus { background: #fafafa; border-color: #999; color: #23282d; } .button:focus { border-color: #5b9dd9; -webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); outline: none; } .button:active { background: #eee; border-color: #999; -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); }body { font-family: bodyfont, Tahoma, Arial; }	</style><body id="error-page"><div class="wp-die-message">'.$msg.'</div></body></html>');
+          die('<title>'. $title .'</title><!--ERR: '.$preTitle.' --><style type="text/css">'.$ext.
+          'html { background: #f1f1f1; } body { background: #fff; color: #444; font-family: bodyfont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+          margin: 2em auto; padding: 1em 2em; max-width: 700px; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13); width: 80%; max-height: 130px;}
+          h1 { border-bottom: 1px solid #dadada; clear: both; color: #666; font-size: 24px; margin: 30px 0 0 0; padding: 0; padding-bottom: 7px; } #error-page { margin-top: 50px; }
+          #error-page p, #error-page .wp-die-message { font-size: 14px; line-height: 1.5; margin: 25px 0 20px; }
+          #error-page code { font-family: Consolas, Monaco, monospace; } ul li { margin-bottom: 10px; font-size: 14px ; }
+          a { color: #0073aa; } a:hover, a:active { color: #00a0d2; }
+          a:focus { color: #124964; -webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); outline: none; }
+          .button { background: #f7f7f7; border: 1px solid #ccc; color: #555; display: inline-block; text-decoration: none; font-size: 13px; line-height: 2; height: 28px; margin: 0; padding: 0 10px 1px; cursor: pointer;
+          -webkit-border-radius: 3px; -webkit-appearance: none; border-radius: 3px; white-space: nowrap; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 1px 0 #ccc;
+          box-shadow: 0 1px 0 #ccc; vertical-align: top; } .button.button-large { height: 30px; line-height: 2.15384615; padding: 0 12px 2px; } .button:hover, .button:focus { background: #fafafa; border-color: #999; color: #23282d; }
+          .button:focus { border-color: #5b9dd9; -webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); box-shadow: 0 0 3px rgba(0, 115, 170, 0.8); outline: none; } .button:active { background: #eee; border-color: #999;
+          -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); }body { font-family: bodyfont, Tahoma, Arial; }	</style>
+          <body id="error-page'.$preTitle.'"><div class="wp-die-message">'.$msg.'</div></body></html>');
         }
         /**
          * Initiate plugin with init hook
@@ -356,47 +368,24 @@ if (!class_exists("PeproUltimateInvoice")) {
             // remove_all_actions("woocommerce_before_order_itemmeta", 10);
           }
 
-          if (
-            isset($_GET["invoice"]) && !empty(
-              trim(
-                sanitize_text_field($_GET["invoice"])
-              )
-            )
-          ){
-            if (
-              !$this->auth_check()
-            ){
-              $this->die("invoice auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-            }else
-            {
-              die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"]))));
-            }
+          if ( isset($_GET["invoice"]) && !empty( trim( sanitize_text_field($_GET["invoice"]) ) ) ){
+            die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"]))));
           }
+
           if (isset($_GET["invoice-pdf"]) && !empty(trim(sanitize_text_field($_GET["invoice-pdf"])))){
             $force_download = false;
-            if (isset($_GET["download"]) && !empty(sanitize_text_field($_GET["download"]))){ $force_download = true; }
-            if (!$this->auth_check()){
-              $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
-              $this->die("pdfinvoice auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-            }else{
-              die($this->print->create_pdf((int) trim(sanitize_text_field($_GET["invoice-pdf"])),$force_download));
+            if (isset($_GET["download"]) && !empty(sanitize_text_field($_GET["download"]))){
+              $force_download = true;
             }
+            die($this->print->create_pdf((int) trim(sanitize_text_field($_GET["invoice-pdf"])), $force_download));
           }
+
           if (isset($_GET["invoice-slips"]) && !empty(trim(sanitize_text_field($_GET["invoice-slips"])))){
-            if (!$this->auth_check()){
-              $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
-              $this->die("invoice slips auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-            }else{
-              die($this->print->create_slips((int) trim(sanitize_text_field($_GET["invoice-slips"]))));
-            }
+            die($this->print->create_slips((int) trim(sanitize_text_field($_GET["invoice-slips"]))));
           }
+
           if (isset($_GET["invoice-inventory"]) && !empty(trim(sanitize_text_field($_GET["invoice-inventory"])))){
-            if (!$this->auth_check()){
-              $lnk = "<a href='".home_url()."' class='button button-primary'>Go Back</a>";
-              $this->die("invoice inventory auth_check", __("Err 403 - Access Denied", $this->td), $this->Unauthorized_Access);
-            }else{
-              die($this->print->create_inventory((int) trim(sanitize_text_field($_GET["invoice-inventory"]))));
-            }
+            die($this->print->create_inventory((int) trim(sanitize_text_field($_GET["invoice-inventory"]))));
           }
 
           add_filter( "plugin_action_links_{$this->plugin_basename}", array($this, 'plugins_row_links'));
