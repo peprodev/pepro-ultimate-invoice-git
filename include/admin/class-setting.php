@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/05/16 11:50:44
+# @Last modified time: 2021/07/09 12:38:34
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -86,8 +86,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
         $i = $current_section;
         switch ($current_section) {
           case 'items':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   "puiw_items_title"                            => array(
                     'name' => _x("Show/Hide items in Invoices", "wc-setting", $this->td),
@@ -317,8 +316,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
             );
             break;
           case 'report':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   'puiw_report_title'                           => array(
                     'name' => _x("Inventory Report Setting", "wc-setting", $this->td),
@@ -423,8 +421,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
             );
             break;
           case 'theme':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   'puiw_theme_title'                            => array(
                     'name' => _x("Invoices Theming Setting", "wc-setting", $this->td),
@@ -627,8 +624,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
             break;
           case 'misc':
-              $section_data = apply_filters(
-                  "puiw_setting_section_{$current_section}",
+              $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                   array(
                     'puiw_misc_title'                           => array(
                       'name' => _x("Miscellaneous Setting", "wc-setting", $this->td),
@@ -885,8 +881,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
               break;
           case 'integ':
-              $section_data = apply_filters(
-                  "puiw_setting_section_{$current_section}",
+              $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                   array(
                     'puiw_integ_title'                   => array(
                       'id'   => 'puiw_integ_title',
@@ -949,8 +944,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
               break;
           case 'barcode':
-              $section_data = apply_filters(
-                  "puiw_setting_section_{$current_section}",
+              $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                   array(
                     'puiw_barcode_title'                        => array(
                       'name' => _x("Invoices Barcode Setting", "wc-setting", $this->td),
@@ -996,8 +990,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
               break;
           case 'email':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   'puiw_email_title'                            => array(
                     'name' => _x("Invoices Email Setting", "wc-setting", $this->td),
@@ -1095,8 +1088,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
             break;
           case 'privacy':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   'puiw_privacy_title'                          => array(
                     'name' => _x("Privacy Setting", "wc-setting", $this->td),
@@ -1167,8 +1159,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
             break;
           case 'extras':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   'puiw_extras_title'                          => array(
                     'name' => _x("Extras Setting", "wc-setting", $this->td),
@@ -1219,8 +1210,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
             break;
           case 'pdf':
-            $section_data = apply_filters(
-                "puiw_setting_section_{$current_section}",
+            $section_data = apply_filters( "puiw_setting_section_{$current_section}",
                 array(
                   'puiw_pdf_title'                              => array(
                     'name' => _x("PDF Invoices Setting", "wc-setting", $this->td),
@@ -1311,8 +1301,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
               );
             break;
           default:
-            $section_data = apply_filters(
-              "puiw_setting_section_default",
+            $section_data = apply_filters( "puiw_setting_section_default",
                 array(
                   'puiw_default_title'                          => array(
                     'name'              => _x("Store Details in Invoices", "wc-setting", $this->td),
@@ -1402,7 +1391,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
       }
       public function output()
       {
-        global $current_section,$hide_save_button;
+        global $current_section, $hide_save_button;
 
         switch ($current_section) {
           case 'color':

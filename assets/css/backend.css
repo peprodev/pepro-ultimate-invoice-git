@@ -1,3 +1,14 @@
+/**
+ * @Author: Amirhosseinhpv
+ * @Date:   2020/10/20 22:23:23
+ * @Email:  its@hpv.im
+ * @Last modified by:   Amirhosseinhpv
+ * @Last modified time: 2021/06/26 12:59:12
+ * @License: GPLv2
+ * @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
+ */
+
+
 @font-face {
     font-family: bodyfont;
     font-style: normal;
@@ -222,4 +233,9 @@ strong.tag {
     padding: 4px 10px;
     margin: 2px 0;
     display: inline-block;
+}
+
+
+.advabced_puiwc .select2.select2-container {
+	min-width: 100%;
 }

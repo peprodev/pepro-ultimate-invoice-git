@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/05/16 12:12:10
+# @Last modified time: 2021/06/27 14:06:17
 
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
@@ -799,7 +799,7 @@ if (!class_exists("PeproUltimateInvoice")) {
           $url2     = home_url("?invoice-pdf={$id}");
           $url4     = home_url("?invoice-inventory={$id}");
           $url3     = home_url("?invoice-slips={$id}");
-
+          $current  = $this->tpl->get_template();
           echo '<template id="puiw_DateSelectorContainer" style="display:none;"><div id="puiw_DateContainer" data-date="" style="width: 100%;"></div></template>';
 
           echo "";
@@ -1149,7 +1149,7 @@ if (!class_exists("PeproUltimateInvoice")) {
 
              }
 
-             return apply_filters( "pepro-ultimate-invoice-orders-action", $actions, $order, $allowed_statuses,
+             return apply_filters( "pepro_ultimate_invoice_orders_action", $actions, $order, $allowed_statuses,
                                      $this->print->has_access("HTML",$order),
                                      $this->print->has_access("PDF",$order)
                    );
@@ -1451,12 +1451,9 @@ if (!class_exists("PeproUltimateInvoice")) {
             // Docmunentations are shown here
             $hll = "<dev><h4><strong>".__("Shortcode and Hooks for Developers", $this->td)."</strong></h4>
             <pre class='caqpde' dir='ltr' align='left' lang='en-US'>".implode(
-                apply_filters(
-                    "{$this->db_slug}_documentation", array(
+                apply_filters( "puiw_documentation", array(
                     "<b ".(is_rtl()?"class='fa'":"").">"._x("WordPress Shortcode", "setting-general", $this->td)."</b><hr>",
                     '<strong class="tag">[puiw_quick_shop el_id="" el_class=""]</strong>      <i>Outputs Quick Shop page. You can use Visual Composer Widget too.</i>',
-
-
 
                     '<br />',
                     "<b ".(is_rtl()?"class='fa'":"").">"._x("WordPress Action Hooks", "setting-general", $this->td).'</b>',
@@ -1467,8 +1464,6 @@ if (!class_exists("PeproUltimateInvoice")) {
                     '<strong class="tag" >order_ajax_request_success</strong>            <i>TRIGGERS ON DOCUMENT        --Fires on cart page, when "Get invoice" button successes</i>',
                     '<strong class="tag" >order_ajax_request_success</strong>            <i>TRIGGERS ON DOCUMENT        --Fires on cart page, when "Get invoice" button successes</i>',
 
-
-
                     '<br />',
                     "<b ".(is_rtl()?"class='fa'":"").">"._x("WordPress Filter Hooks", "setting-general", $this->td).'</b>',
                     '<hr>',
@@ -1476,8 +1471,6 @@ if (!class_exists("PeproUltimateInvoice")) {
                     '<strong class="tag" >order_ajax_request_success</strong>            <i>TRIGGERS ON DOCUMENT        --Fires on cart page, when "Get invoice" button successes</i>',
                     '<strong class="tag" >order_ajax_request_success</strong>            <i>TRIGGERS ON DOCUMENT        --Fires on cart page, when "Get invoice" button successes</i>',
                     '<strong class="tag" >order_ajax_request_success</strong>            <i>TRIGGERS ON DOCUMENT        --Fires on cart page, when "Get invoice" button successes</i>',
-
-
 
                     '<br />',
                     "<b ".(is_rtl()?"class='fa'":"").">"._x("jQuery Triggering Hooks", "setting-general", $this->td).'</b>',
@@ -1889,14 +1882,14 @@ if (!class_exists("PeproUltimateInvoice")) {
               'stock_status' => 'instock',
               'limit' => -1,
             );
-            $product_categories = get_terms('product_cat', apply_filters("pepro-one-page-purchase--categories-args", $cat_args));
+            $product_categories = get_terms('product_cat', apply_filters("pepro_one_page_purchase_categories_args", $cat_args));
             if(!empty($product_categories) ) {
                 foreach ($product_categories as $key => $category) {
                     $cats .= "<option value=\"$category->slug\">$category->name</option>";
                 }
             }
             // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
-            $loop = wc_get_products(apply_filters("pepro-one-page-purchase--prodcuts-args", $prodcuts_args));
+            $loop = wc_get_products(apply_filters("pepro_one_page_purchase_prodcuts_args", $prodcuts_args));
             $currencysymbol = get_woocommerce_currency_symbol();
             foreach ($loop as $product) {
                 $product = wc_get_product($product);
@@ -1908,7 +1901,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                 $skutxt = _x("SKU:", "js-i18n", $this->td);
                 $stock = $product->get_stock_quantity();
                 //https://www.php.net/manual/en/function.date.php
-                $dateformat = apply_filters("pepro-one-page-purchase--prodcuts-date-format", "Y-m-j h:i:s");
+                $dateformat = apply_filters("pepro_one_page_purchase_prodcuts_date_format", "Y-m-j h:i:s");
                 $imgurl = wp_get_attachment_image_src($product->get_image_id(), 'thumbnail')[0];
                 $categoris_raw = strip_tags(wc_get_product_category_list($product->get_id()));
                 $updated = $product->get_date_modified()->format($dateformat);

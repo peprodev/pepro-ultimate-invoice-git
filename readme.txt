@@ -288,7 +288,7 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 = 1.0.3 =
 
-- Added hook: pepro-ultimate-invoice-orders-column-data
+- Added hook: pepro_ultimate_invoice_orders_column_data
 - Added hook: pepro-ultimate-invoice-orders-action
 - Removed Appsero integration
 

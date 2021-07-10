@@ -3,7 +3,7 @@
 # @Date:   2020/09/20 23:08:04
 # @Email:  its@hpv.im
 # @Last modified by:   Amirhosseinhpv
-# @Last modified time: 2021/04/15 12:29:11
+# @Last modified time: 2021/06/27 14:07:20
 # @License: GPLv2
 # @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
 
@@ -133,7 +133,7 @@ if (!class_exists("PeproUltimateInvoice_Columns")) {
                 $email    = $order->get_billing_email();
                 $id       = $order->get_id();
                 $coldata  = "<script>CURRENT_ORDER_MAIL['$id'] = '$email';</script>" . $this->popup_html_data($id);
-                echo apply_filters( "pepro-ultimate-invoice-orders-column-data", $coldata, $post->ID);
+                echo apply_filters( "pepro_ultimate_invoice_orders_column_data", $coldata, $post->ID);
             }
         }
         public function popup_html_data($id,$mode=true)

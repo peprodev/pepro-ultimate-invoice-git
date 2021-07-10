@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/05/16 12:09:56
+# @Last modified time: 2021/06/27 13:49:35
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -215,8 +215,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $opts["invoice_qrcode"]             = apply_filters("puiw_printinvoice_getinvoice_qrdata",            add_query_arg( "invoice", $order->get_id(),home_url()), $opts, $order);
           $opts["invoice_qrcode"]             = wp_strip_all_tags( $opts["invoice_qrcode"], true );
           $opts["customer_address"]           = str_replace(
-              apply_filters(
-                  "puiw_printinvoice_address_template",
+              apply_filters("puiw_printinvoice_address_template",
                   array(
                   "[first_name]",
                   "[last_name]",
@@ -232,8 +231,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                   "[uin]"
                   ),  $opts, $order
               ),
-              apply_filters(
-                  "puiw_printinvoice_address_template_replace",
+              apply_filters("puiw_printinvoice_address_template_replace",
                   array(
                   $opts["customer_fname"],
                   $opts["customer_lname"],
@@ -298,8 +296,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function get_preserve_english_numbers($opt, $order)
         {
-          return $keepOriginalENnumbers = apply_filters(
-            "puiw_printinvoice_preserve_english_numbers",
+          return $keepOriginalENnumbers = apply_filters("puiw_printinvoice_preserve_english_numbers",
             array(
               "invoice_id_en",
               "invoice_track_id_en",
@@ -354,8 +351,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function get_preserve_html_tags($opt, $order)
         {
-          return apply_filters(
-            "puiw_printinvoice_preserve_html_tags",
+          return apply_filters("puiw_printinvoice_preserve_html_tags",
             array(
               "invoice_final_prices",
               "invoice_final_prices_pdf",
@@ -378,7 +374,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         {
 
           if ( has_filter("puiw_printinvoice_check_user_has_access")){
-            return apply_filter("puiw_printinvoice_check_user_has_access", false, $type, $order);
+            return apply_filters("puiw_printinvoice_check_user_has_access", false, $type, $order);
           }
 
           // Allow Customer/Users view invoices
