@@ -29,7 +29,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
       {
         global $PeproUltimateInvoice;
 
-        $this->td     = "puice";
+        $this->td     = "pepro-ultimate-invoice";
         $this->id     = "pepro_ultimate_invoice";
         $this->label  = _x("Ultimate Invoice", "wc-setting", $this->td);
 

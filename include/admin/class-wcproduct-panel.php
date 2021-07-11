@@ -19,8 +19,8 @@ if (!class_exists("PeproUltimateInvoice_wcPanel")) {
             woocommerce_wp_text_input(
                 array(
                   'id'        => '_shelf_number_id',
-                  'label'     => __('Storage rack No/ID', 'puice'),
-                  'desc_tip'  => __('Enter the Number/ID of rack in storage that product is in', 'puice')
+                  'label'     => __('Storage rack No/ID', 'pepro-ultimate-invoice'),
+                  'desc_tip'  => __('Enter the Number/ID of rack in storage that product is in', 'pepro-ultimate-invoice')
                 )
             );
             echo "</div>";

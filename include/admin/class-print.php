@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/06/27 13:49:35
+# @Last modified time: 2021/07/11 20:36:04
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -12,7 +12,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         protected $fn;
         public function __construct()
         {
-            $this->td = "puice";
+            $this->td = "pepro-ultimate-invoice";
             $this->fn = new PeproUltimateInvoice_Template;
             add_filter( "puiw_get_default_dynamic_params", array( $this, "puiw_get_default_dynamic_params"), 10, 2);
             // add compatibility with WPC Product Bundles for WooCommerce By WPClever
@@ -370,7 +370,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $order
           );
         }
-        public function has_access($type="HTML", $order)
+        public function has_access($type="HTML", $order=false)
         {
 
           if ( has_filter("puiw_printinvoice_check_user_has_access")){
@@ -1333,7 +1333,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             fclose($fp);
             return $save_file_loc;
         }
-        protected function get_pdf_style($order_id=0,$order)
+        protected function get_pdf_style($order_id=0, $order=false)
         {
           $template = $this->fn->get_template();
           $templateDirpath = apply_filters( "puiw_get_template_dir_path", $template, $order);

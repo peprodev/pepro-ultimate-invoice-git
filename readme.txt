@@ -3,35 +3,35 @@ Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
-Tested up to: 5.7
-Stable tag: 1.3.4
+Tested up to: 5.8
+Stable tag: 1.3.5
 Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 5.1.0
+WC tested up to: 5.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The most complete invoice plugin you will ever need. Easily create HTML/PDF invoices for your WC orders, in a beautiful style.
+The Most Advanced Invoice Plugin you were looking for! Create HTML/PDF Invoices of WooCommerce Orders, Attach PDF Invoice to Mail and Let customers download beautiful-customizable styles invoices.
 
 == Description ==
 
-### **The most complete invoice plugin you will ever need.**
+## **Ultimate Invoice plugin for WooCommerce!**
 
-Easily create HTML/PDF invoices for your WC orders, in a beautiful style and e-mail it to your customers.
+The Most Advanced Invoice Plugin you were looking for! Create HTML/PDF Invoices of WooCommerce Orders, Attach PDF Invoice to Mail and Let customers download beautiful-customizable styles invoices.
 
-This plugin lets you to Generate Awesome Invoices for Woocommerce orders and:
+This plugin lets you to Generate Awesome Invoices for WooCommerce orders and:
 
--   Download PDF invoices (Customer, Shop Manager)
--   Email Styled Invoices (to Customer, Shop Manager, Custom list)
+-   Download PDF invoices
+-   Email Styled Invoices
 -   Attach PDF to WC Emails
 -   Attach PDF to Invoices Emails
--   Restrict Invoices Options (Customer, Shop Manager)
+-   Restrict Invoices Options
 -   Full Invoice Customizations
 -   Make your own Invoice Template
 -   Make your own PDF Invoice Template
 -   Make your own Inventory Report Template
 -   Make your own Packing Slips Template
--   Alter plugins via Action and Filter Hooks
+-   Alter plugins via Action/Filter hooks
 -   and .....
 
 
@@ -53,6 +53,7 @@ This plugin lets you to Generate Awesome Invoices for Woocommerce orders and:
 -----------------------
 
 ### Made by Developers for Developers
+- [Github Wiki](https://github.com/peprodev/ultimate-invoice/wiki)
 - Over 190 Filter Hook
 - Over 15 Action Hook
 - Fully Translatable
@@ -151,6 +152,9 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 
 == Changelog ==
+
+= 1.3.5 =
+- Fix: Changed textdomain
 
 = 1.3.4 =
 - Fix: Changed Default Invoice Access setting to prevent Pre-invoice 403 error

@@ -18,7 +18,7 @@ if (!class_exists("PeproUltimateInvoice_Columns")) {
         private $td;
         public function __construct()
         {
-            $this->td = "puice";
+            $this->td = "pepro-ultimate-invoice";
             add_action("admin_enqueue_scripts", array( $this, "admin_enqueue_scripts" ) );
             add_filter('manage_edit-shop_order_columns', array( $this , 'column_header'), 20);
             add_action('manage_shop_order_posts_custom_column', array( $this , 'column_content'));

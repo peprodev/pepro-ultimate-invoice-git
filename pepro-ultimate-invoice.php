@@ -9,22 +9,22 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.3.4
-Stable tag: 1.3.4
+Version: 1.3.5
+Stable tag: 1.3.5
 Requires at least: 5.0
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 5.1.0
-Text Domain: puice
+WC tested up to: 5.4.1
+Text Domain: pepro-ultimate-invoice
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/06/27 14:06:17
-
+# @Last modified time: 2021/07/11 21:14:39
 namespace peproulitmateinvoice;
+
 use voku\CssToInlineStyles\CssToInlineStyles;
 
 /**
@@ -74,7 +74,7 @@ if (!class_exists("PeproUltimateInvoice")) {
         {
             $this->version = "1.3.4";
             self::$_instance = $this;
-            $this->td = "puice";
+            $this->td = "pepro-ultimate-invoice";
             $this->db_slug = $this->td;
             $this->plugin_file = __FILE__;
             $this->plugin_dir = plugin_dir_path(__FILE__);
@@ -87,8 +87,11 @@ if (!class_exists("PeproUltimateInvoice")) {
             $this->title_tw = sprintf(__("%2\$s ver. %1\$s", $this->td), $this->version, $this->title_t);
             $this->title_d = __("Pepro Development Group", $this->td);
             $this->title_w = sprintf(__("%2\$s ver. %1\$s", $this->td), $this->version, $this->title);
-            $this->Unauthorized_Access = "<h2 dir='rtl' align='center'>".__("Unauthorized Access!",$this->td)."</h2>";
-            $this->Unauthorized_Access .= "<a href='".home_url()."' class='button button-primary'>".__("Go Back",$this->td)."</a>";
+            $this->Unauthorized_Access = "<h2 dir='rtl' align='center'>".__("Unauthorized Access!", $this->td)."</h2>";
+            $this->Unauthorized_Access .= "<a href='".home_url()."'
+            class='button button-primary'>".__("Go Back", $this->td)."</a>";
+
+            load_plugin_textdomain("pepro-ultimate-invoice", false, dirname(plugin_basename(__FILE__))."/languages/");
 
             // define constants to be accessible out of the plugin class
             defined('PEPROULTIMATEINVOICE_VER') || define('PEPROULTIMATEINVOICE_VER', $this->version);
@@ -1119,7 +1122,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          * @since 1.1.0
          * @license https://pepro.dev/license Pepro.dev License
          */
-        public function has_access_print($mode = "HTML",$order)
+        public function has_access_print($mode = "HTML", $order=false)
         {
           return $this->print->has_access($mode,$order);
         }
@@ -1851,7 +1854,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          * @since   1.0.0
          * @license https://pepro.dev/license Pepro.dev License
          */
-        public function integrate_with_shortcode($atts=array(),$content)
+        public function integrate_with_shortcode($atts=array(),$content="")
         {
             $atts = extract(
                 shortcode_atts(
@@ -2399,7 +2402,6 @@ if (!class_exists("PeproUltimateInvoice")) {
      */
     add_action("plugins_loaded", function(){
       global $PeproUltimateInvoice;
-      load_plugin_textdomain("puice", false, dirname(plugin_basename(__FILE__))."/languages/");
       $PeproUltimateInvoice = new \peproulitmateinvoice\PeproUltimateInvoice;
       register_activation_hook(__FILE__, array("PeproUltimateInvoice", "activation_hook"));
       register_deactivation_hook(__FILE__, array("PeproUltimateInvoice", "deactivation_hook"));

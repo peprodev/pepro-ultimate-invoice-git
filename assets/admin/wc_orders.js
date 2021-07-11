@@ -309,7 +309,7 @@
       puiw_hide_all();
     });
 
-    $(document).on("click tap", "ul.inner_content li a[data-action], #puice p a[data-action]", function(e) {
+    $(document).on("click tap", "ul.inner_content li a[data-action], #pepro-ultimate-invoice p a[data-action]", function(e) {
       e.preventDefault();
       let me = $(this);
       if (me.data("action") !== "") {
