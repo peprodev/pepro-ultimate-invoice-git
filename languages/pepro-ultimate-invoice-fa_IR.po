@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pepro Ultimate Invoice\n"
-"POT-Creation-Date: 2021-04-24 21:27+0430\n"
-"PO-Revision-Date: 2021-04-24 21:28+0430\n"
-"Last-Translator: Amirhosseinhpv <amirhossein@hpv.im>\n"
-"Language-Team: Amirhosseinhpv <amirhossein@hpv.im>\n"
+"POT-Creation-Date: 2021-07-12 22:24+0430\n"
+"PO-Revision-Date: 2021-07-12 22:31+0430\n"
+"Last-Translator: Amirhosseinhpv <its@hpv.im>\n"
+"Language-Team: Amirhosseinhpv <its@hpv.im>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,27 +21,27 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: include/admin/class-column.php:33 include/admin/class-setting.php:1540
+#: include/admin/class-column.php:33 include/admin/class-setting.php:1606
 msgctxt "wc-setting-js"
 msgid "Select image file"
 msgstr "انتخاب فایل عکس"
 
-#: include/admin/class-column.php:34 include/admin/class-setting.php:1541
+#: include/admin/class-column.php:34 include/admin/class-setting.php:1607
 msgctxt "wc-setting-js"
 msgid "Use this image"
 msgstr "استفاده از این عکس"
 
-#: include/admin/class-column.php:35 include/admin/class-setting.php:1542
+#: include/admin/class-column.php:35 include/admin/class-setting.php:1608
 msgctxt "wc-setting-js"
 msgid "Clear"
 msgstr "پاک کردن"
 
-#: include/admin/class-column.php:36 include/admin/class-setting.php:1543
+#: include/admin/class-column.php:36 include/admin/class-setting.php:1609
 msgctxt "wc-setting-js"
 msgid "Current preview"
 msgstr "پیش نمایش فعلی"
 
-#: include/admin/class-column.php:37 include/admin/class-setting.php:1544
+#: include/admin/class-column.php:37 include/admin/class-setting.php:1610
 msgctxt "wc-setting-js"
 msgid "Select image"
 msgstr "انتخاب عکس"
@@ -56,60 +56,71 @@ msgctxt "js-string"
 msgid "Today"
 msgstr "امروز"
 
-#: include/admin/class-column.php:43 include/admin/class-setting.php:1439
+#: include/admin/class-column.php:43 include/admin/class-setting.php:1430
+#: include/admin/class-setting.php:1481
 msgctxt "wc-setting-js"
 msgid "Error"
-msgstr "خطا"
+msgstr "خطایی رخ داد"
 
-#: include/admin/class-column.php:44 include/admin/class-setting.php:1440
+#: include/admin/class-column.php:44 include/admin/class-setting.php:1431
+#: include/admin/class-setting.php:1482
 msgctxt "wc-setting-js"
 msgid "Canceled"
 msgstr "لغو شد"
 
-#: include/admin/class-column.php:45 include/admin/class-setting.php:1441
+#: include/admin/class-column.php:45 include/admin/class-setting.php:1432
+#: include/admin/class-setting.php:1484
 msgctxt "wc-setting-js"
 msgid "Confirm"
-msgstr "تایید"
+msgstr "تایید کنید"
 
-#: include/admin/class-column.php:46 include/admin/class-setting.php:1442
+#: include/admin/class-column.php:46 include/admin/class-setting.php:1433
+#: include/admin/class-setting.php:1486
 msgctxt "wc-setting-js"
 msgid "Success"
 msgstr "عملیات موفق"
 
-#: include/admin/class-column.php:47 include/admin/class-setting.php:1443
+#: include/admin/class-column.php:47 include/admin/class-setting.php:1434
+#: include/admin/class-setting.php:1488
 msgctxt "wc-setting-js"
 msgid "Submit"
 msgstr "ثبت"
 
-#: include/admin/class-column.php:48 include/admin/class-setting.php:1444
+#: include/admin/class-column.php:48 include/admin/class-setting.php:1435
+#: include/admin/class-setting.php:1489
 msgctxt "wc-setting-js"
 msgid "Okay"
 msgstr "باشه"
 
-#: include/admin/class-column.php:49 include/admin/class-setting.php:1446
+#: include/admin/class-column.php:49 include/admin/class-setting.php:1437
+#: include/admin/class-setting.php:1491
 msgctxt "wc-setting-js"
 msgid "Yes"
 msgstr "بله"
 
-#: include/admin/class-column.php:50 include/admin/class-setting.php:1448
+#: include/admin/class-column.php:50 include/admin/class-setting.php:1439
+#: include/admin/class-setting.php:1493
 msgctxt "wc-setting-js"
 msgid "No"
 msgstr "خیر"
 
-#: include/admin/class-column.php:51 include/admin/class-setting.php:1449
+#: include/admin/class-column.php:51 include/admin/class-setting.php:1440
+#: include/admin/class-setting.php:1494
 msgctxt "wc-setting-js"
 msgid "Cancel"
 msgstr "لغو"
 
-#: include/admin/class-column.php:52 include/admin/class-setting.php:1450
+#: include/admin/class-column.php:52 include/admin/class-setting.php:1441
+#: include/admin/class-setting.php:1495
 msgctxt "wc-setting-js"
 msgid "Send to all"
 msgstr "ارسال به لیست"
 
-#: include/admin/class-column.php:53 include/admin/class-setting.php:1451
+#: include/admin/class-column.php:53 include/admin/class-setting.php:1442
+#: include/admin/class-setting.php:1496
 msgctxt "wc-setting-js"
 msgid "Close"
-msgstr "بستن"
+msgstr "نزدیک"
 
 #: include/admin/class-column.php:54
 msgctxt "wc-setting-js"
@@ -172,97 +183,97 @@ msgctxt "wc-setting-js"
 msgid "Enter at least an email address"
 msgstr "حداقل یک آدرس ایمیل وارد کنید"
 
-#: include/admin/class-column.php:99 pepro-ultimate-invoice.php:85
+#: include/admin/class-column.php:98 pepro-ultimate-invoice.php:86
 msgid "Ultimate Invoice"
 msgstr "آخرین فاکتورساز"
 
-#: include/admin/class-column.php:147 pepro-ultimate-invoice.php:815
+#: include/admin/class-column.php:146
 msgctxt "wc-orders-popup"
 msgid "View Invoice Options"
 msgstr "مشاهده گزینه های فاکتور"
 
-#: include/admin/class-column.php:150 pepro-ultimate-invoice.php:855
+#: include/admin/class-column.php:149 pepro-ultimate-invoice.php:846
 msgctxt "wc-orders-popup"
 msgid "View Order HTML Invoice"
 msgstr "مشاهده فاکتور HTML"
 
-#: include/admin/class-column.php:153 pepro-ultimate-invoice.php:859
+#: include/admin/class-column.php:152 pepro-ultimate-invoice.php:850
 msgctxt "wc-orders-popup"
 msgid "View Order PDF Invoice"
 msgstr "مشاهده فاکتور PDF"
 
-#: include/admin/class-column.php:163 include/admin/class-column.php:173
+#: include/admin/class-column.php:162 include/admin/class-column.php:172
 msgctxt "wc-orders-popup"
 msgid "Close"
-msgstr "بستن"
+msgstr "نزدیک"
 
-#: include/admin/class-column.php:164
+#: include/admin/class-column.php:163
 msgctxt "wc-orders-popup"
 msgid "Back to menu"
 msgstr "بازگشت به منوی اصلی"
 
-#: include/admin/class-column.php:165
+#: include/admin/class-column.php:164
 msgctxt "wc-orders-popup"
 msgid "Open in new Tab"
 msgstr "بازکردن در تب جدید"
 
-#: include/admin/class-column.php:166
+#: include/admin/class-column.php:165
 msgctxt "wc-orders-popup"
 msgid "Print Now"
 msgstr "چاپ"
 
-#: include/admin/class-column.php:167
+#: include/admin/class-column.php:166
 msgctxt "wc-orders-popup"
 msgid "Download PDF"
 msgstr "دانلود فایل PDF"
 
-#: include/admin/class-column.php:175
+#: include/admin/class-column.php:174
 #, php-format
 msgctxt "wc-orders-popup"
 msgid "Invoice #%s Options"
 msgstr "گزینه های سفارش #%s"
 
-#: include/admin/class-column.php:178 pepro-ultimate-invoice.php:856
+#: include/admin/class-column.php:177 pepro-ultimate-invoice.php:847
 msgctxt "wc-orders-popup"
 msgid "HTML Invoice"
 msgstr "فاکتور HTML"
 
-#: include/admin/class-column.php:179 pepro-ultimate-invoice.php:860
+#: include/admin/class-column.php:178 pepro-ultimate-invoice.php:851
 msgctxt "wc-orders-popup"
 msgid "PDF Invoice"
 msgstr "فاکتور PDF"
 
-#: include/admin/class-column.php:180 pepro-ultimate-invoice.php:864
+#: include/admin/class-column.php:179 pepro-ultimate-invoice.php:855
 msgctxt "wc-orders-popup"
 msgid "Inventory report"
 msgstr "گزارش انبارداری"
 
-#: include/admin/class-column.php:181 pepro-ultimate-invoice.php:868
+#: include/admin/class-column.php:180 pepro-ultimate-invoice.php:859
 msgctxt "wc-orders-popup"
 msgid "Sender/Receiver Packing Slip"
 msgstr "چاپ برچسب پستی"
 
-#: include/admin/class-column.php:182 pepro-ultimate-invoice.php:872
+#: include/admin/class-column.php:181 pepro-ultimate-invoice.php:863
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Customer"
 msgstr "ایمیل فاکتور به مشتری"
 
-#: include/admin/class-column.php:183 pepro-ultimate-invoice.php:876
+#: include/admin/class-column.php:182 pepro-ultimate-invoice.php:867
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Shop Managers"
 msgstr "ایمیل فاکتور به مدیران فروشگاه"
 
-#: include/admin/class-column.php:184 pepro-ultimate-invoice.php:880
+#: include/admin/class-column.php:183 pepro-ultimate-invoice.php:871
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Custom List"
 msgstr "ایمیل فاکتور به آدرس های دلخواه"
 
-#: include/admin/class-print.php:27 include/admin/class-setting.php:935
+#: include/admin/class-print.php:27 include/admin/class-setting.php:930
 msgctxt "wc-setting"
 msgid "Bundled in:"
 msgstr "باندل شده در:"
 
-#: include/admin/class-print.php:28 include/admin/class-setting.php:915
+#: include/admin/class-print.php:28 include/admin/class-setting.php:910
 msgctxt "wc-setting"
 msgid "Bundled products:"
 msgstr "محصولات باندل شده:"
@@ -288,81 +299,79 @@ msgstr "جزئیات"
 msgid "Invoice %s"
 msgstr "فاکتور %s"
 
-#: include/admin/class-print.php:405 include/admin/class-print.php:666
-#: include/admin/class-print.php:847 include/admin/class-print.php:1052
-#: pepro-ultimate-invoice.php:1560
+#: include/admin/class-print.php:462 include/admin/class-print.php:723
+#: include/admin/class-print.php:904 include/admin/class-print.php:1109
+#: pepro-ultimate-invoice.php:1604
 msgid "Incorrect data!"
 msgstr "داده وارد شده نامعتبر است!"
 
-#: include/admin/class-print.php:408 include/admin/class-print.php:850
-#: include/admin/class-print.php:1055
+#: include/admin/class-print.php:465 include/admin/class-print.php:907
+#: include/admin/class-print.php:1112
 msgid "Incorrect Order!"
 msgstr "شماره فاکتور وارد شده نامعتبر است!"
 
-#: include/admin/class-print.php:410 include/admin/class-print.php:411
-#: include/admin/class-print.php:673 pepro-ultimate-invoice.php:369
-#: pepro-ultimate-invoice.php:380 pepro-ultimate-invoice.php:388
-#: pepro-ultimate-invoice.php:396
+#: include/admin/class-print.php:467 include/admin/class-print.php:468
+#: include/admin/class-print.php:730
 msgid "Err 403 - Access Denied"
 msgstr "خطای 403 - دسترسی غیرمجاز"
 
-#: include/admin/class-print.php:422 include/admin/class-print.php:867
-#: include/admin/class-print.php:1072
+#: include/admin/class-print.php:479 include/admin/class-print.php:924
+#: include/admin/class-print.php:1129
 msgid "Note provided by Customer"
 msgstr "یادداشت مشتری"
 
-#: include/admin/class-print.php:423 include/admin/class-print.php:868
-#: include/admin/class-print.php:1073
+#: include/admin/class-print.php:480 include/admin/class-print.php:925
+#: include/admin/class-print.php:1130
 msgid "Note provided by Shop manager"
 msgstr "یادداشت مدیر فروشگاه"
 
-#: include/admin/class-print.php:532 include/admin/class-print.php:535
-#: include/admin/class-print.php:863 include/admin/class-print.php:1068
+#: include/admin/class-print.php:589 include/admin/class-print.php:592
+#: include/admin/class-print.php:920 include/admin/class-print.php:1125
 msgid "PRINT"
 msgstr "چاپ"
 
-#: include/admin/class-print.php:533 include/admin/class-print.php:536
+#: include/admin/class-print.php:590 include/admin/class-print.php:593
 msgid "GET PDF"
 msgstr "دریافت نسخه پی‌دی‌اف"
 
-#: include/admin/class-print.php:775
+#: include/admin/class-print.php:832
 #, php-format
 msgctxt "invoice-template"
 msgid "Invoice #%s on %s"
 msgstr "فاکتور #%s از %s"
 
-#: include/admin/class-print.php:784
+#: include/admin/class-print.php:841
 msgctxt "invoice-template"
 msgid "Error! Invoice does not exist."
 msgstr ""
 "متاسفانه فاکتور درخواستی موجود نیست!\n"
 "<br>اگر مطمئن هستید این یک خطاست، با مدیر سایت تماس بگیرید."
 
-#: include/admin/class-print.php:786
+#: include/admin/class-print.php:843
 #, php-format
 msgctxt "invoice-template"
 msgid "Created by %s<br>( %s )"
 msgstr "ساخته شده توسط %s<br>( %s )"
 
-#: include/admin/class-print.php:788
+#: include/admin/class-print.php:845
 #, php-format
 msgctxt "invoice-template"
 msgid "%sBack to Dashboard%s"
 msgstr "%sبازگشت به پیشخوان%s"
 
-#: include/admin/class-print.php:789
+#: include/admin/class-print.php:846
 #, php-format
 msgctxt "invoice-template"
 msgid "%sBack to Orders%s"
 msgstr "%sبازگشت به سفارشات%s"
 
-#: include/admin/class-print.php:811
+#: include/admin/class-print.php:868
 #, php-format
 msgctxt "invoice-template"
 msgid "%s -- Page {PAGENO} / {nbpg}"
 msgstr "%s  -- صفحه {PAGENO} از {nbpg}"
 
-#: include/admin/class-print.php:812
+#: include/admin/class-print.php:869
 #, php-format
 msgctxt "invoice-template"
 msgid "Created by %s at %s"
@@ -373,55 +382,60 @@ msgctxt "wc-setting"
 msgid "Ultimate Invoice"
 msgstr "آخرین فاکتورساز"
 
-#: include/admin/class-setting.php:68
+#: include/admin/class-setting.php:67
 msgctxt "wc-setting"
 msgid "Store Details"
 msgstr "مشخصات فروشگاه"
 
-#: include/admin/class-setting.php:69
+#: include/admin/class-setting.php:68
 msgctxt "wc-setting"
 msgid "Invoice Items"
 msgstr "موارد نمایشی در فاکتور"
 
-#: include/admin/class-setting.php:70
+#: include/admin/class-setting.php:69
 msgctxt "wc-setting"
 msgid "PDF Invoice"
 msgstr "فاکتور PDF"
 
-#: include/admin/class-setting.php:71
+#: include/admin/class-setting.php:70
 msgctxt "wc-setting"
 msgid "Theming"
 msgstr "قالب بندی"
 
-#: include/admin/class-setting.php:72
+#: include/admin/class-setting.php:71
 msgctxt "wc-setting"
 msgid "Inventory"
 msgstr "انبارداری"
 
-#: include/admin/class-setting.php:73
+#: include/admin/class-setting.php:72
 msgctxt "wc-setting"
 msgid "Email"
 msgstr "ایمیل"
 
-#: include/admin/class-setting.php:74 include/admin/class-setting.php:1474
-msgctxt "wc-setting"
-msgid "Color Schemes"
-msgstr "پالت های رنگ"
-
-#: include/admin/class-setting.php:75
+#: include/admin/class-setting.php:73
 msgctxt "wc-setting"
 msgid "Barcode & QR"
 msgstr "بارکد و کیوآر"
 
-#: include/admin/class-setting.php:76
+#: include/admin/class-setting.php:74
 msgctxt "wc-setting"
 msgid "Privacy"
 msgstr "حریم خصوصی"
 
+#: include/admin/class-setting.php:75 include/admin/class-setting.php:1517
+msgctxt "wc-setting"
+msgid "Color Schemes"
+msgstr "پالت های رنگ"
+
+#: include/admin/class-setting.php:76
+msgctxt "wc-setting"
+msgid "Integration"
+msgstr "افزودنی ها"
+
 #: include/admin/class-setting.php:77
 msgctxt "wc-setting"
-msgid "Extras"
-msgstr "موارد بیشتر"
+msgid "Extra Features"
+msgstr "امکانات بیشتر"
 
 #: include/admin/class-setting.php:78
 msgctxt "wc-setting"
@@ -430,425 +444,425 @@ msgstr "متفرقه ..."
 
 #: include/admin/class-setting.php:79
 msgctxt "wc-setting"
-msgid "Integration"
-msgstr "افزودنی ها"
+msgid "Migrate/Backup"
+msgstr "درون ریزی/برون بری"
 
-#: include/admin/class-setting.php:93
+#: include/admin/class-setting.php:92
 msgctxt "wc-setting"
 msgid "Show/Hide items in Invoices"
 msgstr "نمایش/مخفی کردن موارد در فاکتور ها"
 
-#: include/admin/class-setting.php:98
+#: include/admin/class-setting.php:97
 msgctxt "wc-setting"
 msgid "Show Store National Id"
 msgstr "نمایش شناسه ملی فروشگاه"
 
-#: include/admin/class-setting.php:100 include/admin/class-setting.php:106
-#: include/admin/class-setting.php:112 include/admin/class-setting.php:118
-#: include/admin/class-setting.php:124 include/admin/class-setting.php:130
-#: include/admin/class-setting.php:136 include/admin/class-setting.php:142
-#: include/admin/class-setting.php:148 include/admin/class-setting.php:154
-#: include/admin/class-setting.php:160 include/admin/class-setting.php:166
-#: include/admin/class-setting.php:172 include/admin/class-setting.php:178
-#: include/admin/class-setting.php:184 include/admin/class-setting.php:190
-#: include/admin/class-setting.php:196 include/admin/class-setting.php:202
-#: include/admin/class-setting.php:207 include/admin/class-setting.php:213
-#: include/admin/class-setting.php:219 include/admin/class-setting.php:225
-#: include/admin/class-setting.php:231 include/admin/class-setting.php:330
-#: include/admin/class-setting.php:336 include/admin/class-setting.php:349
-#: include/admin/class-setting.php:355 include/admin/class-setting.php:361
-#: include/admin/class-setting.php:367 include/admin/class-setting.php:373
-#: include/admin/class-setting.php:379 include/admin/class-setting.php:568
-#: include/admin/class-setting.php:861 include/admin/class-setting.php:867
-#: include/admin/class-setting.php:902 include/admin/class-setting.php:909
-#: include/admin/class-setting.php:922 include/admin/class-setting.php:929
+#: include/admin/class-setting.php:99 include/admin/class-setting.php:105
+#: include/admin/class-setting.php:111 include/admin/class-setting.php:117
+#: include/admin/class-setting.php:123 include/admin/class-setting.php:129
+#: include/admin/class-setting.php:135 include/admin/class-setting.php:141
+#: include/admin/class-setting.php:147 include/admin/class-setting.php:153
+#: include/admin/class-setting.php:159 include/admin/class-setting.php:165
+#: include/admin/class-setting.php:171 include/admin/class-setting.php:177
+#: include/admin/class-setting.php:183 include/admin/class-setting.php:189
+#: include/admin/class-setting.php:195 include/admin/class-setting.php:201
+#: include/admin/class-setting.php:206 include/admin/class-setting.php:212
+#: include/admin/class-setting.php:218 include/admin/class-setting.php:224
+#: include/admin/class-setting.php:230 include/admin/class-setting.php:328
+#: include/admin/class-setting.php:334 include/admin/class-setting.php:347
+#: include/admin/class-setting.php:353 include/admin/class-setting.php:359
+#: include/admin/class-setting.php:365 include/admin/class-setting.php:371
+#: include/admin/class-setting.php:377 include/admin/class-setting.php:565
+#: include/admin/class-setting.php:857 include/admin/class-setting.php:863
+#: include/admin/class-setting.php:897 include/admin/class-setting.php:904
+#: include/admin/class-setting.php:917 include/admin/class-setting.php:924
 msgctxt "wc-setting"
 msgid "Check to show or leave unchecked to hide"
 msgstr "برای نمایش این گزینه را بزنید و برای مخفی سازی، تیک را بردارید"
 
-#: include/admin/class-setting.php:104
+#: include/admin/class-setting.php:103
 msgctxt "wc-setting"
 msgid "Show Store Registration Number"
 msgstr "نمایش شماره ثبت فروشگاه"
 
-#: include/admin/class-setting.php:110
+#: include/admin/class-setting.php:109
 msgctxt "wc-setting"
 msgid "Show Store Economical Number"
 msgstr "نمایش شماره اقتصادی فروشگاه"
 
-#: include/admin/class-setting.php:116
+#: include/admin/class-setting.php:115
 msgctxt "wc-setting"
 msgid "Show Customer Address"
 msgstr "نمایش آدرس مشتری"
 
-#: include/admin/class-setting.php:122
+#: include/admin/class-setting.php:121
 msgctxt "wc-setting"
 msgid "Show Customer Phone"
 msgstr "نمایش تلفن مشتری"
 
-#: include/admin/class-setting.php:128
+#: include/admin/class-setting.php:127
 msgctxt "wc-setting"
 msgid "Show Customer E-mail"
 msgstr "نمایش ایمیل مشتری"
 
-#: include/admin/class-setting.php:134
+#: include/admin/class-setting.php:133
 msgctxt "wc-setting"
 msgid "Show Order Date"
 msgstr "نمایش تاریخ سفارش"
 
-#: include/admin/class-setting.php:140
+#: include/admin/class-setting.php:139
 msgctxt "wc-setting"
 msgid "Show Payment method"
 msgstr "نمایش شیوه پرداخت"
 
-#: include/admin/class-setting.php:146
+#: include/admin/class-setting.php:145
 msgctxt "wc-setting"
 msgid "Show Shipping method"
 msgstr "نمایش روش ارسال"
 
-#: include/admin/class-setting.php:152
+#: include/admin/class-setting.php:151
 msgctxt "wc-setting"
 msgid "Show Transaction Ref. ID"
 msgstr "نمایش رسید پرداخت"
 
-#: include/admin/class-setting.php:158
+#: include/admin/class-setting.php:157
 msgctxt "wc-setting"
 msgid "Show Paid Date"
 msgstr "نمایش تاریخ تسویه"
 
-#: include/admin/class-setting.php:164
+#: include/admin/class-setting.php:163
 msgctxt "wc-setting"
 msgid "Show Purchase Completed Date"
 msgstr "نمایش تاریخ تکمیل سفارش"
 
-#: include/admin/class-setting.php:170
+#: include/admin/class-setting.php:169
 msgctxt "wc-setting"
 msgid "Show Shipping Date"
 msgstr "نمایش تاریخ ارسال مرسوله"
 
-#: include/admin/class-setting.php:176
+#: include/admin/class-setting.php:175
 msgctxt "wc-setting"
 msgid "Show Order Status"
 msgstr "نمایش وضعیت سفارش"
 
-#: include/admin/class-setting.php:182
+#: include/admin/class-setting.php:181
 msgctxt "wc-setting"
 msgid "Show Product Image"
 msgstr "نمایش عکس محصولات"
 
-#: include/admin/class-setting.php:188
+#: include/admin/class-setting.php:187
 msgctxt "wc-setting"
 msgid "Show Product Purchase note"
 msgstr "نمایش توضیحات محصولات"
 
-#: include/admin/class-setting.php:194
+#: include/admin/class-setting.php:193
 msgctxt "wc-setting"
 msgid "Show Order Items"
 msgstr "نمایش لیست محصولات"
 
-#: include/admin/class-setting.php:200
+#: include/admin/class-setting.php:199
 msgctxt "wc-setting"
 msgid "Show Order Total"
 msgstr "نمایش جمع کل"
 
-#: include/admin/class-setting.php:206
+#: include/admin/class-setting.php:205
 msgctxt "wc-setting"
 msgid "Show Product Weight"
 msgstr "نمایش وزن محصولات"
 
-#: include/admin/class-setting.php:212
+#: include/admin/class-setting.php:211
 msgctxt "wc-setting"
 msgid "Show Product Dimensions"
 msgstr "نمایش ابعاد محصولات"
 
-#: include/admin/class-setting.php:218
+#: include/admin/class-setting.php:217
 msgctxt "wc-setting"
 msgid "Show Product Discount percentage"
 msgstr "نمایش درصد تخفیف"
 
-#: include/admin/class-setting.php:224
+#: include/admin/class-setting.php:223
 msgctxt "wc-setting"
 msgid "Show Product Calculated Tax"
 msgstr "نمایش مالیات"
 
-#: include/admin/class-setting.php:230
+#: include/admin/class-setting.php:229
 msgctxt "wc-setting"
 msgid "Show Product SKU"
 msgstr "نمایش کد یکتای محصولات"
 
-#: include/admin/class-setting.php:236 include/admin/class-setting.php:341
+#: include/admin/class-setting.php:235 include/admin/class-setting.php:339
 msgctxt "wc-setting"
 msgid "Use ID when SKU's unavailable"
 msgstr "نمایش آی‌دی وقتی کد یکتا تعریف نشده است"
 
-#: include/admin/class-setting.php:237 include/admin/class-setting.php:342
+#: include/admin/class-setting.php:236 include/admin/class-setting.php:340
 msgctxt "wc-setting"
 msgid "Check to use or leave unchecked to not"
 msgstr "برای استفاده این گزینه را تیک بزنید و برای عدم استفاده، تیک را بردارید"
 
-#: include/admin/class-setting.php:242
+#: include/admin/class-setting.php:241
 msgctxt "wc-setting"
 msgid "Activate User UIN feature & Show it"
 msgstr "دریافت کدملی مشتری و نمایش آن"
 
-#: include/admin/class-setting.php:243 include/admin/class-setting.php:962
-#: include/admin/class-setting.php:968 include/admin/class-setting.php:981
-#: include/admin/class-setting.php:987
+#: include/admin/class-setting.php:242 include/admin/class-setting.php:956
+#: include/admin/class-setting.php:962 include/admin/class-setting.php:975
+#: include/admin/class-setting.php:981
 msgctxt "wc-setting"
 msgid "Check to add or leave unchecked to hide"
 msgstr ""
 "برای فعالسازی این قابلیت و نمایش، این گزینه را تیک بزنید و برای غیرفعالسازی "
 "تیک را بردارید"
 
-#: include/admin/class-setting.php:244
+#: include/admin/class-setting.php:243
 msgctxt "wc-setting"
 msgid ""
 "Show User UIN (Unique Identification Number) in invoice which will be "
 "received at checkout page"
 msgstr "نمایش کدملی مشتری که هنگام ثبت سفارش از وی دریافت میشود"
 
-#: include/admin/class-setting.php:249
+#: include/admin/class-setting.php:248
 msgctxt "wc-setting"
 msgid "Address on Invoices"
 msgstr "آدرس ها در فاکتور"
 
-#: include/admin/class-setting.php:253
+#: include/admin/class-setting.php:252
 msgctxt "wc-setting"
 msgid "Use Billing Address"
 msgstr "استفاده از آدرس صورتحساب"
 
-#: include/admin/class-setting.php:254
+#: include/admin/class-setting.php:253
 msgctxt "wc-setting"
 msgid "Use Shipping Address"
 msgstr "استفاده از آدرس حمل و نقل"
 
-#: include/admin/class-setting.php:259 include/admin/class-setting.php:261
+#: include/admin/class-setting.php:258 include/admin/class-setting.php:260
 msgctxt "wc-setting"
 msgid "Customer Address template"
 msgstr "قالب آدرس مشتری"
 
-#: include/admin/class-setting.php:261 include/admin/class-setting.php:414
-#: include/admin/class-setting.php:460 include/admin/class-setting.php:469
-#: include/admin/class-setting.php:478 include/admin/class-setting.php:496
-#: include/admin/class-setting.php:505 include/admin/class-setting.php:514
-#: include/admin/class-setting.php:528 include/admin/class-setting.php:538
-#: include/admin/class-setting.php:545 include/admin/class-setting.php:552
-#: include/admin/class-setting.php:559 include/admin/class-setting.php:591
-#: include/admin/class-setting.php:602 include/admin/class-setting.php:610
-#: include/admin/class-setting.php:618 include/admin/class-setting.php:655
-#: include/admin/class-setting.php:1009 include/admin/class-setting.php:1020
-#: include/admin/class-setting.php:1029 include/admin/class-setting.php:1200
-#: include/admin/class-setting.php:1208 include/admin/class-setting.php:1322
-#: include/admin/class-setting.php:1337 include/admin/class-setting.php:1344
-#: include/admin/class-setting.php:1351 include/admin/class-setting.php:1358
-#: include/admin/class-setting.php:1365 include/admin/class-setting.php:1372
-#: include/admin/class-setting.php:1379 include/admin/class-setting.php:1386
+#: include/admin/class-setting.php:260 include/admin/class-setting.php:412
+#: include/admin/class-setting.php:457 include/admin/class-setting.php:466
+#: include/admin/class-setting.php:475 include/admin/class-setting.php:493
+#: include/admin/class-setting.php:502 include/admin/class-setting.php:511
+#: include/admin/class-setting.php:525 include/admin/class-setting.php:535
+#: include/admin/class-setting.php:542 include/admin/class-setting.php:549
+#: include/admin/class-setting.php:556 include/admin/class-setting.php:588
+#: include/admin/class-setting.php:599 include/admin/class-setting.php:607
+#: include/admin/class-setting.php:615 include/admin/class-setting.php:651
+#: include/admin/class-setting.php:1002 include/admin/class-setting.php:1013
+#: include/admin/class-setting.php:1022 include/admin/class-setting.php:1193
+#: include/admin/class-setting.php:1201 include/admin/class-setting.php:1313
+#: include/admin/class-setting.php:1328 include/admin/class-setting.php:1335
+#: include/admin/class-setting.php:1342 include/admin/class-setting.php:1349
+#: include/admin/class-setting.php:1356 include/admin/class-setting.php:1363
+#: include/admin/class-setting.php:1370 include/admin/class-setting.php:1377
 #, php-format
 msgid "Enter %s here"
 msgstr "%s را اینجا وارد کنید"
 
-#: include/admin/class-setting.php:263
+#: include/admin/class-setting.php:262
 msgctxt "wc-setting"
 msgid "Use following tags and build your own addressing template."
 msgstr "با استفاده از تگ های زیر، قالب نمایشی آدرس را بسازید."
 
-#: include/admin/class-setting.php:267
+#: include/admin/class-setting.php:266
 msgctxt "wc-setting"
 msgid "Show Order Note?"
 msgstr "نمایش یادداشت فاکتور؟"
 
-#: include/admin/class-setting.php:273
+#: include/admin/class-setting.php:272
 msgctxt "wc-setting"
 msgid "Hide Note from invoice"
 msgstr "عدم نمایش یادداشت"
 
-#: include/admin/class-setting.php:274 include/admin/class-setting.php:390
+#: include/admin/class-setting.php:273 include/admin/class-setting.php:388
 msgctxt "wc-setting"
 msgid "Show Note provided by customer"
 msgstr "نمایش یادداشت مشتری"
 
-#: include/admin/class-setting.php:275 include/admin/class-setting.php:391
+#: include/admin/class-setting.php:274 include/admin/class-setting.php:389
 msgctxt "wc-setting"
 msgid "Show Note provided by shop manager"
 msgstr "نمایش یادداشت مدیر فروشگاه"
 
-#: include/admin/class-setting.php:276 include/admin/class-setting.php:392
+#: include/admin/class-setting.php:275 include/admin/class-setting.php:390
 msgctxt "wc-setting"
 msgid "Show Note provided by customer & shop manager"
 msgstr "نمایش یادداشت مشتری و مدیر فروشگاه"
 
-#: include/admin/class-setting.php:280
+#: include/admin/class-setting.php:279
 msgctxt "wc-setting"
 msgid "Show Price Template"
 msgstr "قالب قیمت"
 
-#: include/admin/class-setting.php:286 include/admin/class-setting.php:403
+#: include/admin/class-setting.php:285 include/admin/class-setting.php:401
 msgctxt "wc-setting"
 msgid "Show Live Price (regular)"
 msgstr "نمایش قیمت زنده (اصلی)"
 
-#: include/admin/class-setting.php:287 include/admin/class-setting.php:404
+#: include/admin/class-setting.php:286 include/admin/class-setting.php:402
 msgctxt "wc-setting"
 msgid "Show Live Price (sale)"
 msgstr "نمایش قیمت زنده (تخفیفی)"
 
-#: include/admin/class-setting.php:288 include/admin/class-setting.php:405
+#: include/admin/class-setting.php:287 include/admin/class-setting.php:403
 msgctxt "wc-setting"
 msgid "Show Live Price (sale & regular)"
 msgstr "نمایش قیمت زنده (اصلی و تخفیفی)"
 
-#: include/admin/class-setting.php:289 include/admin/class-setting.php:406
+#: include/admin/class-setting.php:288 include/admin/class-setting.php:404
 msgctxt "wc-setting"
 msgid "Show Invoice Calculated price"
 msgstr "نمایش قیمت محاسبه شده در فاکتور"
 
-#: include/admin/class-setting.php:294
+#: include/admin/class-setting.php:293
 msgctxt "wc-setting"
 msgid "Invoice Items Sorting"
 msgstr "مرتب سازی محصولات در فاکتور"
 
-#: include/admin/class-setting.php:299
+#: include/admin/class-setting.php:298
 msgctxt "wc-setting"
 msgid "Default"
 msgstr "پیشفرض"
 
-#: include/admin/class-setting.php:300
+#: include/admin/class-setting.php:299
 msgctxt "wc-setting"
 msgid "By Item ID"
 msgstr "آی دی ایتم"
 
-#: include/admin/class-setting.php:301
+#: include/admin/class-setting.php:300
 msgctxt "wc-setting"
 msgid "By Product ID"
 msgstr "آی دی محصول مادر"
 
-#: include/admin/class-setting.php:302
+#: include/admin/class-setting.php:301
 msgctxt "wc-setting"
 msgid "By SKU"
 msgstr "شناسه محصول"
 
-#: include/admin/class-setting.php:303
+#: include/admin/class-setting.php:302
 msgctxt "wc-setting"
 msgid "By Quantity"
 msgstr "تعداد"
 
-#: include/admin/class-setting.php:304
+#: include/admin/class-setting.php:303
 msgctxt "wc-setting"
 msgid "By Name"
 msgstr "نام"
 
-#: include/admin/class-setting.php:305
+#: include/admin/class-setting.php:304
 msgctxt "wc-setting"
 msgid "By Price"
 msgstr "قیمت"
 
-#: include/admin/class-setting.php:306
+#: include/admin/class-setting.php:305
 msgctxt "wc-setting"
 msgid "By Total"
 msgstr "قیمت کلی"
 
-#: include/admin/class-setting.php:307
+#: include/admin/class-setting.php:306
 msgctxt "wc-setting"
 msgid "By Weight"
 msgstr "وزن"
 
-#: include/admin/class-setting.php:308
+#: include/admin/class-setting.php:307
 msgctxt "wc-setting"
 msgid "By Subtotal"
 msgstr "قیمت جزئی"
 
-#: include/admin/class-setting.php:309
+#: include/admin/class-setting.php:308
 msgctxt "wc-setting"
 msgid "By Subtotal Tax"
 msgstr "قیمت جزئی و مالیات"
 
-#: include/admin/class-setting.php:324
+#: include/admin/class-setting.php:322
 msgctxt "wc-setting"
 msgid "Inventory Report Setting"
 msgstr "تنظیمات گزارش انبارداری"
 
-#: include/admin/class-setting.php:329
+#: include/admin/class-setting.php:327
 msgctxt "wc-setting"
 msgid "Shelf Storage Number ID in Inventory Report "
 msgstr "نمایش شماره قفسه کالا در گزارش انبارداری "
 
-#: include/admin/class-setting.php:335
+#: include/admin/class-setting.php:333
 msgctxt "wc-setting"
 msgid "Show Product SKU in Inventory Report"
 msgstr "نمایش کد یکتای کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:347
+#: include/admin/class-setting.php:345
 msgctxt "wc-setting"
 msgid "Show Product Image in Inventory Report"
 msgstr "نمایش عکس کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:353
+#: include/admin/class-setting.php:351
 msgctxt "wc-setting"
 msgid "Show Product Weight in Inventory Report"
 msgstr "نمایش وزن کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:359
+#: include/admin/class-setting.php:357
 msgctxt "wc-setting"
 msgid "Show Product Total Weight in Inventory Report"
 msgstr "نمایش مجموع وزن کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:365
+#: include/admin/class-setting.php:363
 msgctxt "wc-setting"
 msgid "Show Product Dimensions in Inventory Report"
 msgstr "نمایش ابعاد کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:371
+#: include/admin/class-setting.php:369
 msgctxt "wc-setting"
 msgid "Show Product Quantity in Inventory Report"
 msgstr "نمایش تعداد کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:377
+#: include/admin/class-setting.php:375
 msgctxt "wc-setting"
 msgid "Show Product Note in Inventory Report"
 msgstr "نمایش توضیحات کالا در گزارش انبارداری"
 
-#: include/admin/class-setting.php:383
+#: include/admin/class-setting.php:381
 msgctxt "wc-setting"
 msgid "Show Order Notes in Inventory Report"
 msgstr "نمایش یادداشت سفارش در گزارش انبارداری"
 
-#: include/admin/class-setting.php:389
+#: include/admin/class-setting.php:387
 msgctxt "wc-setting"
 msgid "Hide Notes from report"
 msgstr "مخفی کردن یادداشت در گزارشات انبارداری"
 
-#: include/admin/class-setting.php:396
+#: include/admin/class-setting.php:394
 msgctxt "wc-setting"
 msgid "Price in Inventory Report"
 msgstr "قالب قیمت در گزارش انبارداری"
 
-#: include/admin/class-setting.php:402
+#: include/admin/class-setting.php:400
 msgctxt "wc-setting"
 msgid "DO NOT SHOW Prices (HIDE)"
 msgstr "عدم نمایش قیمت"
 
-#: include/admin/class-setting.php:411 include/admin/class-setting.php:414
+#: include/admin/class-setting.php:409 include/admin/class-setting.php:412
 msgctxt "wc-setting"
 msgid "Inventory Report Custom CSS"
 msgstr "کد اختصاصی CSS گزارشات انبارداری"
 
-#: include/admin/class-setting.php:415
+#: include/admin/class-setting.php:413
 msgctxt "wc-setting"
 msgid "You can add custom css here to be used in Inventory Report"
 msgstr ""
 "شما میتوانید کد CSS اختصاصی استایل دهی گزارشات انبارداری را اینجا وارد کنید"
 
-#: include/admin/class-setting.php:430
+#: include/admin/class-setting.php:427
 msgctxt "wc-setting"
 msgid "Invoices Theming Setting"
 msgstr "تنظیمات قالب بندی فاکتور"
 
-#: include/admin/class-setting.php:435
+#: include/admin/class-setting.php:432
 msgctxt "wc-setting"
 msgid "Default Theme"
 msgstr "قالب پیشفرض"
 
-#: include/admin/class-setting.php:439
+#: include/admin/class-setting.php:436
 msgctxt "wc-setting"
 msgid ""
 "This theme will be used as default in Emails, HTML invoices, PDF invoices, "
@@ -857,12 +871,12 @@ msgstr ""
 "این قالب به عنوان پیشفرض برای فاکتور های HTML و PDF و ایمیلی، گزارش انبار "
 "داری و چاپ برچسب پستی استفاده میشود."
 
-#: include/admin/class-setting.php:445
+#: include/admin/class-setting.php:442
 msgctxt "wc-setting"
 msgid "Pre-Invoice Theme"
 msgstr "قالب پیش‌فاکتور"
 
-#: include/admin/class-setting.php:449
+#: include/admin/class-setting.php:446
 msgctxt "wc-setting"
 msgid ""
 "This theme will be used for Pre-Invoice orders in Emails, HTML invoices, PDF "
@@ -871,27 +885,27 @@ msgstr ""
 "این قالب به عنوان پیشفرض برای پیش‌فاکتور های HTML و PDF و ایمیلی، گزارش انبار "
 "داری و چاپ برچسب پستی استفاده میشود."
 
-#: include/admin/class-setting.php:455
+#: include/admin/class-setting.php:452
 msgctxt "wc-setting"
 msgid "Theme Colors set"
 msgstr "رنگبندی قالب"
 
-#: include/admin/class-setting.php:460 include/admin/class-setting.php:496
+#: include/admin/class-setting.php:457 include/admin/class-setting.php:493
 msgctxt "wc-setting"
 msgid "Theme primary color"
 msgstr "رنگ اول قالب"
 
-#: include/admin/class-setting.php:469 include/admin/class-setting.php:505
+#: include/admin/class-setting.php:466 include/admin/class-setting.php:502
 msgctxt "wc-setting"
 msgid "Theme secondary color"
 msgstr "رنگ دوم قالب"
 
-#: include/admin/class-setting.php:478 include/admin/class-setting.php:514
+#: include/admin/class-setting.php:475 include/admin/class-setting.php:511
 msgctxt "wc-setting"
 msgid "Theme tertiary color"
 msgstr "رنگ سوم قالب"
 
-#: include/admin/class-setting.php:485 include/admin/class-setting.php:522
+#: include/admin/class-setting.php:482 include/admin/class-setting.php:519
 #, php-format
 msgctxt "wc-setting"
 msgid ""
@@ -899,68 +913,68 @@ msgid ""
 "favourie colors set."
 msgstr "شما میتوانید پالت های رنگی را %s ساخته و استفاده کنید."
 
-#: include/admin/class-setting.php:485 include/admin/class-setting.php:522
+#: include/admin/class-setting.php:482 include/admin/class-setting.php:519
 msgid "here"
 msgstr "اینجا"
 
-#: include/admin/class-setting.php:491
+#: include/admin/class-setting.php:488
 msgctxt "wc-setting"
 msgid "Pre-Invoice Theme Colors set"
 msgstr "رنگبندی قالب پیش‌فاکتور"
 
-#: include/admin/class-setting.php:527 include/admin/class-setting.php:528
+#: include/admin/class-setting.php:524 include/admin/class-setting.php:525
 msgctxt "wc-setting"
 msgid "Invoice Title"
 msgstr "عنوان فاکتور"
 
-#: include/admin/class-setting.php:531 pepro-ultimate-invoice.php:1368
+#: include/admin/class-setting.php:528 pepro-ultimate-invoice.php:1352
 #, php-format
 msgctxt "wc-setting"
 msgid "Invoice %s"
 msgstr "فاکتور %s"
 
-#: include/admin/class-setting.php:532 include/admin/class-setting.php:1013
+#: include/admin/class-setting.php:529 include/admin/class-setting.php:1006
 #, php-format
 msgctxt "wc-setting"
 msgid "You can use %s instead of Invoice Number"
 msgstr "شما میتوانید از %s بجای شماره فاکتور استفاده کنید"
 
-#: include/admin/class-setting.php:535 include/admin/class-setting.php:538
+#: include/admin/class-setting.php:532 include/admin/class-setting.php:535
 msgctxt "wc-setting"
 msgid "Font size (px)"
 msgstr "اندازه فونت به پیکسل"
 
-#: include/admin/class-setting.php:543 include/admin/class-setting.php:545
+#: include/admin/class-setting.php:540 include/admin/class-setting.php:542
 msgctxt "wc-setting"
 msgid "Invoice Prefix"
 msgstr "پیشوند شماره فاکتور"
 
-#: include/admin/class-setting.php:550 include/admin/class-setting.php:552
+#: include/admin/class-setting.php:547 include/admin/class-setting.php:549
 msgctxt "wc-setting"
 msgid "Invoice Suffix"
 msgstr "پسوند شماره فاکتور"
 
-#: include/admin/class-setting.php:557 include/admin/class-setting.php:559
+#: include/admin/class-setting.php:554 include/admin/class-setting.php:556
 msgctxt "wc-setting"
 msgid "Invoice Start Number"
 msgstr "شماره شروع فاکتور"
 
-#: include/admin/class-setting.php:560
+#: include/admin/class-setting.php:557
 msgctxt "wc-setting"
 msgid "Invoices number will start from this number"
 msgstr "شماره فاکتور از این عدد شروع میشود"
 
-#: include/admin/class-setting.php:565
+#: include/admin/class-setting.php:562
 msgctxt "wc-setting"
 msgid "Show Signatures"
 msgstr "نمایش امضا"
 
-#: include/admin/class-setting.php:571
+#: include/admin/class-setting.php:568
 msgctxt "wc-setting"
 msgid "Add Store Signature and Stamp"
 msgstr "افزودن عکس امضای فروشگاه"
 
-#: include/admin/class-setting.php:575
+#: include/admin/class-setting.php:572
 msgctxt "wc-setting"
 msgid ""
 "Add your scanned signature or stamp to be added to invoices footer. "
@@ -969,78 +983,78 @@ msgstr ""
 "عکس اسکن شده از مهر یا امضای فروشگاه را انتخاب کنید. ( اندازه پیشنهادی "
 "150×300 پیکسل)"
 
-#: include/admin/class-setting.php:580
+#: include/admin/class-setting.php:577
 msgctxt "wc-setting"
 msgid "Add Watermark to Invoices"
 msgstr "افزودن واترمارک به فاکتور"
 
-#: include/admin/class-setting.php:584
+#: include/admin/class-setting.php:581
 msgctxt "wc-setting"
 msgid "Add your watermark image to invoices (can use png too)"
 msgstr ""
 "عکس واترمارک دلخواه را به فاکتور اضافه کنید (میتواند پس زمینه شفاف باشد)"
 
-#: include/admin/class-setting.php:589 include/admin/class-setting.php:591
+#: include/admin/class-setting.php:586 include/admin/class-setting.php:588
 msgctxt "wc-setting"
 msgid "Watermark opacity"
 msgstr "شفافیت وارترمارک"
 
-#: include/admin/class-setting.php:592
+#: include/admin/class-setting.php:589
 msgctxt "wc-setting"
 msgid "Watermark opacity scale <br>(0: opaque | 100: transparent)"
 msgstr "شفافیت واترمارک را مشخص کنید.<br>(0: تمام رنگ | 100: تمام شفاف)"
 
-#: include/admin/class-setting.php:599 include/admin/class-setting.php:602
+#: include/admin/class-setting.php:596 include/admin/class-setting.php:599
 msgctxt "wc-setting"
 msgid "Invoices footer"
 msgstr "پاصفحه فاکتور"
 
-#: include/admin/class-setting.php:603
+#: include/admin/class-setting.php:600
 msgctxt "wc-setting"
 msgid "HTML tags are allowed. DO NOT ADD CSS here!"
 msgstr "تگ های اچ‌تی‌ام مجاز هستند اما کد های CSS را وارد نکنید!"
 
-#: include/admin/class-setting.php:607
+#: include/admin/class-setting.php:604
 msgctxt "wc-setting"
 msgid "HTML Custom CSS"
 msgstr "استایل CSS فاکتور HTML"
 
-#: include/admin/class-setting.php:610
+#: include/admin/class-setting.php:607
 msgctxt "wc-setting"
 msgid "HTML Invoices Custom CSS"
 msgstr "استایل CSS فاکتور HTML"
 
-#: include/admin/class-setting.php:611
+#: include/admin/class-setting.php:608
 msgctxt "wc-setting"
 msgid "You can add custom css here to be used in HTML Invoices"
 msgstr "شما میتوانید کد CSS شخصی سازی فاکتور HTML را اینجا وارد کنید"
 
-#: include/admin/class-setting.php:615
+#: include/admin/class-setting.php:612
 msgctxt "wc-setting"
 msgid "PDF Custom CSS"
 msgstr "استایل CSS فاکتور PDF"
 
-#: include/admin/class-setting.php:618
+#: include/admin/class-setting.php:615
 msgctxt "wc-setting"
 msgid "PDF Invoices Custom CSS"
 msgstr "استایل CSS فاکتور PDF"
 
-#: include/admin/class-setting.php:619
+#: include/admin/class-setting.php:616
 msgctxt "wc-setting"
 msgid "You can add custom css here to be used in PDF Invoices"
 msgstr "شما میتوانید کد CSS شخصی سازی فاکتور PDF را اینجا وارد کنید"
 
-#: include/admin/class-setting.php:634
+#: include/admin/class-setting.php:630
 msgctxt "wc-setting"
 msgid "Miscellaneous Setting"
 msgstr "تنظیمات متفرقه"
 
-#: include/admin/class-setting.php:639
+#: include/admin/class-setting.php:635
 msgctxt "wc-setting"
 msgid "Use Dark-mode as Default"
 msgstr "استفاده از حالت تیره بصورت پیشفرض"
 
-#: include/admin/class-setting.php:643
+#: include/admin/class-setting.php:639
 msgctxt "wc-setting"
 msgid ""
 "Check to use dark-mode as default color scheme for setting screen or leave "
@@ -1049,12 +1063,12 @@ msgstr ""
 "برای استفاده از حالت تیره بصورت پیشفرض این گزینه را تیک بزنید و برای عدم "
 "استفاده، تیک را بردارید"
 
-#: include/admin/class-setting.php:646
+#: include/admin/class-setting.php:642
 msgctxt "wc-setting"
 msgid "Disable WC Dashboard"
 msgstr "غیرفعالسازی پیشخوان جدید ووکامرس"
 
-#: include/admin/class-setting.php:649
+#: include/admin/class-setting.php:645
 msgctxt "wc-setting"
 msgid ""
 "Check to disable new Dashboard introduced in Woocommerce 4.0 or leave "
@@ -1063,34 +1077,34 @@ msgstr ""
 "برای غیرفعالسازی پیشخوان مدرن ووکامرس که از نسخه 4 اضافه شده است، این گزینه "
 "را تیک بزنید"
 
-#: include/admin/class-setting.php:650
+#: include/admin/class-setting.php:646
 msgctxt "wc-setting"
 msgid "Refresh page after setting saved."
 msgstr "پس از ثبت تغییرات صفحه را رفرش کنید."
 
-#: include/admin/class-setting.php:653 include/admin/class-setting.php:655
+#: include/admin/class-setting.php:649 include/admin/class-setting.php:651
 msgctxt "wc-setting"
 msgid "Date parsing template"
 msgstr "قالب تاریخ"
 
-#: include/admin/class-setting.php:847
+#: include/admin/class-setting.php:843
 msgctxt "wc-setting"
 msgid ""
 "Some of the most commonly used date/time format characters and their values"
 msgstr ""
 "Some of the most commonly used date/time format characters and their values"
 
-#: include/admin/class-setting.php:847
+#: include/admin/class-setting.php:843
 msgctxt "wc-setting"
 msgid "View date format string examples"
 msgstr "مشاهده نمونه های قالب تاریخ"
 
-#: include/admin/class-setting.php:852
+#: include/admin/class-setting.php:848
 msgctxt "wc-setting"
 msgid "Convert Date to Jalali/Shamsi"
 msgstr "تبدیل تاریخ به شمسی"
 
-#: include/admin/class-setting.php:855
+#: include/admin/class-setting.php:851
 msgctxt "wc-setting"
 msgid ""
 "Check to convert dates into Jalali/Shamsi format or leave unchecked to use "
@@ -1099,174 +1113,174 @@ msgstr ""
 "برای تبدیل تاریخ به شمسی این گزینه را تیک بزنید و برای استفاده از تاریخ "
 "پیشفرض تیک را بردارید"
 
-#: include/admin/class-setting.php:858
+#: include/admin/class-setting.php:854
 msgctxt "wc-setting"
 msgid "Show Shipped Date on Order details"
 msgstr "نمایش تاریخ ارسال مرسوله در صفحه سفارش"
 
-#: include/admin/class-setting.php:864
+#: include/admin/class-setting.php:860
 msgctxt "wc-setting"
 msgid "Show Shipping Track Serial on Order details"
 msgstr "نمایش کد پیگیری مرسوله در صفحه سفارش"
 
-#: include/admin/class-setting.php:870
+#: include/admin/class-setting.php:866
 msgctxt "wc-setting"
 msgid "Force Persian/Faris Numbers?"
 msgstr "تغییر اعداد به فارسی و عربی؟"
 
-#: include/admin/class-setting.php:874
+#: include/admin/class-setting.php:870
 msgctxt "wc-setting"
 msgid "No, Use Default English style"
 msgstr "استفاده از اعداد انگلیسی"
 
-#: include/admin/class-setting.php:875
+#: include/admin/class-setting.php:871
 msgctxt "wc-setting"
 msgid "Yes, Use Eastern Arabic Numbers style"
 msgstr "استفاده از اعداد عربی"
 
-#: include/admin/class-setting.php:876
+#: include/admin/class-setting.php:872
 msgctxt "wc-setting"
 msgid "Yes, Use Persian Numbers style"
 msgstr "استفاده از اعداد فارسی"
 
-#: include/admin/class-setting.php:893
+#: include/admin/class-setting.php:888
 msgctxt "wc-setting"
 msgid "Integration Setting"
 msgstr "تنظیمات افزودنی های جانبی"
 
-#: include/admin/class-setting.php:895
+#: include/admin/class-setting.php:890
 #, php-format
 msgid "Integration with %s"
 msgstr "تنظیمات افزودنی جانبی %s"
 
-#: include/admin/class-setting.php:899
+#: include/admin/class-setting.php:894
 msgctxt "wc-setting"
 msgid "Show bundles"
 msgstr "نمایش باندل ها"
 
-#: include/admin/class-setting.php:906
+#: include/admin/class-setting.php:901
 msgctxt "wc-setting"
 msgid "Show bundles subtitle"
 msgstr "نمایش توضیحات باندل ها"
 
-#: include/admin/class-setting.php:913
+#: include/admin/class-setting.php:908
 msgctxt "wc-setting"
 msgid "Bundles products subtitle prefix"
 msgstr "متن قبل از توضیحات محصول باندل"
 
-#: include/admin/class-setting.php:919
+#: include/admin/class-setting.php:914
 msgctxt "wc-setting"
 msgid "Show bundled products"
 msgstr "نمایش محصولات باندل شده"
 
-#: include/admin/class-setting.php:926
+#: include/admin/class-setting.php:921
 msgctxt "wc-setting"
 msgid "Show bundled products subtitle"
 msgstr "نمایش توضیحات محصولات باندل شده"
 
-#: include/admin/class-setting.php:933
+#: include/admin/class-setting.php:928
 msgctxt "wc-setting"
 msgid "Bundled products subtitle prefix"
 msgstr "متن قبل از توضیحات محصولات باندل شده"
 
-#: include/admin/class-setting.php:939
+#: include/admin/class-setting.php:934
 msgctxt "wc-setting"
 msgid "Show bundled products hierarchy"
 msgstr "نمایش محصولات باندل شده با سلسله مراتب"
 
-#: include/admin/class-setting.php:942
+#: include/admin/class-setting.php:937
 msgctxt "wc-setting"
 msgid "Check to show hierarchy or leave unchecked to show normally"
 msgstr ""
 "برای نمایش سلسله مراتبی این گزینه را بزنید و برای نمایش معمولی، تیک را بردارید"
 
-#: include/admin/class-setting.php:956
+#: include/admin/class-setting.php:950
 msgctxt "wc-setting"
 msgid "Invoices Barcode Setting"
 msgstr "تنظیمات بارکد و کیوآر فاکتور"
 
-#: include/admin/class-setting.php:961
+#: include/admin/class-setting.php:955
 msgctxt "wc-setting"
 msgid "Show Invoices Number Barcode"
 msgstr "نمایش بارکد شماره فاکتور"
 
-#: include/admin/class-setting.php:967
+#: include/admin/class-setting.php:961
 msgctxt "wc-setting"
 msgid "Show Shipping Track Serial Barcode"
 msgstr "نمایش بارکد شماره پیگیری مرسوله"
 
-#: include/admin/class-setting.php:980
+#: include/admin/class-setting.php:974
 msgctxt "wc-setting"
 msgid "Show Barcode in Sender Shipping slip"
 msgstr "نمایش بارکد در برچسب پستی فرستنده"
 
-#: include/admin/class-setting.php:986
+#: include/admin/class-setting.php:980
 msgctxt "wc-setting"
 msgid "Show Barcode in Recipient Shipping slip"
 msgstr "نمایش بارکد در برچسب پستی گیرنده"
 
-#: include/admin/class-setting.php:1003
+#: include/admin/class-setting.php:996
 msgctxt "wc-setting"
 msgid "Invoices Email Setting"
 msgstr "تنظیمات ایمیل فاکتور"
 
-#: include/admin/class-setting.php:1008 include/admin/class-setting.php:1009
+#: include/admin/class-setting.php:1001 include/admin/class-setting.php:1002
 msgctxt "wc-setting"
 msgid "Email Subject"
 msgstr "موضوع ایمیل"
 
-#: include/admin/class-setting.php:1011 pepro-ultimate-invoice.php:295
+#: include/admin/class-setting.php:1004 pepro-ultimate-invoice.php:304
 #, php-format
 msgctxt "wc-setting"
 msgid "Order #%s invoice on "
 msgstr "فاکتور سفارش #%s در "
 
-#: include/admin/class-setting.php:1019 include/admin/class-setting.php:1020
+#: include/admin/class-setting.php:1012 include/admin/class-setting.php:1013
 msgctxt "wc-setting"
 msgid "\"From\" name"
 msgstr "\"از\" نام"
 
-#: include/admin/class-setting.php:1021
+#: include/admin/class-setting.php:1014
 msgid "How the sender name appears in outgoing emails"
 msgstr "نام فرستنده در ایمیل‌های ارسالی چگونه ظاهر می‌شود"
 
-#: include/admin/class-setting.php:1028 include/admin/class-setting.php:1029
+#: include/admin/class-setting.php:1021 include/admin/class-setting.php:1022
 msgctxt "wc-setting"
 msgid "\"From\" address"
 msgstr "\"از\" آدرس"
 
-#: include/admin/class-setting.php:1030
+#: include/admin/class-setting.php:1023
 msgid "How the sender email appears in outgoing emails"
 msgstr "آدرس فرستنده در ایمیل‌های ارسالی چگونه ظاهر می‌شود"
 
-#: include/admin/class-setting.php:1035
+#: include/admin/class-setting.php:1028
 msgctxt "wc-setting"
 msgid "Send Invoices via Email to Customer"
 msgstr "ارسال فاکتور ایمیلی به مشتری"
 
-#: include/admin/class-setting.php:1040 include/admin/class-setting.php:1061
+#: include/admin/class-setting.php:1033 include/admin/class-setting.php:1054
 msgctxt "wc-setting"
 msgid "Send Manually"
 msgstr "ارسال دستی"
 
-#: include/admin/class-setting.php:1041 include/admin/class-setting.php:1062
+#: include/admin/class-setting.php:1034 include/admin/class-setting.php:1055
 msgctxt "wc-setting"
 msgid "Send Automatically"
 msgstr "ارسال خودکار"
 
-#: include/admin/class-setting.php:1043 include/admin/class-setting.php:1064
+#: include/admin/class-setting.php:1036 include/admin/class-setting.php:1057
 msgctxt "wc-setting"
 msgid ""
 "Choose whether send HTML invoices via Email to customers automatically or "
 "manually"
 msgstr "انتخاب کنید فاکتور به مشتری بصورت خودکار یا دستی ارسال شود"
 
-#: include/admin/class-setting.php:1047
+#: include/admin/class-setting.php:1040
 msgctxt "wc-setting"
 msgid "Order Statuses for Automatic Sending to Customers"
 msgstr "وضعیت های سفارش برای ارسال خودکار به مشتری"
 
-#: include/admin/class-setting.php:1053
+#: include/admin/class-setting.php:1046
 msgctxt "wc-setting"
 msgid ""
 "Send HTML Invoices via Email to customer when order status is among these "
@@ -1275,17 +1289,17 @@ msgstr ""
 "ارسال فاکتور به مشتری درصورتی که وضعیت فاکتور جزو موارد انتخابی باشد. "
 "میتوانید چند مورد را باهم انتخاب کنید"
 
-#: include/admin/class-setting.php:1056
+#: include/admin/class-setting.php:1049
 msgctxt "wc-setting"
 msgid "Send Invoices via Email to Shop Managers"
 msgstr "ارسال فاکتور ایمیلی به مدیران فروشگاه"
 
-#: include/admin/class-setting.php:1068
+#: include/admin/class-setting.php:1061
 msgctxt "wc-setting"
 msgid "Order Statuses for Automatic Sending to Managers"
 msgstr "وضعیت های سفارش برای ارسال خودکار به مدیران فروشگاه"
 
-#: include/admin/class-setting.php:1074
+#: include/admin/class-setting.php:1067
 msgctxt "wc-setting"
 msgid ""
 "Send HTML Invoices via Email to Shop managers when order status is among "
@@ -1294,12 +1308,12 @@ msgstr ""
 "ارسال فاکتور به مدیران فروشگاه درصورتی که وضعیت فاکتور جزو موارد انتخابی "
 "باشد. میتوانید چند مورد را باهم انتخاب کنید"
 
-#: include/admin/class-setting.php:1077
+#: include/admin/class-setting.php:1070
 msgctxt "wc-setting"
 msgid "Shop Managers who will receive invoice mail"
 msgstr "مدیرانی که فاکتور ایمیلی دریافت خواهند کرد"
 
-#: include/admin/class-setting.php:1082
+#: include/admin/class-setting.php:1075
 msgctxt "wc-setting"
 msgid ""
 "Send HTML Invoices via Email to Shop managers either manually through WC "
@@ -1308,84 +1322,84 @@ msgstr ""
 "ارسال فاکتور به مدیران فروشگاه بصورت خودکار یا دستی. میتوانید چند مدیر را "
 "باهم انتخاب کنید"
 
-#: include/admin/class-setting.php:1085
+#: include/admin/class-setting.php:1078
 msgctxt "wc-setting"
 msgid "Attach PDF Invoices to mail"
 msgstr "ضمیمه کردن فاکتور PDF به ایمیل"
 
-#: include/admin/class-setting.php:1088
+#: include/admin/class-setting.php:1081
 msgctxt "wc-setting"
 msgid ""
 "Check to attach a PDF Invoice to WooCommerce Mails or leave unchecked to not"
 msgstr "برای ضمیمه کردن فاکتور PDF به ایمیل های ووکامرس این گزینه را تیک بزنید"
 
-#: include/admin/class-setting.php:1102
+#: include/admin/class-setting.php:1094
 msgctxt "wc-setting"
 msgid "Privacy Setting"
 msgstr "تنظیمات حریم خصوصی"
 
-#: include/admin/class-setting.php:1107
+#: include/admin/class-setting.php:1099
 msgctxt "wc-setting"
 msgid "Allow Guest Users view invoices"
 msgstr "اجازه مشاهده فاکتور به کاربران مهمان (لاگین نشده)"
 
-#: include/admin/class-setting.php:1110 include/admin/class-setting.php:1129
-#: include/admin/class-setting.php:1148
+#: include/admin/class-setting.php:1102 include/admin/class-setting.php:1122
+#: include/admin/class-setting.php:1142
 msgctxt "wc-setting"
 msgid "Check to allow or leave unchecked to disallow"
 msgstr ""
 "برای اجازه دادن این گزینه را تیک بزنید و برای عدم دسترسی، تیک گزینه را بردارید"
 
-#: include/admin/class-setting.php:1111
+#: include/admin/class-setting.php:1103
 msgctxt "wc-setting"
 msgid "Allow logged out visitors be able to see invoices by having its URL"
 msgstr ""
 "به کاربران مهمان (لاگین نشده) اجازه دهید در صورت داشتن آدرس URL فاکتور، آن را "
 "مشاهده و دریافت کنند"
 
-#: include/admin/class-setting.php:1114
+#: include/admin/class-setting.php:1106
 msgctxt "wc-setting"
 msgid "Invoice Output for Guests"
 msgstr "خروجی فاکتور برای کاربران مهمان (لاگین نشده)"
 
-#: include/admin/class-setting.php:1120 include/admin/class-setting.php:1139
+#: include/admin/class-setting.php:1112 include/admin/class-setting.php:1132
 msgctxt "wc-setting"
 msgid "Use HTML Only"
 msgstr "فقط HTML"
 
-#: include/admin/class-setting.php:1121 include/admin/class-setting.php:1140
+#: include/admin/class-setting.php:1113 include/admin/class-setting.php:1133
 msgctxt "wc-setting"
 msgid "Use PDF Only"
 msgstr "فقط PDF"
 
-#: include/admin/class-setting.php:1122 include/admin/class-setting.php:1141
+#: include/admin/class-setting.php:1114 include/admin/class-setting.php:1134
 msgctxt "wc-setting"
 msgid "User HTML/PDF"
 msgstr "استفاده از HTML و PDF"
 
-#: include/admin/class-setting.php:1126
+#: include/admin/class-setting.php:1118
 msgctxt "wc-setting"
 msgid "Allow Customer/Users view invoices"
 msgstr "اجازه مشاهده فاکتور به کاربران (لاگین شده)"
 
-#: include/admin/class-setting.php:1130
+#: include/admin/class-setting.php:1123
 msgctxt "wc-setting"
 msgid "Allow logged in visitors be able to see their invoices by having its URL"
 msgstr ""
 "به کاربران (لاگین شده) اجازه دهید در صورت داشتن آدرس URL فاکتور، آن را مشاهده "
 "و دریافت کنند"
 
-#: include/admin/class-setting.php:1133
+#: include/admin/class-setting.php:1126
 msgctxt "wc-setting"
 msgid "Invoice Output for Customers"
 msgstr "خروجی فاکتور برای مشتریان"
 
-#: include/admin/class-setting.php:1145
+#: include/admin/class-setting.php:1138
 msgctxt "wc-setting"
 msgid "Show Invoices option in orders list"
 msgstr "نمایش گزینه های فاکتور در لیست سفارشات"
 
-#: include/admin/class-setting.php:1149
+#: include/admin/class-setting.php:1143
 msgctxt "wc-setting"
 msgid ""
 "Add 'Get Invoice' button to customer order list so they could have invoice too"
@@ -1393,12 +1407,12 @@ msgstr ""
 "افزودن دکمه \"دریافت فاکتور\" به لیست سفارشات مشتریان تا بتوانند از سیستم "
 "فاکتور استفاده کنند"
 
-#: include/admin/class-setting.php:1152
+#: include/admin/class-setting.php:1146
 msgctxt "wc-setting"
 msgid "Allowed Orders statuses"
 msgstr "شرایط قابل استفاده"
 
-#: include/admin/class-setting.php:1158
+#: include/admin/class-setting.php:1152
 msgctxt "wc-setting"
 msgid ""
 "In which Order Status Customers can use 'Get Invoice' feature?<br>Multiple "
@@ -1407,17 +1421,17 @@ msgstr ""
 "در چه وضعیت هایی از سفارش مشتری مجاز به دریافت فاکتور میباشد؟ میتوانید چند "
 "مورد را باهم انتخاب کنید"
 
-#: include/admin/class-setting.php:1172
+#: include/admin/class-setting.php:1165
 msgctxt "wc-setting"
 msgid "Extras Setting"
 msgstr "تنظیمات موارد بیشتر"
 
-#: include/admin/class-setting.php:1177
+#: include/admin/class-setting.php:1170
 msgctxt "wc-setting"
 msgid "Enable Quick Shop Feature"
 msgstr "فعالسازی قابلیت خرید سریع"
 
-#: include/admin/class-setting.php:1180
+#: include/admin/class-setting.php:1173
 msgctxt "wc-setting"
 msgid ""
 "Check to Enable 'Quick Shop' Feature and integrate it with WPBakery Page "
@@ -1426,7 +1440,7 @@ msgstr ""
 "برای فعالسازی این قابلیت و ادغام با صفحه ساز ویژوال کامپوزر ( اگر نصب باشد ) "
 "این گزینه را تیک بزنید"
 
-#: include/admin/class-setting.php:1181
+#: include/admin/class-setting.php:1174
 msgctxt "wc-setting"
 msgid ""
 "This will let users filter and shop all your products in one page. Use "
@@ -1437,19 +1451,19 @@ msgstr ""
 "اقدام به خرید یا دریافت پیش‌فاکتور کنند. برای استفاده از شورتکد "
 "<code>[puiw_quick_shop]</code> یا ویجت ویژوال کامپوزر استفاده کنید"
 
-#: include/admin/class-setting.php:1184
+#: include/admin/class-setting.php:1177
 msgctxt "wc-setting"
 msgid "Pre-order Invoices"
 msgstr "قابلیت پیش‌فاکتور"
 
-#: include/admin/class-setting.php:1187
+#: include/admin/class-setting.php:1180
 msgctxt "wc-setting"
 msgid ""
 "Check to allow users get pre-order invoices or leave unchecked to disallow"
 msgstr ""
 "برای اجازه دادن کاربران به استفاده از سیستم پیش‌فاکتور این گزینه را تیک بزنید"
 
-#: include/admin/class-setting.php:1188
+#: include/admin/class-setting.php:1181
 msgctxt "wc-setting"
 msgid ""
 "PRE-ORDER INVOICE means user does not place an order, but rather select "
@@ -1459,12 +1473,12 @@ msgstr ""
 "پیش‌فاکتور یعنی کاربر سبد خرید را آماده کرده و بجای پرداخت، تنها فاکتور را "
 "دریافت میکند تا بعدا بصورت حضوری مراجعه کرده و خرید را انجام دهد."
 
-#: include/admin/class-setting.php:1191
+#: include/admin/class-setting.php:1184
 msgctxt "wc-setting"
 msgid "Clear Cart on Quick Buy"
 msgstr "خالی کردن سبدخرید پس از دریافت پیش‌فاکتور"
 
-#: include/admin/class-setting.php:1194
+#: include/admin/class-setting.php:1187
 msgctxt "wc-setting"
 msgid ""
 "Check to clear cart on pre-order invoice creation or leave unchecked to keep "
@@ -1473,24 +1487,24 @@ msgstr ""
 "برای خالی کردن سبدخرید پس از دریافت پیش‌فاکتور این گزینه را تیک بزنید یا برای "
 "نگه داری محتویات سبد خرید حتی پس از دریافت پیش‌فاکتور تیک را بردارید"
 
-#: include/admin/class-setting.php:1197 include/admin/class-setting.php:1200
+#: include/admin/class-setting.php:1190 include/admin/class-setting.php:1193
 msgctxt "wc-setting"
 msgid "Extra Notes on Pre-order by Shop Manager"
 msgstr "یادداشت مدیر فروشگاه برروی سفارشات پیش‌فاکتور"
 
-#: include/admin/class-setting.php:1201
+#: include/admin/class-setting.php:1194
 msgctxt "wc-setting"
 msgid "You can add custom note here to be added into pre-orders"
 msgstr ""
 "شما میتوانید یادداشت مخصوصی را در اینجا قرار دهید تا به سفارشات پیش‌فاکتور "
 "اضافه شود"
 
-#: include/admin/class-setting.php:1205 include/admin/class-setting.php:1208
+#: include/admin/class-setting.php:1198 include/admin/class-setting.php:1201
 msgctxt "wc-setting"
 msgid "Extra Notes on Pre-order on behalf of Customer"
 msgstr "یادداشت از طرف مشتری برروی سفارشات پیش‌فاکتور"
 
-#: include/admin/class-setting.php:1209
+#: include/admin/class-setting.php:1202
 msgctxt "wc-setting"
 msgid ""
 "You can add custom note here to be added into pre-orders on behalf of customer"
@@ -1498,322 +1512,322 @@ msgstr ""
 "شما میتوانید یادداشت مخصوصی را از طرف مشتری در اینجا قرار دهید تا به سفارشات "
 "پیش‌فاکتور اضافه شود"
 
-#: include/admin/class-setting.php:1224
+#: include/admin/class-setting.php:1216
 msgctxt "wc-setting"
 msgid "PDF Invoices Setting"
 msgstr "تنظیمات فاکتور PDF"
 
-#: include/admin/class-setting.php:1229
+#: include/admin/class-setting.php:1221
 msgctxt "wc-setting"
 msgid "PDF Page size"
 msgstr "اندازه برگه PDF"
 
-#: include/admin/class-setting.php:1236
+#: include/admin/class-setting.php:1228
 msgctxt "wc-setting"
 msgid "A Series: A0"
 msgstr "A Series: A0"
 
-#: include/admin/class-setting.php:1237
+#: include/admin/class-setting.php:1229
 msgctxt "wc-setting"
 msgid "A Series: A1"
 msgstr "A Series: A1"
 
-#: include/admin/class-setting.php:1238
+#: include/admin/class-setting.php:1230
 msgctxt "wc-setting"
 msgid "A Series: A2"
 msgstr "A Series: A2"
 
-#: include/admin/class-setting.php:1239
+#: include/admin/class-setting.php:1231
 msgctxt "wc-setting"
 msgid "A Series: A3"
 msgstr "A Series: A3"
 
-#: include/admin/class-setting.php:1240
+#: include/admin/class-setting.php:1232
 msgctxt "wc-setting"
 msgid "A Series: A4"
 msgstr "A Series: A4"
 
-#: include/admin/class-setting.php:1241
+#: include/admin/class-setting.php:1233
 msgctxt "wc-setting"
 msgid "A Series: A5"
 msgstr "A Series: A5"
 
-#: include/admin/class-setting.php:1242
+#: include/admin/class-setting.php:1234
 msgctxt "wc-setting"
 msgid "A Series: A6"
 msgstr "A Series: A6"
 
-#: include/admin/class-setting.php:1243
+#: include/admin/class-setting.php:1235
 msgctxt "wc-setting"
 msgid "A Series: A7"
 msgstr "A Series: A7"
 
-#: include/admin/class-setting.php:1244
+#: include/admin/class-setting.php:1236
 msgctxt "wc-setting"
 msgid "A Series: A8"
 msgstr "A Series: A8"
 
-#: include/admin/class-setting.php:1245
+#: include/admin/class-setting.php:1237
 msgctxt "wc-setting"
 msgid "A Series: A9"
 msgstr "A Series: A9"
 
-#: include/admin/class-setting.php:1246
+#: include/admin/class-setting.php:1238
 msgctxt "wc-setting"
 msgid "A Series: A10"
 msgstr "A Series: A10"
 
-#: include/admin/class-setting.php:1247
+#: include/admin/class-setting.php:1239
 msgctxt "wc-setting"
 msgid "B Series: B0"
 msgstr "B Series: B0"
 
-#: include/admin/class-setting.php:1248
+#: include/admin/class-setting.php:1240
 msgctxt "wc-setting"
 msgid "B Series: B1"
 msgstr "B Series: B1"
 
-#: include/admin/class-setting.php:1249
+#: include/admin/class-setting.php:1241
 msgctxt "wc-setting"
 msgid "B Series: B2"
 msgstr "B Series: B2"
 
-#: include/admin/class-setting.php:1250
+#: include/admin/class-setting.php:1242
 msgctxt "wc-setting"
 msgid "B Series: B3"
 msgstr "B Series: B3"
 
-#: include/admin/class-setting.php:1251
+#: include/admin/class-setting.php:1243
 msgctxt "wc-setting"
 msgid "B Series: B4"
 msgstr "B Series: B4"
 
-#: include/admin/class-setting.php:1252
+#: include/admin/class-setting.php:1244
 msgctxt "wc-setting"
 msgid "B Series: B5"
 msgstr "B Series: B5"
 
-#: include/admin/class-setting.php:1253
+#: include/admin/class-setting.php:1245
 msgctxt "wc-setting"
 msgid "B Series: B6"
 msgstr "B Series: B6"
 
-#: include/admin/class-setting.php:1254
+#: include/admin/class-setting.php:1246
 msgctxt "wc-setting"
 msgid "B Series: B7"
 msgstr "B Series: B7"
 
-#: include/admin/class-setting.php:1255
+#: include/admin/class-setting.php:1247
 msgctxt "wc-setting"
 msgid "B Series: B8"
 msgstr "B Series: B8"
 
-#: include/admin/class-setting.php:1256
+#: include/admin/class-setting.php:1248
 msgctxt "wc-setting"
 msgid "B Series: B9"
 msgstr "B Series: B9"
 
-#: include/admin/class-setting.php:1257
+#: include/admin/class-setting.php:1249
 msgctxt "wc-setting"
 msgid "B Series: B10"
 msgstr "B Series: B10"
 
-#: include/admin/class-setting.php:1258
+#: include/admin/class-setting.php:1250
 msgctxt "wc-setting"
 msgid "C Series: C0"
 msgstr "C Series: C0"
 
-#: include/admin/class-setting.php:1259
+#: include/admin/class-setting.php:1251
 msgctxt "wc-setting"
 msgid "C Series: C1"
 msgstr "C Series: C1"
 
-#: include/admin/class-setting.php:1260
+#: include/admin/class-setting.php:1252
 msgctxt "wc-setting"
 msgid "C Series: C2"
 msgstr "C Series: C2"
 
-#: include/admin/class-setting.php:1261
+#: include/admin/class-setting.php:1253
 msgctxt "wc-setting"
 msgid "C Series: C3"
 msgstr "C Series: C3"
 
-#: include/admin/class-setting.php:1262
+#: include/admin/class-setting.php:1254
 msgctxt "wc-setting"
 msgid "C Series: C4"
 msgstr "C Series: C3"
 
-#: include/admin/class-setting.php:1263
+#: include/admin/class-setting.php:1255
 msgctxt "wc-setting"
 msgid "C Series: C5"
 msgstr "C Series: C3"
 
-#: include/admin/class-setting.php:1264
+#: include/admin/class-setting.php:1256
 msgctxt "wc-setting"
 msgid "C Series: C6"
 msgstr "C Series: C6"
 
-#: include/admin/class-setting.php:1265
+#: include/admin/class-setting.php:1257
 msgctxt "wc-setting"
 msgid "C Series: C7"
 msgstr "C Series: C7"
 
-#: include/admin/class-setting.php:1266
+#: include/admin/class-setting.php:1258
 msgctxt "wc-setting"
 msgid "C Series: C8"
 msgstr "C Series: C8"
 
-#: include/admin/class-setting.php:1267
+#: include/admin/class-setting.php:1259
 msgctxt "wc-setting"
 msgid "C Series: C9"
 msgstr "C Series: C9"
 
-#: include/admin/class-setting.php:1268
+#: include/admin/class-setting.php:1260
 msgctxt "wc-setting"
 msgid "C Series: C10"
 msgstr "C Series: C10"
 
-#: include/admin/class-setting.php:1269
+#: include/admin/class-setting.php:1261
 msgctxt "wc-setting"
 msgid "Letter"
 msgstr "نامه (Letter)"
 
-#: include/admin/class-setting.php:1270
+#: include/admin/class-setting.php:1262
 msgctxt "wc-setting"
 msgid "Legal"
 msgstr "رسمی (Legal)"
 
-#: include/admin/class-setting.php:1271
+#: include/admin/class-setting.php:1263
 msgctxt "wc-setting"
 msgid "Executive"
 msgstr "اجرایی (Executive)"
 
-#: include/admin/class-setting.php:1272
+#: include/admin/class-setting.php:1264
 msgctxt "wc-setting"
 msgid "Folio"
 msgstr "یادداشتی (Folio)"
 
-#: include/admin/class-setting.php:1273
+#: include/admin/class-setting.php:1265
 msgctxt "wc-setting"
 msgid "Demy"
 msgstr "دمی اکتاوو (Demy)"
 
-#: include/admin/class-setting.php:1274
+#: include/admin/class-setting.php:1266
 msgctxt "wc-setting"
 msgid "Royal"
 msgstr "سلطنتی (Royal)"
 
-#: include/admin/class-setting.php:1278
+#: include/admin/class-setting.php:1270
 msgctxt "wc-setting"
 msgid "PDF Page Orientation "
 msgstr "چرخش برگه PDF "
 
-#: include/admin/class-setting.php:1285
+#: include/admin/class-setting.php:1277
 msgctxt "wc-setting"
 msgid "Portrait"
 msgstr "عمودی (Portrait)"
 
-#: include/admin/class-setting.php:1286
+#: include/admin/class-setting.php:1278
 msgctxt "wc-setting"
 msgid "Landscape"
 msgstr "افقی (Landscape)"
 
-#: include/admin/class-setting.php:1290
+#: include/admin/class-setting.php:1282
 msgctxt "wc-setting"
 msgid "PDF Font"
 msgstr "فونت نمایشی PDF"
 
-#: include/admin/class-setting.php:1294
+#: include/admin/class-setting.php:1286
 msgctxt "wc-setting"
 msgid "DejaVuSans (Standard)"
 msgstr "دژاوو (استاندارد)"
 
-#: include/admin/class-setting.php:1295
+#: include/admin/class-setting.php:1287
 msgctxt "wc-setting"
 msgid "Dana (Standard)"
 msgstr "دانا (استاندارد)"
 
-#: include/admin/class-setting.php:1296
+#: include/admin/class-setting.php:1288
 msgctxt "wc-setting"
 msgid "IRANSans (Standard)"
 msgstr "ایران سنس (استاندارد)"
 
-#: include/admin/class-setting.php:1297
+#: include/admin/class-setting.php:1289
 msgctxt "wc-setting"
 msgid "IRANYekan (Standard)"
 msgstr "ایران یکان (استاندارد)"
 
-#: include/admin/class-setting.php:1298
+#: include/admin/class-setting.php:1290
 msgctxt "wc-setting"
 msgid "Dana (Farsi-Digits Support)"
 msgstr "دانا ( پشتیبانی از اعداد فارسی )"
 
-#: include/admin/class-setting.php:1299
+#: include/admin/class-setting.php:1291
 msgctxt "wc-setting"
 msgid "IRANSans (Farsi-Digits Support)"
 msgstr "ایران سنس ( پشتیبانی از اعداد فارسی )"
 
-#: include/admin/class-setting.php:1300
+#: include/admin/class-setting.php:1292
 msgctxt "wc-setting"
 msgid "IRANYekan (Farsi-Digits Support)"
 msgstr "ایران یکان ( پشتیبانی از اعداد فارسی )"
 
-#: include/admin/class-setting.php:1316
+#: include/admin/class-setting.php:1307
 msgctxt "wc-setting"
 msgid "Store Details in Invoices"
 msgstr "مشخصات فروشگاه در فاکتور ها"
 
-#: include/admin/class-setting.php:1321 include/admin/class-setting.php:1322
+#: include/admin/class-setting.php:1312 include/admin/class-setting.php:1313
 msgctxt "wc-setting"
 msgid "Store Name"
 msgstr "نام فروشگاه"
 
-#: include/admin/class-setting.php:1327
+#: include/admin/class-setting.php:1318
 msgctxt "wc-setting"
 msgid "Store Logo"
 msgstr "لوگوی فروشگاه"
 
-#: include/admin/class-setting.php:1330
+#: include/admin/class-setting.php:1321
 msgctxt "wc-setting"
 msgid "Select your store logo file"
 msgstr "انتخاب فایل لوگوی فروشگاه"
 
-#: include/admin/class-setting.php:1336 include/admin/class-setting.php:1337
+#: include/admin/class-setting.php:1327 include/admin/class-setting.php:1328
 msgctxt "wc-setting"
 msgid "Store Website"
 msgstr "وبسایت فروشگاه"
 
-#: include/admin/class-setting.php:1343 include/admin/class-setting.php:1344
+#: include/admin/class-setting.php:1334 include/admin/class-setting.php:1335
 msgctxt "wc-setting"
 msgid "Store E-mail"
 msgstr "ایمیل فروشگاه"
 
-#: include/admin/class-setting.php:1350 include/admin/class-setting.php:1351
+#: include/admin/class-setting.php:1341 include/admin/class-setting.php:1342
 msgctxt "wc-setting"
 msgid "Store Phone number"
 msgstr "تلفن فروشگاه"
 
-#: include/admin/class-setting.php:1357 include/admin/class-setting.php:1358
+#: include/admin/class-setting.php:1348 include/admin/class-setting.php:1349
 msgctxt "wc-setting"
 msgid "Store National ID"
 msgstr "شناسه ملی فروشگاه"
 
-#: include/admin/class-setting.php:1364 include/admin/class-setting.php:1365
+#: include/admin/class-setting.php:1355 include/admin/class-setting.php:1356
 msgctxt "wc-setting"
 msgid "Store Registration Number"
 msgstr "شماره ثبت فروشگاه"
 
-#: include/admin/class-setting.php:1371 include/admin/class-setting.php:1372
+#: include/admin/class-setting.php:1362 include/admin/class-setting.php:1363
 msgctxt "wc-setting"
 msgid "Store Economical Number"
 msgstr "شماره اقتصادی فروشگاه"
 
-#: include/admin/class-setting.php:1378 include/admin/class-setting.php:1379
+#: include/admin/class-setting.php:1369 include/admin/class-setting.php:1370
 msgctxt "wc-setting"
 msgid "Store Address"
 msgstr "آدرس فروشگاه"
 
-#: include/admin/class-setting.php:1382
+#: include/admin/class-setting.php:1373
 msgctxt "wc-setting"
 msgid ""
 "This Address will be used instead of Woocommerce store address in invoices, "
@@ -1822,94 +1836,94 @@ msgstr ""
 "این آدرس بجای آدرس پیشفرض ووکامرس قرار میگیرد، برای استفاده از آدرس ووکامرس "
 "این قسمت را خالی رها کنید"
 
-#: include/admin/class-setting.php:1385 include/admin/class-setting.php:1386
+#: include/admin/class-setting.php:1376 include/admin/class-setting.php:1377
 msgctxt "wc-setting"
 msgid "Store Postcode / ZIP"
 msgstr "کد پستی فروشگاه"
 
-#: include/admin/class-setting.php:1416
+#: include/admin/class-setting.php:1407 include/admin/class-setting.php:1457
 msgid "Delete"
 msgstr "حذف"
 
-#: include/admin/class-setting.php:1417
+#: include/admin/class-setting.php:1408 include/admin/class-setting.php:1458
 msgid "Edit"
 msgstr "ویرایش"
 
-#: include/admin/class-setting.php:1418
+#: include/admin/class-setting.php:1409 include/admin/class-setting.php:1459
 msgid "Apply"
 msgstr "بکار گیری"
 
-#: include/admin/class-setting.php:1419
+#: include/admin/class-setting.php:1410 include/admin/class-setting.php:1460
 msgid "Discard"
 msgstr "لغو"
 
-#: include/admin/class-setting.php:1420
+#: include/admin/class-setting.php:1411 include/admin/class-setting.php:1461
 msgid "Export"
 msgstr "برون بری"
 
-#: include/admin/class-setting.php:1421
+#: include/admin/class-setting.php:1412 include/admin/class-setting.php:1462
 msgid "Import"
 msgstr "درون ریزی"
 
-#: include/admin/class-setting.php:1422
+#: include/admin/class-setting.php:1413 include/admin/class-setting.php:1463
 msgid "Comming Soon ..."
 msgstr "بزودی ..."
 
-#: include/admin/class-setting.php:1423
+#: include/admin/class-setting.php:1414 include/admin/class-setting.php:1464
 msgid "Primary"
 msgstr "اصلی"
 
-#: include/admin/class-setting.php:1424
+#: include/admin/class-setting.php:1415 include/admin/class-setting.php:1465
 msgid "Secondary"
 msgstr "دومی"
 
-#: include/admin/class-setting.php:1425
+#: include/admin/class-setting.php:1416 include/admin/class-setting.php:1466
 msgid "Tertiary"
 msgstr "سومی"
 
-#: include/admin/class-setting.php:1426
+#: include/admin/class-setting.php:1417 include/admin/class-setting.php:1467
 msgid "Click to change"
 msgstr "برای ویرایش کلیک کنید"
 
-#: include/admin/class-setting.php:1427
+#: include/admin/class-setting.php:1418 include/admin/class-setting.php:1468
 msgid "Error importing data!"
 msgstr "خطا در درون ریزی داده!"
 
-#: include/admin/class-setting.php:1428
+#: include/admin/class-setting.php:1419 include/admin/class-setting.php:1470
 msgid "Please check the data or contact support@pepro.dev"
 msgstr "لطفا داده را بررسی یا با ایمیل support@pepro.dev در ارتباط باشید"
 
-#: include/admin/class-setting.php:1429
+#: include/admin/class-setting.php:1420 include/admin/class-setting.php:1471
 msgid "Enter data here to Import."
 msgstr "داده برای درون ریزی را وارد کنید."
 
-#: include/admin/class-setting.php:1430
+#: include/admin/class-setting.php:1421 include/admin/class-setting.php:1472
 msgid "Press ENTER to set name or ESC to discard"
 msgstr "برای ذخیره ENTER و برای لغو ESC را بفشارید"
 
-#: include/admin/class-setting.php:1445
+#: include/admin/class-setting.php:1436 include/admin/class-setting.php:1490
 msgctxt "wc-setting-js"
 msgid "Copy to clipboard"
 msgstr "کپی به کلیپ‌برد"
 
-#: include/admin/class-setting.php:1447
+#: include/admin/class-setting.php:1438 include/admin/class-setting.php:1492
 msgctxt "wc-setting-js"
 msgid "Import"
 msgstr "درون ریزی"
 
-#: include/admin/class-setting.php:1453
+#: include/admin/class-setting.php:1444 include/admin/class-setting.php:1498
 msgctxt "wc-setting-js"
 msgid ""
 "Are you sure you want to Delete This Color Schemes?<br>THIS CAN NOT BE UNDONE."
 msgstr ""
 "آیا از حذف این پالت رنگی اطمینان دارید؟<br>این عملیات قابل بازگردانی نیست."
 
-#: include/admin/class-setting.php:1454
+#: include/admin/class-setting.php:1445 include/admin/class-setting.php:1499
 msgctxt "wc-setting-js"
 msgid "Are you sure you want to Delete All Color Schemes?"
 msgstr "آیا مطمئن هستید میخواهید تمامی پالت های رنگی را حذف کنید؟"
 
-#: include/admin/class-setting.php:1455
+#: include/admin/class-setting.php:1446 include/admin/class-setting.php:1500
 msgctxt "wc-setting-js"
 msgid ""
 "Are you sure you want to Restore All Color Schemes to Default?<br>THIS WILL "
@@ -1918,39 +1932,108 @@ msgstr ""
 "آیا مطمئن هستید میخواهید پالت ها را به حالت پیشفرض برگردانید؟<br>این عملیات "
 "موجب حذف پالت های فعلی شده و قابل بازگردانی نیست."
 
-#: include/admin/class-setting.php:1480 include/admin/class-setting.php:1491
+#: include/admin/class-setting.php:1469
+msgid "Error exporting data!"
+msgstr "خطا در برون بری داده!"
+
+#: include/admin/class-setting.php:1483
+msgctxt "wc-setting-js"
+msgid "Caution"
+msgstr "اخطار"
+
+#: include/admin/class-setting.php:1485
+msgctxt "wc-setting-js"
+msgid "Are you sure you want to continue?"
+msgstr "آیا مطمئن هستید میخواهید ادامه دهید؟"
+
+#: include/admin/class-setting.php:1487
+msgctxt "wc-setting-js"
+msgid "Reload page"
+msgstr "نوسازی صفحه"
+
+#: include/admin/class-setting.php:1523 include/admin/class-setting.php:1534
 msgctxt "swatches-panel"
 msgid "Save Color Schemes"
 msgstr "ذخیره سازی پالت های رنگی"
 
-#: include/admin/class-setting.php:1482 include/admin/class-setting.php:1493
+#: include/admin/class-setting.php:1525 include/admin/class-setting.php:1536
 msgctxt "swatches-panel"
 msgid "Add New"
-msgstr "افزودن"
+msgstr "افزودن جدید"
 
-#: include/admin/class-setting.php:1483 include/admin/class-setting.php:1494
+#: include/admin/class-setting.php:1526 include/admin/class-setting.php:1537
 msgctxt "swatches-panel"
 msgid "Delete All"
 msgstr "حذف همه"
 
-#: include/admin/class-setting.php:1484 include/admin/class-setting.php:1495
+#: include/admin/class-setting.php:1527 include/admin/class-setting.php:1538
 msgctxt "swatches-panel"
 msgid "Restore Default"
 msgstr "بازگردانی به پیشفرض"
 
-#: include/admin/class-setting.php:1486 include/admin/class-setting.php:1497
+#: include/admin/class-setting.php:1529 include/admin/class-setting.php:1540
 msgctxt "swatches-panel"
 msgid "Export"
 msgstr "برون بری"
 
-#: include/admin/class-setting.php:1487 include/admin/class-setting.php:1498
+#: include/admin/class-setting.php:1530 include/admin/class-setting.php:1541
 msgctxt "swatches-panel"
 msgid "Import"
 msgstr "درون ریزی"
 
-#: include/admin/class-setting.php:1489
+#: include/admin/class-setting.php:1532
 msgid "No Color Scheme Found!"
 msgstr "هیچ پالت رنگی یافت نشد!"
+
+#: include/admin/class-setting.php:1553
+msgctxt "wc-setting"
+msgid "Migrate/Backup Settings"
+msgstr "پشتیان گیری / درون ریزی و برون بری تنظیمات"
+
+#: include/admin/class-setting.php:1557
+msgctxt "swatches-panel"
+msgid "Export PHP"
+msgstr "برون بری PHP"
+
+#: include/admin/class-setting.php:1558
+msgctxt "swatches-panel"
+msgid "Export JSON"
+msgstr "برون بری JSON"
+
+#: include/admin/class-setting.php:1559
+msgctxt "swatches-panel"
+msgid "Import JSON"
+msgstr "درون ریزی JSON"
+
+#: include/admin/class-setting.php:1561
+msgctxt "wc-setting"
+msgid "Danger Zone!"
+msgstr "منطقه خطر!"
+
+#: include/admin/class-setting.php:1562
+msgctxt "wc-setting"
+msgid "Do not use any of buttons below without knowing what your are doing!"
+msgstr ""
+"هیچ از دکمه های زیر را بدون دانستن آنکه چه عملی انجام میدهد استفاده نکنید!"
+
+#: include/admin/class-setting.php:1564
+msgctxt "swatches-panel"
+msgid "FORCE RESET TO DEFAULT SETTINGS"
+msgstr "اعمال اجباری تنظیمات پیشفرض"
+
+#: include/admin/class-setting.php:1565
+msgctxt "swatches-panel"
+msgid "FORCE CLEAR OUT ALL SETTINGS"
+msgstr "حذف اجباری تمامی تنظیمات"
+
+#: include/admin/class-setting.php:1566
+msgctxt "swatches-panel"
+msgid "FILL OUT EMPTY SETTINGS WITH DEFAULT VALUES"
+msgstr "اعمال تنظیمات پیشفرض روی مقادیر خالی"
+
+#: include/admin/class-template.php:413
+msgid ", "
+msgstr "، "
 
 #: include/admin/class-wcproduct-panel.php:22
 msgid "Storage rack No/ID"
@@ -1960,126 +2043,131 @@ msgstr "شماره قفسه انبارداری"
 msgid "Enter the Number/ID of rack in storage that product is in"
 msgstr "شماره قفسه ای که محصول در آن در انبار وجود دارد را وارد کنید"
 
-#: pepro-ultimate-invoice.php:86
+#: pepro-ultimate-invoice.php:87
 msgid "Pepro Ultimate Invoice for Woocommerce"
 msgstr "آخرین فاکتورساز ووکامرسی، از پپرو"
 
-#: pepro-ultimate-invoice.php:87 pepro-ultimate-invoice.php:89
+#: pepro-ultimate-invoice.php:88 pepro-ultimate-invoice.php:90
 #, php-format
 msgid "%2$s ver. %1$s"
 msgstr "%2$s نسخه %1$s"
 
-#: pepro-ultimate-invoice.php:88
+#: pepro-ultimate-invoice.php:89
 msgid "Pepro Development Group"
 msgstr "گروه توسعه نرم‌افزاری پپرو"
 
-#: pepro-ultimate-invoice.php:90
+#: pepro-ultimate-invoice.php:91
 msgid "Unauthorized Access!"
 msgstr "شما دسترسی لازم را ندارید !"
 
-#: pepro-ultimate-invoice.php:91
+#: pepro-ultimate-invoice.php:93
 msgid "Go Back"
 msgstr "بازگشت به سایت"
 
-#: pepro-ultimate-invoice.php:143
+#: pepro-ultimate-invoice.php:150
 msgid "kg"
 msgstr "کیلوگرم"
 
-#: pepro-ultimate-invoice.php:143
+#: pepro-ultimate-invoice.php:150
 msgid "g"
 msgstr "گرم"
 
-#: pepro-ultimate-invoice.php:143
+#: pepro-ultimate-invoice.php:150
 msgid "lbs"
 msgstr "پوند"
 
-#: pepro-ultimate-invoice.php:143
+#: pepro-ultimate-invoice.php:150
 msgid "oz"
 msgstr "اونس"
 
-#: pepro-ultimate-invoice.php:152
+#: pepro-ultimate-invoice.php:161
 msgid "mm"
 msgstr "میلی متر"
 
-#: pepro-ultimate-invoice.php:153
+#: pepro-ultimate-invoice.php:162
 msgid "cm"
 msgstr "سانتی متر"
 
-#: pepro-ultimate-invoice.php:154
+#: pepro-ultimate-invoice.php:163
 msgid "in"
 msgstr "اینچ"
 
-#: pepro-ultimate-invoice.php:155
+#: pepro-ultimate-invoice.php:164
 msgid "yd"
 msgstr "یارد"
 
-#: pepro-ultimate-invoice.php:203 pepro-ultimate-invoice.php:249
+#: pepro-ultimate-invoice.php:212 pepro-ultimate-invoice.php:258
 #, php-format
 msgid "Automatic Email sent to customer mail address:<br> %s"
 msgstr "فاکتور به ایمیل مشتری بصورت خودکار ارسال شد<br><p>آدرس ایمیل: %s</p>"
 
-#: pepro-ultimate-invoice.php:205 pepro-ultimate-invoice.php:251
+#: pepro-ultimate-invoice.php:214 pepro-ultimate-invoice.php:260
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to customer mail address:<br> %s"
 msgstr "خطایی در ارسال خودکار ایمیل به مشتری رخ داد، آدرس ایمیل:<br> %s"
 
-#: pepro-ultimate-invoice.php:213 pepro-ultimate-invoice.php:262
+#: pepro-ultimate-invoice.php:222 pepro-ultimate-invoice.php:271
 #, php-format
 msgid "Automatic Email sent to following shop managers:<br> %s"
 msgstr ""
 "فاکتور به ایمیل مدیران فروشگاه بصورت خودکار ارسال شد<br><p>آدرس ایمیل ها: %s</"
 "p>"
 
-#: pepro-ultimate-invoice.php:215 pepro-ultimate-invoice.php:264
+#: pepro-ultimate-invoice.php:224 pepro-ultimate-invoice.php:273
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to following shop managers:<br> %s"
 msgstr ""
 "خطایی در ارسال خودکار ایمیل به مدیران فروشگاه رخ داد، آدرس ایمیل ها:<br> %s"
 
-#: pepro-ultimate-invoice.php:218 pepro-ultimate-invoice.php:267
+#: pepro-ultimate-invoice.php:227 pepro-ultimate-invoice.php:276
 msgid "No Shop Manager selected to send Automatic Email to."
 msgstr ""
 "شما هیچ یک از مدیران فروشگاه را برای ارسال خودکار ایمیل تنظیم نکرده اید."
 
-#: pepro-ultimate-invoice.php:432
+#: pepro-ultimate-invoice.php:390 pepro-ultimate-invoice.php:393
+#: pepro-ultimate-invoice.php:396 pepro-ultimate-invoice.php:400
+msgid "Back to Settings"
+msgstr "بازگشت به تنظیمات"
+
+#: pepro-ultimate-invoice.php:445
 msgid "User Unique Identification Number"
 msgstr "کدملی شخصی"
 
-#: pepro-ultimate-invoice.php:442
+#: pepro-ultimate-invoice.php:455
 msgid "Shipped Date (Shamsi)"
 msgstr "تاریخ ارسال مرسوله (شمسی)"
 
-#: pepro-ultimate-invoice.php:444 pepro-ultimate-invoice.php:450
+#: pepro-ultimate-invoice.php:457 pepro-ultimate-invoice.php:463
 msgid "Select Shipped Date"
 msgstr "انتخاب تاریخ ارسال مرسوله"
 
-#: pepro-ultimate-invoice.php:448
+#: pepro-ultimate-invoice.php:461
 msgid "Shipped Date (Gregorian)"
 msgstr "تاریخ ارسال مرسوله (میلادی)"
 
-#: pepro-ultimate-invoice.php:454
+#: pepro-ultimate-invoice.php:467
 msgid "Shipping Track Serial"
 msgstr "کد رهگیری پستی مرسوله"
 
-#: pepro-ultimate-invoice.php:456
+#: pepro-ultimate-invoice.php:469
 msgid "Enter Shipping Track Serial"
 msgstr "کد رهگیری پستی را وارد کنید"
 
-#: pepro-ultimate-invoice.php:460
+#: pepro-ultimate-invoice.php:473
 msgid "Customer Signature"
 msgstr "امضای مشتری"
 
-#: pepro-ultimate-invoice.php:502 pepro-ultimate-invoice.php:1149
+#: pepro-ultimate-invoice.php:502 pepro-ultimate-invoice.php:1116
 msgctxt "order-page"
 msgid "View Invoice"
 msgstr "دریافت فاکتور"
 
-#: pepro-ultimate-invoice.php:505 pepro-ultimate-invoice.php:1153
+#: pepro-ultimate-invoice.php:505 pepro-ultimate-invoice.php:1120
 msgctxt "order-page"
 msgid "PDF Invoice"
-msgstr "فاکتور پی‌دی‌اف"
+msgstr "فاکتور PDF"
 
 #: pepro-ultimate-invoice.php:527
 msgid "Page {PAGENO} / {nbpg}"
@@ -2095,194 +2183,189 @@ msgctxt "wc-orders"
 msgid "Shipping tracking Serial:"
 msgstr "کد رهگیری مرسوله:"
 
-#: pepro-ultimate-invoice.php:709
+#: pepro-ultimate-invoice.php:708
 #, php-format
 msgctxt "theme-name"
 msgid "%1$s — by %2$s"
 msgstr "%1$s توسط %2$s"
 
-#: pepro-ultimate-invoice.php:759
+#: pepro-ultimate-invoice.php:757
 msgid "Select The Date Product Shipped"
 msgstr "تاریخی که مرسوله ارسال شد را مشخص کنید"
 
-#: pepro-ultimate-invoice.php:760
+#: pepro-ultimate-invoice.php:758
 msgid "Clear"
 msgstr "پاک کردن"
 
-#: pepro-ultimate-invoice.php:816
-msgctxt "wc-orders-popup"
-msgid "Invoice Options"
-msgstr "گزینه های فاکتور"
-
-#: pepro-ultimate-invoice.php:820
+#: pepro-ultimate-invoice.php:811
 msgid "Use Advanced Options?"
 msgstr "مشاهده گزینه های حرفه ای؟"
 
-#: pepro-ultimate-invoice.php:824
+#: pepro-ultimate-invoice.php:815
 msgid "Force Use theme"
 msgstr "اجبار به استفاده از قالب زیر برای فاکتور"
 
-#: pepro-ultimate-invoice.php:830
+#: pepro-ultimate-invoice.php:821
 msgid "Primary, Secondary and Tertiary Colors"
 msgstr "رنگ بندی قالب فاکتور"
 
-#: pepro-ultimate-invoice.php:842
+#: pepro-ultimate-invoice.php:833
 msgid "Load colors from Schemes"
 msgstr "بارگیری از پالت رنگی"
 
-#: pepro-ultimate-invoice.php:848
+#: pepro-ultimate-invoice.php:839
 msgctxt "wc-orders-popup"
 msgid "Reset Advanced Options to default"
 msgstr "بازگردانی تنظیمات حرفه ای به پیشفرض"
 
-#: pepro-ultimate-invoice.php:848
+#: pepro-ultimate-invoice.php:839
 msgctxt "wc-orders-popup"
 msgid "Reset"
 msgstr "ریست"
 
-#: pepro-ultimate-invoice.php:863
+#: pepro-ultimate-invoice.php:854
 msgctxt "wc-orders-popup"
 msgid "View Order Inventory report"
 msgstr "مشاهده گزارش انبارداری"
 
-#: pepro-ultimate-invoice.php:867
+#: pepro-ultimate-invoice.php:858
 msgctxt "wc-orders-popup"
 msgid "View Packing Slip for shipping"
 msgstr "مشاهده برچسب پستی مرسوله"
 
-#: pepro-ultimate-invoice.php:871
+#: pepro-ultimate-invoice.php:862
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Customer"
 msgstr "ایمیل فاکتور به مشتری"
 
-#: pepro-ultimate-invoice.php:875
+#: pepro-ultimate-invoice.php:866
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Shop Managers"
 msgstr "ایمیل فاکتور به مدیران فروشگاه"
 
-#: pepro-ultimate-invoice.php:879
+#: pepro-ultimate-invoice.php:870
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Custom List"
 msgstr "ایمیل فاکتور به آدرس های منتخب"
 
-#: pepro-ultimate-invoice.php:883
+#: pepro-ultimate-invoice.php:874
 msgctxt "wc-orders-popup"
 msgid "Edit User Unique Identification Number"
 msgstr "ویرایش کدملی مشتری"
 
-#: pepro-ultimate-invoice.php:884
+#: pepro-ultimate-invoice.php:875
 msgctxt "wc-orders-popup"
 msgid "Edit User UIN"
 msgstr "ویرایش کدملی"
 
-#: pepro-ultimate-invoice.php:887
+#: pepro-ultimate-invoice.php:878
 msgctxt "wc-orders-popup"
 msgid "Edit transaction ID"
 msgstr "ویرایش رسید پرداخت"
 
-#: pepro-ultimate-invoice.php:888
+#: pepro-ultimate-invoice.php:879
 msgctxt "wc-orders-popup"
 msgid "Edit Transaction ID"
 msgstr "ویرایش رسید پرداخت"
 
-#: pepro-ultimate-invoice.php:891
+#: pepro-ultimate-invoice.php:882
 msgctxt "wc-orders-popup"
 msgid "Edit shipped date"
 msgstr "ویرایش تاریخ ارسال"
 
-#: pepro-ultimate-invoice.php:892
+#: pepro-ultimate-invoice.php:883
 msgctxt "wc-orders-popup"
 msgid "Edit Shipped Date"
 msgstr "ویرایش تاریخ ارسال"
 
-#: pepro-ultimate-invoice.php:895
+#: pepro-ultimate-invoice.php:886
 msgctxt "wc-orders-popup"
 msgid "Edit shipping track serial"
 msgstr "ویرایش کد رهگیری پستی"
 
-#: pepro-ultimate-invoice.php:896
+#: pepro-ultimate-invoice.php:887
 msgctxt "wc-orders-popup"
 msgid "Edit Shipping Track Serial"
 msgstr "ویرایش کد رهگیری پستی"
 
-#: pepro-ultimate-invoice.php:899
+#: pepro-ultimate-invoice.php:890
 msgctxt "wc-orders-popup"
 msgid "Edit customer signature image"
 msgstr "ویرایش امضای مشتری"
 
-#: pepro-ultimate-invoice.php:900
+#: pepro-ultimate-invoice.php:891
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Signature"
 msgstr "ویرایش امضای مشتری"
 
-#: pepro-ultimate-invoice.php:903
+#: pepro-ultimate-invoice.php:894
 msgctxt "wc-orders-popup"
 msgid "Edit customer provided note"
 msgstr "ویرایش یادداشت مشتری"
 
-#: pepro-ultimate-invoice.php:904
+#: pepro-ultimate-invoice.php:895
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Note"
 msgstr "ویرایش یادداشت مشتری"
 
-#: pepro-ultimate-invoice.php:907
+#: pepro-ultimate-invoice.php:898
 msgctxt "wc-orders-popup"
 msgid "Edit shop manager provided note"
 msgstr "ویرایش یادداشت مدیر فروشگاه"
 
-#: pepro-ultimate-invoice.php:908
+#: pepro-ultimate-invoice.php:899
 msgctxt "wc-orders-popup"
 msgid "Edit Shop manager Note"
 msgstr "ویرایش یادداشت مدیر فروشگاه"
 
-#: pepro-ultimate-invoice.php:929 pepro-ultimate-invoice.php:933
+#: pepro-ultimate-invoice.php:920 pepro-ultimate-invoice.php:924
 msgid "Shop Manager provided note:"
 msgstr "یادداشت مدیر فروشگاه:"
 
-#: pepro-ultimate-invoice.php:934
+#: pepro-ultimate-invoice.php:925
 msgid "Enter Shop Manager provided note here"
 msgstr "یادداشت مدیر فروشگاه را اینجا وارد کنید"
 
-#: pepro-ultimate-invoice.php:985 pepro-ultimate-invoice.php:986
+#: pepro-ultimate-invoice.php:978 pepro-ultimate-invoice.php:979
 msgctxt "wc-order-screen"
 msgid "Unique Identification Number"
 msgstr "کدملی مشتری"
 
-#: pepro-ultimate-invoice.php:1032
+#: pepro-ultimate-invoice.php:1024
 msgid "Back to Dashboard"
 msgstr "بازگشت به پیشخوان وردپرس"
 
-#: pepro-ultimate-invoice.php:1039
+#: pepro-ultimate-invoice.php:1031
 msgid "Switch Dark-mode"
 msgstr "حالت تیره"
 
-#: pepro-ultimate-invoice.php:1046
+#: pepro-ultimate-invoice.php:1038
 msgid "WC Orders"
 msgstr "سفارشات"
 
-#: pepro-ultimate-invoice.php:1087 pepro-ultimate-invoice.php:1177
+#: pepro-ultimate-invoice.php:1077 pepro-ultimate-invoice.php:1141
 msgid "Pre-buy Invoice"
 msgstr "پیش‌فاکتور"
 
-#: pepro-ultimate-invoice.php:1092
+#: pepro-ultimate-invoice.php:1082
 #, php-format
 msgid "Pre-buy Invoice (%s)"
 msgid_plural "Pre-buy Invoices (%s)"
 msgstr[0] "پیش‌فاکتور (%s)"
 msgstr[1] "پیش‌فاکتور (%s)"
 
-#: pepro-ultimate-invoice.php:1197
+#: pepro-ultimate-invoice.php:1163
 msgctxt "js-cart-page"
 msgid "Unauthorized Access!"
-msgstr "عدم دسترسی !"
+msgstr "شما دسترسی لازم را ندارید !"
 
-#: pepro-ultimate-invoice.php:1198 pepro-ultimate-invoice.php:1206
-#: pepro-ultimate-invoice.php:2011
+#: pepro-ultimate-invoice.php:1164 pepro-ultimate-invoice.php:1171
+#: pepro-ultimate-invoice.php:2063
 msgctxt "js-cart-page"
 msgid "Okay"
 msgstr "باشه"
 
-#: pepro-ultimate-invoice.php:1199
+#: pepro-ultimate-invoice.php:1165
 #, php-format
 msgctxt "js-cart-page"
 msgid ""
@@ -2292,315 +2375,325 @@ msgstr ""
 "متاسفیم اما این قابلیت برای کاربران عضو وبسایت میباشد. <br>لطفا %sعضو شوید / "
 "وارد شوید%s."
 
-#: pepro-ultimate-invoice.php:1212
+#: pepro-ultimate-invoice.php:1176
 msgid "Get Pre-buy Invoice"
 msgstr "دریافت پیش‌فاکتور"
 
-#: pepro-ultimate-invoice.php:1249 pepro-ultimate-invoice.php:1250
-#: pepro-ultimate-invoice.php:2059
+#: pepro-ultimate-invoice.php:1214 pepro-ultimate-invoice.php:1215
 msgid "Setting"
 msgstr "تنظیمات"
 
-#: pepro-ultimate-invoice.php:1255 pepro-ultimate-invoice.php:1256
+#: pepro-ultimate-invoice.php:1220 pepro-ultimate-invoice.php:1221
 msgid "Support"
 msgstr "پشتیبانی این محصول"
 
-#: pepro-ultimate-invoice.php:1456
+#: pepro-ultimate-invoice.php:1297
+#, php-format
+msgctxt "wc-setting"
+msgid "Invoice #%s — "
+msgstr "فاکتور #%s — "
+
+#: pepro-ultimate-invoice.php:1504
 msgid "Shortcode and Hooks for Developers"
 msgstr "شورت‌کد و هوک ها برای توسعه دهندگان"
 
-#: pepro-ultimate-invoice.php:1460
+#: pepro-ultimate-invoice.php:1509
 msgctxt "setting-general"
 msgid "WordPress Shortcode"
 msgstr "شورت‌کد های وردپرس"
 
-#: pepro-ultimate-invoice.php:1466
+#: pepro-ultimate-invoice.php:1513
 msgctxt "setting-general"
 msgid "WordPress Action Hooks"
 msgstr "اکشن هوک های وردپرس"
 
-#: pepro-ultimate-invoice.php:1477
+#: pepro-ultimate-invoice.php:1522
 msgctxt "setting-general"
 msgid "WordPress Filter Hooks"
 msgstr "فیلتر هوک های وردپرس"
 
-#: pepro-ultimate-invoice.php:1487
+#: pepro-ultimate-invoice.php:1530
 msgctxt "setting-general"
 msgid "jQuery Triggering Hooks"
 msgstr "هوک های تریگر جی‌کوئری"
 
-#: pepro-ultimate-invoice.php:1522
+#: pepro-ultimate-invoice.php:1564
 #, php-format
 msgctxt "footer-copyright"
 msgid "Thanks for using %s products."
 msgstr "بابت استفاده از محصولات %s از شما سپاسگزاریم."
 
-#: pepro-ultimate-invoice.php:1522
+#: pepro-ultimate-invoice.php:1564
 msgid "Pepro Dev"
 msgstr "گروه برنامه‏نویسی پپرو"
 
-#: pepro-ultimate-invoice.php:1523
+#: pepro-ultimate-invoice.php:1567
 #, php-format
 msgctxt "footer-copyright"
 msgid "%s — Version %s"
 msgstr "%s — نسخه %s"
 
-#: pepro-ultimate-invoice.php:1538
+#: pepro-ultimate-invoice.php:1583
 msgid "Unauthorized Access Denied!"
 msgstr "دسترسی غیرمجاز!"
 
-#: pepro-ultimate-invoice.php:1556
+#: pepro-ultimate-invoice.php:1601
 msgid "Products successfully added to cart!"
 msgstr "محصولات به سبد خرید اضافه شدند!"
 
-#: pepro-ultimate-invoice.php:1614
+#: pepro-ultimate-invoice.php:1658
 #, php-format
 msgid "Invoice Created by %s%s"
 msgstr "فاکتور توسط %s ایجاد شد. %s"
 
 #. Author of the plugin/theme
-#: pepro-ultimate-invoice.php:1614
+#: pepro-ultimate-invoice.php:1658 pepro-ultimate-invoice.php:2183
 msgid "Pepro Dev. Group"
-msgstr "تیم برنامه ‏نویسی پپرو"
+msgstr "تیم توسعه پپرو (Pepro Dev)"
 
-#: pepro-ultimate-invoice.php:1624
+#: pepro-ultimate-invoice.php:1670
 msgid "Request success!"
 msgstr "با موفقیت انجام شد!"
 
-#: pepro-ultimate-invoice.php:1632
+#: pepro-ultimate-invoice.php:1679
 msgid "No valid order"
 msgstr "سفارش معتبری یافت نشد"
 
-#: pepro-ultimate-invoice.php:1677
+#: pepro-ultimate-invoice.php:1725
 #, php-format
 msgid "%d emails"
 msgstr "%d ایمیل"
 
-#: pepro-ultimate-invoice.php:1680
+#: pepro-ultimate-invoice.php:1728
 #, php-format
 msgid "Sending email to <br><strong>%s</strong><br>was successfully done"
 msgstr "فاکتور با موفقیت برای <br><strong>%s</strong><br> ارسال شد"
 
-#: pepro-ultimate-invoice.php:1682
+#: pepro-ultimate-invoice.php:1730
 #, php-format
 msgid "Error sending email to <br><strong>%s</strong>"
 msgstr "متاسفانه در ارسال ایمیل به<br><strong>%s</strong><br>مشکلی پیش آمد"
 
-#: pepro-ultimate-invoice.php:1685
+#: pepro-ultimate-invoice.php:1733
 msgid "No valid email found for this order"
 msgstr "متاسفانه آدرس ایمیل مشتری برای این سفارش ثبت نشده است"
 
-#: pepro-ultimate-invoice.php:1694
+#: pepro-ultimate-invoice.php:1742
 msgid "Error fetching shop managers."
 msgstr "خطا در بارگیری لیست مدیران فروشگاه."
 
-#: pepro-ultimate-invoice.php:1701
+#: pepro-ultimate-invoice.php:1749 pepro-ultimate-invoice.php:1761
 msgid "Saved successfully!"
 msgstr "تنظیمات با موفقیت ثبت گردیدند!"
 
-#: pepro-ultimate-invoice.php:1756
+#: pepro-ultimate-invoice.php:1817
 #, php-format
 msgctxt "required-plugin"
 msgid "%1$s needs %2$s in order to function"
 msgstr "ماژول %1$s به افزونه %2$s نیاز دارد. لطفا نصب کنید"
 
-#: pepro-ultimate-invoice.php:1758
+#: pepro-ultimate-invoice.php:1820
 msgctxt "required-plugin"
 msgid "WooCommerce"
 msgstr "ووکامرس"
 
-#: pepro-ultimate-invoice.php:1883
+#: pepro-ultimate-invoice.php:1934
 msgid "All Categories"
 msgstr "همه دسته بندی ها"
 
-#: pepro-ultimate-invoice.php:1911 pepro-ultimate-invoice.php:1912
-#: pepro-ultimate-invoice.php:2021
+#: pepro-ultimate-invoice.php:1962 pepro-ultimate-invoice.php:1963
+#: pepro-ultimate-invoice.php:2073
 msgctxt "js-i18n"
 msgid "SKU:"
 msgstr "شناسه:"
 
-#: pepro-ultimate-invoice.php:1940
+#: pepro-ultimate-invoice.php:1991
 msgid "Add to cart"
 msgstr "افزودن به کارت"
 
-#: pepro-ultimate-invoice.php:1969
+#: pepro-ultimate-invoice.php:2019
 msgid "Filter Products by Category"
 msgstr "فیلتر محصولات براساس دسته بندی"
 
-#: pepro-ultimate-invoice.php:1975
+#: pepro-ultimate-invoice.php:2025
 msgid "Sort and Search shown products"
 msgstr "مرتب سازی و جستجو میان محصولات"
 
-#: pepro-ultimate-invoice.php:1977
+#: pepro-ultimate-invoice.php:2027
 msgid "Search among current shown products"
 msgstr "جستجو بین محصولات نمایش داده شده"
 
-#: pepro-ultimate-invoice.php:1980
+#: pepro-ultimate-invoice.php:2030
 msgid "Sort By: "
 msgstr "مرتب سازی براساس: "
 
-#: pepro-ultimate-invoice.php:1981
+#: pepro-ultimate-invoice.php:2031
 msgid "Alphabetically"
 msgstr "نام"
 
-#: pepro-ultimate-invoice.php:1982
+#: pepro-ultimate-invoice.php:2032
 msgid "Popularity"
 msgstr "محبوبیت"
 
-#: pepro-ultimate-invoice.php:1983
+#: pepro-ultimate-invoice.php:2033
 msgid "Total Sales"
 msgstr "تعداد فروش"
 
-#: pepro-ultimate-invoice.php:1984
+#: pepro-ultimate-invoice.php:2034
 msgid "Latest"
 msgstr "جدیدترین"
 
-#: pepro-ultimate-invoice.php:1985
+#: pepro-ultimate-invoice.php:2035
 msgid "Price (ASC)"
 msgstr "قیمت (صعودی)"
 
-#: pepro-ultimate-invoice.php:1986
+#: pepro-ultimate-invoice.php:2036
 msgid "Price (DESC)"
 msgstr "قیمت (نزولی)"
 
-#: pepro-ultimate-invoice.php:1993
+#: pepro-ultimate-invoice.php:2043
 msgid "Your cart is empty!"
 msgstr "سبد خرید شما خالی است!"
 
-#: pepro-ultimate-invoice.php:1995
+#: pepro-ultimate-invoice.php:2045
 msgid "Nothing found!"
 msgstr "محصولی پیدا نشد!"
 
-#: pepro-ultimate-invoice.php:2013
+#: pepro-ultimate-invoice.php:2065
 msgctxt "js-i18n"
 msgid "Added to cart"
 msgstr "به سبد اضافه شد"
 
-#: pepro-ultimate-invoice.php:2014
+#: pepro-ultimate-invoice.php:2066
 msgctxt "js-i18n"
 msgid "THIS IS AN ERROR!"
 msgstr "خطایی رخ داده!"
 
-#: pepro-ultimate-invoice.php:2015
+#: pepro-ultimate-invoice.php:2067
 msgctxt "js-i18n"
 msgid "Your basket is empty!"
 msgstr "سبد خرید شما خالی است!"
 
-#: pepro-ultimate-invoice.php:2016
+#: pepro-ultimate-invoice.php:2068
 msgctxt "js-i18n"
 msgid "Total Items:"
 msgstr "مجموع محصولات:"
 
-#: pepro-ultimate-invoice.php:2017
+#: pepro-ultimate-invoice.php:2069
 msgctxt "js-i18n"
 msgid "Total Products:"
 msgstr "تعداد محصولات:"
 
-#: pepro-ultimate-invoice.php:2018
+#: pepro-ultimate-invoice.php:2070
 msgctxt "js-i18n"
 msgid "There is an unknown error and we are unable to proccess your request"
 msgstr ""
 "این یک خطای پیش بینی نشده است و متاسفانه سیستم قادر به انجام وظیفه نمیباشد"
 
-#: pepro-ultimate-invoice.php:2019
+#: pepro-ultimate-invoice.php:2071
 msgctxt "js-i18n"
 msgid "Remove from cart"
 msgstr "حذف از سبد خرید"
 
-#: pepro-ultimate-invoice.php:2020
+#: pepro-ultimate-invoice.php:2072
 msgctxt "js-i18n"
 msgid "Clear cart"
 msgstr "پاکسازی سبد خرید"
 
-#: pepro-ultimate-invoice.php:2022
+#: pepro-ultimate-invoice.php:2074
 msgctxt "js-i18n"
 msgid "Are you sure you want to remove this item from basket?"
 msgstr "آیا مطمئن هستید میخواهید این محصول را از سبد خرید حذف کنید؟"
 
-#: pepro-ultimate-invoice.php:2023
+#: pepro-ultimate-invoice.php:2075
 msgctxt "js-i18n"
 msgid "Are you sure you want to remove all items from basket?"
 msgstr "آیا مطمئن هستید میخواهید تمامی محصولات را از سبد خرید حذف کنید؟"
 
-#: pepro-ultimate-invoice.php:2024
+#: pepro-ultimate-invoice.php:2076
 msgctxt "js-i18n"
 msgid "Removing"
 msgstr "حذف"
 
-#: pepro-ultimate-invoice.php:2025
+#: pepro-ultimate-invoice.php:2077
 msgctxt "js-i18n"
 msgid "Clear basket"
 msgstr "پاکسازی سبد خرید"
 
-#: pepro-ultimate-invoice.php:2026
+#: pepro-ultimate-invoice.php:2078
 msgctxt "js-i18n"
 msgid "Instant Shopping Basket Upated!"
 msgstr "سبد خرید شما بروز رسانی شد!"
 
-#: pepro-ultimate-invoice.php:2027
+#: pepro-ultimate-invoice.php:2079
 msgctxt "js-i18n"
 msgid "Yes"
 msgstr "بله"
 
-#: pepro-ultimate-invoice.php:2028
+#: pepro-ultimate-invoice.php:2080
 msgctxt "js-i18n"
 msgid "No"
 msgstr "خیر"
 
-#: pepro-ultimate-invoice.php:2030
+#: pepro-ultimate-invoice.php:2082
 msgctxt "js-i18n"
 msgid "Proceed to Checkout / Invoice"
 msgstr "ثبت سفارش"
 
-#: pepro-ultimate-invoice.php:2049
-msgid "Quick Shop"
-msgstr "خرید سریع"
+#: pepro-ultimate-invoice.php:2101 pepro-ultimate-invoice.php:2114
+#: pepro-ultimate-invoice.php:2122 pepro-ultimate-invoice.php:2128
+msgid "Design Options"
+msgstr "تنظیمات طراحی"
 
-#: pepro-ultimate-invoice.php:2050
-msgid "One-page Purchase"
-msgstr "خرید و دریافت پیش‌فاکتور آنی در یک صفحه"
-
-#: pepro-ultimate-invoice.php:2056
-msgid "Pepro Elements"
-msgstr "ویجت های پپرو"
-
-#: pepro-ultimate-invoice.php:2068
+#: pepro-ultimate-invoice.php:2110
 msgid "Element ID"
 msgstr "آی دی المان"
 
-#: pepro-ultimate-invoice.php:2071
+#: pepro-ultimate-invoice.php:2113
 #, php-format
 msgid ""
 "Enter element ID (Note: make sure it is unique and valid according to %sW3C "
 "Specification%s)."
 msgstr "افزودن آی دی (براساس استاندارد %sW3C Specification%s)"
 
-#: pepro-ultimate-invoice.php:2072 pepro-ultimate-invoice.php:2080
-#: pepro-ultimate-invoice.php:2086
-msgid "Design Options"
-msgstr "تنظیمات طراحی"
-
-#: pepro-ultimate-invoice.php:2076
+#: pepro-ultimate-invoice.php:2118
 msgid "Extra class name"
 msgstr "نام کلاس اضافی"
 
-#: pepro-ultimate-invoice.php:2079
+#: pepro-ultimate-invoice.php:2121
 msgid ""
 "If you wish to style particular content element differently, then use this "
 "field to add a class name and then refer to it in your css file."
 msgstr "افزودن کلاس اضافی به نگه دارنده این ویجت."
 
-#: pepro-ultimate-invoice.php:2084
+#: pepro-ultimate-invoice.php:2126
 msgid "CSS box"
 msgstr "تنظیمات سی اس اس"
 
-#: pepro-ultimate-invoice.php:2286
+#: pepro-ultimate-invoice.php:2134 pepro-ultimate-invoice.php:2151
+msgid "Quick Shop"
+msgstr "خرید سریع"
+
+#: pepro-ultimate-invoice.php:2135 pepro-ultimate-invoice.php:2152
+msgid "One-page Purchase"
+msgstr "خرید و دریافت پیش‌فاکتور آنی در یک صفحه"
+
+#: pepro-ultimate-invoice.php:2139
+msgid "Pepro Elements"
+msgstr "ویجت های پپرو"
+
+#: pepro-ultimate-invoice.php:2183
+#, php-format
+msgid "Proudly Developed by %s"
+msgstr "با افتخار توسعه یافته بدست %s"
+
+#: pepro-ultimate-invoice.php:2365
 #, php-format
 msgctxt "setting-page"
 msgid "Enter %s"
 msgstr "%s را وارد کنید"
 
-#: pepro-ultimate-invoice.php:2310
+#: pepro-ultimate-invoice.php:2389
 #, php-format
 msgctxt "setting-page"
 msgid "Choose %s"
@@ -2625,160 +2718,10 @@ msgid "https://pepro.dev/"
 msgstr "https://pepro.dev/"
 
 #~ msgctxt "wc-setting"
-#~ msgid "Show current regular price"
-#~ msgstr "نمایش قیمت واقعی فعلی"
+#~ msgid "Extras"
+#~ msgstr "جزئیات"
 
-#~ msgctxt "wc-setting"
-#~ msgid "Show current sale price"
-#~ msgstr "نمایش قیمت تخفیفی فعلی"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show current regular & sale price"
-#~ msgstr "نمایش قیمت واقعی و تخفیفی فعلی"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show actual price"
-#~ msgstr "نمایش قیمت محاسبه شده در فاکتور"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Hide Price in reports"
-#~ msgstr "مخفی کردن قیمت در گزارشات"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show only regular price"
-#~ msgstr "نمایش قیمت واقعی"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show only sale price"
-#~ msgstr "نمایش قیمت تخفیفی"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show both regular and sale price"
-#~ msgstr "نمایش قیمت واقعی و تخفیفی با هم"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show regular/sale price"
-#~ msgstr "نمایش قیمت اصلی قابل محاسبه در فاکتور"
-
-#~ msgid "Switch Color Scheme"
-#~ msgstr "حالت تیره / روشن"
-
-#~ msgid "Settings"
-#~ msgstr "تنظیمات"
-
-#~ msgid "Pepro Co"
-#~ msgstr "تیم برنامه ‏نویسی پپرو"
-
-#~ msgid "m"
-#~ msgstr "متر"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show Invoices QR Code"
-#~ msgstr "نمایش کیوآر کد فاکتور"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Theme"
-#~ msgstr "قالب"
-
-#~ msgid "Documentation"
-#~ msgstr "مستندات"
-
-#~ msgid "Save setting"
-#~ msgstr "ذخیره تنظیمات"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Invoice Output for Shop Managers"
-#~ msgstr "خروجی فاکتور برای مدیران فروشگاه"
-
-#~ msgid "Error sending email to %s"
-#~ msgstr "متاسفانه در ارسال ایمیل به<br><strong>%s</strong><br>مشکلی پیش آمد"
-
-#~ msgctxt "wc-setting-js"
-#~ msgid "Email sent successfully to: "
-#~ msgstr "ایمیل با موفقیت ارسال شد به آدرس:"
-
-#~ msgctxt "wc-setting-js"
-#~ msgid "Email send failed!"
-#~ msgstr "ارسال ایمیل با مشکل مواجه شد!"
-
-#~ msgid "Instant Shop"
-#~ msgstr "صفحه خرید سریع"
-
-#~ msgid "Optional: You note for customer on order/invoice"
-#~ msgstr "اختیاری: یادداشت ادمین برای مشتریان روی سفارشات/فاکتور"
-
-#~ msgid "Optional: Your brad logo on invoices"
-#~ msgstr "اختیاری: آدرس لوگوی شما در فاکتور"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Allow Customers to use invoices"
-#~ msgstr "اجازه به مشتریان برای استفاده از فاکتور"
-
-#~ msgid "<p>Unauthorized Access!</p>"
-#~ msgstr "شما دسترسی کافی ندارید!"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Items"
-#~ msgstr "موارد نمایشی"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Automation"
-#~ msgstr "اتوماسیون"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Inventory Report Management"
-#~ msgstr "مدیریت گزارش انبارداری"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show 'Create Sender Postal Label' Button"
-#~ msgstr "قابلیت \"چاپ برچسب پستی\" برای فروشگاه"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Let shop manager create customer's postal label for shipping"
-#~ msgstr "به مدیران اجازه دهید برچسب پستی برای مرسولات چاپ کنند"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Show 'Create Recipient Postal Label' Button"
-#~ msgstr "قابلیت \"چاپ برچسب پستی\" برای مشتریان"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Let shop manager create recipient's postal label for shipping"
-#~ msgstr "به مدیران اجازه دهید برچسب پستی برای مرسولات چاپ کنند"
-
-#~ msgctxt "wc-setting"
-#~ msgid "HTML tags are allowed. You can add custom css from Misc. tab."
+#~ msgid ""
+#~ "[country], [province], [city], [address1], [address2]. Postcode: ([po_box])"
 #~ msgstr ""
-#~ "تگ های HTML مجاز هستند. برای افزودن کد CSS میتوانید از تب \"متفرقه\" اقدام "
-#~ "کنید."
-
-#~ msgctxt "wc-setting"
-#~ msgid "Use PDF Feature for Shop Managers"
-#~ msgstr "استفاده از قابلیت PDF برای مدیران فروشگاه"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Add 'GET PDF INVOICE' Button to HTML"
-#~ msgstr "افزودن دکمه \"دریافت PDF\" به HTML"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Use PDF Feature for Customers"
-#~ msgstr "استفاده از قابلیت PDF برای مشتریان"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Use A5 Paper size for PDF"
-#~ msgstr "استفاده از اندازه A5 برای PDF"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Check to use A5 Papers size in PDF or leave unchecked to use A4"
-#~ msgstr ""
-#~ "برای استفاده از اندازه A5 تیک بزنید و برای استفاده از اندازه A4 تیک را "
-#~ "بردارید"
-
-#~ msgctxt "wc-setting"
-#~ msgid "Orders statuses that User can Get Invoice"
-#~ msgstr "وضعیت هایی که کاربر میتواند فاکتور دریافت کند"
-
-#~ msgid "View Order HTML Invoice"
-#~ msgstr "مشاهده فاکتور HTML"
-
-#~ msgid "HTML Invoice"
-#~ msgstr "فاکتور HTML"
+#~ "[country]، [province]، [city]، [address1]، [address2]. کد پستی: ([po_box])"

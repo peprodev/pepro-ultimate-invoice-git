@@ -42,11 +42,11 @@ This plugin lets you to Generate Awesome Invoices for WooCommerce orders and:
 - Added: Showing *Order item meta* after order item description
 - Added: Sort order items by get_items_sorting
 - Dev: Added Integration Section in Settings
-- Fix: Discount precent problem
-- Fix: Showing live price instead of actual order cost
-- Fix: Invoice Access problem
-- Fix: Default setting values changed
-- Fix: Clearing Setting on Uninstall problem
+- Fixed: Discount precent problem
+- Fixed: Showing live price instead of actual order cost
+- Fixed: Invoice Access problem
+- Fixed: Default setting values changed
+- Fixed: Clearing Setting on Uninstall problem
 
 
 
@@ -153,17 +153,37 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
-= 1.3.5 =
-- Fix: Changed textdomain
+= Version 1.3.5 / 2021-07-12 / 1400-04-21 =
+- Fixed: Changed textdomain to pepro-ultimate-invoice
+- Fixed: 'Store' Address was not properly translated
+- Fixed: 'Customer' Address was not properly translated
+- Fixed: Default template for RTL/Persian sites was not 'Default-RTL'
+- Fixed: Wpbakery Page Builder widget not showing
+- Fixed: Quick Buy feature would not work when Wpbakery Page Builder is disabled
+- Added: Backup / Export & Import Settings as JSON
+- Added: Option to Revert Settings to Default, Clear out Settings, Re-set Settings based on default values
+- Added: More default Options based on site Locale
+- Added: Export/Import Settings as JSON data
+- Added: Export Settings as PHP Script to use in your child theme for customers
+- Added: `pepro_ultimate_invoice_default_options` filter hook to alter default settings fields
+- Added: `pepro_ultimate_invoice_reset_options_done` action hook to alter default settings fields
+- Dev: Upgraded font-awesome to 5.15.3
+- Dev: Changed function which returned WooCommerce store base-address
+- Dev: new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-reset !DO NOT USE IF NOT SURE!
+- Dev: new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-clear !DO NOT USE IF NOT SURE!
+- Dev: new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-set
+- Dev: new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-get
+- Dev: Changed Setting panel javascript localize_script object as `_peproUltimateInvoice`
+- Removed: function `clear_out_settings`, use `change_default_settings` instead
 
 = 1.3.4 =
-- Fix: Changed Default Invoice Access setting to prevent Pre-invoice 403 error
+- Fixed: Changed Default Invoice Access setting to prevent Pre-invoice 403 error
 - Dev: added `puiw_printinvoice_check_user_has_access` filter Hook to alter Invoice Access
 - Dev: Invoice Access function is more relible now
 
 = 1.3.2 =
-- Fix: Sorting problems
-- Fix: Error Create Inventory and Packing Slip Reports
+- Fixed: Sorting problems
+- Fixed: Error Create Inventory and Packing Slip Reports
 
 = 1.3.0 =
 - Added: Fully Compatibility with [WPC Product Bundles by WPClever](https://wpclever.net/downloads/product-bundles)
@@ -194,13 +214,13 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 - Dev: Added puiw_order_items filter hook to manipulate order items
 - Dev: Added Integration Section in Settings
 - Dev: Added Comment for print invoice class functions
-- Fix: Discount precent problem
-- Fix: Showing live price instead of actual order cost
-- Fix: Invoice Access problem
-- Fix: Default setting values changed
-- Fix: Clearing Setting on Uninstall problem
-- Fix: Translation & ReadMe
-- Fix: Font max size changed from 30 to 99
+- Fixed: Discount precent problem
+- Fixed: Showing live price instead of actual order cost
+- Fixed: Invoice Access problem
+- Fixed: Default setting values changed
+- Fixed: Clearing Setting on Uninstall problem
+- Fixed: Translation & ReadMe
+- Fixed: Font max size changed from 30 to 99
 - Thanks to M. Mohsen Sobati for feature requests & reports
 
 = 1.2.5 =
@@ -317,62 +337,21 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
-= 1.3.4 =
-- Fix: Changed Default Invoice Access setting to prevent Pre-invoice 403 error
-- Dev: added `puiw_printinvoice_check_user_has_access` filter Hook to alter Invoice Access
-- Dev: Invoice Access function is more relible now
-
-= 1.3.2 =
-- Fix: Sorting problems
-- Fix: Error Create Inventory and Packing Slip Reports
-
-= 🔥 Version 1.3.0 🔥 (2021-04-24 | 1400-02-04) =
-- Added: Fully Compatibility with WPC Product Bundles by WPClever (https://wpclever.net/downloads/product-bundles)
-- Added: Fully Compatibility with WooCommerce Extra Product Options by ThemeComplete (https://codecanyon.net/item/woocommerce-extra-product-options/7908619)
-- Added: Fully Compatibility with *Any Standard* plugins that adds and shows Order item metas
-- Added: Showing *Order item meta* after order item description
-- Added: Sort order items by get_items_sorting
-- Dev: Added get_items_sorting public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_items_sorting filter hook
-- Dev: Added puiw_order_items_sort_by filter hook to change items sorting (PID, ID, SKU, QTY, NAME, PRICE, TOTAL, WEIGHT, SUBTOTAL, SUBTOTAL_TAX)
-- Dev: Added puiw_order_items_sort_desc filter hook to change items ordering from ASC to DESC
-- Dev: Added puiw_order_items_sort_by_force filter hook to hook into items ordering by your choice
-- Dev: Added get_woosb_show_bundles public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_show_bundles_subtitle filter hook
-- Dev: Added get_woosb_show_bundles_subtitle public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_show_bundles_subtitle filter hook
-- Dev: Added get_woosb_show_bundled_products public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_show_bundled_products filter hook
-- Dev: Added get_woosb_show_bundled_subtitle public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_show_bundled_subtitle filter hook
-- Dev: Added get_woosb_show_bundled_hierarchy public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_show_bundled_hierarchy filter hook
-- Dev: Added get_woosb_bundled_subtitle_prefix public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_bundled_subtitle_prefix filter hook
-- Dev: Added get_woosb_bundles_subtitle_prefix public function in PeproUltimateInvoice_Template
-- Dev: Added puiw_get_woosb_bundles_subtitle_prefix filter hook
-- Dev: Added puiw_invoice_item_extra_classes filter hook for invoice items tr html el. class
-- Dev: Added puiw_order_items filter hook to manipulate order items
-- Dev: Added Integration Section in Settings
-- Dev: Added Comment for print invoice class functions
-- Fix: Discount precent problem
-- Fix: Showing live price instead of actual order cost
-- Fix: Invoice Access problem
-- Fix: Default setting values changed
-- Fix: Clearing Setting on Uninstall problem
-- Fix: Translation & ReadMe
-- Fix: Font max size changed from 30 to 99
-- Thanks to M. Mohsen Sobati for feature requests & reports
-
-= 1.2.5 =
-- Fixed Jalali Date Converter incompatibility with some themes
-- Fixed Jalali Datepicker and Persian WooCommerce incompatibility
-
-= 1.2.4 =
-- Fixed Item Wrong Price display in some cases
-- Fixed Using Current Currency instead of Order Currency
-- Fixed Theme Select in Advanced Invoice print from Orders metabox
-- Fixed Color-Scheme Select in Advanced Invoice print from Orders metabox
-- Fixed Color-Scheme Select in Setting > Theming section
-- Fixed Using Default PDF Invoice template while Advanced Invoice printing
-- Fixed PDF Generation link in HTML invoices
+= Version 1.3.5 / 2021-07-12 / 1400-04-21 =
+- Fixed: Changed textdomain
+- Fixed: Store Address was not properly translated
+- Fixed: Customer Address was not properly translated
+- Fixed: Default template for RTL/Persian sites is the Default-RTL
+- Fixed: Wpbakery Page Builder widget not showing
+- Fixed: Quick Buy feature would not work when Wpbakery Page Builder is disabled
+- Added: Backup / Export & Import Settings as JSON
+- Added: Option to Revert Settings to Default, Clear out Settings, Re-set Settings based on default values
+- Dev: Added `pepro_ultimate_invoice_default_options` filter hook to alter default settings fields
+- Dev: Added `pepro_ultimate_invoice_reset_options_done` action hook to alter default settings fields
+- Dev: Upgraded font-awesome to 5.15.3
+- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-reset !DO NOT USE IF NOT SURE!
+- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-clear !DO NOT USE IF NOT SURE!
+- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-set
+- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-get
+- Dev: Removed function `clear_out_settings`, use `change_default_settings("RESET")` instead
+- Dev: Changed Setting panel javascript localize_script object as `_peproUltimateInvoice`

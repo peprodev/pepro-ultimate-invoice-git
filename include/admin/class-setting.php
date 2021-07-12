@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/07/09 12:38:34
+# @Last modified time: 2021/07/12 22:23:28
 
 defined("ABSPATH") or die("Pepro Ultimate Invoice :: Unauthorized Access!");
 
@@ -48,35 +48,35 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
         }
 
       }
-      public function debug_enabled($true = true,$false = false)
+      public function debugEnabled($debug_true = true, $debug_false = false)
       {
-        return $true;
-        // return defined("WP_DEBUG") && true == WP_DEBUG ? $true : $false;
+          return apply_filters("puiw_debug_enabled", $debug_true);
       }
       public function get_sections()
       {
-        echo get_option( "puiw_dark_mode", "no" ) == "no" ? "" : "<script>
+        echo get_option( "puiw_dark_mode", "no") === "yes" ? "<script>
           document.getElementsByTagName('html')[0].classList.add('dark');
-        </script>";
+        </script>" : "";
         $this->wp_enqueue_scripts();
         // prevent gap between page load css and page first byte transfer
         $ext = "@font-face { font-family: 'bodyfont'; font-style: normal; font-weight: 400; src: url('".PEPROULTIMATEINVOICE_URL."/assets/css/96594ad4.woff2') format('woff2'); }";
-        $css = file_get_contents(PEPROULTIMATEINVOICE_DIR . '/assets/admin/wc_setting' . $this->debug_enabled(".css",".min.css"));
+        $css = file_get_contents(PEPROULTIMATEINVOICE_DIR . '/assets/admin/wc_setting' . $this->debugEnabled(".css",".min.css"));
         $css = str_replace("{dir}", PEPROULTIMATEINVOICE_URL."/assets/" , $css);
         echo "<style>$ext $css</style>";
         $sections = array(
-          'general'   =>  _x("Store Details",     "wc-setting", $this->td),
-          'items'     =>  _x("Invoice Items",     "wc-setting", $this->td),
-          'pdf'       =>  _x("PDF Invoice",       "wc-setting", $this->td),
-          'theme'     =>  _x("Theming",           "wc-setting", $this->td),
-          'report'    =>  _x("Inventory",         "wc-setting", $this->td),
-          'email'     =>  _x("Email",             "wc-setting", $this->td),
-          'color'     =>  _x("Color Schemes",     "wc-setting", $this->td),
-          'barcode'   =>  _x("Barcode & QR",      "wc-setting", $this->td),
-          'privacy'   =>  _x("Privacy",           "wc-setting", $this->td),
-          'extras'    =>  _x("Extras",            "wc-setting", $this->td),
-          'misc'      =>  _x("Misc.",             "wc-setting", $this->td),
-          'integ'     =>  _x("Integration",       "wc-setting", $this->td),
+          'general' => _x("Store Details", "wc-setting", $this->td),
+          'items'   => _x("Invoice Items", "wc-setting", $this->td),
+          'pdf'     => _x("PDF Invoice", "wc-setting", $this->td),
+          'theme'   => _x("Theming", "wc-setting", $this->td),
+          'report'  => _x("Inventory", "wc-setting", $this->td),
+          'email'   => _x("Email", "wc-setting", $this->td),
+          'barcode' => _x("Barcode & QR", "wc-setting", $this->td),
+          'privacy' => _x("Privacy", "wc-setting", $this->td),
+          'color'   => _x("Color Schemes", "wc-setting", $this->td),
+          'integ'   => _x("Integration", "wc-setting", $this->td),
+          'extras'  => _x("Extra Features", "wc-setting", $this->td),
+          'misc'    => _x("Misc.", "wc-setting", $this->td),
+          'migrate' => _x("Migrate/Backup", "wc-setting", $this->td),
         );
         return apply_filters('woocommerce_get_sections_' . $this->id, $sections);
       }
@@ -1391,7 +1391,7 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
       }
       public function output()
       {
-        global $current_section, $hide_save_button;
+        global $current_section, $hide_save_button, $PeproUltimateInvoice;
 
         switch ($current_section) {
           case 'color':
@@ -1399,69 +1399,121 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
             wp_enqueue_script("jquery-confirm",     PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery-confirm.min.js", array("jquery"));
             wp_enqueue_script("jquery-color",       PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery.color.min.js", array("jquery"));
             wp_enqueue_style("jquery-confirm",      PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery-confirm.min.css", array(), '1.0', 'all');
-            wp_enqueue_style("jquery-minicolors",   PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery.minicolors" . $this->debug_enabled(".css",".min.css"), array(), '1.0', 'all');
+            wp_enqueue_style("jquery-minicolors",   PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery.minicolors" . $this->debugEnabled(".css",".min.css"), array(), '1.0', 'all');
             wp_enqueue_script("jquery-minicolors",  PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery.minicolors.min.js", array("jquery"));
-            wp_enqueue_style( "color-scheme.css",   PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".css",".min.css"));
-            wp_register_script( "color-scheme.js",  PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debug_enabled(".js",".min.js"), array('jquery'), "1.1.0");
+            wp_enqueue_style( "color-scheme.css",   PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debugEnabled(".css",".min.css"));
+            wp_register_script( "color-scheme.js",  PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/color-scheme' . $this->debugEnabled(".js",".min.js"), array('jquery'), "1.1.0");
             wp_localize_script( "color-scheme.js", "msg", array(
-              "delete" => __("Delete",$this->td),
-              "edit" => __("Edit",$this->td),
-              "apply" => __("Apply",$this->td),
-              "discard" => __("Discard",$this->td),
-              "export" => __("Export",$this->td),
-              "import" => __("Import",$this->td),
-              "commingsoon" => __("Comming Soon ...",$this->td),
-              "primary" => __("Primary",$this->td),
-              "secondary" => __("Secondary",$this->td),
-              "tertiary" => __("Tertiary",$this->td),
+              "delete"       => __("Delete",$this->td),
+              "edit"         => __("Edit",$this->td),
+              "apply"        => __("Apply",$this->td),
+              "discard"      => __("Discard",$this->td),
+              "export"       => __("Export",$this->td),
+              "import"       => __("Import",$this->td),
+              "commingsoon"  => __("Comming Soon ...",$this->td),
+              "primary"      => __("Primary",$this->td),
+              "secondary"    => __("Secondary",$this->td),
+              "tertiary"     => __("Tertiary",$this->td),
               "click2change" => __("Click to change",$this->td),
-              "importErr" => __("Error importing data!",$this->td),
-              "importErr2" => __("Please check the data or contact support@pepro.dev",$this->td),
-              "insertErr" => __("Enter data here to Import.",$this->td),
-              "swatchinp" => __("Press ENTER to set name or ESC to discard",$this->td),
-            ) );
+              "importErr"    => __("Error importing data!",$this->td),
+              "importErr2"   => __("Please check the data or contact support@pepro.dev",$this->td),
+              "insertErr"    => __("Enter data here to Import.",$this->td),
+              "swatchinp"    => __("Press ENTER to set name or ESC to discard",$this->td),
+              ));
             wp_localize_script( "color-scheme.js", "_i18n", array(
-              "td"                  => "puiw_{$this->td}",
-              "ajax"                => admin_url("admin-ajax.php"),
-              "home"                => home_url(),
-              "nonce"               => wp_create_nonce($this->td),
-              "plugin_url"          => PEPROULTIMATEINVOICE_URL,
+              "td"         => "puiw_{$this->td}",
+              "ajax"       => admin_url("admin-ajax.php"),
+              "home"       => home_url(),
+              "nonce"      => wp_create_nonce($this->td),
+              "plugin_url" => PEPROULTIMATEINVOICE_URL,
 
-              "errorTxt"            => _x("Error", "wc-setting-js", $this->td),
-              "cancelTtl"           => _x("Canceled", "wc-setting-js", $this->td),
-              "confirmTxt"          => _x("Confirm", "wc-setting-js", $this->td),
-              "successTtl"          => _x("Success", "wc-setting-js", $this->td),
-              "submitTxt"           => _x("Submit", "wc-setting-js", $this->td),
-              "okTxt"               => _x("Okay", "wc-setting-js", $this->td),
-              "txtCopy"             => _x("Copy to clipboard", "wc-setting-js", $this->td),
-              "txtYes"              => _x("Yes", "wc-setting-js", $this->td),
-              "txtImport"           => _x("Import", "wc-setting-js", $this->td),
-              "txtNop"              => _x("No", "wc-setting-js", $this->td),
-              "cancelbTn"           => _x("Cancel", "wc-setting-js", $this->td),
-              "sendTxt"             => _x("Send to all", "wc-setting-js", $this->td),
-              "closeTxt"            => _x("Close", "wc-setting-js", $this->td),
+              "errorTxt"   => _x("Error", "wc-setting-js", $this->td),
+              "cancelTtl"  => _x("Canceled", "wc-setting-js", $this->td),
+              "confirmTxt" => _x("Confirm", "wc-setting-js", $this->td),
+              "successTtl" => _x("Success", "wc-setting-js", $this->td),
+              "submitTxt"  => _x("Submit", "wc-setting-js", $this->td),
+              "okTxt"      => _x("Okay", "wc-setting-js", $this->td),
+              "txtCopy"    => _x("Copy to clipboard", "wc-setting-js", $this->td),
+              "txtYes"     => _x("Yes", "wc-setting-js", $this->td),
+              "txtImport"  => _x("Import", "wc-setting-js", $this->td),
+              "txtNop"     => _x("No", "wc-setting-js", $this->td),
+              "cancelbTn"  => _x("Cancel", "wc-setting-js", $this->td),
+              "sendTxt"    => _x("Send to all", "wc-setting-js", $this->td),
+              "closeTxt"   => _x("Close", "wc-setting-js", $this->td),
 
               "confirm_trash"       => _x("Are you sure you want to Delete This Color Schemes?<br>THIS CAN NOT BE UNDONE.", "wc-setting-js", $this->td),
               "confirm_delete"      => _x("Are you sure you want to Delete All Color Schemes?", "wc-setting-js", $this->td),
               "confirm_restore"     => _x("Are you sure you want to Restore All Color Schemes to Default?<br>THIS WILL DELETE ALL CURRENT ITEMS AND IT CAN NOT BE UNDONE.", "wc-setting-js", $this->td),
-            ) );
+              ));
             wp_enqueue_script( "color-scheme.js");
             $this->print_color_schemes();
-            break;
+          break;
+          case 'migrate':
+            wp_enqueue_style( "color-scheme.css",   PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/migrate-backup' . $this->debugEnabled(".css",".min.css"));
+            wp_enqueue_script("jquery-confirm",     PEPROULTIMATEINVOICE_ASSETS_URL . "/js/jquery-confirm.min.js", array("jquery"));
+            wp_enqueue_style("jquery-confirm",      PEPROULTIMATEINVOICE_ASSETS_URL . "/css/jquery-confirm.min.css", array(), '1.0', 'all');
+            wp_register_script( "migrate-backup.js",  PEPROULTIMATEINVOICE_ASSETS_URL . '/admin/migrate-backup' . $this->debugEnabled(".js",".min.js"), array('jquery'), "1.1.0");
+            wp_localize_script( "migrate-backup.js", "msg", array(
+              "delete"       => __("Delete",$this->td),
+              "edit"         => __("Edit",$this->td),
+              "apply"        => __("Apply",$this->td),
+              "discard"      => __("Discard",$this->td),
+              "export"       => __("Export",$this->td),
+              "import"       => __("Import",$this->td),
+              "commingsoon"  => __("Comming Soon ...",$this->td),
+              "primary"      => __("Primary",$this->td),
+              "secondary"    => __("Secondary",$this->td),
+              "tertiary"     => __("Tertiary",$this->td),
+              "click2change" => __("Click to change",$this->td),
+              "importErr"    => __("Error importing data!",$this->td),
+              "exportErr"    => __("Error exporting data!",$this->td),
+              "importErr2"   => __("Please check the data or contact support@pepro.dev",$this->td),
+              "insertErr"    => __("Enter data here to Import.",$this->td),
+              "swatchinp"    => __("Press ENTER to set name or ESC to discard",$this->td),
+              ));
+            wp_localize_script( "migrate-backup.js", "_i18n", array(
+              "td"         => "puiw_{$this->td}",
+              "ajax"       => admin_url("admin-ajax.php"),
+              "home"       => home_url(),
+              "nonce"      => wp_create_nonce($this->td),
+              "plugin_url" => PEPROULTIMATEINVOICE_URL,
+              "json_data"  => $PeproUltimateInvoice->change_default_settings("json"),
+              "errorTxt"   => _x("Error", "wc-setting-js", $this->td),
+              "cancelTtl"  => _x("Canceled", "wc-setting-js", $this->td),
+              "cautiontl"  => _x("Caution", "wc-setting-js", $this->td),
+              "confirmTxt" => _x("Confirm", "wc-setting-js", $this->td),
+              "confirmMsg" => _x("Are you sure you want to continue?", "wc-setting-js", $this->td),
+              "successTtl" => _x("Success", "wc-setting-js", $this->td),
+              "reloadTxt"  => _x("Reload page", "wc-setting-js", $this->td),
+              "submitTxt"  => _x("Submit", "wc-setting-js", $this->td),
+              "okTxt"      => _x("Okay", "wc-setting-js", $this->td),
+              "txtCopy"    => _x("Copy to clipboard", "wc-setting-js", $this->td),
+              "txtYes"     => _x("Yes", "wc-setting-js", $this->td),
+              "txtImport"  => _x("Import", "wc-setting-js", $this->td),
+              "txtNop"     => _x("No", "wc-setting-js", $this->td),
+              "cancelbTn"  => _x("Cancel", "wc-setting-js", $this->td),
+              "sendTxt"    => _x("Send to all", "wc-setting-js", $this->td),
+              "closeTxt"   => _x("Close", "wc-setting-js", $this->td),
 
+              "confirm_trash"       => _x("Are you sure you want to Delete This Color Schemes?<br>THIS CAN NOT BE UNDONE.", "wc-setting-js", $this->td),
+              "confirm_delete"      => _x("Are you sure you want to Delete All Color Schemes?", "wc-setting-js", $this->td),
+              "confirm_restore"     => _x("Are you sure you want to Restore All Color Schemes to Default?<br>THIS WILL DELETE ALL CURRENT ITEMS AND IT CAN NOT BE UNDONE.", "wc-setting-js", $this->td),
+              ));
+            wp_enqueue_script( "migrate-backup.js");
+            $hide_save_button = true;
+            $this->print_migrate_backup();
+          break;
           default:
             $settings = $this->get_settings($current_section);
             WC_Admin_Settings::output_fields($settings);
-            break;
+          break;
         }
 
       }
       public function print_color_schemes()
       {
         ob_start();
-
         ?>
-
         <h2><?php echo _x("Color Schemes", "wc-setting", $this->td);?></h2>
         <br>
         <div class="puiw_color_schemes_wrap">
@@ -1490,7 +1542,31 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
           </p>
         </div>
         <?php
-
+        $tcona = ob_get_contents();
+        ob_end_clean();
+        echo apply_filters( "puiw_section_color_html", $tcona);
+      }
+      public function print_migrate_backup()
+      {
+        ob_start();
+        ?>
+        <h2><?php echo _x("Migrate/Backup Settings", "wc-setting", $this->td);?></h2>
+        <br>
+        <div class="puiw_color_schemes_wrap">
+          <div class="puiw_color_schemes_tool">
+            <a class="button button-secondary" target="_blank" href="<?=admin_url("?ultimate-invoice-get");?>"><?php echo _x("Export PHP","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary backup-export" href="#"><?php echo _x("Export JSON","swatches-panel",$this->td);?></a>
+            <a class="button button-secondary backup-import show" href="#"><?php echo _x("Import JSON","swatches-panel",$this->td);?></a>
+          </div>
+          <h2 class="red"><?php echo _x("Danger Zone!", "wc-setting", $this->td);?></h2>
+          <h3><?php echo _x("Do not use any of buttons below without knowing what your are doing!", "wc-setting", $this->td);?></h3>
+          <div class="puiw_color_schemes_tool">
+              <a class="button button-secondary btn-confirm" target="_blank" href="<?=admin_url("?ultimate-invoice-reset");?>"><?php echo _x("FORCE RESET TO DEFAULT SETTINGS","swatches-panel",$this->td);?></a>
+              <a class="button button-secondary btn-confirm" target="_blank" href="<?=admin_url("?ultimate-invoice-clear");?>"><?php echo _x("FORCE CLEAR OUT ALL SETTINGS","swatches-panel",$this->td);?></a>
+              <a class="button button-secondary btn-confirm" target="_blank" href="<?=admin_url("?ultimate-invoice-set");?>"><?php echo _x("FILL OUT EMPTY SETTINGS WITH DEFAULT VALUES","swatches-panel",$this->td);?></a>
+          </div>
+        </div>
+        <?php
         $tcona = ob_get_contents();
         ob_end_clean();
         echo apply_filters( "puiw_section_color_html", $tcona);
@@ -1525,19 +1601,18 @@ function PeproUltimateInvoice__wc_get_settings_pages($settings)
         wp_enqueue_script('jquery');
         wp_enqueue_script('jquery-ui-core');
         wp_enqueue_script('jquery-ui-selectmenu');
-        wp_register_script("pepro-ultimate-invoice-wc-setting", PEPROULTIMATEINVOICE_ASSETS_URL . "/admin/wc_setting"  . $this->debug_enabled(".js",".min.js"), array("jquery","wp-color-picker"));
-        wp_localize_script(
-          "pepro-ultimate-invoice-wc-setting", "_l10n", array(
-            "title"         => _x("Select image file", "wc-setting-js", $this->td),
-            "btntext"       => _x("Use this image", "wc-setting-js", $this->td),
-            "clear"         => _x("Clear", "wc-setting-js", $this->td),
-            "currentlogo"   => _x("Current preview", "wc-setting-js", $this->td),
-            "selectbtn"     => _x("Select image", "wc-setting-js", $this->td),
-            "plugin_url"    => PEPROULTIMATEINVOICE_URL,
-            "zephyrfix"     => true, /* fix for upsulotion admin css */
-            "themeData"     => $PeproUltimateInvoice->load_themes(1),
-            "get_template"  => get_option( "puiw_template",   "default"),
-            "darkmode"      => get_option( "puiw_dark_mode",  "no" ) == "yes" ? true : false,
+        wp_register_script("pepro-ultimate-invoice-wc-setting", PEPROULTIMATEINVOICE_ASSETS_URL . "/admin/wc_setting"  . $this->debugEnabled(".js",".min.js"), array("jquery","wp-color-picker"));
+        wp_localize_script( "pepro-ultimate-invoice-wc-setting", "_peproUltimateInvoice", array(
+            "title"          => _x("Select image file", "wc-setting-js", $this->td),
+            "btntext"        => _x("Use this image", "wc-setting-js", $this->td),
+            "clear"          => _x("Clear", "wc-setting-js", $this->td),
+            "currentlogo"    => _x("Current preview", "wc-setting-js", $this->td),
+            "selectbtn"      => _x("Select image", "wc-setting-js", $this->td),
+            "zephyrfix"      => true, /* fix for upsulotion admin css */
+            "plugin_url"     => PEPROULTIMATEINVOICE_URL,
+            "themeData"      => $PeproUltimateInvoice->load_themes(1),
+            "get_template"   => get_option("puiw_template", "default"),
+            "darkmode"       => get_option("puiw_dark_mode", "no"),
           )
         );
         wp_enqueue_script("pepro-ultimate-invoice-wc-setting");

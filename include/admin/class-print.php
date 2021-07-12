@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/07/11 20:36:04
+# @Last modified time: 2021/07/12 11:45:03
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -19,7 +19,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             $this->hide_bundles_parent = 0;
             $this->hide_bundles_child = 0;
 
-              $this->_woosb_show_bundles = $this->fn->get_woosb_show_bundles();
+            $this->_woosb_show_bundles = $this->fn->get_woosb_show_bundles();
             $this->_woosb_show_bundles_subtitle = $this->fn->get_woosb_show_bundles_subtitle();
             $this->_woosb_show_bundled_products = $this->fn->get_woosb_show_bundled_products();
             $this->_woosb_show_bundled_subtitle = $this->fn->get_woosb_show_bundled_subtitle();
@@ -214,6 +214,10 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
           $opts["customer_uin"]               = apply_filters("puiw_printinvoice_getcustomer_uin",              get_post_meta($order->get_id(), 'puiw_billing_uin', true), $opts, $order);
           $opts["invoice_qrcode"]             = apply_filters("puiw_printinvoice_getinvoice_qrdata",            add_query_arg( "invoice", $order->get_id(),home_url()), $opts, $order);
           $opts["invoice_qrcode"]             = wp_strip_all_tags( $opts["invoice_qrcode"], true );
+
+          $get_base_countries = WC()->countries->__get('countries');
+          $get_base_states = WC()->countries->get_states($opts["customer_country"]);
+
           $opts["customer_address"]           = str_replace(
               apply_filters("puiw_printinvoice_address_template",
                   array(
@@ -236,8 +240,8 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
                   $opts["customer_fname"],
                   $opts["customer_lname"],
                   $opts["customer_company"],
-                  $opts["customer_country"],
-                  (!empty($opts["customer_country"]) && !empty($opts["customer_state"])) ? WC()->countries->get_states($opts["customer_country"])[$opts["customer_state"]] : "",
+                  $get_base_countries[$opts["customer_country"]] ?: $opts["customer_country"],
+                  $get_base_states[$opts["customer_state"]] ?: $opts["customer_state"],
                   $opts["customer_city"],
                   $opts["customer_address_1"],
                   $opts["customer_address_2"],

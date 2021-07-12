@@ -1,3 +1,14 @@
+/**
+ * @Author: Amirhosseinhpv
+ * @Date:   2020/10/20 22:23:23
+ * @Email:  its@hpv.im
+ * @Last modified by:   Amirhosseinhpv
+ * @Last modified time: 2021/07/12 21:32:13
+ * @License: GPLv2
+ * @Copyright: Copyright © Amirhosseinhpv (https://hpv.im), all rights reserved.
+ */
+
+
 (function($) {
   var names = [`${msg.primary}: `, `${msg.secondary}: `, `${msg.tertiary}: `,];
   var DEFAULT_SWATACHES = `[{"n":"Smoke","p":"#9E9E9E","s":"#A6A6A6","t":"#B3B3B3"},{"n":"Mango","p":"#FFCC80","s":"#FCD59A","t":"#FFDFB0"},{"n":"Gold","p":"#FAEE84","s":"#FFF59D","t":"#FFF8B5"},{"n":"Grass","p":"#A5D6A7","s":"#AFE0B1","t":"#C3EBC5"},{"n":"Sea","p":"#90CAF9","s":"#A6D5FC","t":"#B5DEFF"},{"n":"Peach","p":"#EF9A9A","s":"#F5ABAB","t":"#F0BBBB"}]`;
@@ -82,7 +93,7 @@
               buttons: { no: { text: txtNop, btnClass: 'btn-red', keys: ['n','esc'], action: function(){
                 me.parents(".swatch").first().removeClass("highlight");
               } },
-                yes: { text: txtYes, btnClass: 'btn-red', keys: ['y','enter'], action: function() {
+                yes: { text: txtYes, btnClass: 'btn-red', keys: ['enter'], action: function() {
                   me.parents(".swatch").first().remove();
                   that.update();
                 }},
@@ -220,7 +231,7 @@
               type: "red",
               boxWidth: '600px', icon: 'fa fa-question-circle', closeIcon: true, animation: 'scale',
               buttons: { no: { text: txtNop, btnClass: 'btn-red', keys: ['n','esc'], action: function(){} },
-                yes: { text: txtYes, btnClass: 'btn-red', keys: ['y','enter'], action: function() {
+                yes: { text: txtYes, btnClass: 'btn-red', keys: ['enter'], action: function() {
                   $(".puiw_color_schemes_workspace .swatch").remove();
                   that.update();
                 }},
@@ -235,7 +246,7 @@
               content: _i18n.confirm_restore,
               boxWidth: '600px', icon: 'fa fa-question-circle', closeIcon: true, animation: 'scale',
               buttons: { no: { text: txtNop, btnClass: 'btn-blue', keys: ['n','esc'], action: function(){} },
-                yes: { text: txtYes, btnClass: 'btn-blue', keys: ['y','enter'], action: function() {
+                yes: { text: txtYes, btnClass: 'btn-blue', keys: ['enter'], action: function() {
                   $("textarea#puiw_color_schemes").val(DEFAULT_SWATACHES);
                   that.load(1);
                   that.refresh();
@@ -256,8 +267,8 @@
               closeIcon: true,
               animation: 'scale',
               buttons: {
-                ok: { text: okTxt, btnClass: 'btn-blue', keys: ['y','enter'], action: function(){} },
-                yes: { text: txtCopy, btnClass: 'btn-blue', keys: ['c'], action: function() {
+                ok: { text: okTxt, btnClass: 'btn-blue', keys: ['enter'], action: function(){} },
+                yes: { text: txtCopy, btnClass: 'btn-blue', keys: ['esc'], action: function() {
                   that.copyToClipboard(currentData);
                 }},
               },
@@ -278,7 +289,7 @@
               animation: 'scale',
               buttons: {
                 no: { text: cancelbTn, btnClass: 'btn-blue', keys: ['n','esc'], action: function(){} },
-                yes: { text: txtImport, btnClass: 'btn-blue', keys: ['y','enter'], action: function() {
+                yes: { text: txtImport, btnClass: 'btn-blue', keys: ['enter'], action: function() {
                   var importData = $("#puiw_color_schemes_import").val();
                   if ($.trim(importData) == ""){$("#puiw_color_schemes_import").focus(); return false; }
                   try {

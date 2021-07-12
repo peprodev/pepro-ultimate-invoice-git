@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/04/24 21:18:07
+# @Last modified time: 2021/07/12 17:18:03
 
 namespace peproulitmateinvoice;
 
@@ -392,27 +392,27 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      */
     public function get_wc_store_address()
     {
-      // The main address pieces:
-      $store_address     = get_option( 'woocommerce_store_address' );
-      $store_address_2   = get_option( 'woocommerce_store_address_2' );
-      $store_city        = get_option( 'woocommerce_store_city' );
-      $store_postcode    = get_option( 'woocommerce_store_postcode' );
 
-      // The country/state
-      $store_raw_country = get_option( 'woocommerce_default_country' );
+      $get_base_address = WC()->countries->get_base_address();
+      $get_base_address_2 = WC()->countries->get_base_address_2();
+      $get_base_city = WC()->countries->get_base_city();
+      $get_base_state = WC()->countries->get_base_state();
+      $get_base_country = WC()->countries->get_base_country();
+      $get_base_countries = WC()->countries->__get('countries');
+      $get_base_states = WC()->countries->get_states($get_base_country);
+      $get_base_postcode = WC()->countries->get_base_postcode();
 
-      // Split the country/state
-      $split_country = explode( ":", $store_raw_country );
+      $puiw_store_address = array(
+        $get_base_countries[$get_base_country] ?: $get_base_country,
+        $get_base_states[$get_base_state] ?: $get_base_state,
+        $get_base_city,
+        $get_base_address,
+        $get_base_address_2
+      );
 
-      // Country and state separated:
-      $store_country = $split_country[0];
-      $store_state   = $split_country[1];
+      $return = implode(__(", ", "pepro-ultimate-invoice"), $puiw_store_address);
 
-      $return = $store_address . "<br />";
-      $return .= ( $store_address_2 ) ? $store_address_2 . "<br />" : '';
-      $return .= $store_city . ', ' . $store_state . ' ' . $store_postcode . "<br />";
-      $return .= $store_country;
-      return apply_filters("puiw_get_wc_store_address", $return, $store_address, $store_address_2, $store_city, $store_postcode, $store_country, $store_state, $store_raw_country);
+      return apply_filters("puiw_get_wc_store_address", $return);
     }
     /**
      * get store postcode / zip
@@ -1567,7 +1567,7 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
      * @since 1.0.0
      * @license https://pepro.dev/license Pepro.dev License
      */
-    public function get_address_display_method($default="[province], [city], [address1], [address2] ([po_box])")
+    public function get_address_display_method($default="[country], [province], [city], [address1], [address2] ([po_box])")
     {
       $address_display_method = get_option("puiw_address_display_method",$default);
       $address_display_method = empty($address_display_method) ? $default : $address_display_method;
