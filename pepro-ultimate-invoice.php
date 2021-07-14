@@ -15,7 +15,7 @@ Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 5.4.1
+WC tested up to: 5.5
 Text Domain: pepro-ultimate-invoice
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
