@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 Requires PHP: 7.0
 WC requires at least: 4.4
 WC tested up to: 5.5
@@ -35,9 +35,11 @@ This plugin lets you to Generate Awesome Invoices for WooCommerce orders and:
 -   and .....
 
 
-### Hot Features of Version 1.3.6 🔥 (2021-07-14 | 1400-04-23)
-- Export/Import Settings!
-- Bulk Download Invoices as ZIP Archive
+### Hot Features of Version 1.3.7 🔥 (2021-07-14 | 1400-04-23)
+- Bulk Download Invoices PDF as ZIP Archive
+- Bulk Print Invoices Inventory Reports
+- Bulk Print Invoices Shipping Slips
+- Export/Import Settings as JSON/PHP!
 
 ### Version 1.3.0
 - Added: Fully Compatibility with [WPC Product Bundles by WPClever](https://wpclever.net/downloads/product-bundles)
@@ -150,8 +152,10 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 == Changelog ==
 
-= Version 1.3.6 / 2021-07-14 / 1400-04-23 =
-- Added: Bulk Download Invoices as ZIP Archive (added as bulk action in WC Orders)
+= Version 1.3.7 / 2021-07-14 / 1400-04-23 =
+- Added: Bulk Print Invoices Shipping Slips (Order Screen > Bulk Actions)
+- Added: Bulk Print Invoices Inventory Reports (Order Screen > Bulk Actions)
+- Added: Bulk Download PDF Invoices as ZIP Archive (Order Screen > Bulk Actions)
 - Fixed: Wrong GMT/UTC date display
 
 = Version 1.3.5 / 2021-07-12 / 1400-04-21 =
@@ -338,8 +342,10 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
-= Version 1.3.6 / 2021-07-14 / 1400-04-23 =
-- Added: Bulk Download Invoices as ZIP Archive (added as bulk action in WC Orders)
+= Version 1.3.7 / 2021-07-14 / 1400-04-23 =
+- Added: Bulk Print Invoices Shipping Slips (Order Screen > Bulk Actions)
+- Added: Bulk Print Invoices Inventory Reports (Order Screen > Bulk Actions)
+- Added: Bulk Download PDF Invoices as ZIP Archive (Order Screen > Bulk Actions)
 - Fixed: Wrong GMT/UTC date display
 
 = Version 1.3.5 / 2021-07-12 / 1400-04-21 =

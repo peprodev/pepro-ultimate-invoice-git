@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/07/14 11:31:01
+# @Last modified time: 2021/07/14 17:34:13
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -1141,7 +1141,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $opt["show_inventory_note"] = "no";
               break;
           }
-          foreach ($opt as $key => $value) { if (substr($key,0,5) == "show_" && $value !== "yes"){ $main_css_style .= "[if~='$key']{display:none !important;}.$key{display:none !important;}"; } }
+          foreach ($opt as $key => $value) { if (substr($key,0,5) == "show_" && $value != "yes"){ $main_css_style .= "[if~='$key'],.$key{display:none !important;}"; } }
           $opt["invoice_final_prices_pre_colspan"] = $nmpo = 8;
           if (trim($opt["watermark"]) == ""){ $main_css_style .= '[if~="watermark"]{display:none !important;}.watermark{display:none !important;}'; }
           if ($opt["show_product_image_inventory"] !== "yes"){ $nmpo-=1; }

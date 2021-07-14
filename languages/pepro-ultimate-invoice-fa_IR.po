@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pepro Ultimate Invoice\n"
-"POT-Creation-Date: 2021-07-14 12:41+0430\n"
-"PO-Revision-Date: 2021-07-14 12:42+0430\n"
+"POT-Creation-Date: 2021-07-14 18:32+0430\n"
+"PO-Revision-Date: 2021-07-14 18:34+0430\n"
 "Last-Translator: Amirhosseinhpv <its@hpv.im>\n"
 "Language-Team: Amirhosseinhpv <its@hpv.im>\n"
 "Language: fa_IR\n"
@@ -192,12 +192,12 @@ msgctxt "wc-orders-popup"
 msgid "View Invoice Options"
 msgstr "مشاهده گزینه های فاکتور"
 
-#: include/admin/class-column.php:149 pepro-ultimate-invoice.php:932
+#: include/admin/class-column.php:149 pepro-ultimate-invoice.php:1035
 msgctxt "wc-orders-popup"
 msgid "View Order HTML Invoice"
 msgstr "مشاهده فاکتور HTML"
 
-#: include/admin/class-column.php:152 pepro-ultimate-invoice.php:936
+#: include/admin/class-column.php:152 pepro-ultimate-invoice.php:1039
 msgctxt "wc-orders-popup"
 msgid "View Order PDF Invoice"
 msgstr "مشاهده فاکتور PDF"
@@ -233,37 +233,37 @@ msgctxt "wc-orders-popup"
 msgid "Invoice #%s Options"
 msgstr "گزینه های سفارش #%s"
 
-#: include/admin/class-column.php:177 pepro-ultimate-invoice.php:933
+#: include/admin/class-column.php:177 pepro-ultimate-invoice.php:1036
 msgctxt "wc-orders-popup"
 msgid "HTML Invoice"
 msgstr "فاکتور HTML"
 
-#: include/admin/class-column.php:178 pepro-ultimate-invoice.php:937
+#: include/admin/class-column.php:178 pepro-ultimate-invoice.php:1040
 msgctxt "wc-orders-popup"
 msgid "PDF Invoice"
 msgstr "فاکتور PDF"
 
-#: include/admin/class-column.php:179 pepro-ultimate-invoice.php:941
+#: include/admin/class-column.php:179 pepro-ultimate-invoice.php:1044
 msgctxt "wc-orders-popup"
 msgid "Inventory report"
 msgstr "گزارش انبارداری"
 
-#: include/admin/class-column.php:180 pepro-ultimate-invoice.php:945
+#: include/admin/class-column.php:180 pepro-ultimate-invoice.php:1048
 msgctxt "wc-orders-popup"
 msgid "Sender/Receiver Packing Slip"
 msgstr "چاپ برچسب پستی"
 
-#: include/admin/class-column.php:181 pepro-ultimate-invoice.php:949
+#: include/admin/class-column.php:181 pepro-ultimate-invoice.php:1052
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Customer"
 msgstr "ایمیل فاکتور به مشتری"
 
-#: include/admin/class-column.php:182 pepro-ultimate-invoice.php:953
+#: include/admin/class-column.php:182 pepro-ultimate-invoice.php:1056
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Shop Managers"
 msgstr "ایمیل فاکتور به مدیران فروشگاه"
 
-#: include/admin/class-column.php:183 pepro-ultimate-invoice.php:957
+#: include/admin/class-column.php:183 pepro-ultimate-invoice.php:1060
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Custom List"
 msgstr "ایمیل فاکتور به آدرس های دلخواه"
@@ -278,7 +278,8 @@ msgctxt "wc-setting"
 msgid "Bundled products:"
 msgstr "محصولات باندل شده:"
 
-#: include/admin/class-print.php:181
+#: include/admin/class-print.php:181 pepro-ultimate-invoice.php:494
+#: pepro-ultimate-invoice.php:526
 msgid "Print"
 msgstr "چاپ"
 
@@ -301,7 +302,7 @@ msgstr "فاکتور %s"
 
 #: include/admin/class-print.php:462 include/admin/class-print.php:727
 #: include/admin/class-print.php:897 include/admin/class-print.php:1102
-#: pepro-ultimate-invoice.php:1690
+#: pepro-ultimate-invoice.php:1793
 msgid "Incorrect data!"
 msgstr "داده وارد شده نامعتبر است!"
 
@@ -927,7 +928,7 @@ msgctxt "wc-setting"
 msgid "Invoice Title"
 msgstr "عنوان فاکتور"
 
-#: include/admin/class-setting.php:528 pepro-ultimate-invoice.php:1438
+#: include/admin/class-setting.php:528 pepro-ultimate-invoice.php:1541
 #, php-format
 msgctxt "wc-setting"
 msgid "Invoice %s"
@@ -1229,7 +1230,7 @@ msgctxt "wc-setting"
 msgid "Email Subject"
 msgstr "موضوع ایمیل"
 
-#: include/admin/class-setting.php:1004 pepro-ultimate-invoice.php:320
+#: include/admin/class-setting.php:1004 pepro-ultimate-invoice.php:330
 #, php-format
 msgctxt "wc-setting"
 msgid "Order #%s invoice on "
@@ -2064,321 +2065,337 @@ msgstr "شما دسترسی لازم را ندارید !"
 msgid "Go Back"
 msgstr "بازگشت به سایت"
 
-#: pepro-ultimate-invoice.php:150
+#: pepro-ultimate-invoice.php:147
 msgid "kg"
 msgstr "کیلوگرم"
 
-#: pepro-ultimate-invoice.php:150
+#: pepro-ultimate-invoice.php:147
 msgid "g"
 msgstr "گرم"
 
-#: pepro-ultimate-invoice.php:150
+#: pepro-ultimate-invoice.php:147
 msgid "lbs"
 msgstr "پوند"
 
-#: pepro-ultimate-invoice.php:150
+#: pepro-ultimate-invoice.php:147
 msgid "oz"
 msgstr "اونس"
 
-#: pepro-ultimate-invoice.php:161
+#: pepro-ultimate-invoice.php:158
 msgid "mm"
 msgstr "میلی متر"
 
-#: pepro-ultimate-invoice.php:162
+#: pepro-ultimate-invoice.php:159
 msgid "cm"
 msgstr "سانتی متر"
 
-#: pepro-ultimate-invoice.php:163
+#: pepro-ultimate-invoice.php:160
 msgid "in"
 msgstr "اینچ"
 
-#: pepro-ultimate-invoice.php:164
+#: pepro-ultimate-invoice.php:161
 msgid "yd"
 msgstr "یارد"
 
-#: pepro-ultimate-invoice.php:198
-msgid "Download Invoice Archive"
-msgstr "دانلود فشرده فاکتورها"
+#: pepro-ultimate-invoice.php:195
+msgid "Bulk Download PDF Invoice"
+msgstr "دانلود دسته جمعی فاکتورهای PDF"
 
-#: pepro-ultimate-invoice.php:228 pepro-ultimate-invoice.php:274
+#: pepro-ultimate-invoice.php:196
+msgid "Bulk Print Inventory Report"
+msgstr "چاپ دسته جمعی گزارش انبارداری"
+
+#: pepro-ultimate-invoice.php:197
+msgid "Bulk Print Packing Slips"
+msgstr "چاپ دسته جمعی برچسب پستی"
+
+#: pepro-ultimate-invoice.php:238 pepro-ultimate-invoice.php:284
 #, php-format
 msgid "Automatic Email sent to customer mail address:<br> %s"
 msgstr "فاکتور به ایمیل مشتری بصورت خودکار ارسال شد<br><p>آدرس ایمیل: %s</p>"
 
-#: pepro-ultimate-invoice.php:230 pepro-ultimate-invoice.php:276
+#: pepro-ultimate-invoice.php:240 pepro-ultimate-invoice.php:286
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to customer mail address:<br> %s"
 msgstr "خطایی در ارسال خودکار ایمیل به مشتری رخ داد، آدرس ایمیل:<br> %s"
 
-#: pepro-ultimate-invoice.php:238 pepro-ultimate-invoice.php:287
+#: pepro-ultimate-invoice.php:248 pepro-ultimate-invoice.php:297
 #, php-format
 msgid "Automatic Email sent to following shop managers:<br> %s"
 msgstr ""
 "فاکتور به ایمیل مدیران فروشگاه بصورت خودکار ارسال شد<br><p>آدرس ایمیل ها: %s</"
 "p>"
 
-#: pepro-ultimate-invoice.php:240 pepro-ultimate-invoice.php:289
+#: pepro-ultimate-invoice.php:250 pepro-ultimate-invoice.php:299
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to following shop managers:<br> %s"
 msgstr ""
 "خطایی در ارسال خودکار ایمیل به مدیران فروشگاه رخ داد، آدرس ایمیل ها:<br> %s"
 
-#: pepro-ultimate-invoice.php:243 pepro-ultimate-invoice.php:292
+#: pepro-ultimate-invoice.php:253 pepro-ultimate-invoice.php:302
 msgid "No Shop Manager selected to send Automatic Email to."
 msgstr ""
 "شما هیچ یک از مدیران فروشگاه را برای ارسال خودکار ایمیل تنظیم نکرده اید."
 
-#: pepro-ultimate-invoice.php:457
+#: pepro-ultimate-invoice.php:456
 #, php-format
 msgid "Failed creating zip archive! (code: %s) %s"
 msgstr "خطا در ساخت فایل آرشیو زیپ ( کد : %s ) %s"
 
-#: pepro-ultimate-invoice.php:457
+#: pepro-ultimate-invoice.php:456
 msgid "Error"
 msgstr "خطا"
 
-#: pepro-ultimate-invoice.php:476 pepro-ultimate-invoice.php:479
-#: pepro-ultimate-invoice.php:482 pepro-ultimate-invoice.php:486
+#: pepro-ultimate-invoice.php:495
+msgid "Bulk Inventory Report"
+msgstr "چاپ دسته جمعی گزارش انبارداری"
+
+#: pepro-ultimate-invoice.php:527
+msgid "Bulk Packing Slip"
+msgstr "چاپ دسته جمعی برچسب پستی"
+
+#: pepro-ultimate-invoice.php:548 pepro-ultimate-invoice.php:551
+#: pepro-ultimate-invoice.php:554 pepro-ultimate-invoice.php:558
 msgid "Back to Settings"
 msgstr "بازگشت به تنظیمات"
 
-#: pepro-ultimate-invoice.php:531
+#: pepro-ultimate-invoice.php:625
 msgid "User Unique Identification Number"
 msgstr "کدملی شخصی"
 
-#: pepro-ultimate-invoice.php:541
+#: pepro-ultimate-invoice.php:651
 msgid "Shipped Date (Shamsi)"
 msgstr "تاریخ ارسال مرسوله (شمسی)"
 
-#: pepro-ultimate-invoice.php:543 pepro-ultimate-invoice.php:549
+#: pepro-ultimate-invoice.php:653 pepro-ultimate-invoice.php:659
 msgid "Select Shipped Date"
 msgstr "انتخاب تاریخ ارسال مرسوله"
 
-#: pepro-ultimate-invoice.php:547
+#: pepro-ultimate-invoice.php:657
 msgid "Shipped Date (Gregorian)"
 msgstr "تاریخ ارسال مرسوله (میلادی)"
 
-#: pepro-ultimate-invoice.php:553
+#: pepro-ultimate-invoice.php:663
 msgid "Shipping Track Serial"
 msgstr "کد رهگیری پستی مرسوله"
 
-#: pepro-ultimate-invoice.php:555
+#: pepro-ultimate-invoice.php:665
 msgid "Enter Shipping Track Serial"
 msgstr "کد رهگیری پستی را وارد کنید"
 
-#: pepro-ultimate-invoice.php:559
+#: pepro-ultimate-invoice.php:669
 msgid "Customer Signature"
 msgstr "امضای مشتری"
 
-#: pepro-ultimate-invoice.php:588 pepro-ultimate-invoice.php:1202
+#: pepro-ultimate-invoice.php:691 pepro-ultimate-invoice.php:1305
 msgctxt "order-page"
 msgid "View Invoice"
 msgstr "دریافت فاکتور"
 
-#: pepro-ultimate-invoice.php:591 pepro-ultimate-invoice.php:1206
+#: pepro-ultimate-invoice.php:694 pepro-ultimate-invoice.php:1309
 msgctxt "order-page"
 msgid "PDF Invoice"
 msgstr "فاکتور PDF"
 
-#: pepro-ultimate-invoice.php:613
+#: pepro-ultimate-invoice.php:716
 msgid "Page {PAGENO} / {nbpg}"
 msgstr "صفحه {PAGENO} از {nbpg}"
 
-#: pepro-ultimate-invoice.php:659
+#: pepro-ultimate-invoice.php:762
 msgctxt "wc-orders"
 msgid "Shipped Date:"
 msgstr "تاریخ ارسال مرسوله:"
 
-#: pepro-ultimate-invoice.php:662
+#: pepro-ultimate-invoice.php:765
 msgctxt "wc-orders"
 msgid "Shipping tracking Serial:"
 msgstr "کد رهگیری مرسوله:"
 
-#: pepro-ultimate-invoice.php:794
+#: pepro-ultimate-invoice.php:897
 #, php-format
 msgctxt "theme-name"
 msgid "%1$s — by %2$s"
 msgstr "%1$s توسط %2$s"
 
-#: pepro-ultimate-invoice.php:843
+#: pepro-ultimate-invoice.php:946
 msgid "Select The Date Product Shipped"
 msgstr "تاریخی که مرسوله ارسال شد را مشخص کنید"
 
-#: pepro-ultimate-invoice.php:844
+#: pepro-ultimate-invoice.php:947
 msgid "Clear"
 msgstr "پاک کردن"
 
-#: pepro-ultimate-invoice.php:897
+#: pepro-ultimate-invoice.php:1000
 msgid "Use Advanced Options?"
 msgstr "مشاهده گزینه های حرفه ای؟"
 
-#: pepro-ultimate-invoice.php:901
+#: pepro-ultimate-invoice.php:1004
 msgid "Force Use theme"
 msgstr "اجبار به استفاده از قالب زیر برای فاکتور"
 
-#: pepro-ultimate-invoice.php:907
+#: pepro-ultimate-invoice.php:1010
 msgid "Primary, Secondary and Tertiary Colors"
 msgstr "رنگ بندی قالب فاکتور"
 
-#: pepro-ultimate-invoice.php:919
+#: pepro-ultimate-invoice.php:1022
 msgid "Load colors from Schemes"
 msgstr "بارگیری از پالت رنگی"
 
-#: pepro-ultimate-invoice.php:925
+#: pepro-ultimate-invoice.php:1028
 msgctxt "wc-orders-popup"
 msgid "Reset Advanced Options to default"
 msgstr "بازگردانی تنظیمات حرفه ای به پیشفرض"
 
-#: pepro-ultimate-invoice.php:925
+#: pepro-ultimate-invoice.php:1028
 msgctxt "wc-orders-popup"
 msgid "Reset"
 msgstr "ریست"
 
-#: pepro-ultimate-invoice.php:940
+#: pepro-ultimate-invoice.php:1043
 msgctxt "wc-orders-popup"
 msgid "View Order Inventory report"
 msgstr "مشاهده گزارش انبارداری"
 
-#: pepro-ultimate-invoice.php:944
+#: pepro-ultimate-invoice.php:1047
 msgctxt "wc-orders-popup"
 msgid "View Packing Slip for shipping"
 msgstr "مشاهده برچسب پستی مرسوله"
 
-#: pepro-ultimate-invoice.php:948
+#: pepro-ultimate-invoice.php:1051
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Customer"
 msgstr "ایمیل فاکتور به مشتری"
 
-#: pepro-ultimate-invoice.php:952
+#: pepro-ultimate-invoice.php:1055
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Shop Managers"
 msgstr "ایمیل فاکتور به مدیران فروشگاه"
 
-#: pepro-ultimate-invoice.php:956
+#: pepro-ultimate-invoice.php:1059
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Custom List"
 msgstr "ایمیل فاکتور به آدرس های منتخب"
 
-#: pepro-ultimate-invoice.php:960
+#: pepro-ultimate-invoice.php:1063
 msgctxt "wc-orders-popup"
 msgid "Edit User Unique Identification Number"
 msgstr "ویرایش کدملی مشتری"
 
-#: pepro-ultimate-invoice.php:961
+#: pepro-ultimate-invoice.php:1064
 msgctxt "wc-orders-popup"
 msgid "Edit User UIN"
 msgstr "ویرایش کدملی"
 
-#: pepro-ultimate-invoice.php:964
+#: pepro-ultimate-invoice.php:1067
 msgctxt "wc-orders-popup"
 msgid "Edit transaction ID"
 msgstr "ویرایش رسید پرداخت"
 
-#: pepro-ultimate-invoice.php:965
+#: pepro-ultimate-invoice.php:1068
 msgctxt "wc-orders-popup"
 msgid "Edit Transaction ID"
 msgstr "ویرایش رسید پرداخت"
 
-#: pepro-ultimate-invoice.php:968
+#: pepro-ultimate-invoice.php:1071
 msgctxt "wc-orders-popup"
 msgid "Edit shipped date"
 msgstr "ویرایش تاریخ ارسال"
 
-#: pepro-ultimate-invoice.php:969
+#: pepro-ultimate-invoice.php:1072
 msgctxt "wc-orders-popup"
 msgid "Edit Shipped Date"
 msgstr "ویرایش تاریخ ارسال"
 
-#: pepro-ultimate-invoice.php:972
+#: pepro-ultimate-invoice.php:1075
 msgctxt "wc-orders-popup"
 msgid "Edit shipping track serial"
 msgstr "ویرایش کد رهگیری پستی"
 
-#: pepro-ultimate-invoice.php:973
+#: pepro-ultimate-invoice.php:1076
 msgctxt "wc-orders-popup"
 msgid "Edit Shipping Track Serial"
 msgstr "ویرایش کد رهگیری پستی"
 
-#: pepro-ultimate-invoice.php:976
+#: pepro-ultimate-invoice.php:1079
 msgctxt "wc-orders-popup"
 msgid "Edit customer signature image"
 msgstr "ویرایش امضای مشتری"
 
-#: pepro-ultimate-invoice.php:977
+#: pepro-ultimate-invoice.php:1080
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Signature"
 msgstr "ویرایش امضای مشتری"
 
-#: pepro-ultimate-invoice.php:980
+#: pepro-ultimate-invoice.php:1083
 msgctxt "wc-orders-popup"
 msgid "Edit customer provided note"
 msgstr "ویرایش یادداشت مشتری"
 
-#: pepro-ultimate-invoice.php:981
+#: pepro-ultimate-invoice.php:1084
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Note"
 msgstr "ویرایش یادداشت مشتری"
 
-#: pepro-ultimate-invoice.php:984
+#: pepro-ultimate-invoice.php:1087
 msgctxt "wc-orders-popup"
 msgid "Edit shop manager provided note"
 msgstr "ویرایش یادداشت مدیر فروشگاه"
 
-#: pepro-ultimate-invoice.php:985
+#: pepro-ultimate-invoice.php:1088
 msgctxt "wc-orders-popup"
 msgid "Edit Shop manager Note"
 msgstr "ویرایش یادداشت مدیر فروشگاه"
 
-#: pepro-ultimate-invoice.php:1006 pepro-ultimate-invoice.php:1010
+#: pepro-ultimate-invoice.php:1109 pepro-ultimate-invoice.php:1113
 msgid "Shop Manager provided note:"
 msgstr "یادداشت مدیر فروشگاه:"
 
-#: pepro-ultimate-invoice.php:1011
+#: pepro-ultimate-invoice.php:1114
 msgid "Enter Shop Manager provided note here"
 msgstr "یادداشت مدیر فروشگاه را اینجا وارد کنید"
 
-#: pepro-ultimate-invoice.php:1064 pepro-ultimate-invoice.php:1065
+#: pepro-ultimate-invoice.php:1167 pepro-ultimate-invoice.php:1168
 msgctxt "wc-order-screen"
 msgid "Unique Identification Number"
 msgstr "کدملی مشتری"
 
-#: pepro-ultimate-invoice.php:1110
+#: pepro-ultimate-invoice.php:1213
 msgid "Back to Dashboard"
 msgstr "بازگشت به پیشخوان وردپرس"
 
-#: pepro-ultimate-invoice.php:1117
+#: pepro-ultimate-invoice.php:1220
 msgid "Switch Dark-mode"
 msgstr "حالت تیره"
 
-#: pepro-ultimate-invoice.php:1124
+#: pepro-ultimate-invoice.php:1227
 msgid "WC Orders"
 msgstr "سفارشات"
 
-#: pepro-ultimate-invoice.php:1163 pepro-ultimate-invoice.php:1227
+#: pepro-ultimate-invoice.php:1266 pepro-ultimate-invoice.php:1330
 msgid "Pre-buy Invoice"
 msgstr "پیش‌فاکتور"
 
-#: pepro-ultimate-invoice.php:1168
+#: pepro-ultimate-invoice.php:1271
 #, php-format
 msgid "Pre-buy Invoice (%s)"
 msgid_plural "Pre-buy Invoices (%s)"
 msgstr[0] "پیش‌فاکتور (%s)"
 msgstr[1] "پیش‌فاکتور (%s)"
 
-#: pepro-ultimate-invoice.php:1249
+#: pepro-ultimate-invoice.php:1352
 msgctxt "js-cart-page"
 msgid "Unauthorized Access!"
 msgstr "شما دسترسی لازم را ندارید !"
 
-#: pepro-ultimate-invoice.php:1250 pepro-ultimate-invoice.php:1257
-#: pepro-ultimate-invoice.php:2149
+#: pepro-ultimate-invoice.php:1353 pepro-ultimate-invoice.php:1360
+#: pepro-ultimate-invoice.php:2252
 msgctxt "js-cart-page"
 msgid "Okay"
 msgstr "باشه"
 
-#: pepro-ultimate-invoice.php:1251
+#: pepro-ultimate-invoice.php:1354
 #, php-format
 msgctxt "js-cart-page"
 msgid ""
@@ -2388,325 +2405,325 @@ msgstr ""
 "متاسفیم اما این قابلیت برای کاربران عضو وبسایت میباشد. <br>لطفا %sعضو شوید / "
 "وارد شوید%s."
 
-#: pepro-ultimate-invoice.php:1262
+#: pepro-ultimate-invoice.php:1365
 msgid "Get Pre-buy Invoice"
 msgstr "دریافت پیش‌فاکتور"
 
-#: pepro-ultimate-invoice.php:1300 pepro-ultimate-invoice.php:1301
+#: pepro-ultimate-invoice.php:1403 pepro-ultimate-invoice.php:1404
 msgid "Setting"
 msgstr "تنظیمات"
 
-#: pepro-ultimate-invoice.php:1306 pepro-ultimate-invoice.php:1307
+#: pepro-ultimate-invoice.php:1409 pepro-ultimate-invoice.php:1410
 msgid "Support"
 msgstr "پشتیبانی این محصول"
 
-#: pepro-ultimate-invoice.php:1383
+#: pepro-ultimate-invoice.php:1486
 #, php-format
 msgctxt "wc-setting"
 msgid "Invoice #%s — "
 msgstr "فاکتور #%s — "
 
-#: pepro-ultimate-invoice.php:1590
+#: pepro-ultimate-invoice.php:1693
 msgid "Shortcode and Hooks for Developers"
 msgstr "شورت‌کد و هوک ها برای توسعه دهندگان"
 
-#: pepro-ultimate-invoice.php:1595
+#: pepro-ultimate-invoice.php:1698
 msgctxt "setting-general"
 msgid "WordPress Shortcode"
 msgstr "شورت‌کد های وردپرس"
 
-#: pepro-ultimate-invoice.php:1599
+#: pepro-ultimate-invoice.php:1702
 msgctxt "setting-general"
 msgid "WordPress Action Hooks"
 msgstr "اکشن هوک های وردپرس"
 
-#: pepro-ultimate-invoice.php:1608
+#: pepro-ultimate-invoice.php:1711
 msgctxt "setting-general"
 msgid "WordPress Filter Hooks"
 msgstr "فیلتر هوک های وردپرس"
 
-#: pepro-ultimate-invoice.php:1616
+#: pepro-ultimate-invoice.php:1719
 msgctxt "setting-general"
 msgid "jQuery Triggering Hooks"
 msgstr "هوک های تریگر جی‌کوئری"
 
-#: pepro-ultimate-invoice.php:1650
+#: pepro-ultimate-invoice.php:1753
 #, php-format
 msgctxt "footer-copyright"
 msgid "Thanks for using %s products."
 msgstr "بابت استفاده از محصولات %s از شما سپاسگزاریم."
 
-#: pepro-ultimate-invoice.php:1650
+#: pepro-ultimate-invoice.php:1753
 msgid "Pepro Dev"
 msgstr "گروه برنامه‏نویسی پپرو"
 
-#: pepro-ultimate-invoice.php:1653
+#: pepro-ultimate-invoice.php:1756
 #, php-format
 msgctxt "footer-copyright"
 msgid "%s — Version %s"
 msgstr "%s — نسخه %s"
 
-#: pepro-ultimate-invoice.php:1669
+#: pepro-ultimate-invoice.php:1772
 msgid "Unauthorized Access Denied!"
 msgstr "دسترسی غیرمجاز!"
 
-#: pepro-ultimate-invoice.php:1687
+#: pepro-ultimate-invoice.php:1790
 msgid "Products successfully added to cart!"
 msgstr "محصولات به سبد خرید اضافه شدند!"
 
-#: pepro-ultimate-invoice.php:1744
+#: pepro-ultimate-invoice.php:1847
 #, php-format
 msgid "Invoice Created by %s%s"
 msgstr "فاکتور توسط %s ایجاد شد. %s"
 
 #. Author of the plugin/theme
-#: pepro-ultimate-invoice.php:1744 pepro-ultimate-invoice.php:2269
+#: pepro-ultimate-invoice.php:1847 pepro-ultimate-invoice.php:2372
 msgid "Pepro Dev. Group"
 msgstr "تیم توسعه پپرو (Pepro Dev)"
 
-#: pepro-ultimate-invoice.php:1756
+#: pepro-ultimate-invoice.php:1859
 msgid "Request success!"
 msgstr "با موفقیت انجام شد!"
 
-#: pepro-ultimate-invoice.php:1765
+#: pepro-ultimate-invoice.php:1868
 msgid "No valid order"
 msgstr "سفارش معتبری یافت نشد"
 
-#: pepro-ultimate-invoice.php:1811
+#: pepro-ultimate-invoice.php:1914
 #, php-format
 msgid "%d emails"
 msgstr "%d ایمیل"
 
-#: pepro-ultimate-invoice.php:1814
+#: pepro-ultimate-invoice.php:1917
 #, php-format
 msgid "Sending email to <br><strong>%s</strong><br>was successfully done"
 msgstr "فاکتور با موفقیت برای <br><strong>%s</strong><br> ارسال شد"
 
-#: pepro-ultimate-invoice.php:1816
+#: pepro-ultimate-invoice.php:1919
 #, php-format
 msgid "Error sending email to <br><strong>%s</strong>"
 msgstr "متاسفانه در ارسال ایمیل به<br><strong>%s</strong><br>مشکلی پیش آمد"
 
-#: pepro-ultimate-invoice.php:1819
+#: pepro-ultimate-invoice.php:1922
 msgid "No valid email found for this order"
 msgstr "متاسفانه آدرس ایمیل مشتری برای این سفارش ثبت نشده است"
 
-#: pepro-ultimate-invoice.php:1828
+#: pepro-ultimate-invoice.php:1931
 msgid "Error fetching shop managers."
 msgstr "خطا در بارگیری لیست مدیران فروشگاه."
 
-#: pepro-ultimate-invoice.php:1835 pepro-ultimate-invoice.php:1847
+#: pepro-ultimate-invoice.php:1938 pepro-ultimate-invoice.php:1950
 msgid "Saved successfully!"
 msgstr "تنظیمات با موفقیت ثبت گردیدند!"
 
-#: pepro-ultimate-invoice.php:1903
+#: pepro-ultimate-invoice.php:2006
 #, php-format
 msgctxt "required-plugin"
 msgid "%1$s needs %2$s in order to function"
 msgstr "ماژول %1$s به افزونه %2$s نیاز دارد. لطفا نصب کنید"
 
-#: pepro-ultimate-invoice.php:1906
+#: pepro-ultimate-invoice.php:2009
 msgctxt "required-plugin"
 msgid "WooCommerce"
 msgstr "ووکامرس"
 
-#: pepro-ultimate-invoice.php:2020
+#: pepro-ultimate-invoice.php:2123
 msgid "All Categories"
 msgstr "همه دسته بندی ها"
 
-#: pepro-ultimate-invoice.php:2048 pepro-ultimate-invoice.php:2049
-#: pepro-ultimate-invoice.php:2159
+#: pepro-ultimate-invoice.php:2151 pepro-ultimate-invoice.php:2152
+#: pepro-ultimate-invoice.php:2262
 msgctxt "js-i18n"
 msgid "SKU:"
 msgstr "شناسه:"
 
-#: pepro-ultimate-invoice.php:2077
+#: pepro-ultimate-invoice.php:2180
 msgid "Add to cart"
 msgstr "افزودن به کارت"
 
-#: pepro-ultimate-invoice.php:2105
+#: pepro-ultimate-invoice.php:2208
 msgid "Filter Products by Category"
 msgstr "فیلتر محصولات براساس دسته بندی"
 
-#: pepro-ultimate-invoice.php:2111
+#: pepro-ultimate-invoice.php:2214
 msgid "Sort and Search shown products"
 msgstr "مرتب سازی و جستجو میان محصولات"
 
-#: pepro-ultimate-invoice.php:2113
+#: pepro-ultimate-invoice.php:2216
 msgid "Search among current shown products"
 msgstr "جستجو بین محصولات نمایش داده شده"
 
-#: pepro-ultimate-invoice.php:2116
+#: pepro-ultimate-invoice.php:2219
 msgid "Sort By: "
 msgstr "مرتب سازی براساس: "
 
-#: pepro-ultimate-invoice.php:2117
+#: pepro-ultimate-invoice.php:2220
 msgid "Alphabetically"
 msgstr "نام"
 
-#: pepro-ultimate-invoice.php:2118
+#: pepro-ultimate-invoice.php:2221
 msgid "Popularity"
 msgstr "محبوبیت"
 
-#: pepro-ultimate-invoice.php:2119
+#: pepro-ultimate-invoice.php:2222
 msgid "Total Sales"
 msgstr "تعداد فروش"
 
-#: pepro-ultimate-invoice.php:2120
+#: pepro-ultimate-invoice.php:2223
 msgid "Latest"
 msgstr "جدیدترین"
 
-#: pepro-ultimate-invoice.php:2121
+#: pepro-ultimate-invoice.php:2224
 msgid "Price (ASC)"
 msgstr "قیمت (صعودی)"
 
-#: pepro-ultimate-invoice.php:2122
+#: pepro-ultimate-invoice.php:2225
 msgid "Price (DESC)"
 msgstr "قیمت (نزولی)"
 
-#: pepro-ultimate-invoice.php:2129
+#: pepro-ultimate-invoice.php:2232
 msgid "Your cart is empty!"
 msgstr "سبد خرید شما خالی است!"
 
-#: pepro-ultimate-invoice.php:2131
+#: pepro-ultimate-invoice.php:2234
 msgid "Nothing found!"
 msgstr "محصولی پیدا نشد!"
 
-#: pepro-ultimate-invoice.php:2151
+#: pepro-ultimate-invoice.php:2254
 msgctxt "js-i18n"
 msgid "Added to cart"
 msgstr "به سبد اضافه شد"
 
-#: pepro-ultimate-invoice.php:2152
+#: pepro-ultimate-invoice.php:2255
 msgctxt "js-i18n"
 msgid "THIS IS AN ERROR!"
 msgstr "خطایی رخ داده!"
 
-#: pepro-ultimate-invoice.php:2153
+#: pepro-ultimate-invoice.php:2256
 msgctxt "js-i18n"
 msgid "Your basket is empty!"
 msgstr "سبد خرید شما خالی است!"
 
-#: pepro-ultimate-invoice.php:2154
+#: pepro-ultimate-invoice.php:2257
 msgctxt "js-i18n"
 msgid "Total Items:"
 msgstr "مجموع محصولات:"
 
-#: pepro-ultimate-invoice.php:2155
+#: pepro-ultimate-invoice.php:2258
 msgctxt "js-i18n"
 msgid "Total Products:"
 msgstr "تعداد محصولات:"
 
-#: pepro-ultimate-invoice.php:2156
+#: pepro-ultimate-invoice.php:2259
 msgctxt "js-i18n"
 msgid "There is an unknown error and we are unable to proccess your request"
 msgstr ""
 "این یک خطای پیش بینی نشده است و متاسفانه سیستم قادر به انجام وظیفه نمیباشد"
 
-#: pepro-ultimate-invoice.php:2157
+#: pepro-ultimate-invoice.php:2260
 msgctxt "js-i18n"
 msgid "Remove from cart"
 msgstr "حذف از سبد خرید"
 
-#: pepro-ultimate-invoice.php:2158
+#: pepro-ultimate-invoice.php:2261
 msgctxt "js-i18n"
 msgid "Clear cart"
 msgstr "پاکسازی سبد خرید"
 
-#: pepro-ultimate-invoice.php:2160
+#: pepro-ultimate-invoice.php:2263
 msgctxt "js-i18n"
 msgid "Are you sure you want to remove this item from basket?"
 msgstr "آیا مطمئن هستید میخواهید این محصول را از سبد خرید حذف کنید؟"
 
-#: pepro-ultimate-invoice.php:2161
+#: pepro-ultimate-invoice.php:2264
 msgctxt "js-i18n"
 msgid "Are you sure you want to remove all items from basket?"
 msgstr "آیا مطمئن هستید میخواهید تمامی محصولات را از سبد خرید حذف کنید؟"
 
-#: pepro-ultimate-invoice.php:2162
+#: pepro-ultimate-invoice.php:2265
 msgctxt "js-i18n"
 msgid "Removing"
 msgstr "حذف"
 
-#: pepro-ultimate-invoice.php:2163
+#: pepro-ultimate-invoice.php:2266
 msgctxt "js-i18n"
 msgid "Clear basket"
 msgstr "پاکسازی سبد خرید"
 
-#: pepro-ultimate-invoice.php:2164
+#: pepro-ultimate-invoice.php:2267
 msgctxt "js-i18n"
 msgid "Instant Shopping Basket Upated!"
 msgstr "سبد خرید شما بروز رسانی شد!"
 
-#: pepro-ultimate-invoice.php:2165
+#: pepro-ultimate-invoice.php:2268
 msgctxt "js-i18n"
 msgid "Yes"
 msgstr "بله"
 
-#: pepro-ultimate-invoice.php:2166
+#: pepro-ultimate-invoice.php:2269
 msgctxt "js-i18n"
 msgid "No"
 msgstr "خیر"
 
-#: pepro-ultimate-invoice.php:2168
+#: pepro-ultimate-invoice.php:2271
 msgctxt "js-i18n"
 msgid "Proceed to Checkout / Invoice"
 msgstr "ثبت سفارش"
 
-#: pepro-ultimate-invoice.php:2187 pepro-ultimate-invoice.php:2200
-#: pepro-ultimate-invoice.php:2208 pepro-ultimate-invoice.php:2214
+#: pepro-ultimate-invoice.php:2290 pepro-ultimate-invoice.php:2303
+#: pepro-ultimate-invoice.php:2311 pepro-ultimate-invoice.php:2317
 msgid "Design Options"
 msgstr "تنظیمات طراحی"
 
-#: pepro-ultimate-invoice.php:2196
+#: pepro-ultimate-invoice.php:2299
 msgid "Element ID"
 msgstr "آی دی المان"
 
-#: pepro-ultimate-invoice.php:2199
+#: pepro-ultimate-invoice.php:2302
 #, php-format
 msgid ""
 "Enter element ID (Note: make sure it is unique and valid according to %sW3C "
 "Specification%s)."
 msgstr "افزودن آی دی (براساس استاندارد %sW3C Specification%s)"
 
-#: pepro-ultimate-invoice.php:2204
+#: pepro-ultimate-invoice.php:2307
 msgid "Extra class name"
 msgstr "نام کلاس اضافی"
 
-#: pepro-ultimate-invoice.php:2207
+#: pepro-ultimate-invoice.php:2310
 msgid ""
 "If you wish to style particular content element differently, then use this "
 "field to add a class name and then refer to it in your css file."
 msgstr "افزودن کلاس اضافی به نگه دارنده این ویجت."
 
-#: pepro-ultimate-invoice.php:2212
+#: pepro-ultimate-invoice.php:2315
 msgid "CSS box"
 msgstr "تنظیمات سی اس اس"
 
-#: pepro-ultimate-invoice.php:2220 pepro-ultimate-invoice.php:2237
+#: pepro-ultimate-invoice.php:2323 pepro-ultimate-invoice.php:2340
 msgid "Quick Shop"
 msgstr "خرید سریع"
 
-#: pepro-ultimate-invoice.php:2221 pepro-ultimate-invoice.php:2238
+#: pepro-ultimate-invoice.php:2324 pepro-ultimate-invoice.php:2341
 msgid "One-page Purchase"
 msgstr "خرید و دریافت پیش‌فاکتور آنی در یک صفحه"
 
-#: pepro-ultimate-invoice.php:2225
+#: pepro-ultimate-invoice.php:2328
 msgid "Pepro Elements"
 msgstr "ویجت های پپرو"
 
-#: pepro-ultimate-invoice.php:2269
+#: pepro-ultimate-invoice.php:2372
 #, php-format
 msgid "Proudly Developed by %s"
 msgstr "با افتخار توسعه یافته بدست %s"
 
-#: pepro-ultimate-invoice.php:2451
+#: pepro-ultimate-invoice.php:2554
 #, php-format
 msgctxt "setting-page"
 msgid "Enter %s"
 msgstr "%s را وارد کنید"
 
-#: pepro-ultimate-invoice.php:2475
+#: pepro-ultimate-invoice.php:2578
 #, php-format
 msgctxt "setting-page"
 msgid "Choose %s"
