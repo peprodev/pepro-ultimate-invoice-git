@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/07/12 11:45:03
+# @Last modified time: 2021/07/14 11:31:01
 namespace peproulitmateinvoice;
 use voku\CssToInlineStyles\CssToInlineStyles;
 
@@ -720,6 +720,10 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
         }
         public function create_pdf($order_id=0, $force_download = false, $MODE="I")
         {
+          // 'D': download the PDF file
+          // 'I': serves in-line to the browser
+          // 'S': returns the PDF document as a string
+          // 'F': save as file $file_out
           if (!$order_id || empty(trim($order_id)) || !is_numeric(trim($order_id))){ return __('Incorrect data!', $this->td); }
           (int) $order_id = trim($order_id);
           $order = wc_get_order($order_id);
@@ -807,8 +811,7 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             'fontDir' => array_merge($fontDirs, [plugin_dir_path(__FILE__)]),
             'fontdata' => $_fontData,
             'default_font' => $this->fn->get_pdf_font(),
-            // 'default_font' => "danafa",
-            'format' => "$get_pdf_size", // A4-L
+            'format' => $get_pdf_size, // A4-L
             'mode' => 'utf-8',
             'margin_right' => $template_pdf_setting["pdf_margin_right"],
             'margin_left' => $template_pdf_setting["pdf_margin_left"],
@@ -816,9 +819,9 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
             'margin_bottom' => $template_pdf_setting["pdf_margin_bottom"],
             'margin_header' => $template_pdf_setting["pdf_margin_header"],
             'margin_footer' => $template_pdf_setting["pdf_margin_footer"],
-            'debug' => 0,
+            'debug' => false,
             'allow_output_buffering' => true,
-            'showImageErrors' => 0,
+            'showImageErrors' => false,
             'mirrorMargins' => 0,
             'autoLangToFont' => true,
             'defaultPageNumStyle' => 'arabic-indic',
@@ -854,12 +857,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $html_invoice = $this->create_html($order_id, "PDF","","",$skipAuth);
               $html_header = $this->create_html($order_id, "PDF", "header","",$skipAuth);
               $html_footer = $this->create_html($order_id, "PDF", "footer","",$skipAuth);
-              // echo "<pre dir='ltr' style='border:1px solid gray'>". print_r([$html_invoice, $PDF_EXTRA_STYLE],1) ."</pre>";exit;
-              // $cssToInlineStyles = new CssToInlineStyles($html_invoice);
-              // $cssToInlineStyles->setCleanup(true);
-              // $cssToInlineStyles->setUseInlineStylesBlock(true);
-              // $html_invoice = $cssToInlineStyles->convert();
-              // echo "<style type='text/css'>$stylesheet</style>$html_header $html_invoice $html_footer";exit;
               $datec = date_i18n("Y-m-d H:i", $datenow);
               if ($this->fn->get_date_shamsi() == "yes") {
                 $datec = pu_jdate("Y-m-d H:i", (int) $datenow, "", "local", "en");
@@ -893,10 +890,6 @@ if (!class_exists("PeproUltimateInvoice_Print")) {
               $er = $mpdf->Output($tmpname, "F");
               return $namedotext;
             }
-            // 'D': download the PDF file
-            // 'I': serves in-line to the browser
-            // 'S': returns the PDF document as a string
-            // 'F': save as file $file_out
             $mpdf->Output($name . ($force_download ? ".pdf" : ""),($force_download ? "D" : "I"));
         }
         public function create_slips($order_id=0, $MODE="HTML")

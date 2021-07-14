@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.3.5
-Stable tag: 1.3.5
+Version: 1.3.6
+Stable tag: 1.3.6
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/07/12 22:15:50
+# @Last modified time: 2021/07/14 12:46:33
 
 namespace peproulitmateinvoice;
 
@@ -73,7 +73,7 @@ if (!class_exists("PeproUltimateInvoice")) {
          */
         public function __construct()
         {
-            $this->version = "1.3.4";
+            $this->version = "1.3.6";
             self::$_instance = $this;
             $this->td = "pepro-ultimate-invoice";
             $this->db_slug = $this->td;
@@ -187,6 +187,22 @@ if (!class_exists("PeproUltimateInvoice")) {
                 $vars[] = "tclr";
                 return $vars;
             });
+
+
+            add_filter( 'bulk_actions-edit-shop_order', array( $this, 'downloads_bulk_actions_edit_product'), 20, 1 );
+            add_filter( 'handle_bulk_actions-edit-shop_order', array( $this, 'downloads_handle_bulk_action_edit_shop_order'), 10, 3 );
+
+        }
+        public function downloads_bulk_actions_edit_product( $actions )
+        {
+          $actions['invoice_zip'] = __("Download Invoice Archive",$this->td);
+          return $actions;
+        }
+        public function downloads_handle_bulk_action_edit_shop_order( $redirect_to, $action, $post_ids )
+        {
+          if ( $action !== 'invoice_zip' ){ return $redirect_to;}
+          global $attach_download_dir, $attach_download_file; // ???
+          return add_query_arg( array('invoice-zip' => implode(',', $post_ids)), $redirect_to );
         }
         public function debugEnabled($debug_true = true, $debug_false = false)
         {
@@ -376,6 +392,76 @@ if (!class_exists("PeproUltimateInvoice")) {
                     $force_download = true;
                 }
                 die($this->print->create_pdf((int) trim(sanitize_text_field($_GET["invoice-pdf"])), $force_download));
+            }
+
+            if (isset($_GET["invoice-zip"]) && !empty(trim(sanitize_text_field($_GET["invoice-zip"])))) {
+                $pdfs = array();
+                $orderidsvalid = array();
+                $orderidsname = array();
+                $orderids = (array) explode(",", $_GET["invoice-zip"]);
+                $orderids = array_map("trim", $orderids);
+                $invoicename_parts = apply_filters( "puiw_generate_pdf_name_orderid_format", array(
+                  "invoice_prefix"=> $this->tpl->get_invoice_prefix(),
+                  "invoice_suffix"=> $this->tpl->get_invoice_suffix(),
+                  "invoice_start"=> $this->tpl->get_invoice_start(),
+                ));
+
+                foreach ( $orderids as $order_id) {
+                  $order = wc_get_order($order_id);
+                  if ($order) {
+                    $orderidsvalid[] = $order_id;
+                    $invoice_startpad = $invoicename_parts["invoice_start"]+$order_id;
+                    $pdf_temp = $this->print->create_pdf((int)$order_id, false, "S");
+                    if(file_exists(PEPROULTIMATEINVOICE_DIR . "/pdf_temp/$pdf_temp")){
+                      $pdfs[] = PEPROULTIMATEINVOICE_DIR . "/pdf_temp/$pdf_temp";
+                    }
+                    $orderidsname[] = "FILE: $pdf_temp".PHP_EOL.
+                    "MD5: " . md5_file(PEPROULTIMATEINVOICE_DIR . "/pdf_temp/$pdf_temp").PHP_EOL.
+                    "SHA1: " . sha1_file(PEPROULTIMATEINVOICE_DIR . "/pdf_temp/$pdf_temp").PHP_EOL;
+                  }
+                }
+
+                $order_id_formatted = implode("-", $orderidsvalid);
+                $datenow = current_time('timestamp');
+                $datetime = date_i18n("Y_m_d_H_i", $datenow);
+                $namedir = PEPROULTIMATEINVOICE_DIR . "/zip_temp";
+                if (!file_exists( $namedir )) { mkdir($namedir, 0777, true); }
+
+                $namedotext = "InvoicesArchive($order_id_formatted)-$datetime.zip";
+                $zip_file = "{$namedir}/{$namedotext}";
+
+                file_exists($zip_file) AND unlink($zip_file);
+
+                $zip = new \ZipArchive;
+
+                if ($zip->open($zip_file, $zip::CREATE|$zip::OVERWRITE) === TRUE) {
+                  foreach ($pdfs as $file) { $zip->addFile($file, basename($file)); }
+                  $lineone = "WooCommerce PDF Invoices Zipped Archive File";
+                  $linetwo = "Created by Pepro Ultimate Invoice for WooCommerce (ver. {$this->version})";
+                  $comments_lines = array(
+                    PHP_EOL.str_pad($lineone, strlen($linetwo)+8, " ", STR_PAD_BOTH).PHP_EOL,
+                    str_pad($linetwo, strlen($linetwo)+8, " ", STR_PAD_BOTH).PHP_EOL,
+                    str_pad("https://wordpress.org/plugins/pepro-ultimate-invoice/", strlen($linetwo)+8, " ", STR_PAD_BOTH).PHP_EOL,
+                    str_pad("Developed by Pepro Dev ( https://pepro.dev/ )", strlen($linetwo)+8, " ", STR_PAD_BOTH).PHP_EOL,
+                    str_pad("*", strlen($linetwo)+8, "=", STR_PAD_BOTH).PHP_EOL,
+                    "Date: " . $this->tpl->get_date("now"),
+                    "Generated on: {$this->tpl->get_store_name()} ({$this->tpl->get_store_website()})",
+                    "Support Email: {$this->tpl->get_store_email()}".PHP_EOL,
+                    str_pad("*", strlen($linetwo)+8, "=", STR_PAD_BOTH).PHP_EOL,
+                    "This archive should contain following Invoice PDF files:".PHP_EOL,
+                    implode(PHP_EOL, $orderidsname).PHP_EOL,
+                  );
+                  $zip->setArchiveComment( implode(PHP_EOL, $comments_lines));
+                  $zip->close();
+                } else {
+                  wp_die( sprintf(__("Failed creating zip archive! (code: %s) %s",$this->td), $zip->status, "<br>".$zip->getStatusString()), __("Error",$this->td), array("back_link"=> true));
+                  exit;
+                }
+                foreach ($pdfs as $file) { file_exists($file) AND unlink($file); }
+                header('Content-type: application/force-download');
+                header("Content-Disposition: attachment; filename='$namedotext'");
+                readfile($zip_file);
+                exit;
             }
 
             if (isset($_GET["invoice-slips"]) && !empty(trim(sanitize_text_field($_GET["invoice-slips"])))) {

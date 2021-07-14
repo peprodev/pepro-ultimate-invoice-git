@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Pepro Ultimate Invoice\n"
-"POT-Creation-Date: 2021-07-12 22:24+0430\n"
+"POT-Creation-Date: 2021-07-14 12:41+0430\n"
 "PO-Revision-Date: 2021-07-12 11:15+0430\n"
 "Last-Translator: Amirhosseinhpv <its@hpv.im>\n"
 "Language-Team: Amirhosseinhpv <its@hpv.im>\n"
@@ -184,12 +184,12 @@ msgctxt "wc-orders-popup"
 msgid "View Invoice Options"
 msgstr ""
 
-#: include/admin/class-column.php:149 pepro-ultimate-invoice.php:846
+#: include/admin/class-column.php:149 pepro-ultimate-invoice.php:932
 msgctxt "wc-orders-popup"
 msgid "View Order HTML Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:152 pepro-ultimate-invoice.php:850
+#: include/admin/class-column.php:152 pepro-ultimate-invoice.php:936
 msgctxt "wc-orders-popup"
 msgid "View Order PDF Invoice"
 msgstr ""
@@ -225,37 +225,37 @@ msgctxt "wc-orders-popup"
 msgid "Invoice #%s Options"
 msgstr ""
 
-#: include/admin/class-column.php:177 pepro-ultimate-invoice.php:847
+#: include/admin/class-column.php:177 pepro-ultimate-invoice.php:933
 msgctxt "wc-orders-popup"
 msgid "HTML Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:178 pepro-ultimate-invoice.php:851
+#: include/admin/class-column.php:178 pepro-ultimate-invoice.php:937
 msgctxt "wc-orders-popup"
 msgid "PDF Invoice"
 msgstr ""
 
-#: include/admin/class-column.php:179 pepro-ultimate-invoice.php:855
+#: include/admin/class-column.php:179 pepro-ultimate-invoice.php:941
 msgctxt "wc-orders-popup"
 msgid "Inventory report"
 msgstr ""
 
-#: include/admin/class-column.php:180 pepro-ultimate-invoice.php:859
+#: include/admin/class-column.php:180 pepro-ultimate-invoice.php:945
 msgctxt "wc-orders-popup"
 msgid "Sender/Receiver Packing Slip"
 msgstr ""
 
-#: include/admin/class-column.php:181 pepro-ultimate-invoice.php:863
+#: include/admin/class-column.php:181 pepro-ultimate-invoice.php:949
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Customer"
 msgstr ""
 
-#: include/admin/class-column.php:182 pepro-ultimate-invoice.php:867
+#: include/admin/class-column.php:182 pepro-ultimate-invoice.php:953
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Shop Managers"
 msgstr ""
 
-#: include/admin/class-column.php:183 pepro-ultimate-invoice.php:871
+#: include/admin/class-column.php:183 pepro-ultimate-invoice.php:957
 msgctxt "wc-orders-popup"
 msgid "Mail Invoice to Custom List"
 msgstr ""
@@ -291,34 +291,34 @@ msgstr ""
 msgid "Invoice %s"
 msgstr ""
 
-#: include/admin/class-print.php:462 include/admin/class-print.php:723
-#: include/admin/class-print.php:904 include/admin/class-print.php:1109
-#: pepro-ultimate-invoice.php:1604
+#: include/admin/class-print.php:462 include/admin/class-print.php:727
+#: include/admin/class-print.php:897 include/admin/class-print.php:1102
+#: pepro-ultimate-invoice.php:1690
 msgid "Incorrect data!"
 msgstr ""
 
-#: include/admin/class-print.php:465 include/admin/class-print.php:907
-#: include/admin/class-print.php:1112
+#: include/admin/class-print.php:465 include/admin/class-print.php:900
+#: include/admin/class-print.php:1105
 msgid "Incorrect Order!"
 msgstr ""
 
 #: include/admin/class-print.php:467 include/admin/class-print.php:468
-#: include/admin/class-print.php:730
+#: include/admin/class-print.php:734
 msgid "Err 403 - Access Denied"
 msgstr ""
 
-#: include/admin/class-print.php:479 include/admin/class-print.php:924
-#: include/admin/class-print.php:1129
+#: include/admin/class-print.php:479 include/admin/class-print.php:917
+#: include/admin/class-print.php:1122
 msgid "Note provided by Customer"
 msgstr ""
 
-#: include/admin/class-print.php:480 include/admin/class-print.php:925
-#: include/admin/class-print.php:1130
+#: include/admin/class-print.php:480 include/admin/class-print.php:918
+#: include/admin/class-print.php:1123
 msgid "Note provided by Shop manager"
 msgstr ""
 
 #: include/admin/class-print.php:589 include/admin/class-print.php:592
-#: include/admin/class-print.php:920 include/admin/class-print.php:1125
+#: include/admin/class-print.php:913 include/admin/class-print.php:1118
 msgid "PRINT"
 msgstr ""
 
@@ -326,42 +326,42 @@ msgstr ""
 msgid "GET PDF"
 msgstr ""
 
-#: include/admin/class-print.php:832
+#: include/admin/class-print.php:835
 #, php-format
 msgctxt "invoice-template"
 msgid "Invoice #%s on %s"
 msgstr ""
 
-#: include/admin/class-print.php:841
+#: include/admin/class-print.php:844
 msgctxt "invoice-template"
 msgid "Error! Invoice does not exist."
-msgstr ""
-
-#: include/admin/class-print.php:843
-#, php-format
-msgctxt "invoice-template"
-msgid "Created by %s<br>( %s )"
-msgstr ""
-
-#: include/admin/class-print.php:845
-#, php-format
-msgctxt "invoice-template"
-msgid "%sBack to Dashboard%s"
 msgstr ""
 
 #: include/admin/class-print.php:846
 #, php-format
 msgctxt "invoice-template"
+msgid "Created by %s<br>( %s )"
+msgstr ""
+
+#: include/admin/class-print.php:848
+#, php-format
+msgctxt "invoice-template"
+msgid "%sBack to Dashboard%s"
+msgstr ""
+
+#: include/admin/class-print.php:849
+#, php-format
+msgctxt "invoice-template"
 msgid "%sBack to Orders%s"
 msgstr ""
 
-#: include/admin/class-print.php:868
+#: include/admin/class-print.php:865
 #, php-format
 msgctxt "invoice-template"
 msgid "%s -- Page {PAGENO} / {nbpg}"
 msgstr ""
 
-#: include/admin/class-print.php:869
+#: include/admin/class-print.php:866
 #, php-format
 msgctxt "invoice-template"
 msgid "Created by %s at %s"
@@ -910,7 +910,7 @@ msgctxt "wc-setting"
 msgid "Invoice Title"
 msgstr ""
 
-#: include/admin/class-setting.php:528 pepro-ultimate-invoice.php:1352
+#: include/admin/class-setting.php:528 pepro-ultimate-invoice.php:1438
 #, php-format
 msgctxt "wc-setting"
 msgid "Invoice %s"
@@ -1201,7 +1201,7 @@ msgctxt "wc-setting"
 msgid "Email Subject"
 msgstr ""
 
-#: include/admin/class-setting.php:1004 pepro-ultimate-invoice.php:304
+#: include/admin/class-setting.php:1004 pepro-ultimate-invoice.php:320
 #, php-format
 msgctxt "wc-setting"
 msgid "Order #%s invoice on "
@@ -1972,7 +1972,7 @@ msgctxt "swatches-panel"
 msgid "FILL OUT EMPTY SETTINGS WITH DEFAULT VALUES"
 msgstr ""
 
-#: include/admin/class-template.php:413
+#: include/admin/class-template.php:424
 msgid ", "
 msgstr ""
 
@@ -2037,272 +2037,285 @@ msgstr ""
 msgid "yd"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:212 pepro-ultimate-invoice.php:258
+#: pepro-ultimate-invoice.php:198
+msgid "Download Invoice Archive"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:228 pepro-ultimate-invoice.php:274
 #, php-format
 msgid "Automatic Email sent to customer mail address:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:214 pepro-ultimate-invoice.php:260
+#: pepro-ultimate-invoice.php:230 pepro-ultimate-invoice.php:276
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to customer mail address:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:222 pepro-ultimate-invoice.php:271
+#: pepro-ultimate-invoice.php:238 pepro-ultimate-invoice.php:287
 #, php-format
 msgid "Automatic Email sent to following shop managers:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:224 pepro-ultimate-invoice.php:273
+#: pepro-ultimate-invoice.php:240 pepro-ultimate-invoice.php:289
 #, php-format
 msgid ""
 "An error occured sending Automatic Email to following shop managers:<br> %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:227 pepro-ultimate-invoice.php:276
+#: pepro-ultimate-invoice.php:243 pepro-ultimate-invoice.php:292
 msgid "No Shop Manager selected to send Automatic Email to."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:390 pepro-ultimate-invoice.php:393
-#: pepro-ultimate-invoice.php:396 pepro-ultimate-invoice.php:400
+#: pepro-ultimate-invoice.php:457
+#, php-format
+msgid "Failed creating zip archive! (code: %s) %s"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:457
+msgid "Error"
+msgstr ""
+
+#: pepro-ultimate-invoice.php:476 pepro-ultimate-invoice.php:479
+#: pepro-ultimate-invoice.php:482 pepro-ultimate-invoice.php:486
 msgid "Back to Settings"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:445
+#: pepro-ultimate-invoice.php:531
 msgid "User Unique Identification Number"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:455
+#: pepro-ultimate-invoice.php:541
 msgid "Shipped Date (Shamsi)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:457 pepro-ultimate-invoice.php:463
+#: pepro-ultimate-invoice.php:543 pepro-ultimate-invoice.php:549
 msgid "Select Shipped Date"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:461
+#: pepro-ultimate-invoice.php:547
 msgid "Shipped Date (Gregorian)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:467
+#: pepro-ultimate-invoice.php:553
 msgid "Shipping Track Serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:469
+#: pepro-ultimate-invoice.php:555
 msgid "Enter Shipping Track Serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:473
+#: pepro-ultimate-invoice.php:559
 msgid "Customer Signature"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:502 pepro-ultimate-invoice.php:1116
+#: pepro-ultimate-invoice.php:588 pepro-ultimate-invoice.php:1202
 msgctxt "order-page"
 msgid "View Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:505 pepro-ultimate-invoice.php:1120
+#: pepro-ultimate-invoice.php:591 pepro-ultimate-invoice.php:1206
 msgctxt "order-page"
 msgid "PDF Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:527
+#: pepro-ultimate-invoice.php:613
 msgid "Page {PAGENO} / {nbpg}"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:573
+#: pepro-ultimate-invoice.php:659
 msgctxt "wc-orders"
 msgid "Shipped Date:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:576
+#: pepro-ultimate-invoice.php:662
 msgctxt "wc-orders"
 msgid "Shipping tracking Serial:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:708
+#: pepro-ultimate-invoice.php:794
 #, php-format
 msgctxt "theme-name"
 msgid "%1$s — by %2$s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:757
+#: pepro-ultimate-invoice.php:843
 msgid "Select The Date Product Shipped"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:758
+#: pepro-ultimate-invoice.php:844
 msgid "Clear"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:811
+#: pepro-ultimate-invoice.php:897
 msgid "Use Advanced Options?"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:815
+#: pepro-ultimate-invoice.php:901
 msgid "Force Use theme"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:821
+#: pepro-ultimate-invoice.php:907
 msgid "Primary, Secondary and Tertiary Colors"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:833
+#: pepro-ultimate-invoice.php:919
 msgid "Load colors from Schemes"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:839
+#: pepro-ultimate-invoice.php:925
 msgctxt "wc-orders-popup"
 msgid "Reset Advanced Options to default"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:839
+#: pepro-ultimate-invoice.php:925
 msgctxt "wc-orders-popup"
 msgid "Reset"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:854
+#: pepro-ultimate-invoice.php:940
 msgctxt "wc-orders-popup"
 msgid "View Order Inventory report"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:858
+#: pepro-ultimate-invoice.php:944
 msgctxt "wc-orders-popup"
 msgid "View Packing Slip for shipping"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:862
+#: pepro-ultimate-invoice.php:948
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Customer"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:866
+#: pepro-ultimate-invoice.php:952
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Shop Managers"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:870
+#: pepro-ultimate-invoice.php:956
 msgctxt "wc-orders-popup"
 msgid "Mail Order Invoice to Custom List"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:874
+#: pepro-ultimate-invoice.php:960
 msgctxt "wc-orders-popup"
 msgid "Edit User Unique Identification Number"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:875
+#: pepro-ultimate-invoice.php:961
 msgctxt "wc-orders-popup"
 msgid "Edit User UIN"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:878
+#: pepro-ultimate-invoice.php:964
 msgctxt "wc-orders-popup"
 msgid "Edit transaction ID"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:879
+#: pepro-ultimate-invoice.php:965
 msgctxt "wc-orders-popup"
 msgid "Edit Transaction ID"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:882
+#: pepro-ultimate-invoice.php:968
 msgctxt "wc-orders-popup"
 msgid "Edit shipped date"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:883
+#: pepro-ultimate-invoice.php:969
 msgctxt "wc-orders-popup"
 msgid "Edit Shipped Date"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:886
+#: pepro-ultimate-invoice.php:972
 msgctxt "wc-orders-popup"
 msgid "Edit shipping track serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:887
+#: pepro-ultimate-invoice.php:973
 msgctxt "wc-orders-popup"
 msgid "Edit Shipping Track Serial"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:890
+#: pepro-ultimate-invoice.php:976
 msgctxt "wc-orders-popup"
 msgid "Edit customer signature image"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:891
+#: pepro-ultimate-invoice.php:977
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Signature"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:894
+#: pepro-ultimate-invoice.php:980
 msgctxt "wc-orders-popup"
 msgid "Edit customer provided note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:895
+#: pepro-ultimate-invoice.php:981
 msgctxt "wc-orders-popup"
 msgid "Edit Customer Note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:898
+#: pepro-ultimate-invoice.php:984
 msgctxt "wc-orders-popup"
 msgid "Edit shop manager provided note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:899
+#: pepro-ultimate-invoice.php:985
 msgctxt "wc-orders-popup"
 msgid "Edit Shop manager Note"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:920 pepro-ultimate-invoice.php:924
+#: pepro-ultimate-invoice.php:1006 pepro-ultimate-invoice.php:1010
 msgid "Shop Manager provided note:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:925
+#: pepro-ultimate-invoice.php:1011
 msgid "Enter Shop Manager provided note here"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:978 pepro-ultimate-invoice.php:979
+#: pepro-ultimate-invoice.php:1064 pepro-ultimate-invoice.php:1065
 msgctxt "wc-order-screen"
 msgid "Unique Identification Number"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1024
+#: pepro-ultimate-invoice.php:1110
 msgid "Back to Dashboard"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1031
+#: pepro-ultimate-invoice.php:1117
 msgid "Switch Dark-mode"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1038
+#: pepro-ultimate-invoice.php:1124
 msgid "WC Orders"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1077 pepro-ultimate-invoice.php:1141
+#: pepro-ultimate-invoice.php:1163 pepro-ultimate-invoice.php:1227
 msgid "Pre-buy Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1082
+#: pepro-ultimate-invoice.php:1168
 #, php-format
 msgid "Pre-buy Invoice (%s)"
 msgid_plural "Pre-buy Invoices (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: pepro-ultimate-invoice.php:1163
+#: pepro-ultimate-invoice.php:1249
 msgctxt "js-cart-page"
 msgid "Unauthorized Access!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1164 pepro-ultimate-invoice.php:1171
-#: pepro-ultimate-invoice.php:2063
+#: pepro-ultimate-invoice.php:1250 pepro-ultimate-invoice.php:1257
+#: pepro-ultimate-invoice.php:2149
 msgctxt "js-cart-page"
 msgid "Okay"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1165
+#: pepro-ultimate-invoice.php:1251
 #, php-format
 msgctxt "js-cart-page"
 msgid ""
@@ -2310,324 +2323,324 @@ msgid ""
 "users.<br>Please %sLogin / Register%s."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1176
+#: pepro-ultimate-invoice.php:1262
 msgid "Get Pre-buy Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1214 pepro-ultimate-invoice.php:1215
+#: pepro-ultimate-invoice.php:1300 pepro-ultimate-invoice.php:1301
 msgid "Setting"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1220 pepro-ultimate-invoice.php:1221
+#: pepro-ultimate-invoice.php:1306 pepro-ultimate-invoice.php:1307
 msgid "Support"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1297
+#: pepro-ultimate-invoice.php:1383
 #, php-format
 msgctxt "wc-setting"
 msgid "Invoice #%s — "
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1504
+#: pepro-ultimate-invoice.php:1590
 msgid "Shortcode and Hooks for Developers"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1509
+#: pepro-ultimate-invoice.php:1595
 msgctxt "setting-general"
 msgid "WordPress Shortcode"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1513
+#: pepro-ultimate-invoice.php:1599
 msgctxt "setting-general"
 msgid "WordPress Action Hooks"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1522
+#: pepro-ultimate-invoice.php:1608
 msgctxt "setting-general"
 msgid "WordPress Filter Hooks"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1530
+#: pepro-ultimate-invoice.php:1616
 msgctxt "setting-general"
 msgid "jQuery Triggering Hooks"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1564
+#: pepro-ultimate-invoice.php:1650
 #, php-format
 msgctxt "footer-copyright"
 msgid "Thanks for using %s products."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1564
+#: pepro-ultimate-invoice.php:1650
 msgid "Pepro Dev"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1567
+#: pepro-ultimate-invoice.php:1653
 #, php-format
 msgctxt "footer-copyright"
 msgid "%s — Version %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1583
+#: pepro-ultimate-invoice.php:1669
 msgid "Unauthorized Access Denied!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1601
+#: pepro-ultimate-invoice.php:1687
 msgid "Products successfully added to cart!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1658
+#: pepro-ultimate-invoice.php:1744
 #, php-format
 msgid "Invoice Created by %s%s"
 msgstr ""
 
 #. Author of the plugin/theme
-#: pepro-ultimate-invoice.php:1658 pepro-ultimate-invoice.php:2183
+#: pepro-ultimate-invoice.php:1744 pepro-ultimate-invoice.php:2269
 msgid "Pepro Dev. Group"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1670
+#: pepro-ultimate-invoice.php:1756
 msgid "Request success!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1679
+#: pepro-ultimate-invoice.php:1765
 msgid "No valid order"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1725
+#: pepro-ultimate-invoice.php:1811
 #, php-format
 msgid "%d emails"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1728
+#: pepro-ultimate-invoice.php:1814
 #, php-format
 msgid "Sending email to <br><strong>%s</strong><br>was successfully done"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1730
+#: pepro-ultimate-invoice.php:1816
 #, php-format
 msgid "Error sending email to <br><strong>%s</strong>"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1733
+#: pepro-ultimate-invoice.php:1819
 msgid "No valid email found for this order"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1742
+#: pepro-ultimate-invoice.php:1828
 msgid "Error fetching shop managers."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1749 pepro-ultimate-invoice.php:1761
+#: pepro-ultimate-invoice.php:1835 pepro-ultimate-invoice.php:1847
 msgid "Saved successfully!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1817
+#: pepro-ultimate-invoice.php:1903
 #, php-format
 msgctxt "required-plugin"
 msgid "%1$s needs %2$s in order to function"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1820
+#: pepro-ultimate-invoice.php:1906
 msgctxt "required-plugin"
 msgid "WooCommerce"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1934
+#: pepro-ultimate-invoice.php:2020
 msgid "All Categories"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1962 pepro-ultimate-invoice.php:1963
-#: pepro-ultimate-invoice.php:2073
+#: pepro-ultimate-invoice.php:2048 pepro-ultimate-invoice.php:2049
+#: pepro-ultimate-invoice.php:2159
 msgctxt "js-i18n"
 msgid "SKU:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:1991
+#: pepro-ultimate-invoice.php:2077
 msgid "Add to cart"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2019
+#: pepro-ultimate-invoice.php:2105
 msgid "Filter Products by Category"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2025
+#: pepro-ultimate-invoice.php:2111
 msgid "Sort and Search shown products"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2027
+#: pepro-ultimate-invoice.php:2113
 msgid "Search among current shown products"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2030
+#: pepro-ultimate-invoice.php:2116
 msgid "Sort By: "
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2031
+#: pepro-ultimate-invoice.php:2117
 msgid "Alphabetically"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2032
+#: pepro-ultimate-invoice.php:2118
 msgid "Popularity"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2033
+#: pepro-ultimate-invoice.php:2119
 msgid "Total Sales"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2034
+#: pepro-ultimate-invoice.php:2120
 msgid "Latest"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2035
+#: pepro-ultimate-invoice.php:2121
 msgid "Price (ASC)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2036
+#: pepro-ultimate-invoice.php:2122
 msgid "Price (DESC)"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2043
+#: pepro-ultimate-invoice.php:2129
 msgid "Your cart is empty!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2045
+#: pepro-ultimate-invoice.php:2131
 msgid "Nothing found!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2065
+#: pepro-ultimate-invoice.php:2151
 msgctxt "js-i18n"
 msgid "Added to cart"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2066
+#: pepro-ultimate-invoice.php:2152
 msgctxt "js-i18n"
 msgid "THIS IS AN ERROR!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2067
+#: pepro-ultimate-invoice.php:2153
 msgctxt "js-i18n"
 msgid "Your basket is empty!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2068
+#: pepro-ultimate-invoice.php:2154
 msgctxt "js-i18n"
 msgid "Total Items:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2069
+#: pepro-ultimate-invoice.php:2155
 msgctxt "js-i18n"
 msgid "Total Products:"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2070
+#: pepro-ultimate-invoice.php:2156
 msgctxt "js-i18n"
 msgid "There is an unknown error and we are unable to proccess your request"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2071
+#: pepro-ultimate-invoice.php:2157
 msgctxt "js-i18n"
 msgid "Remove from cart"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2072
+#: pepro-ultimate-invoice.php:2158
 msgctxt "js-i18n"
 msgid "Clear cart"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2074
+#: pepro-ultimate-invoice.php:2160
 msgctxt "js-i18n"
 msgid "Are you sure you want to remove this item from basket?"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2075
+#: pepro-ultimate-invoice.php:2161
 msgctxt "js-i18n"
 msgid "Are you sure you want to remove all items from basket?"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2076
+#: pepro-ultimate-invoice.php:2162
 msgctxt "js-i18n"
 msgid "Removing"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2077
+#: pepro-ultimate-invoice.php:2163
 msgctxt "js-i18n"
 msgid "Clear basket"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2078
+#: pepro-ultimate-invoice.php:2164
 msgctxt "js-i18n"
 msgid "Instant Shopping Basket Upated!"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2079
+#: pepro-ultimate-invoice.php:2165
 msgctxt "js-i18n"
 msgid "Yes"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2080
+#: pepro-ultimate-invoice.php:2166
 msgctxt "js-i18n"
 msgid "No"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2082
+#: pepro-ultimate-invoice.php:2168
 msgctxt "js-i18n"
 msgid "Proceed to Checkout / Invoice"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2101 pepro-ultimate-invoice.php:2114
-#: pepro-ultimate-invoice.php:2122 pepro-ultimate-invoice.php:2128
+#: pepro-ultimate-invoice.php:2187 pepro-ultimate-invoice.php:2200
+#: pepro-ultimate-invoice.php:2208 pepro-ultimate-invoice.php:2214
 msgid "Design Options"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2110
+#: pepro-ultimate-invoice.php:2196
 msgid "Element ID"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2113
+#: pepro-ultimate-invoice.php:2199
 #, php-format
 msgid ""
 "Enter element ID (Note: make sure it is unique and valid according to %sW3C "
 "Specification%s)."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2118
+#: pepro-ultimate-invoice.php:2204
 msgid "Extra class name"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2121
+#: pepro-ultimate-invoice.php:2207
 msgid ""
 "If you wish to style particular content element differently, then use this "
 "field to add a class name and then refer to it in your css file."
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2126
+#: pepro-ultimate-invoice.php:2212
 msgid "CSS box"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2134 pepro-ultimate-invoice.php:2151
+#: pepro-ultimate-invoice.php:2220 pepro-ultimate-invoice.php:2237
 msgid "Quick Shop"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2135 pepro-ultimate-invoice.php:2152
+#: pepro-ultimate-invoice.php:2221 pepro-ultimate-invoice.php:2238
 msgid "One-page Purchase"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2139
+#: pepro-ultimate-invoice.php:2225
 msgid "Pepro Elements"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2183
+#: pepro-ultimate-invoice.php:2269
 #, php-format
 msgid "Proudly Developed by %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2365
+#: pepro-ultimate-invoice.php:2451
 #, php-format
 msgctxt "setting-page"
 msgid "Enter %s"
 msgstr ""
 
-#: pepro-ultimate-invoice.php:2389
+#: pepro-ultimate-invoice.php:2475
 #, php-format
 msgctxt "setting-page"
 msgid "Choose %s"

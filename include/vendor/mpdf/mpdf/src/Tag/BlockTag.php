@@ -1,4 +1,13 @@
 <?php
+# @Author: Amirhosseinhpv
+# @Date:   2020/10/20 22:23:23
+# @Email:  its@hpv.im
+# @Last modified by:   Amirhosseinhpv
+# @Last modified time: 2021/07/14 12:28:09
+# @License: GPLv2
+# @Copyright: Copyright © Amirhosseinhpv (https://hpv.im), all rights reserved.
+
+
 
 namespace Mpdf\Tag;
 
@@ -115,7 +124,7 @@ abstract class BlockTag extends Tag
 		/* -- TABLES -- */
 		if ($this->mpdf->tableLevel) {
 			// If already something on the line
-			if ($this->mpdf->cell[$this->mpdf->row][$this->mpdf->col]['s'] > 0 && !$this->mpdf->nestedtablejustfinished) {
+			if (isset($this->mpdf->cell[$this->mpdf->row][$this->mpdf->col]['s']) && $this->mpdf->cell[$this->mpdf->row][$this->mpdf->col]['s'] > 0 && !$this->mpdf->nestedtablejustfinished) {
 				$this->mpdf->_saveCellTextBuffer("\n");
 				if (!isset($this->mpdf->cell[$this->mpdf->row][$this->mpdf->col]['maxs'])) {
 					$this->mpdf->cell[$this->mpdf->row][$this->mpdf->col]['maxs'] = $this->mpdf->cell[$this->mpdf->row][$this->mpdf->col]['s'];

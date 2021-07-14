@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 Requires PHP: 7.0
 WC requires at least: 4.4
 WC tested up to: 5.4.1
@@ -35,18 +35,15 @@ This plugin lets you to Generate Awesome Invoices for WooCommerce orders and:
 -   and .....
 
 
-### New Release -- Version 1.3.0 🔥 (2021-04-24 | 1400-02-04)
+### Hot Features of Version 1.3.6 🔥 (2021-07-14 | 1400-04-23)
+- Export/Import Settings!
+- Bulk Download Invoices as ZIP Archive
+
+### Version 1.3.0
 - Added: Fully Compatibility with [WPC Product Bundles by WPClever](https://wpclever.net/downloads/product-bundles)
 - Added: Fully Compatibility with [WooCommerce Extra Product Options by ThemeComplete](https://codecanyon.net/item/woocommerce-extra-product-options/7908619)
 - Added: Fully Compatibility with *Any Standard* plugins that adds and shows Order item metas
-- Added: Showing *Order item meta* after order item description
-- Added: Sort order items by get_items_sorting
-- Dev: Added Integration Section in Settings
-- Fixed: Discount precent problem
-- Fixed: Showing live price instead of actual order cost
-- Fixed: Invoice Access problem
-- Fixed: Default setting values changed
-- Fixed: Clearing Setting on Uninstall problem
+- Added: Added Integration Section in Settings
 
 
 
@@ -152,6 +149,10 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 
 == Changelog ==
+
+= Version 1.3.6 / 2021-07-14 / 1400-04-23 =
+- Added: Bulk Download Invoices as ZIP Archive (added as bulk action in WC Orders)
+- Fixed: Wrong GMT/UTC date display
 
 = Version 1.3.5 / 2021-07-12 / 1400-04-21 =
 - Fixed: Changed textdomain to pepro-ultimate-invoice
@@ -336,6 +337,10 @@ PEPRO DEV is a premium supplier of quality WordPress plugins, services and suppo
 Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to check our [free offerings](http://profiles.wordpress.org/peprodev/), we hope you enjoy them!
 
 == Upgrade Notice ==
+
+= Version 1.3.6 / 2021-07-14 / 1400-04-23 =
+- Added: Bulk Download Invoices as ZIP Archive (added as bulk action in WC Orders)
+- Fixed: Wrong GMT/UTC date display
 
 = Version 1.3.5 / 2021-07-12 / 1400-04-21 =
 - Fixed: Changed textdomain

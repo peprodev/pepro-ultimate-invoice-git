@@ -1,5 +1,5 @@
 <?php
-# @Last modified time: 2021/07/12 17:18:03
+# @Last modified time: 2021/07/14 10:19:11
 
 namespace peproulitmateinvoice;
 
@@ -70,16 +70,27 @@ if (!class_exists("PeproUltimateInvoice_Template")) {
       $date_format = get_option("puiw_date_format",$default_format);
       $date_format = empty($date_format) ? $default_format : $date_format;
       $date_format = $force_format ? $default_format : $date_format;
-      /**
-       * filter date if persian date option is set to true
-       */
+      $timestamp = $this->local_date_i18n(strtotime($date_str));
+      $converted_date = date_i18n($default_format, $timestamp, true);
 
-      (int) $timestamp = strtotime($date_str);
-      $converted_date = date_i18n( $date_format, $timestamp);
       if ($this->get_date_shamsi() == "yes") {
         $converted_date = pu_jdate($date_format, $timestamp, "", "local", "en");
       }
+
       return apply_filters("puiw_get_date", $converted_date, $date_str, $timestamp, $date_format, $default_format, $force_format);
+    }
+    public function local_date_i18n($timestamp) {
+      $timezone_str = get_option('timezone_string') ?: 'UTC';
+      $timezone = new \DateTimeZone($timezone_str);
+      // The date in the local timezone.
+      $date = new \DateTime(null, $timezone);
+      $date->setTimestamp($timestamp);
+      $date_str = $date->format('Y-m-d H:i:s');
+      // Pretend the local date is UTC to get the timestamp
+      // to pass to date_i18n().
+      $utc_timezone = new \DateTimeZone('UTC');
+      $utc_date = new \DateTime($date_str, $utc_timezone);
+      return $utc_date->getTimestamp();
     }
     /**
      * change numbers into western arabic or farsi or keep it as is
