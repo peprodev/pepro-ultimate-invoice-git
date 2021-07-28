@@ -4,20 +4,19 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 1.3.7
+Stable tag: 1.3.8
 Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 5.5
+WC tested up to: 5.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The Most Advanced Invoice Plugin you were looking for! Create HTML/PDF Invoices of WooCommerce Orders, Attach PDF Invoice to Mail and Let customers download beautiful-customizable styles invoices.
+The Most Advanced Invoice Plugin you were looking for!
+Create HTML/PDF Invoices of WooCommerce Orders, Attach PDF Invoice to Mail and Let customers download beautiful-customizable styled invoices.
 
 == Description ==
 
 ## **Ultimate Invoice plugin for WooCommerce!**
-
-The Most Advanced Invoice Plugin you were looking for! Create HTML/PDF Invoices of WooCommerce Orders, Attach PDF Invoice to Mail and Let customers download beautiful-customizable styles invoices.
 
 This plugin lets you to Generate Awesome Invoices for WooCommerce orders and:
 
@@ -151,6 +150,10 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 
 == Changelog ==
+
+= Version 1.3.8 / 2021-07-28 / 1400-05-06 =
+
+- Bug fixes
 
 = Version 1.3.7 / 2021-07-14 / 1400-04-23 =
 - Added: Bulk Print Invoices Shipping Slips (Order Screen > Bulk Actions)
@@ -341,6 +344,10 @@ PEPRO DEV is a premium supplier of quality WordPress plugins, services and suppo
 Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to check our [free offerings](http://profiles.wordpress.org/peprodev/), we hope you enjoy them!
 
 == Upgrade Notice ==
+
+= Version 1.3.8 / 2021-07-28 / 1400-05-06 =
+
+- Bug fixes
 
 = Version 1.3.7 / 2021-07-14 / 1400-04-23 =
 - Added: Bulk Print Invoices Shipping Slips (Order Screen > Bulk Actions)

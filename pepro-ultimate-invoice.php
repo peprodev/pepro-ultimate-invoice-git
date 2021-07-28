@@ -9,20 +9,20 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.3.7
-Stable tag: 1.3.7
+Version: 1.3.8
+Stable tag: 1.3.8
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.0
 WC requires at least: 4.4
-WC tested up to: 5.5
+WC tested up to: 5.5.2
 Text Domain: pepro-ultimate-invoice
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/07/14 18:24:29
+# @Last modified time: 2021/07/28 17:33:15
 
 namespace peproulitmateinvoice;
 
@@ -75,7 +75,7 @@ if (!class_exists("PeproUltimateInvoice")) {
         {
             self::$_instance = $this;
             $this->td = "pepro-ultimate-invoice";
-            $this->version = "1.3.7";
+            $this->version = "1.3.8";
             $this->db_slug = $this->td;
             $this->plugin_file = __FILE__;
             $this->plugin_dir = plugin_dir_path(__FILE__);
@@ -2315,7 +2315,7 @@ if (!class_exists("PeproUltimateInvoice")) {
                   'heading' => esc_html__('CSS box', $this->td),
                   'param_name' => 'css',
                   'group' => esc_html__('Design Options', $this->td),
-              ),
+              )
             );
             vc_map(
               array(
@@ -2330,28 +2330,9 @@ if (!class_exists("PeproUltimateInvoice")) {
                                                 "{$this->assets_url}/css/vc.init" . $this->debugEnabled(".css", ".min.css"),
                                                 "{$this->assets_url}/css/select2.min.css"
                                               ),
-                  'admin_enqueue_js'        => array(
-                                                "{$this->assets_url}/js/select2.min.js",
-                                              ),
+                  'admin_enqueue_js'        => array("{$this->assets_url}/js/select2.min.js",),
                   'params'                  => $params
-                ),
-              array(
-                  'base'                    => "puiw_quick_shop",
-                  'name'                    => __("Quick Shop", $this->td),
-                  'description'             => __('One-page Purchase', "$this->td"),
-                  'class'                   => "{$this->td}__class",
-                  'icon'                    => plugins_url("/assets/img/peprodev.svg", __FILE__),
-                  'show_settings_on_create' => false,
-                  'category'                => "WooCommerce",
-                  'admin_enqueue_css'       => array(
-                                                "{$this->assets_url}/css/vc.init" . $this->debugEnabled(".css", ".min.css"),
-                                                "{$this->assets_url}/css/select2.min.css"
-                                              ),
-                  'admin_enqueue_js'        => array(
-                                                "{$this->assets_url}/js/select2.min.js",
-                                              ),
-                  'params'                  => $params
-            ),
+                )
           );
         }
         /**
