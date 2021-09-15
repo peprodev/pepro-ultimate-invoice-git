@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/ultimate-invoice/
-Version: 1.3.8
-Stable tag: 1.3.8
+Version: 1.3.9
+Stable tag: 1.3.9
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.0
@@ -22,7 +22,7 @@ Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-# @Last modified time: 2021/07/28 17:33:15
+# @Last modified time: 2021/09/15 14:24:34
 
 namespace peproulitmateinvoice;
 
@@ -75,7 +75,7 @@ if (!class_exists("PeproUltimateInvoice")) {
         {
             self::$_instance = $this;
             $this->td = "pepro-ultimate-invoice";
-            $this->version = "1.3.8";
+            $this->version = "1.3.9";
             $this->db_slug = $this->td;
             $this->plugin_file = __FILE__;
             $this->plugin_dir = plugin_dir_path(__FILE__);
@@ -528,13 +528,12 @@ if (!class_exists("PeproUltimateInvoice")) {
             }
 
             if (isset($_GET["invoice"]) && !empty(trim(sanitize_text_field($_GET["invoice"])))) {
-                die($this->print->create_html((int) trim(sanitize_text_field($_GET["invoice"]))));
+                $orderid = (int) trim(sanitize_text_field($_GET["invoice"]));
+                if (wc_get_order($orderid)){ die($this->print->create_html($orderid)); }
             }
             if (isset($_GET["invoice-pdf"]) && !empty(trim(sanitize_text_field($_GET["invoice-pdf"])))) {
                 $force_download = false;
-                if (isset($_GET["download"]) && !empty(sanitize_text_field($_GET["download"]))) {
-                    $force_download = true;
-                }
+                if (isset($_GET["download"]) && !empty(sanitize_text_field($_GET["download"]))) { $force_download = true; }
                 die($this->print->create_pdf((int) trim(sanitize_text_field($_GET["invoice-pdf"])), $force_download));
             }
             if (isset($_GET["invoice-slips"]) && !empty(trim(sanitize_text_field($_GET["invoice-slips"])))) {

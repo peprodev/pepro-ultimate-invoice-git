@@ -4,7 +4,7 @@ Donate link: https://pepro.dev/donate
 Tags: woocommerce invoice, invoice, email invoice, attach pdf invoice, pdf invoice, functionality, dark mode, wordpress, modern design, customization, e-commerce
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 1.3.8
+Stable tag: 1.3.9
 Requires PHP: 7.0
 WC requires at least: 4.4
 WC tested up to: 5.5.2
@@ -150,6 +150,12 @@ You can help us improve our works by committing your changes to Pepro Dev's Gith
 
 
 == Changelog ==
+
+= Version 1.3.9 / 2021-11-15 / 1400-06-26 =
+
+- Bug fixes
+- Compatibility with AP Payment gateway (درگاه پرداخت آپ)
+- DEV: Changed print invoice get query
 
 = Version 1.3.8 / 2021-07-28 / 1400-05-06 =
 
@@ -345,31 +351,19 @@ Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to che
 
 == Upgrade Notice ==
 
+= Version 1.3.9 / 2021-11-15 / 1400-06-26 =
+
+- Bug fixes
+- Compatibility with AP Payment gateway (درگاه پرداخت آپ)
+- DEV: Changed print invoice get query
+
 = Version 1.3.8 / 2021-07-28 / 1400-05-06 =
 
 - Bug fixes
 
 = Version 1.3.7 / 2021-07-14 / 1400-04-23 =
+
 - Added: Bulk Print Invoices Shipping Slips (Order Screen > Bulk Actions)
 - Added: Bulk Print Invoices Inventory Reports (Order Screen > Bulk Actions)
 - Added: Bulk Download PDF Invoices as ZIP Archive (Order Screen > Bulk Actions)
 - Fixed: Wrong GMT/UTC date display
-
-= Version 1.3.5 / 2021-07-12 / 1400-04-21 =
-- Fixed: Changed textdomain
-- Fixed: Store Address was not properly translated
-- Fixed: Customer Address was not properly translated
-- Fixed: Default template for RTL/Persian sites is the Default-RTL
-- Fixed: Wpbakery Page Builder widget not showing
-- Fixed: Quick Buy feature would not work when Wpbakery Page Builder is disabled
-- Added: Backup / Export & Import Settings as JSON
-- Added: Option to Revert Settings to Default, Clear out Settings, Re-set Settings based on default values
-- Dev: Added `pepro_ultimate_invoice_default_options` filter hook to alter default settings fields
-- Dev: Added `pepro_ultimate_invoice_reset_options_done` action hook to alter default settings fields
-- Dev: Upgraded font-awesome to 5.15.3
-- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-reset !DO NOT USE IF NOT SURE!
-- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-clear !DO NOT USE IF NOT SURE!
-- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-set
-- Dev: Added new functional query string (for Developers usage only): /wp-admin/?ultimate-invoice-get
-- Dev: Removed function `clear_out_settings`, use `change_default_settings("RESET")` instead
-- Dev: Changed Setting panel javascript localize_script object as `_peproUltimateInvoice`
